@@ -1,15 +1,62 @@
 {
-  "_readme": "This is the master list the sync script uses to decide which independent (non-editorial) playlist owners count as a 'KEY' supporter, and how they're ranked. Matching is on the Spotify playlist owner display name, case-insensitive, exact match. This is a STARTER list only — Claude cannot reliably verify curator reputations on an ongoing basis, so treat this as a seed and keep adding to it as you spot good independent curators in your reports. Anything NOT in this list still appears in the 'All independent placements' section, it just won't be flagged as a Key Supporter or included in the Key Supporters ranking.",
+  "_readme": "This is the master list the sync script uses to decide which independent (non-editorial) playlist owners count as a 'KEY' supporter, and how they're ranked. Matching is on the Spotify playlist owner display name, case-insensitive, exact match. Tiers below are a first-pass from general knowledge of scale/reputation in dance & electronic — treat as a starting point and re-tier anyone as your own campaign data proves them out one way or the other. Anything NOT in this list still appears in the 'All independent placements' section, it just won't be flagged as a Key Supporter.",
   "_tier_guide": {
-    "1": "Top-tier — high trust, strong track record, large engaged following. Always show first.",
-    "2": "Solid, reliable, respected in scene. Show after tier 1.",
-    "3": "Known/watching — worth tracking but not yet fully proven."
+    "1": "Major label/global artist-owned channel — huge reach, highest credibility.",
+    "2": "Well-known independent aggregator/scene channel — strong reach, respected.",
+    "3": "Known/watching — smaller or less certain reach, still worth tracking."
   },
   "curators": [
-    {
-      "owner_name": "Dance Rising",
-      "tier": 1,
-      "notes": "Seen in your existing tracking doc — confirmed real placement."
-    }
+    { "owner_name": "Dance Rising", "tier": 1, "notes": "Seen in your existing tracking doc — confirmed real placement." },
+
+    { "owner_name": "Defected Records", "tier": 1, "notes": "Major house label." },
+    { "owner_name": "Toolroom Records", "tier": 1, "notes": "Major house label." },
+    { "owner_name": "Anjunabeats", "tier": 1, "notes": "Major trance/prog label." },
+    { "owner_name": "Armada", "tier": 1, "notes": "Major dance label." },
+    { "owner_name": "Ministry of Sound", "tier": 1, "notes": "Major dance brand." },
+    { "owner_name": "Kontor", "tier": 1, "notes": "Major German dance label." },
+    { "owner_name": "Ultra", "tier": 1, "notes": "Major dance label/festival brand." },
+    { "owner_name": "Tomorrowland", "tier": 1, "notes": "Global festival brand." },
+    { "owner_name": "Mau5trap", "tier": 1, "notes": "Deadmau5's label." },
+    { "owner_name": "Martin Garrix", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "Calvin Harris", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "David Guetta", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "Diplo", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "Tiesto", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "Musical Freedom", "tier": 1, "notes": "Tiesto's label." },
+    { "owner_name": "Steve Aoki", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "Axwell", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "Dimitri Vegas & Like Mike", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "MDLBEAST", "tier": 1, "notes": "Major MENA festival/label brand." },
+    { "owner_name": "Kölsch", "tier": 1, "notes": "Respected global techno/house artist." },
+    { "owner_name": "Nicky Romero", "tier": 1, "notes": "Global artist channel." },
+    { "owner_name": "R3HAB", "tier": 1, "notes": "Global artist channel." },
+
+    { "owner_name": "Future House Music", "tier": 2, "notes": "Well-known independent future house aggregator." },
+    { "owner_name": "Future House Cloud", "tier": 2, "notes": "Well-known independent future house aggregator." },
+    { "owner_name": "ChillYourMind", "tier": 2, "notes": "Well-known independent scene channel." },
+    { "owner_name": "Storm Music Group", "tier": 2, "notes": "Independent aggregator/label." },
+    { "owner_name": "Selected", "tier": 2, "notes": "Independent scene channel." },
+    { "owner_name": "UNCOMMON", "tier": 2, "notes": "Independent scene channel." },
+    { "owner_name": "Soave", "tier": 2, "notes": "Independent future/bass house aggregator." },
+    { "owner_name": "Groove Bassment", "tier": 2, "notes": "Independent bass house channel." },
+    { "owner_name": "Data Transmission", "tier": 2, "notes": "Established dance music media/curator." },
+    { "owner_name": "Yotto", "tier": 2, "notes": "Respected melodic house/techno artist." },
+    { "owner_name": "Double J Music", "tier": 2, "notes": "Independent curator — has appeared in your reports before." },
+    { "owner_name": "Another Rhythm", "tier": 2, "notes": "Independent scene channel." },
+    { "owner_name": "Good Company", "tier": 2, "notes": "Independent scene channel." },
+    { "owner_name": "House Nation", "tier": 2, "notes": "Independent house aggregator." },
+
+    { "owner_name": "THE NIGHT DRIVE", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "LoudKult", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "Garde", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "theonlyMajed", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "BLACK DOT", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "The Latest Sounds", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "Castle Collective", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "Academia", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "Robaer", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "Simon Field", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "We Got", "tier": 3, "notes": "Independent — watching." },
+    { "owner_name": "NikeWomen", "tier": 3, "notes": "Brand-run playlist, non-editorial — watching." }
   ]
 }
