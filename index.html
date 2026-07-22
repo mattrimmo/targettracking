@@ -488,13 +488,67 @@ function renderTrackedList(tracked) {
     el.appendChild(row);
   });
 }
+function washFromImg(img, isrc) {
+  const wash = document.getElementById('wash-' + isrc);
+  if (!wash) return;
+  const run = () => {
+    try {
+      const c = document.createElement('canvas');
+      c.width = 12; c.height = 12;
+      const ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0, 12, 12);
+      const data = ctx.getImageData(0, 0, 12, 12).data;
+      let r=0,g=0,b=0,n=0;
+      for (let i=0; i<data.length; i+=4) { r+=data[i]; g+=data[i+1]; b+=data[i+2]; n++; }
+      r=Math.round(r/n); g=Math.round(g/n); b=Math.round(b/n);
+      wash.style.background = `radial-gradient(ellipse 620px 240px at 60px 40px, rgba(${r},${g},${b},0.22), transparent 70%)`;
+      wash.style.opacity = '1';
+    } catch (e) { /* CORS or decode issue — just skip the wash for this card */ }
+  };
+  if (img.complete && img.naturalWidth) run(); else img.addEventListener('load', run);
+}
+function applyArtworkWash() {
+  document.querySelectorAll('.track-art[id^="art-"]').forEach(img => {
+    if (img.id.startsWith('art-missing-')) return;
+    washFromImg(img, img.id.replace('art-', ''));
+  });
+}
+const _artCache = {};
+async function fetchArtByIsrc(isrc) {
+  if (_artCache[isrc] !== undefined) return _artCache[isrc];
+  try {
+    const d = await spGet('/search?q=isrc:' + isrc + '&type=track&limit=1');
+    const t = d.tracks && d.tracks.items && d.tracks.items[0];
+    const img = t && t.album && t.album.images && (t.album.images[1] || t.album.images[0]);
+    _artCache[isrc] = img ? img.url : null;
+  } catch (e) {
+    _artCache[isrc] = null;
+  }
+  return _artCache[isrc];
+}
+async function backfillMissingArt(tracked) {
+  const missing = tracked.tracks.filter(t => !t.image);
+  for (const t of missing) {
+    const url = await fetchArtByIsrc(t.isrc);
+    if (!url) continue;
+    const img = document.getElementById('art-missing-' + t.isrc);
+    if (img) {
+      img.src = url;
+      img.style.display = 'block';
+      washFromImg(img, t.isrc);
+    }
+  }
+}
 function editorialListRows(list) {
   if (!list.length) return '<div class="empty-note">None currently.</div>';
   return '<div class="list-rows">' + list.map(p => `
     <div class="list-row">
       <div class="left">
         ${p.cover_url ? `<img class="row-art" src="${p.cover_url}">` : '<div class="row-art"></div>'}
-        <div class="pname-wrap"><a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 30)}</a></div>
+        <div class="pname-wrap">
+          <a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 30)}</a>
+          <div class="curator">${p.owner_name || 'Spotify'}</div>
+        </div>
       </div>
       <div class="followers">${fmtNum(p.followers)}</div>
     </div>`).join('') + '</div>';
@@ -549,7 +603,9 @@ function renderCards(tracked, history) {
     card.innerHTML = `
       <div class="card-wash" id="wash-${t.isrc}"></div>
       <div class="track-head">
-        ${t.image ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">` : ''}
+        ${t.image
+          ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
+          : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
         <div>
           <div class="track-name">${t.artist} - ${t.track}</div>
           <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}</div>
@@ -582,34 +638,13 @@ function renderCards(tracked, history) {
     content.appendChild(card);
   });
 }
-function applyArtworkWash() {
-  document.querySelectorAll('.track-art').forEach(img => {
-    const isrc = img.id.replace('art-', '');
-    const wash = document.getElementById('wash-' + isrc);
-    if (!wash) return;
-    const run = () => {
-      try {
-        const c = document.createElement('canvas');
-        c.width = 12; c.height = 12;
-        const ctx = c.getContext('2d');
-        ctx.drawImage(img, 0, 0, 12, 12);
-        const data = ctx.getImageData(0, 0, 12, 12).data;
-        let r=0,g=0,b=0,n=0;
-        for (let i=0; i<data.length; i+=4) { r+=data[i]; g+=data[i+1]; b+=data[i+2]; n++; }
-        r=Math.round(r/n); g=Math.round(g/n); b=Math.round(b/n);
-        wash.style.background = `radial-gradient(ellipse 620px 240px at 60px 40px, rgba(${r},${g},${b},0.22), transparent 70%)`;
-        wash.style.opacity = '1';
-      } catch (e) { /* CORS or decode issue — just skip the wash for this card */ }
-    };
-    if (img.complete) run(); else img.addEventListener('load', run);
-  });
-}
 async function loadAll() {
   try {
     const [tracked, history] = await Promise.all([fetchJson('data/tracked.json'), fetchJson('data/history.json')]);
     renderTrackedList(tracked);
     renderCards(tracked, history);
     applyArtworkWash();
+    backfillMissingArt(tracked);
     let latestDate = null;
     Object.values(history.snapshots || {}).forEach(list => {
       const d = list[list.length - 1];
