@@ -4,172 +4,188 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Listen Up — Long Term Target Tracking</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #0d0d0f;
-    --panel: #141416;
-    --card: #1a1a1e;
-    --card2: #212126;
-    --border: rgba(255,255,255,0.08);
-    --border2: rgba(255,255,255,0.14);
-    --green: #1db954;
-    --green2: #1ed760;
-    --text: #ececec;
-    --muted: #888;
-    --faint: #555;
-    --red: #f04444;
-    --amber: #f59e0b;
-    --blue: #4a9eff;
+    --bg: #101014;
+    --panel: #16161b;
+    --surface: #1b1b21;
+    --surface2: #212129;
+    --border: rgba(255,255,255,0.06);
+    --border2: rgba(255,255,255,0.13);
+    --text: #f2f2f4;
+    --muted: #9a9aa3;
+    --faint: #55555f;
+    --accent: #5b7cfa;
+    --accent-hover: #7292ff;
+    --up: #34d399;
+    --down: #f87171;
+    --gold: #e8b95c;
+    --silver: #b9bcc6;
+    --bronze: #c98a54;
     --mono: 'DM Mono', monospace;
     --sans: 'DM Sans', sans-serif;
   }
-  body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; font-size: 14px; line-height: 1.5; }
-  .shell { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; font-size: 15px; line-height: 1.5; }
+  .shell { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
   .side { background: var(--panel); border-right: 1px solid var(--border); display: flex; flex-direction: column; height: 100vh; position: sticky; top: 0; overflow-y: auto; }
-  .side-top { padding: 20px 20px 14px; border-bottom: 1px solid var(--border); }
-  .side-title { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
+  .side-top { padding: 22px 20px 16px; border-bottom: 1px solid var(--border); }
+  .logo { height: 42px; filter: invert(1); display: block; margin-bottom: 12px; opacity: 0.95; }
+  .logo-fallback { display:none; font-family: var(--sans); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .logo-fallback .bar { display:inline-block; width:16px; height:4px; background:var(--accent); border-radius:2px; margin-right:8px; vertical-align:middle; }
+  .side-title { font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: -0.005em; }
   .side-sub { font-size: 11px; color: var(--faint); margin-top: 2px; }
-  .side-block { padding: 14px 20px; border-bottom: 1px solid var(--border); }
-  .block-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; font-family: var(--mono); display:flex; justify-content:space-between; align-items:center; }
-  .block-label button.link { background:none; border:none; color:var(--faint); font-family:var(--mono); font-size:10px; cursor:pointer; text-transform:none; letter-spacing:0; }
-  .block-label button.link:hover { color: var(--green2); }
+  .side-block { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  .block-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-bottom: 9px; display:flex; justify-content:space-between; align-items:center; }
+  .block-label button.link { background:none; border:none; color:var(--faint); font-size: 11px; cursor:pointer; text-transform:none; letter-spacing:0; font-weight:500; }
+  .block-label button.link:hover { color: var(--accent); }
   input[type=text], input[type=password] {
-    width: 100%; background: var(--card2); border: 1px solid var(--border2);
-    border-radius: 7px; padding: 8px 10px; color: var(--text); font-family: var(--sans);
-    font-size: 13px; outline: none; transition: border-color 0.15s;
+    width: 100%; background: var(--surface2); border: 1px solid var(--border2);
+    border-radius: 8px; padding: 9px 11px; color: var(--text); font-family: var(--sans);
+    font-size: 13.5px; outline: none; transition: border-color 0.15s;
   }
-  input[type=text]:focus, input[type=password]:focus { border-color: var(--green); }
+  input[type=text]:focus, input[type=password]:focus { border-color: var(--accent); }
   input::placeholder { color: var(--faint); }
-  .field-label { font-size: 10px; color: var(--faint); font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; display:block; margin: 8px 0 3px; }
+  .field-label { font-size: 10px; color: var(--faint); letter-spacing: 0.05em; text-transform: uppercase; display:block; margin: 9px 0 4px; font-weight: 600; }
   .field-label:first-child { margin-top: 0; }
-  .btn-green {
-    display: block; width: 100%; margin-top: 8px;
-    background: var(--green); color: #000; border: none; border-radius: 7px;
-    padding: 8px; font-family: var(--sans); font-size: 13px; font-weight: 600;
+  .btn-accent {
+    display: block; width: 100%; margin-top: 9px;
+    background: var(--accent); color: #fff; border: none; border-radius: 8px;
+    padding: 9px; font-family: var(--sans); font-size: 13.5px; font-weight: 600;
     cursor: pointer; transition: background 0.15s;
   }
-  .btn-green:hover { background: var(--green2); }
-  .btn-green:disabled { background: var(--card2); color: var(--faint); cursor: not-allowed; }
-  .btn-ghost {
-    display: block; width: 100%; margin-top: 8px;
-    background: none; color: var(--muted); border: 1px dashed var(--border2); border-radius: 7px;
-    padding: 8px; font-family: var(--sans); font-size: 12px; cursor: pointer; transition: border-color 0.15s, color 0.15s;
-  }
-  .btn-ghost:hover { border-color: var(--green); color: var(--green2); }
-  .notice { font-size: 12px; margin-top: 7px; padding: 6px 9px; border-radius: 6px; display: none; line-height: 1.4; }
+  .btn-accent:hover { background: #6f8bff; }
+  .btn-accent:disabled { background: var(--surface2); color: var(--faint); cursor: not-allowed; }
+  .notice { font-size: 12.5px; margin-top: 8px; padding: 7px 10px; border-radius: 7px; display: none; line-height: 1.4; }
   .notice.show { display: block; }
   .notice.loading { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border2); }
-  .notice.error   { background: rgba(240,68,68,0.1); color: var(--red); border: 1px solid rgba(240,68,68,0.2); }
-  .notice.success { background: rgba(29,185,84,0.08); color: var(--green2); border: 1px solid rgba(29,185,84,0.15); }
+  .notice.error   { background: rgba(248,113,113,0.1); color: var(--down); border: 1px solid rgba(248,113,113,0.2); }
+  .notice.success { background: rgba(52,211,153,0.08); color: var(--up); border: 1px solid rgba(52,211,153,0.18); }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .spin { display: inline-block; width: 10px; height: 10px; border: 2px solid rgba(29,185,84,0.25); border-top-color: var(--green); border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 5px; }
-  .results { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
-  .result-item { display: flex; align-items: center; gap: 9px; padding: 9px; background: var(--card); border: 1px solid var(--border); border-radius: 7px; cursor: pointer; transition: border-color 0.12s, background 0.12s; }
-  .result-item:hover { border-color: var(--border2); background: var(--card2); }
-  .result-art { width: 34px; height: 34px; border-radius: 5px; background: var(--card2); object-fit: cover; flex-shrink: 0; }
-  .result-name { font-size: 12px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .spin { display: inline-block; width: 10px; height: 10px; border: 2px solid rgba(91,124,250,0.3); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 6px; }
+  .results { display: flex; flex-direction: column; gap: 6px; margin-top: 9px; }
+  .result-item { display: flex; align-items: center; gap: 9px; padding: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: border-color 0.12s, background 0.12s; }
+  .result-item:hover { border-color: var(--accent); background: var(--surface2); }
+  .result-art { width: 32px; height: 32px; border-radius: 5px; background: var(--surface2); object-fit: cover; flex-shrink: 0; }
+  .result-name { font-size: 12.5px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .result-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
-  .tracked-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; cursor: pointer; }
+  .tracked-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; cursor: pointer; color: var(--muted); }
   .tracked-item:last-child { border-bottom: none; }
-  .tracked-item:hover { color: var(--green2); }
-  .tracked-item .rm { margin-left: auto; background: none; border: none; color: var(--faint); font-size: 15px; cursor: pointer; padding: 0 4px; flex-shrink:0; }
-  .tracked-item .rm:hover { color: var(--red); }
-  .debug-area { padding: 10px 20px 16px; margin-top: auto; border-top: 1px solid var(--border); }
-  .debug-label { font-size: 10px; color: var(--faint); font-family: var(--mono); margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
-  .debug-clear { background: none; border: none; color: var(--faint); font-size: 10px; cursor: pointer; font-family: var(--mono); padding: 0; }
-  #debugBox { font-size: 10px; color: var(--faint); font-family: var(--mono); background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 7px 8px; height: 100px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; line-height: 1.5; }
+  .tracked-item:hover { color: var(--accent); }
+  .tracked-item .rm { margin-left: auto; background: none; border: none; color: var(--faint); font-size: 16px; cursor: pointer; padding: 0 4px; flex-shrink:0; }
+  .tracked-item .rm:hover { color: var(--down); }
+  .debug-area { padding: 12px 20px 18px; margin-top: auto; border-top: 1px solid var(--border); }
+  .debug-label { font-size: 10px; color: var(--faint); margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; }
+  .debug-clear { background: none; border: none; color: var(--faint); font-size: 10px; cursor: pointer; padding: 0; }
+  #debugBox { font-size: 10px; color: var(--faint); font-family: var(--mono); background: var(--surface); border: 1px solid var(--border); border-radius: 7px; padding: 8px; height: 80px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; line-height: 1.5; }
   .main { display: flex; flex-direction: column; min-height: 100vh; }
-  .main-header { padding: 20px 28px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .main-title { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
-  .main-sub { font-size: 11px; color: var(--faint); font-family: var(--mono); margin-top: 2px; }
-  .content { padding: 22px 28px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
-  .empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--faint); text-align: center; padding: 40px; }
-  .empty-icon { font-size: 36px; opacity: 0.25; }
-  .track-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
-  .track-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-  .track-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; }
-  .track-meta { font-size: 10px; color: var(--faint); font-family: var(--mono); margin-top: 2px; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
-  .stat { background: var(--card); border: 1px solid var(--border); border-radius: 9px; padding: 10px 12px; }
-  .stat-label { font-size: 10px; color: var(--faint); font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase; }
-  .stat-value { font-size: 18px; font-weight: 600; margin-top: 3px; letter-spacing: -0.02em; display:flex; align-items:baseline; gap:6px; }
-  .delta { font-size: 11px; font-family: var(--mono); font-weight: 500; }
-  .delta.up { color: var(--green2); }
-  .delta.down { color: var(--red); }
-  .delta.flat { color: var(--faint); }
-  .section { margin-bottom: 14px; }
-  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
-  .section-title { font-size: 10px; font-weight: 500; color: var(--faint); font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
-  .badge { font-size: 10px; padding: 2px 8px; border-radius: 99px; font-family: var(--mono); }
-  .badge-green { background: rgba(29,185,84,0.12); color: var(--green2); border: 1px solid rgba(29,185,84,0.2); }
-  .badge-gray  { background: var(--card); color: var(--faint); border: 1px solid var(--border2); }
-  .badge-amber { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
-  .table-wrap { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; font-size: 12px; }
-  thead th { background: var(--card); padding: 7px 10px; text-align: left; font-size: 10px; font-weight: 500; color: var(--faint); font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border); white-space: nowrap; }
-  tbody tr { border-bottom: 1px solid var(--border); }
-  tbody tr:last-child { border-bottom: none; }
-  tbody tr:hover { background: rgba(255,255,255,0.02); }
-  td { padding: 7px 10px; vertical-align: middle; }
-  .pl-link { color: var(--blue); text-decoration: underline; font-weight: 500; }
-  .pl-link:hover { color: #76b8ff; }
-  .mono-sm { font-family: var(--mono); font-size: 11px; color: var(--muted); }
-  details.all-independent summary { cursor: pointer; font-size: 11px; color: var(--faint); font-family: var(--mono); padding: 6px 0; }
-  details.all-independent summary:hover { color: var(--muted); }
+  .main-header { padding: 24px 36px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .main-title { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+  .main-sub { font-size: 12.5px; color: var(--faint); margin-top: 3px; }
+  .content { padding: 24px 36px 40px; flex: 1; display: flex; flex-direction: column; gap: 20px; max-width: 1560px; width: 100%; margin: 0 auto; }
+  .empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--faint); text-align: center; padding: 40px; }
+  .empty-icon { font-size: 38px; opacity: 0.2; }
+
+  .track-card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; }
+  .track-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  .track-name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+  .track-meta { font-size: 12px; color: var(--faint); margin-top: 4px; }
+  .track-meta .live-tag { color: var(--accent); font-weight: 600; }
+
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .hero-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .hero-label { font-size: 11.5px; color: var(--muted); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 6px; }
+  .hero-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .hero-num { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+  .pill { display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; font-weight: 600; padding: 3px 9px; border-radius: 99px; }
+  .pill.up { color: var(--up); background: rgba(52,211,153,0.12); }
+  .pill.down { color: var(--down); background: rgba(248,113,113,0.12); }
+  .pill.flat { color: var(--faint); background: rgba(255,255,255,0.05); }
+
+  .section { margin-bottom: 18px; }
+  .section:last-child { margin-bottom: 0; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; }
+  .section-title { font-size: 12.5px; font-weight: 700; color: var(--text); }
+  .section-count { font-size: 11.5px; color: var(--faint); }
+
+  .supporter-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .supporter { display: flex; align-items: center; gap: 9px; background: var(--surface); border: 1px solid var(--border); border-radius: 11px; padding: 8px 12px 8px 8px; }
+  .supporter .ring { width: 30px; height: 30px; border-radius: 50%; display:flex; align-items:center; justify-content:center; font-size: 12px; font-weight: 700; flex-shrink:0; color: #14140f; }
+  .supporter .ring.tier-1 { background: var(--gold); }
+  .supporter .ring.tier-2 { background: var(--silver); }
+  .supporter .ring.tier-3 { background: var(--bronze); }
+  .supporter .name { font-size: 13px; font-weight: 600; }
+  .supporter .followers { font-size: 11px; color: var(--muted); }
+  .empty-note { font-size: 12.5px; color: var(--faint); padding: 10px 0; }
+
+  .duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 980px) { .duo-grid { grid-template-columns: 1fr; } }
+
+  .list-rows { display: flex; flex-direction: column; }
+  .list-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .list-row:last-child { border-bottom: none; }
+  .list-row .left { min-width: 0; flex: 1; }
+  .list-row .pname { font-size: 13.5px; font-weight: 500; color: var(--text); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  .list-row .pname:hover { color: var(--accent); }
+  .list-row .curator { font-size: 11.5px; color: var(--faint); margin-top: 1px; }
+  .list-row .followers { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .tag-editorial { font-size: 10px; color: var(--faint); background: var(--surface2); padding: 1px 7px; border-radius: 99px; margin-left: 6px; }
+
   ::-webkit-scrollbar { width: 4px; height: 4px; }
-  ::-webkit-scrollbar-thumb { background: var(--card2); border-radius: 2px; }
+  ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 2px; }
 </style>
 </head>
 <body>
 <div class="shell">
   <aside class="side">
     <div class="side-top">
+      <img id="logoImg" class="logo" src="logo.png" alt="Listen Up" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
+      <div id="logoFallback" class="logo-fallback"><span class="bar"></span>LISTEN UP</div>
       <div class="side-title">Long Term Target Tracking</div>
-      <div class="side-sub">Listen Up · live editorial &amp; independent movement</div>
+      <div class="side-sub">live editorial &amp; independent movement</div>
     </div>
 
     <div class="side-block">
       <div class="block-label">Settings <button class="link" onclick="toggleSettings()">edit</button></div>
       <div id="settingsForm" style="display:none;">
         <label class="field-label">GitHub owner/org</label>
-        <input type="text" id="ghOwner" placeholder="e.g. listenup-music">
+        <input type="text" id="ghOwner" placeholder="e.g. mattrimmo">
         <label class="field-label">Repo name</label>
-        <input type="text" id="ghRepo" placeholder="e.g. long-term-tracking">
+        <input type="text" id="ghRepo" placeholder="e.g. targettracking">
         <label class="field-label">GitHub token (write access to this repo)</label>
         <input type="password" id="ghToken" placeholder="paste token — kept in this browser only">
         <label class="field-label">Spotify Client ID</label>
         <input type="text" id="spId" placeholder="for searching tracks to add">
         <label class="field-label">Spotify Client Secret</label>
         <input type="password" id="spSecret" placeholder="for searching tracks to add">
-        <button class="btn-green" onclick="saveSettings()">Save</button>
+        <button class="btn-accent" onclick="saveSettings()">Save</button>
       </div>
-      <div id="settingsSummary" class="mono-sm"></div>
+      <div id="settingsSummary" style="font-size:12px;color:var(--muted)"></div>
     </div>
 
     <div class="side-block">
       <div class="block-label">Add a track</div>
       <input type="text" id="q" placeholder="Search title/artist, or paste Spotify link">
-      <button class="btn-green" id="searchBtn" onclick="doSearch()">Search</button>
+      <button class="btn-accent" id="searchBtn" onclick="doSearch()">Search</button>
       <div class="notice" id="searchNotice"></div>
       <div class="results" id="results"></div>
     </div>
 
     <div class="side-block">
-      <div class="block-label">Currently tracked <span id="trackedCount" class="mono-sm"></span></div>
+      <div class="block-label">Currently tracked <span id="trackedCount" style="font-size:12px;color:var(--faint)"></span></div>
       <div id="trackedList"></div>
     </div>
 
     <div class="side-block">
       <div class="block-label">Sync</div>
-      <div class="mono-sm" id="lastSyncNote">—</div>
-      <button class="btn-green" onclick="checkLiveNow()" id="liveBtn">Check live now</button>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:2px;" id="lastSyncNote">—</div>
+      <button class="btn-accent" onclick="checkLiveNow()" id="liveBtn">Check live now</button>
       <div class="notice" id="syncNotice"></div>
     </div>
 
     <div class="debug-area">
-      <div class="debug-label"><span>DEBUG</span><button class="debug-clear" onclick="document.getElementById('debugBox').textContent=''">clear</button></div>
+      <div class="debug-label"><span>Debug</span><button class="debug-clear" onclick="document.getElementById('debugBox').textContent=''">clear</button></div>
       <div id="debugBox"></div>
     </div>
   </aside>
@@ -241,12 +257,14 @@ function notice(id, text, type) {
 function hideNotice(id) { document.getElementById(id).className = 'notice'; }
 const fmtNum = n => (n == null ? '—' : Number(n).toLocaleString('en-GB'));
 const trunc  = (s, n) => (s && s.length > n ? s.slice(0, n) + '…' : (s || ''));
-function deltaSpan(d, suffix) {
-  suffix = suffix || '';
-  if (d === null || d === undefined) return '<span class="delta flat">first snapshot</span>';
-  if (d > 0) return `<span class="delta up">▲ ${d}${suffix} vs last week</span>`;
-  if (d < 0) return `<span class="delta down">▼ ${Math.abs(d)}${suffix} vs last week</span>`;
-  return '<span class="delta flat">— no change vs last week</span>';
+function pill(d) {
+  if (d === null || d === undefined) return '<span class="pill flat">first snapshot</span>';
+  if (d > 0) return `<span class="pill up">▲ ${d}</span>`;
+  if (d < 0) return `<span class="pill down">▼ ${Math.abs(d)}</span>`;
+  return '<span class="pill flat">— no change</span>';
+}
+function initials(name) {
+  return (name || '?').trim().split(/\s+/).slice(0,2).map(w => w[0]).join('').toUpperCase();
 }
 // ─────────────────────────────────────────────────────────────────────────────
 // GITHUB API — read/write the shared data files + trigger the sync workflow
@@ -449,32 +467,47 @@ async function fetchJson(path) {
 function renderTrackedList(tracked) {
   const el = document.getElementById('trackedList');
   document.getElementById('trackedCount').textContent = '(' + tracked.tracks.length + ')';
-  if (!tracked.tracks.length) { el.innerHTML = '<div class="mono-sm" style="padding:6px 0;">Nothing tracked yet.</div>'; return; }
+  if (!tracked.tracks.length) { el.innerHTML = '<div style="font-size:12px;color:var(--faint);padding:6px 0;">Nothing tracked yet.</div>'; return; }
   el.innerHTML = '';
   tracked.tracks.forEach(t => {
     const row = document.createElement('div');
     row.className = 'tracked-item';
     const label = t.artist + ' - ' + t.track;
-    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 30)}</span>
+    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 28)}</span>
       <button class="rm" title="Remove">×</button>`;
     row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
     el.appendChild(row);
   });
 }
-function playlistRows(list) {
-  if (!list.length) return '<tr><td colspan="2" style="padding:12px 10px;color:var(--faint)">None currently.</td></tr>';
-  return list.map(p => `<tr>
-    <td><a class="pl-link" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener">${trunc(p.name, 40)}</a>${p.owner_name ? ' <span class="mono-sm">— '+trunc(p.owner_name,20)+'</span>' : ''}</td>
-    <td style="text-align:right" class="mono-sm">${fmtNum(p.followers)}</td>
-  </tr>`).join('');
+function editorialListRows(list) {
+  if (!list.length) return '<div class="empty-note">None currently.</div>';
+  return '<div class="list-rows">' + list.map(p => `
+    <div class="list-row">
+      <div class="left"><a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 38)}</a></div>
+      <div class="followers">${fmtNum(p.followers)}</div>
+    </div>`).join('') + '</div>';
 }
-function keySupporterRows(list) {
-  if (!list.length) return '<tr><td colspan="3" style="padding:12px 10px;color:var(--faint)">No matches from your master curator list yet — see "All independent placements" below, or add curators to data/curators.json.</td></tr>';
-  return list.map(p => `<tr>
-    <td><a class="pl-link" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener">${trunc(p.owner_name, 30)}</a></td>
-    <td><span class="badge ${p.tier===1?'badge-green':p.tier===2?'badge-amber':'badge-gray'}">Tier ${p.tier}</span></td>
-    <td style="text-align:right" class="mono-sm">${fmtNum(p.followers)}</td>
-  </tr>`).join('');
+function independentListRows(list) {
+  if (!list.length) return '<div class="empty-note">None currently.</div>';
+  return '<div class="list-rows">' + list.map(p => `
+    <div class="list-row">
+      <div class="left">
+        <a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 30)}</a>
+        <div class="curator">${trunc(p.owner_name || '—', 24)}</div>
+      </div>
+      <div class="followers">${fmtNum(p.followers)}</div>
+    </div>`).join('') + '</div>';
+}
+function supporterRow(list) {
+  if (!list.length) return '<div class="empty-note">No matches from your master curator list yet — check "All independent placements" below, or add curators to data/curators.json.</div>';
+  return '<div class="supporter-row">' + list.map(p => `
+    <div class="supporter" title="${p.owner_name} — Tier ${p.tier}${p.notes ? ' — ' + p.notes : ''}">
+      <div class="ring tier-${p.tier}">${initials(p.owner_name)}</div>
+      <div>
+        <div class="name">${trunc(p.owner_name, 20)}</div>
+        <div class="followers">${fmtNum(p.followers)} followers</div>
+      </div>
+    </div>`).join('') + '</div>';
 }
 function renderCards(tracked, history) {
   const content = document.getElementById('content');
@@ -494,7 +527,7 @@ function renderCards(tracked, history) {
         <div class="track-head">
           <div><div class="track-name">${t.artist} - ${t.track}</div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
         </div>
-        <div class="mono-sm">No snapshot yet — click "Check live now" to pull the first one.</div>`;
+        <div class="empty-note">No snapshot yet — click "Check live now" to pull the first one.</div>`;
       content.appendChild(card);
       return;
     }
@@ -502,40 +535,33 @@ function renderCards(tracked, history) {
       <div class="track-head">
         <div>
           <div class="track-name">${t.artist} - ${t.track}</div>
-          <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' (live check)'}</div>
+          <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}</div>
         </div>
       </div>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-label">Editorial playlists</div>
-          <div class="stat-value">${latest.editorial_count}</div>
-          <div>${deltaSpan(latest.editorial_count_delta)}</div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-label">Editorial playlists</div>
+          <div class="hero-row"><span class="hero-num">${latest.editorial_count}</span>${pill(latest.editorial_count_delta)}</div>
         </div>
-        <div class="stat">
-          <div class="stat-label">Independent followers</div>
-          <div class="stat-value">${fmtNum(latest.independent_followers_total)}</div>
-          <div>${deltaSpan(latest.independent_followers_delta)}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Key supporters</div>
-          <div class="stat-value">${latest.key_supporters.length}</div>
+        <div class="hero-stat">
+          <div class="hero-label">Independent followers</div>
+          <div class="hero-row"><span class="hero-num">${fmtNum(latest.independent_followers_total)}</span>${pill(latest.independent_followers_delta)}</div>
         </div>
       </div>
       <div class="section">
-        <div class="section-head"><span class="section-title">Key independent supporters</span><span class="badge badge-green">from master list</span></div>
-        <div class="table-wrap"><table><thead><tr><th>Curator</th><th>Tier</th><th style="text-align:right">Followers</th></tr></thead>
-        <tbody>${keySupporterRows(latest.key_supporters)}</tbody></table></div>
+        <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
+        ${supporterRow(latest.key_supporters)}
       </div>
-      <div class="section">
-        <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="badge badge-gray">${latest.editorial_count} currently</span></div>
-        <div class="table-wrap"><table><thead><tr><th>Playlist</th><th style="text-align:right">Followers</th></tr></thead>
-        <tbody>${playlistRows(latest.editorial_playlists)}</tbody></table></div>
-      </div>
-      <details class="all-independent">
-        <summary>All independent placements (${latest.independent_playlists.length}) — includes curators not yet in your master list</summary>
-        <div class="table-wrap"><table><thead><tr><th>Playlist / curator</th><th style="text-align:right">Followers</th></tr></thead>
-        <tbody>${playlistRows(latest.independent_playlists)}</tbody></table></div>
-      </details>`;
+      <div class="duo-grid">
+        <div class="section">
+          <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="section-count">${latest.editorial_count}</span></div>
+          ${editorialListRows(latest.editorial_playlists)}
+        </div>
+        <div class="section">
+          <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
+          ${independentListRows(latest.independent_playlists)}
+        </div>
+      </div>`;
     content.appendChild(card);
   });
 }
@@ -544,7 +570,6 @@ async function loadAll() {
     const [tracked, history] = await Promise.all([fetchJson('data/tracked.json'), fetchJson('data/history.json')]);
     renderTrackedList(tracked);
     renderCards(tracked, history);
-    // Last sync note = most recent snapshot date across all tracks
     let latestDate = null;
     Object.values(history.snapshots || {}).forEach(list => {
       const d = list[list.length - 1];
