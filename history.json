@@ -1,0 +1,4 @@
+{
+  "_readme": "Snapshot history per tracked ISRC, written only by the sync script (GitHub Actions), never hand-edited. 'official' snapshots are the Wednesday weekly run — week-on-week movement is always calculated against the most recent official snapshot. 'Check live now' writes an unofficial snapshot so you can see current standing without disturbing the official weekly delta.",
+  "snapshots": {}
+}

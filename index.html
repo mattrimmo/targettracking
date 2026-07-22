@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listen Up — Long Term Target Tracking</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d0d0f;
+    --panel: #141416;
+    --card: #1a1a1e;
+    --card2: #212126;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --green: #1db954;
+    --green2: #1ed760;
+    --text: #ececec;
+    --muted: #888;
+    --faint: #555;
+    --red: #f04444;
+    --amber: #f59e0b;
+    --blue: #4a9eff;
+    --mono: 'DM Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+  }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; font-size: 14px; line-height: 1.5; }
+  .shell { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }
+  .side { background: var(--panel); border-right: 1px solid var(--border); display: flex; flex-direction: column; height: 100vh; position: sticky; top: 0; overflow-y: auto; }
+  .side-top { padding: 20px 20px 14px; border-bottom: 1px solid var(--border); }
+  .side-title { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
+  .side-sub { font-size: 11px; color: var(--faint); margin-top: 2px; }
+  .side-block { padding: 14px 20px; border-bottom: 1px solid var(--border); }
+  .block-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; font-family: var(--mono); display:flex; justify-content:space-between; align-items:center; }
+  .block-label button.link { background:none; border:none; color:var(--faint); font-family:var(--mono); font-size:10px; cursor:pointer; text-transform:none; letter-spacing:0; }
+  .block-label button.link:hover { color: var(--green2); }
+  input[type=text], input[type=password] {
+    width: 100%; background: var(--card2); border: 1px solid var(--border2);
+    border-radius: 7px; padding: 8px 10px; color: var(--text); font-family: var(--sans);
+    font-size: 13px; outline: none; transition: border-color 0.15s;
+  }
+  input[type=text]:focus, input[type=password]:focus { border-color: var(--green); }
+  input::placeholder { color: var(--faint); }
+  .field-label { font-size: 10px; color: var(--faint); font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; display:block; margin: 8px 0 3px; }
+  .field-label:first-child { margin-top: 0; }
+  .btn-green {
+    display: block; width: 100%; margin-top: 8px;
+    background: var(--green); color: #000; border: none; border-radius: 7px;
+    padding: 8px; font-family: var(--sans); font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .btn-green:hover { background: var(--green2); }
+  .btn-green:disabled { background: var(--card2); color: var(--faint); cursor: not-allowed; }
+  .btn-ghost {
+    display: block; width: 100%; margin-top: 8px;
+    background: none; color: var(--muted); border: 1px dashed var(--border2); border-radius: 7px;
+    padding: 8px; font-family: var(--sans); font-size: 12px; cursor: pointer; transition: border-color 0.15s, color 0.15s;
+  }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green2); }
+  .notice { font-size: 12px; margin-top: 7px; padding: 6px 9px; border-radius: 6px; display: none; line-height: 1.4; }
+  .notice.show { display: block; }
+  .notice.loading { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border2); }
+  .notice.error   { background: rgba(240,68,68,0.1); color: var(--red); border: 1px solid rgba(240,68,68,0.2); }
+  .notice.success { background: rgba(29,185,84,0.08); color: var(--green2); border: 1px solid rgba(29,185,84,0.15); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { display: inline-block; width: 10px; height: 10px; border: 2px solid rgba(29,185,84,0.25); border-top-color: var(--green); border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 5px; }
+  .results { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+  .result-item { display: flex; align-items: center; gap: 9px; padding: 9px; background: var(--card); border: 1px solid var(--border); border-radius: 7px; cursor: pointer; transition: border-color 0.12s, background 0.12s; }
+  .result-item:hover { border-color: var(--border2); background: var(--card2); }
+  .result-art { width: 34px; height: 34px; border-radius: 5px; background: var(--card2); object-fit: cover; flex-shrink: 0; }
+  .result-name { font-size: 12px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .result-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .tracked-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; cursor: pointer; }
+  .tracked-item:last-child { border-bottom: none; }
+  .tracked-item:hover { color: var(--green2); }
+  .tracked-item .rm { margin-left: auto; background: none; border: none; color: var(--faint); font-size: 15px; cursor: pointer; padding: 0 4px; flex-shrink:0; }
+  .tracked-item .rm:hover { color: var(--red); }
+  .debug-area { padding: 10px 20px 16px; margin-top: auto; border-top: 1px solid var(--border); }
+  .debug-label { font-size: 10px; color: var(--faint); font-family: var(--mono); margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+  .debug-clear { background: none; border: none; color: var(--faint); font-size: 10px; cursor: pointer; font-family: var(--mono); padding: 0; }
+  #debugBox { font-size: 10px; color: var(--faint); font-family: var(--mono); background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 7px 8px; height: 100px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; line-height: 1.5; }
+  .main { display: flex; flex-direction: column; min-height: 100vh; }
+  .main-header { padding: 20px 28px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .main-title { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+  .main-sub { font-size: 11px; color: var(--faint); font-family: var(--mono); margin-top: 2px; }
+  .content { padding: 22px 28px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
+  .empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--faint); text-align: center; padding: 40px; }
+  .empty-icon { font-size: 36px; opacity: 0.25; }
+  .track-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+  .track-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .track-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; }
+  .track-meta { font-size: 10px; color: var(--faint); font-family: var(--mono); margin-top: 2px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: 9px; padding: 10px 12px; }
+  .stat-label { font-size: 10px; color: var(--faint); font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase; }
+  .stat-value { font-size: 18px; font-weight: 600; margin-top: 3px; letter-spacing: -0.02em; display:flex; align-items:baseline; gap:6px; }
+  .delta { font-size: 11px; font-family: var(--mono); font-weight: 500; }
+  .delta.up { color: var(--green2); }
+  .delta.down { color: var(--red); }
+  .delta.flat { color: var(--faint); }
+  .section { margin-bottom: 14px; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
+  .section-title { font-size: 10px; font-weight: 500; color: var(--faint); font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+  .badge { font-size: 10px; padding: 2px 8px; border-radius: 99px; font-family: var(--mono); }
+  .badge-green { background: rgba(29,185,84,0.12); color: var(--green2); border: 1px solid rgba(29,185,84,0.2); }
+  .badge-gray  { background: var(--card); color: var(--faint); border: 1px solid var(--border2); }
+  .badge-amber { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
+  .table-wrap { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  thead th { background: var(--card); padding: 7px 10px; text-align: left; font-size: 10px; font-weight: 500; color: var(--faint); font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  td { padding: 7px 10px; vertical-align: middle; }
+  .pl-link { color: var(--blue); text-decoration: underline; font-weight: 500; }
+  .pl-link:hover { color: #76b8ff; }
+  .mono-sm { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  details.all-independent summary { cursor: pointer; font-size: 11px; color: var(--faint); font-family: var(--mono); padding: 6px 0; }
+  details.all-independent summary:hover { color: var(--muted); }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-thumb { background: var(--card2); border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="side-top">
+      <div class="side-title">Long Term Target Tracking</div>
+      <div class="side-sub">Listen Up · live editorial &amp; independent movement</div>
+    </div>
+
+    <div class="side-block">
+      <div class="block-label">Settings <button class="link" onclick="toggleSettings()">edit</button></div>
+      <div id="settingsForm" style="display:none;">
+        <label class="field-label">GitHub owner/org</label>
+        <input type="text" id="ghOwner" placeholder="e.g. listenup-music">
+        <label class="field-label">Repo name</label>
+        <input type="text" id="ghRepo" placeholder="e.g. long-term-tracking">
+        <label class="field-label">GitHub token (write access to this repo)</label>
+        <input type="password" id="ghToken" placeholder="paste token — kept in this browser only">
+        <label class="field-label">Spotify Client ID</label>
+        <input type="text" id="spId" placeholder="for searching tracks to add">
+        <label class="field-label">Spotify Client Secret</label>
+        <input type="password" id="spSecret" placeholder="for searching tracks to add">
+        <button class="btn-green" onclick="saveSettings()">Save</button>
+      </div>
+      <div id="settingsSummary" class="mono-sm"></div>
+    </div>
+
+    <div class="side-block">
+      <div class="block-label">Add a track</div>
+      <input type="text" id="q" placeholder="Search title/artist, or paste Spotify link">
+      <button class="btn-green" id="searchBtn" onclick="doSearch()">Search</button>
+      <div class="notice" id="searchNotice"></div>
+      <div class="results" id="results"></div>
+    </div>
+
+    <div class="side-block">
+      <div class="block-label">Currently tracked <span id="trackedCount" class="mono-sm"></span></div>
+      <div id="trackedList"></div>
+    </div>
+
+    <div class="side-block">
+      <div class="block-label">Sync</div>
+      <div class="mono-sm" id="lastSyncNote">—</div>
+      <button class="btn-green" onclick="checkLiveNow()" id="liveBtn">Check live now</button>
+      <div class="notice" id="syncNotice"></div>
+    </div>
+
+    <div class="debug-area">
+      <div class="debug-label"><span>DEBUG</span><button class="debug-clear" onclick="document.getElementById('debugBox').textContent=''">clear</button></div>
+      <div id="debugBox"></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <div>
+        <div class="main-title">Target Tracking</div>
+        <div class="main-sub">Official week-on-week movement, refreshed every Wednesday</div>
+      </div>
+    </div>
+    <div class="content" id="content"></div>
+  </main>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// SETTINGS (localStorage only — nothing here is committed to the repo)
+// ─────────────────────────────────────────────────────────────────────────────
+function getSettings() {
+  return {
+    owner:  localStorage.getItem('ltt_owner')  || '',
+    repo:   localStorage.getItem('ltt_repo')   || '',
+    token:  localStorage.getItem('ltt_token')  || '',
+    spId:   localStorage.getItem('ltt_spid')   || '',
+    spSecret: localStorage.getItem('ltt_spsecret') || '',
+  };
+}
+function toggleSettings() {
+  const f = document.getElementById('settingsForm');
+  const s = getSettings();
+  document.getElementById('ghOwner').value = s.owner;
+  document.getElementById('ghRepo').value  = s.repo;
+  document.getElementById('ghToken').value = s.token;
+  document.getElementById('spId').value = s.spId;
+  document.getElementById('spSecret').value = s.spSecret;
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+}
+function saveSettings() {
+  localStorage.setItem('ltt_owner', document.getElementById('ghOwner').value.trim());
+  localStorage.setItem('ltt_repo',  document.getElementById('ghRepo').value.trim());
+  localStorage.setItem('ltt_token', document.getElementById('ghToken').value.trim());
+  localStorage.setItem('ltt_spid', document.getElementById('spId').value.trim());
+  localStorage.setItem('ltt_spsecret', document.getElementById('spSecret').value.trim());
+  document.getElementById('settingsForm').style.display = 'none';
+  renderSettingsSummary();
+  dbg('Settings saved locally.');
+}
+function renderSettingsSummary() {
+  const s = getSettings();
+  document.getElementById('settingsSummary').textContent =
+    (s.owner && s.repo) ? `${s.owner}/${s.repo}` : 'Not configured yet — click edit';
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// DEBUG / NOTICE HELPERS
+// ─────────────────────────────────────────────────────────────────────────────
+function dbg(msg) {
+  const box = document.getElementById('debugBox');
+  const ts  = new Date().toTimeString().slice(0,8);
+  box.textContent += ts + '  ' + msg + '\n';
+  box.scrollTop = box.scrollHeight;
+  console.log('[LTT]', msg);
+}
+function notice(id, text, type) {
+  const el = document.getElementById(id);
+  el.className = 'notice show ' + type;
+  el.innerHTML = (type === 'loading' ? '<span class="spin"></span>' : '') + text;
+}
+function hideNotice(id) { document.getElementById(id).className = 'notice'; }
+const fmtNum = n => (n == null ? '—' : Number(n).toLocaleString('en-GB'));
+const trunc  = (s, n) => (s && s.length > n ? s.slice(0, n) + '…' : (s || ''));
+function deltaSpan(d, suffix) {
+  suffix = suffix || '';
+  if (d === null || d === undefined) return '<span class="delta flat">first snapshot</span>';
+  if (d > 0) return `<span class="delta up">▲ ${d}${suffix} vs last week</span>`;
+  if (d < 0) return `<span class="delta down">▼ ${Math.abs(d)}${suffix} vs last week</span>`;
+  return '<span class="delta flat">— no change vs last week</span>';
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// GITHUB API — read/write the shared data files + trigger the sync workflow
+// ─────────────────────────────────────────────────────────────────────────────
+async function ghApi(path, opts) {
+  const s = getSettings();
+  if (!s.owner || !s.repo || !s.token) throw new Error('Set up GitHub owner/repo/token in Settings first.');
+  opts = opts || {};
+  const res = await fetch('https://api.github.com/repos/' + s.owner + '/' + s.repo + path, {
+    ...opts,
+    headers: {
+      'Authorization': 'token ' + s.token,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(opts.headers || {})
+    }
+  });
+  if (!res.ok) {
+    const body = await res.text().catch(() => '');
+    throw new Error('GitHub API ' + res.status + ': ' + body.slice(0, 200));
+  }
+  return res.status === 204 ? null : res.json();
+}
+async function ghGetFile(path) {
+  const d = await ghApi('/contents/' + path);
+  const content = JSON.parse(decodeURIComponent(escape(atob(d.content.replace(/\n/g, '')))));
+  return { content, sha: d.sha };
+}
+async function ghPutFile(path, contentObj, sha, message) {
+  const json = JSON.stringify(contentObj, null, 2) + '\n';
+  const b64  = btoa(unescape(encodeURIComponent(json)));
+  return ghApi('/contents/' + path, {
+    method: 'PUT',
+    body: JSON.stringify({ message, content: b64, sha })
+  });
+}
+async function ghTriggerSync(official) {
+  await ghApi('/actions/workflows/sync.yml/dispatches', {
+    method: 'POST',
+    body: JSON.stringify({ ref: 'main', inputs: { official: official ? 'true' : 'false' } })
+  });
+}
+async function ghLatestRun() {
+  const d = await ghApi('/actions/workflows/sync.yml/runs?per_page=1&event=workflow_dispatch');
+  return d.workflow_runs && d.workflow_runs[0];
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// SPOTIFY — client credentials, browser-side (public catalogue only, low risk)
+// ─────────────────────────────────────────────────────────────────────────────
+let _spToken = null, _spExpAt = 0;
+async function spToken() {
+  const s = getSettings();
+  if (!s.spId || !s.spSecret) throw new Error('Set Spotify Client ID/Secret in Settings to search for tracks.');
+  if (_spToken && Date.now() < _spExpAt) return _spToken;
+  const res = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Basic ' + btoa(s.spId + ':' + s.spSecret),
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'grant_type=client_credentials'
+  });
+  if (!res.ok) throw new Error('Spotify auth failed ' + res.status);
+  const data = await res.json();
+  _spToken = data.access_token;
+  _spExpAt = Date.now() + (data.expires_in - 30) * 1000;
+  return _spToken;
+}
+async function spGet(path) {
+  const tok = await spToken();
+  const res = await fetch('https://api.spotify.com/v1' + path, { headers: { 'Authorization': 'Bearer ' + tok } });
+  if (!res.ok) throw new Error('Spotify ' + res.status + ' on ' + path);
+  return res.json();
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// SEARCH (to add a track)
+// ─────────────────────────────────────────────────────────────────────────────
+async function doSearch() {
+  const raw = document.getElementById('q').value.trim();
+  if (!raw) return;
+  const btn = document.getElementById('searchBtn');
+  btn.disabled = true; btn.textContent = 'Searching…';
+  document.getElementById('results').innerHTML = '';
+  notice('searchNotice', 'Searching Spotify…', 'loading');
+  try {
+    const trackMatch = raw.match(/open\.spotify\.com\/track\/([A-Za-z0-9]+)/);
+    let items = [];
+    if (trackMatch) {
+      const t = await spGet('/tracks/' + trackMatch[1]);
+      items = [t];
+    } else {
+      const d = await spGet('/search?q=' + encodeURIComponent(raw) + '&type=track&limit=6');
+      items = d.tracks ? d.tracks.items : [];
+    }
+    hideNotice('searchNotice');
+    if (!items.length) { notice('searchNotice', 'No results found.', 'error'); }
+    const container = document.getElementById('results');
+    items.forEach(t => {
+      const img = t.album && t.album.images && t.album.images[2] ? t.album.images[2].url : (t.album && t.album.images && t.album.images[0] ? t.album.images[0].url : '');
+      const el = document.createElement('div');
+      el.className = 'result-item';
+      el.innerHTML = (img ? `<img class="result-art" src="${img}">` : '<div class="result-art"></div>') +
+        `<div style="flex:1;min-width:0;">
+          <div class="result-name">${t.name}</div>
+          <div class="result-sub">${t.artists.map(a=>a.name).join(' & ')}</div>
+        </div>`;
+      el.addEventListener('click', () => addTrack(t));
+      container.appendChild(el);
+    });
+  } catch (e) {
+    notice('searchNotice', e.message, 'error');
+    dbg('SEARCH ERROR: ' + e.message);
+  }
+  btn.disabled = false; btn.textContent = 'Search';
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// ADD / REMOVE TRACKED TRACKS  (commits directly to tracked.json via GitHub API)
+// ─────────────────────────────────────────────────────────────────────────────
+async function addTrack(spotifyTrack) {
+  const isrc = spotifyTrack.external_ids && spotifyTrack.external_ids.isrc;
+  if (!isrc) { notice('searchNotice', 'No ISRC found for this track.', 'error'); return; }
+  notice('searchNotice', 'Adding to tracked list…', 'loading');
+  try {
+    const { content, sha } = await ghGetFile('data/tracked.json');
+    if (content.tracks.some(t => t.isrc === isrc)) {
+      notice('searchNotice', 'Already tracked.', 'error');
+      return;
+    }
+    content.tracks.push({
+      isrc,
+      artist: spotifyTrack.artists.map(a => a.name).join(' & '),
+      track:  spotifyTrack.name,
+      added_at: new Date().toISOString().slice(0, 10)
+    });
+    await ghPutFile('data/tracked.json', content, sha, `Add track: ${spotifyTrack.artists[0].name} - ${spotifyTrack.name}`);
+    notice('searchNotice', '✓ Added. Run "Check live now" to pull its first snapshot.', 'success');
+    document.getElementById('results').innerHTML = '';
+    document.getElementById('q').value = '';
+    dbg('Added ' + isrc);
+    setTimeout(loadAll, 1500);
+  } catch (e) {
+    notice('searchNotice', e.message, 'error');
+    dbg('ADD ERROR: ' + e.message);
+  }
+}
+async function removeTrack(isrc, label) {
+  if (!confirm('Remove "' + label + '" from tracking? History is kept, it just stops updating.')) return;
+  notice('syncNotice', 'Removing…', 'loading');
+  try {
+    const { content, sha } = await ghGetFile('data/tracked.json');
+    content.tracks = content.tracks.filter(t => t.isrc !== isrc);
+    await ghPutFile('data/tracked.json', content, sha, `Remove track: ${label}`);
+    notice('syncNotice', '✓ Removed.', 'success');
+    setTimeout(loadAll, 1500);
+  } catch (e) {
+    notice('syncNotice', e.message, 'error');
+    dbg('REMOVE ERROR: ' + e.message);
+  }
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// CHECK LIVE NOW — triggers the Actions workflow, polls until it finishes
+// ─────────────────────────────────────────────────────────────────────────────
+async function checkLiveNow() {
+  const btn = document.getElementById('liveBtn');
+  btn.disabled = true;
+  notice('syncNotice', 'Triggering sync on GitHub Actions…', 'loading');
+  try {
+    await ghTriggerSync(false); // never touches the official weekly delta
+    await new Promise(r => setTimeout(r, 4000)); // give the run a moment to register
+    let run = await ghLatestRun();
+    let tries = 0;
+    while (run && run.status !== 'completed' && tries < 40) {
+      notice('syncNotice', 'Running… (' + run.status + ')', 'loading');
+      await new Promise(r => setTimeout(r, 5000));
+      run = await ghLatestRun();
+      tries++;
+    }
+    if (run && run.conclusion === 'success') {
+      notice('syncNotice', 'Waiting for the page to rebuild…', 'loading');
+      await new Promise(r => setTimeout(r, 15000)); // Pages rebuild delay
+      notice('syncNotice', '✓ Synced.', 'success');
+      loadAll();
+    } else {
+      notice('syncNotice', 'Run finished with status: ' + (run ? run.conclusion : 'unknown') + '. Check the Actions tab.', 'error');
+    }
+  } catch (e) {
+    notice('syncNotice', e.message, 'error');
+    dbg('SYNC ERROR: ' + e.message);
+  }
+  btn.disabled = false;
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// LOAD + RENDER
+// ─────────────────────────────────────────────────────────────────────────────
+async function fetchJson(path) {
+  const res = await fetch('./' + path + '?t=' + Date.now());
+  if (!res.ok) throw new Error('Could not load ' + path);
+  return res.json();
+}
+function renderTrackedList(tracked) {
+  const el = document.getElementById('trackedList');
+  document.getElementById('trackedCount').textContent = '(' + tracked.tracks.length + ')';
+  if (!tracked.tracks.length) { el.innerHTML = '<div class="mono-sm" style="padding:6px 0;">Nothing tracked yet.</div>'; return; }
+  el.innerHTML = '';
+  tracked.tracks.forEach(t => {
+    const row = document.createElement('div');
+    row.className = 'tracked-item';
+    const label = t.artist + ' - ' + t.track;
+    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 30)}</span>
+      <button class="rm" title="Remove">×</button>`;
+    row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
+    el.appendChild(row);
+  });
+}
+function playlistRows(list) {
+  if (!list.length) return '<tr><td colspan="2" style="padding:12px 10px;color:var(--faint)">None currently.</td></tr>';
+  return list.map(p => `<tr>
+    <td><a class="pl-link" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener">${trunc(p.name, 40)}</a>${p.owner_name ? ' <span class="mono-sm">— '+trunc(p.owner_name,20)+'</span>' : ''}</td>
+    <td style="text-align:right" class="mono-sm">${fmtNum(p.followers)}</td>
+  </tr>`).join('');
+}
+function keySupporterRows(list) {
+  if (!list.length) return '<tr><td colspan="3" style="padding:12px 10px;color:var(--faint)">No matches from your master curator list yet — see "All independent placements" below, or add curators to data/curators.json.</td></tr>';
+  return list.map(p => `<tr>
+    <td><a class="pl-link" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener">${trunc(p.owner_name, 30)}</a></td>
+    <td><span class="badge ${p.tier===1?'badge-green':p.tier===2?'badge-amber':'badge-gray'}">Tier ${p.tier}</span></td>
+    <td style="text-align:right" class="mono-sm">${fmtNum(p.followers)}</td>
+  </tr>`).join('');
+}
+function renderCards(tracked, history) {
+  const content = document.getElementById('content');
+  if (!tracked.tracks.length) {
+    content.innerHTML = `<div class="empty-state"><div class="empty-icon">◎</div><div>Nothing tracked yet.<br>Search for a track on the left to start following it.</div></div>`;
+    return;
+  }
+  content.innerHTML = '';
+  tracked.tracks.forEach(t => {
+    const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
+    const latest = snaps[snaps.length - 1];
+    const card = document.createElement('div');
+    card.className = 'track-card';
+    card.id = 'card-' + t.isrc;
+    if (!latest) {
+      card.innerHTML = `
+        <div class="track-head">
+          <div><div class="track-name">${t.artist} - ${t.track}</div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
+        </div>
+        <div class="mono-sm">No snapshot yet — click "Check live now" to pull the first one.</div>`;
+      content.appendChild(card);
+      return;
+    }
+    card.innerHTML = `
+      <div class="track-head">
+        <div>
+          <div class="track-name">${t.artist} - ${t.track}</div>
+          <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' (live check)'}</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-label">Editorial playlists</div>
+          <div class="stat-value">${latest.editorial_count}</div>
+          <div>${deltaSpan(latest.editorial_count_delta)}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Independent followers</div>
+          <div class="stat-value">${fmtNum(latest.independent_followers_total)}</div>
+          <div>${deltaSpan(latest.independent_followers_delta)}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Key supporters</div>
+          <div class="stat-value">${latest.key_supporters.length}</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head"><span class="section-title">Key independent supporters</span><span class="badge badge-green">from master list</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Curator</th><th>Tier</th><th style="text-align:right">Followers</th></tr></thead>
+        <tbody>${keySupporterRows(latest.key_supporters)}</tbody></table></div>
+      </div>
+      <div class="section">
+        <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="badge badge-gray">${latest.editorial_count} currently</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Playlist</th><th style="text-align:right">Followers</th></tr></thead>
+        <tbody>${playlistRows(latest.editorial_playlists)}</tbody></table></div>
+      </div>
+      <details class="all-independent">
+        <summary>All independent placements (${latest.independent_playlists.length}) — includes curators not yet in your master list</summary>
+        <div class="table-wrap"><table><thead><tr><th>Playlist / curator</th><th style="text-align:right">Followers</th></tr></thead>
+        <tbody>${playlistRows(latest.independent_playlists)}</tbody></table></div>
+      </details>`;
+    content.appendChild(card);
+  });
+}
+async function loadAll() {
+  try {
+    const [tracked, history] = await Promise.all([fetchJson('data/tracked.json'), fetchJson('data/history.json')]);
+    renderTrackedList(tracked);
+    renderCards(tracked, history);
+    // Last sync note = most recent snapshot date across all tracks
+    let latestDate = null;
+    Object.values(history.snapshots || {}).forEach(list => {
+      const d = list[list.length - 1];
+      if (d && (!latestDate || d.date > latestDate)) latestDate = d.date;
+    });
+    document.getElementById('lastSyncNote').textContent = latestDate ? ('Last data: ' + latestDate) : 'No data yet';
+    dbg('Loaded ' + tracked.tracks.length + ' tracked track(s).');
+  } catch (e) {
+    document.getElementById('content').innerHTML = `<div class="empty-state"><div class="empty-icon">!</div><div>${e.message}</div></div>`;
+    dbg('LOAD ERROR: ' + e.message);
+  }
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// BOOT
+// ─────────────────────────────────────────────────────────────────────────────
+document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+renderSettingsSummary();
+loadAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
+  "tracks": []
+}

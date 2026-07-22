@@ -1,0 +1,15 @@
+{
+  "_readme": "This is the master list the sync script uses to decide which independent (non-editorial) playlist owners count as a 'KEY' supporter, and how they're ranked. Matching is on the Spotify playlist owner display name, case-insensitive, exact match. This is a STARTER list only — Claude cannot reliably verify curator reputations on an ongoing basis, so treat this as a seed and keep adding to it as you spot good independent curators in your reports. Anything NOT in this list still appears in the 'All independent placements' section, it just won't be flagged as a Key Supporter or included in the Key Supporters ranking.",
+  "_tier_guide": {
+    "1": "Top-tier — high trust, strong track record, large engaged following. Always show first.",
+    "2": "Solid, reliable, respected in scene. Show after tier 1.",
+    "3": "Known/watching — worth tracking but not yet fully proven."
+  },
+  "curators": [
+    {
+      "owner_name": "Dance Rising",
+      "tier": 1,
+      "notes": "Seen in your existing tracking doc — confirmed real placement."
+    }
+  ]
+}
