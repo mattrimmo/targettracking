@@ -84,25 +84,27 @@ def sp_token():
 
 
 def sp_enrich(spotify_id):
-    """Returns (owner_display_name, total_tracks). Retries once on 429."""
+    """Returns (owner_display_name, total_tracks, cover_url). Retries once on 429."""
     for attempt in range(2):
         tok = sp_token()
         r = requests.get(
             f"https://api.spotify.com/v1/playlists/{spotify_id}",
             headers={"Authorization": "Bearer " + tok},
-            params={"fields": "owner.display_name,tracks.total"},
+            params={"fields": "owner.display_name,tracks.total,images"},
             timeout=30,
         )
         if r.status_code == 429:
             time.sleep(int(r.headers.get("Retry-After", "2")) + 0.5)
             continue
         if not r.ok:
-            return "", None
+            return "", None, None
         d = r.json()
         owner = (d.get("owner") or {}).get("display_name") or ""
         total = (d.get("tracks") or {}).get("total")
-        return owner, total
-    return "", None
+        images = d.get("images") or []
+        cover = images[0]["url"] if images else None
+        return owner, total, cover
+    return "", None, None
 
 
 def build_curator_index(curators_doc):
@@ -122,11 +124,12 @@ def process_track(entry, curator_idx):
 
     for p in current:
         pl = p["playlist"]
-        owner, _total = sp_enrich(pl["spotify_id"])
+        owner, _total, cover = sp_enrich(pl["spotify_id"])
         row = {
             "name": pl["name"],
             "spotify_id": pl["spotify_id"],
             "followers": pl.get("followers") or 0,
+            "cover_url": cover,
         }
         if owner.strip() == "":
             row["owner_name"] = "Spotify"
