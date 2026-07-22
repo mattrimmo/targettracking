@@ -1,0 +1,43 @@
+name: Sync Long Term Target Tracking
+
+on:
+  schedule:
+    - cron: "0 7 * * 3"
+  workflow_dispatch:
+    inputs:
+      official:
+        description: "Treat this run as the official weekly snapshot (normally only the Wednesday schedule does this)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run sync
+        env:
+          SOT_API_KEY: ${{ secrets.SOT_API_KEY }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          IS_OFFICIAL: ${{ github.event_name == 'schedule' || inputs.official == true }}
+        run: python scripts/sync.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "listenup-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/history.json
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Sync: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
