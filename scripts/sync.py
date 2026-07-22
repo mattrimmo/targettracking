@@ -129,6 +129,7 @@ def process_track(entry, curator_idx):
             "followers": pl.get("followers") or 0,
         }
         if owner.strip() == "":
+            row["owner_name"] = "Spotify"
             editorial_playlists.append(row)
         else:
             row["owner_name"] = owner
