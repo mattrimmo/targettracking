@@ -88,7 +88,7 @@
   .empty-icon { font-size: 38px; opacity: 0.2; }
 
   .track-card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; }
-  .track-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  .track-head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
   .track-name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
   .track-meta { font-size: 12px; color: var(--faint); margin-top: 4px; }
   .track-meta .live-tag { color: var(--accent); font-weight: 600; }
@@ -122,15 +122,23 @@
   .duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
   @media (max-width: 980px) { .duo-grid { grid-template-columns: 1fr; } }
 
-  .list-rows { display: flex; flex-direction: column; }
-  .list-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .list-rows { display: flex; flex-direction: column; max-height: 320px; overflow-y: auto; padding-right: 4px; }
+  .list-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); }
   .list-row:last-child { border-bottom: none; }
-  .list-row .left { min-width: 0; flex: 1; }
+  .list-row .left { min-width: 0; flex: 1; display: flex; align-items: center; gap: 9px; }
+  .row-art { width: 30px; height: 30px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: var(--surface2); }
+  .list-row .pname-wrap { min-width: 0; }
   .list-row .pname { font-size: 13.5px; font-weight: 500; color: var(--text); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
   .list-row .pname:hover { color: var(--accent); }
   .list-row .curator { font-size: 11.5px; color: var(--faint); margin-top: 1px; }
   .list-row .followers { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; flex-shrink: 0; }
   .tag-editorial { font-size: 10px; color: var(--faint); background: var(--surface2); padding: 1px 7px; border-radius: 99px; margin-left: 6px; }
+
+  .track-art { width: 68px; height: 68px; border-radius: 12px; object-fit: cover; flex-shrink: 0; background: var(--surface2); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+  .track-head { position: relative; z-index: 1; }
+  .card-wash { position: absolute; inset: 0; border-radius: 16px; opacity: 0; transition: opacity 0.4s; pointer-events: none; z-index: 0; }
+  .track-card { position: relative; overflow: hidden; }
+  .track-card > *:not(.card-wash) { position: relative; z-index: 1; }
 
   ::-webkit-scrollbar { width: 4px; height: 4px; }
   ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 2px; }
@@ -140,7 +148,7 @@
 <div class="shell">
   <aside class="side">
     <div class="side-top">
-      <img id="logoImg" class="logo" src="logo.png" alt="Listen Up" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
+      <img id="logoImg" class="logo" src="" alt="Listen Up" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
       <div id="logoFallback" class="logo-fallback"><span class="bar"></span>LISTEN UP</div>
       <div class="side-title">Long Term Target Tracking</div>
       <div class="side-sub">live editorial &amp; independent movement</div>
@@ -397,6 +405,7 @@ async function addTrack(spotifyTrack) {
       isrc,
       artist: spotifyTrack.artists.map(a => a.name).join(' & '),
       track:  spotifyTrack.name,
+      image:  (spotifyTrack.album && spotifyTrack.album.images && (spotifyTrack.album.images[1] || spotifyTrack.album.images[0]) || {}).url || null,
       added_at: new Date().toISOString().slice(0, 10)
     });
     await ghPutFile('data/tracked.json', content, sha, `Add track: ${spotifyTrack.artists[0].name} - ${spotifyTrack.name}`);
@@ -483,7 +492,10 @@ function editorialListRows(list) {
   if (!list.length) return '<div class="empty-note">None currently.</div>';
   return '<div class="list-rows">' + list.map(p => `
     <div class="list-row">
-      <div class="left"><a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 38)}</a></div>
+      <div class="left">
+        ${p.cover_url ? `<img class="row-art" src="${p.cover_url}">` : '<div class="row-art"></div>'}
+        <div class="pname-wrap"><a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 30)}</a></div>
+      </div>
       <div class="followers">${fmtNum(p.followers)}</div>
     </div>`).join('') + '</div>';
 }
@@ -492,8 +504,11 @@ function independentListRows(list) {
   return '<div class="list-rows">' + list.map(p => `
     <div class="list-row">
       <div class="left">
-        <a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 30)}</a>
-        <div class="curator">${trunc(p.owner_name || '—', 24)}</div>
+        ${p.cover_url ? `<img class="row-art" src="${p.cover_url}">` : '<div class="row-art"></div>'}
+        <div class="pname-wrap">
+          <a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 24)}</a>
+          <div class="curator">${trunc(p.owner_name || '—', 22)}</div>
+        </div>
       </div>
       <div class="followers">${fmtNum(p.followers)}</div>
     </div>`).join('') + '</div>';
@@ -532,7 +547,9 @@ function renderCards(tracked, history) {
       return;
     }
     card.innerHTML = `
+      <div class="card-wash" id="wash-${t.isrc}"></div>
       <div class="track-head">
+        ${t.image ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">` : ''}
         <div>
           <div class="track-name">${t.artist} - ${t.track}</div>
           <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}</div>
@@ -565,11 +582,34 @@ function renderCards(tracked, history) {
     content.appendChild(card);
   });
 }
+function applyArtworkWash() {
+  document.querySelectorAll('.track-art').forEach(img => {
+    const isrc = img.id.replace('art-', '');
+    const wash = document.getElementById('wash-' + isrc);
+    if (!wash) return;
+    const run = () => {
+      try {
+        const c = document.createElement('canvas');
+        c.width = 12; c.height = 12;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(img, 0, 0, 12, 12);
+        const data = ctx.getImageData(0, 0, 12, 12).data;
+        let r=0,g=0,b=0,n=0;
+        for (let i=0; i<data.length; i+=4) { r+=data[i]; g+=data[i+1]; b+=data[i+2]; n++; }
+        r=Math.round(r/n); g=Math.round(g/n); b=Math.round(b/n);
+        wash.style.background = `radial-gradient(ellipse 620px 240px at 60px 40px, rgba(${r},${g},${b},0.22), transparent 70%)`;
+        wash.style.opacity = '1';
+      } catch (e) { /* CORS or decode issue — just skip the wash for this card */ }
+    };
+    if (img.complete) run(); else img.addEventListener('load', run);
+  });
+}
 async function loadAll() {
   try {
     const [tracked, history] = await Promise.all([fetchJson('data/tracked.json'), fetchJson('data/history.json')]);
     renderTrackedList(tracked);
     renderCards(tracked, history);
+    applyArtworkWash();
     let latestDate = null;
     Object.values(history.snapshots || {}).forEach(list => {
       const d = list[list.length - 1];
@@ -586,6 +626,7 @@ async function loadAll() {
 // BOOT
 // ─────────────────────────────────────────────────────────────────────────────
 document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+document.getElementById('logoImg').src = 'logo.png?v=' + Date.now();
 renderSettingsSummary();
 loadAll();
 </script>
