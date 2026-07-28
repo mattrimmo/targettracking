@@ -25,6 +25,13 @@
       "track": "Good Girl",
       "image": "https://i.scdn.co/image/ab67616d00001e02e3571d042e1945b430985d08",
       "added_at": "2026-07-28"
+    },
+    {
+      "isrc": "CBEFB2604584",
+      "artist": "Jamback",
+      "track": "Landslide",
+      "image": "https://i.scdn.co/image/ab67616d00001e02324fb94758ae9b84bd952bc7",
+      "added_at": "2026-07-28"
     }
   ]
 }
