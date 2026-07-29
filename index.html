@@ -92,6 +92,7 @@
   .track-name { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
   .track-meta { font-size: 12px; color: var(--faint); margin-top: 4px; }
   .track-meta .live-tag { color: var(--accent); font-weight: 600; }
+  .label-tag { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); background: var(--surface2); border: 1px solid var(--border2); border-radius: 6px; padding: 2px 7px; margin-left: 8px; vertical-align: middle; }
 
   .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
   .hero-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
@@ -178,6 +179,12 @@
       <button class="btn-accent" id="searchBtn" onclick="doSearch()">Search</button>
       <div class="notice" id="searchNotice"></div>
       <div class="results" id="results"></div>
+      <div id="pendingAdd" style="display:none; margin-top:10px; padding:10px; background:var(--surface); border:1px solid var(--border2); border-radius:8px;">
+        <div style="font-size:13px;font-weight:600;" id="pendingName"></div>
+        <label class="field-label">Label</label>
+        <input type="text" id="pendingLabel" placeholder="e.g. INDEPENDENT">
+        <button class="btn-accent" onclick="confirmAddTrack()">Add to tracking</button>
+      </div>
     </div>
 
     <div class="side-block">
@@ -379,7 +386,7 @@ async function doSearch() {
           <div class="result-name">${t.name}</div>
           <div class="result-sub">${t.artists.map(a=>a.name).join(' & ')}</div>
         </div>`;
-      el.addEventListener('click', () => addTrack(t));
+      el.addEventListener('click', () => selectTrackForAdd(t));
       container.appendChild(el);
     });
   } catch (e) {
@@ -391,7 +398,45 @@ async function doSearch() {
 // ─────────────────────────────────────────────────────────────────────────────
 // ADD / REMOVE TRACKED TRACKS  (commits directly to tracked.json via GitHub API)
 // ─────────────────────────────────────────────────────────────────────────────
-async function addTrack(spotifyTrack) {
+let _pendingTrack = null;
+
+async function selectTrackForAdd(spotifyTrack) {
+  _pendingTrack = spotifyTrack;
+  document.getElementById('pendingName').textContent = spotifyTrack.artists.map(a => a.name).join(' & ') + ' - ' + spotifyTrack.name;
+  const labelInput = document.getElementById('pendingLabel');
+  labelInput.value = '';
+  document.getElementById('pendingAdd').style.display = 'block';
+
+  // Best-effort label lookup — Spotify removed the `label` field from album
+  // objects in their Feb 2026 API changes and it wasn't restored, so this
+  // will likely come back empty right now. Left in deliberately: if Spotify
+  // ever brings it back, this starts working again with no code change.
+  // Either way, the field above is always editable/fallback.
+  try {
+    const albumId = spotifyTrack.album && spotifyTrack.album.id;
+    if (albumId) {
+      const album = await spGet('/albums/' + albumId);
+      if (album.label && album.label !== 'INDEPENDENT') {
+        labelInput.value = album.label.toUpperCase();
+        dbg('Label auto-filled: ' + album.label);
+      } else {
+        dbg('No usable label field returned by Spotify for this album.');
+      }
+    }
+  } catch (e) {
+    dbg('Label lookup failed (expected — Spotify removed this field in Feb 2026): ' + e.message);
+  }
+}
+
+async function confirmAddTrack() {
+  if (!_pendingTrack) return;
+  const label = document.getElementById('pendingLabel').value.trim() || 'INDEPENDENT';
+  await addTrack(_pendingTrack, label);
+  document.getElementById('pendingAdd').style.display = 'none';
+  _pendingTrack = null;
+}
+
+async function addTrack(spotifyTrack, label) {
   const isrc = spotifyTrack.external_ids && spotifyTrack.external_ids.isrc;
   if (!isrc) { notice('searchNotice', 'No ISRC found for this track.', 'error'); return; }
   notice('searchNotice', 'Adding to tracked list…', 'loading');
@@ -405,6 +450,7 @@ async function addTrack(spotifyTrack) {
       isrc,
       artist: spotifyTrack.artists.map(a => a.name).join(' & '),
       track:  spotifyTrack.name,
+      label:  label || 'INDEPENDENT',
       image:  (spotifyTrack.album && spotifyTrack.album.images && (spotifyTrack.album.images[1] || spotifyTrack.album.images[0]) || {}).url || null,
       added_at: new Date().toISOString().slice(0, 10)
     });
@@ -482,7 +528,7 @@ function renderTrackedList(tracked) {
     const row = document.createElement('div');
     row.className = 'tracked-item';
     const label = t.artist + ' - ' + t.track;
-    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 28)}</span>
+    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'INDEPENDENT'}</span></span>
       <button class="rm" title="Remove">×</button>`;
     row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
     el.appendChild(row);
@@ -594,7 +640,7 @@ function renderCards(tracked, history) {
     if (!latest) {
       card.innerHTML = `
         <div class="track-head">
-          <div><div class="track-name">${t.artist} - ${t.track}</div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
+          <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
         </div>
         <div class="empty-note">No snapshot yet — click "Check live now" to pull the first one.</div>`;
       content.appendChild(card);
@@ -607,7 +653,7 @@ function renderCards(tracked, history) {
           ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
           : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
         <div>
-          <div class="track-name">${t.artist} - ${t.track}</div>
+          <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
           <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}</div>
         </div>
       </div>
