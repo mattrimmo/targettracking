@@ -35,6 +35,7 @@ SP_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 IS_OFFICIAL = os.environ.get("IS_OFFICIAL", "false").lower() == "true"
 
 MIN_FOLLOWERS = 100  # same floor as the report generator
+_logged_sample_keys = [False]  # print the raw SOT playlist schema once, for debugging
 
 
 def load_json(path):
@@ -97,6 +98,7 @@ def sp_enrich(spotify_id):
             time.sleep(int(r.headers.get("Retry-After", "2")) + 0.5)
             continue
         if not r.ok:
+            print(f"  [debug] Spotify playlist lookup failed for {spotify_id}: {r.status_code} {r.text[:150]}")
             return "", None, None
         d = r.json()
         owner = (d.get("owner") or {}).get("display_name") or ""
@@ -105,6 +107,34 @@ def sp_enrich(spotify_id):
         cover = images[0]["url"] if images else None
         return owner, total, cover
     return "", None, None
+
+
+def sot_shazam(isrc):
+    """
+    Returns (total_shazams, daily_shazams, chart_positions).
+    chart_positions is the FULL current-charts list from Spot On Track,
+    every country/genre/city entry included — no filtering to UK-only,
+    since the person tracking this wants to see prevalence everywhere,
+    with UK just prioritised in how the dashboard displays it, not in
+    what gets stored.
+    """
+    shazams = sot_get(f"/tracks/{isrc}/shazam/shazams")
+    total = shazams[0]["total"] if shazams else None
+    daily = shazams[0]["daily"] if shazams else None
+
+    charts = sot_get(f"/tracks/{isrc}/shazam/charts/current")
+    chart_positions = [
+        {
+            "country_code": c.get("country_code"),
+            "type": c.get("type"),
+            "position": c.get("position"),
+            "previous_position": c.get("previous_position"),
+            "genre": c.get("genre"),
+            "city": c.get("city"),
+        }
+        for c in charts
+    ]
+    return total, daily, chart_positions
 
 
 def build_curator_index(curators_doc):
@@ -124,7 +154,12 @@ def process_track(entry, curator_idx):
 
     for p in current:
         pl = p["playlist"]
+        if not _logged_sample_keys[0]:
+            print(f"  [debug] sample SOT playlist object keys: {list(pl.keys())}")
+            _logged_sample_keys[0] = True
         owner, _total, cover = sp_enrich(pl["spotify_id"])
+        classification = "editorial" if owner.strip() == "" else "independent"
+        print(f"  [debug] playlist='{pl['name']}' owner='{owner}' -> {classification}, cover={'yes' if cover else 'no'}")
         row = {
             "name": pl["name"],
             "spotify_id": pl["spotify_id"],
@@ -150,6 +185,12 @@ def process_track(entry, curator_idx):
     editorial_playlists.sort(key=lambda k: -k["followers"])
     independent_playlists.sort(key=lambda k: -k["followers"])
 
+    try:
+        total_shazams, daily_shazams, shazam_charts = sot_shazam(isrc)
+    except Exception as e:
+        print(f"  [debug] Shazam lookup failed for {isrc}: {e}")
+        total_shazams, daily_shazams, shazam_charts = None, None, []
+
     return {
         "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "official": IS_OFFICIAL,
@@ -158,6 +199,9 @@ def process_track(entry, curator_idx):
         "independent_playlists": independent_playlists,
         "independent_followers_total": independent_followers_total,
         "key_supporters": key_supporters,
+        "total_shazams": total_shazams,
+        "daily_shazams": daily_shazams,
+        "shazam_charts": shazam_charts,
     }
 
 
@@ -194,9 +238,14 @@ def main():
             snap["independent_followers_delta"] = (
                 snap["independent_followers_total"] - prior_official["independent_followers_total"]
             )
+            if snap.get("total_shazams") is not None and prior_official.get("total_shazams") is not None:
+                snap["total_shazams_delta"] = snap["total_shazams"] - prior_official["total_shazams"]
+            else:
+                snap["total_shazams_delta"] = None
         else:
             snap["editorial_count_delta"] = None
             snap["independent_followers_delta"] = None
+            snap["total_shazams_delta"] = None
 
         prior_list.append(snap)
         # Keep at most 52 snapshots per track (a year of weekly history) to keep the file small
