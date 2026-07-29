@@ -199,6 +199,13 @@
       <div class="notice" id="syncNotice"></div>
     </div>
 
+    <div class="side-block">
+      <div class="block-label">Labels</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:2px;">Backfills any already-tracked track that has no label saved yet.</div>
+      <button class="btn-accent" onclick="backfillLabels()" id="backfillBtn">Backfill missing labels</button>
+      <div class="notice" id="backfillNotice"></div>
+    </div>
+
     <div class="debug-area">
       <div class="debug-label"><span>Debug</span><button class="debug-clear" onclick="document.getElementById('debugBox').textContent=''">clear</button></div>
       <div id="debugBox"></div>
@@ -399,6 +406,61 @@ async function doSearch() {
 // ADD / REMOVE TRACKED TRACKS  (commits directly to tracked.json via GitHub API)
 // ─────────────────────────────────────────────────────────────────────────────
 let _pendingTrack = null;
+
+async function lookupLabelByIsrc(isrc) {
+  try {
+    const found = await spGet('/search?q=isrc:' + isrc + '&type=track&limit=1');
+    const track = found && found.tracks && found.tracks.items && found.tracks.items[0];
+    const albumId = track && track.album && track.album.id;
+    if (!albumId) return null;
+    const album = await spGet('/albums/' + albumId);
+    if (album.label && album.label !== 'INDEPENDENT') return album.label.toUpperCase();
+    return null;
+  } catch (e) {
+    dbg('Label backfill lookup failed for ' + isrc + ': ' + e.message);
+    return null;
+  }
+}
+
+async function backfillLabels() {
+  const btn = document.getElementById('backfillBtn');
+  btn.disabled = true;
+  notice('backfillNotice', 'Reading tracked list…', 'loading');
+  try {
+    const { content, sha } = await ghGetFile('data/tracked.json');
+    const needsLabel = content.tracks.filter(t => !t.label);
+    if (!needsLabel.length) {
+      notice('backfillNotice', 'Every tracked track already has a label saved.', 'success');
+      btn.disabled = false;
+      return;
+    }
+
+    let found = 0, defaulted = 0;
+    for (let i = 0; i < needsLabel.length; i++) {
+      const t = needsLabel[i];
+      notice('backfillNotice', `Checking ${i + 1} of ${needsLabel.length}: ${t.artist} - ${t.track}…`, 'loading');
+      const label = await lookupLabelByIsrc(t.isrc);
+      t.label = label || 'INDEPENDENT';
+      if (label) { found++; dbg('Backfilled label for ' + t.isrc + ': ' + label); }
+      else { defaulted++; dbg('No label found for ' + t.isrc + ' — defaulted to INDEPENDENT.'); }
+    }
+
+    // Re-fetch immediately before writing, in case anything else changed
+    // tracked.json while this loop was running (same race-condition guard
+    // used elsewhere) — merge our label updates onto the current version.
+    const fresh = await ghGetFile('data/tracked.json');
+    const byIsrc = Object.fromEntries(needsLabel.map(t => [t.isrc, t.label]));
+    fresh.content.tracks.forEach(t => { if (byIsrc[t.isrc] && !t.label) t.label = byIsrc[t.isrc]; });
+
+    await ghPutFile('data/tracked.json', fresh.content, fresh.sha, `Backfill labels for ${needsLabel.length} track(s)`);
+    notice('backfillNotice', `✓ Done — found real labels for ${found}, defaulted ${defaulted} to INDEPENDENT (Spotify had nothing for those).`, 'success');
+    setTimeout(loadAll, 1500);
+  } catch (e) {
+    notice('backfillNotice', e.message, 'error');
+    dbg('BACKFILL ERROR: ' + e.message);
+  }
+  btn.disabled = false;
+}
 
 async function selectTrackForAdd(spotifyTrack) {
   _pendingTrack = spotifyTrack;
