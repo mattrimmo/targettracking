@@ -2,10 +2,12 @@ name: Sync Long Term Target Tracking
 
 on:
   schedule:
-    # 07:00 UTC every Wednesday. That's 08:00 during UK summer time (BST) and
-    # 07:00 during UK winter time (GMT) — a ~1hr shift twice a year around the
-    # clock changes. Adjust the hour below if you want it pinned exactly.
-    - cron: "0 7 * * 3"
+    # 05:17 UTC every Wednesday — 06:17 BST / 05:17 GMT. Picked deliberately
+    # early and off the exact hour: GitHub's scheduled triggers can run late
+    # during high load, which tends to cluster right on the hour (lots of
+    # repos fire at :00). This leaves a ~2.5-3hr buffer before a 9am arrival,
+    # even accounting for a delayed run.
+    - cron: "17 5 * * 3"
   workflow_dispatch:
     inputs:
       official:
