@@ -5,54 +5,62 @@
       "isrc": "GXKXT2600014",
       "artist": "Gorgon City & Jem Cooke",
       "track": "Oracle (feat. Jem Cooke)",
-      "added_at": "2026-07-22"
+      "added_at": "2026-07-22",
+      "label": "REALM RECORDS"
     },
     {
       "isrc": "GBUM72604285",
       "artist": "Kolter",
       "track": "Hey Everybody (Back In The Dance)",
-      "added_at": "2026-07-22"
+      "added_at": "2026-07-22",
+      "label": "POSITIVA"
     },
     {
       "isrc": "QMBZ92642899",
       "artist": "Gordo & WhoMadeWho",
       "track": "ENERGY",
-      "added_at": "2026-07-22"
+      "added_at": "2026-07-22",
+      "label": "MAISON ARTS"
     },
     {
       "isrc": "CBEFB2604376",
       "artist": "Cloonee & Prospa & Tristan Henry",
       "track": "Good Girl",
       "image": "https://i.scdn.co/image/ab67616d00001e02e3571d042e1945b430985d08",
-      "added_at": "2026-07-28"
+      "added_at": "2026-07-28",
+      "label": "GOOD MUSIC FOR BAD PEOPLE"
     },
     {
       "isrc": "CBEFB2604584",
       "artist": "Jamback",
       "track": "Landslide",
       "image": "https://i.scdn.co/image/ab67616d00001e02324fb94758ae9b84bd952bc7",
-      "added_at": "2026-07-28"
+      "added_at": "2026-07-28",
+      "label": "JAMBACK"
     },
     {
       "isrc": "GBUM72604306",
       "artist": "Rossi. & bbyclose",
       "track": "On Your Mind",
       "image": "https://i.scdn.co/image/ab67616d00001e020c9cce994439f5f5f3d9602f",
-      "added_at": "2026-07-28"
+      "added_at": "2026-07-28",
+      "label": "CHAOS"
     },
     {
       "isrc": "USUYG1822627",
       "artist": "The Martinez Brothers & Stevie Appleton",
       "track": "Impressions (feat. Stevie Appleton)",
       "image": "https://i.scdn.co/image/ab67616d00001e02a4119c26a0aeee9e42e7ef09",
-      "added_at": "2026-07-28"
+      "added_at": "2026-07-28",
+      "label": "THE MARTINEZ BROTHERS / EMPIRE"
     },
     {
       "isrc": "CBEFB2604479",
       "artist": "Robbie Doherty",
       "track": "Ah Ah Ah",
       "image": "https://i.scdn.co/image/ab67616d00001e0282b808fa44feba2be50b9887",
-      "added_at": "2026-07-28"
+      "added_at": "2026-07-28",
+      "label": "R.DOC"
     }
   ]
 }
