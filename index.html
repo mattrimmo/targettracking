@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Listen Up — Long Term Target Tracking</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -150,6 +151,34 @@
 
   ::-webkit-scrollbar { width: 4px; height: 4px; }
   ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 2px; }
+
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); background: none; border: none; cursor: pointer; padding: 0; margin-bottom: 4px; }
+  .back-link:hover { color: var(--accent); }
+
+  .overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .overview-tile { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; cursor: pointer; transition: border-color 0.15s; }
+  .overview-tile:hover { border-color: var(--accent); }
+  .ov-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+  .ov-name { font-size: 14.5px; font-weight: 700; }
+  .ov-sub { font-size: 11px; color: var(--faint); margin-top: 2px; }
+  .ov-spark { max-height: 36px; margin: 8px 0; }
+  .ov-read { font-size: 12px; color: var(--muted); line-height: 1.4; margin-top: 8px; }
+  .ov-read.pending { color: var(--faint); font-style: italic; }
+
+  .trend-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 99px; white-space: nowrap; }
+  .trend-badge.accelerating { color: var(--up); background: rgba(52,211,153,0.14); }
+  .trend-badge.steady { color: var(--accent); background: rgba(91,124,250,0.13); }
+  .trend-badge.plateauing { color: var(--gold); background: rgba(232,185,92,0.14); }
+  .trend-badge.declining { color: var(--down); background: rgba(248,113,113,0.14); }
+  .trend-badge.pending { color: var(--faint); background: rgba(255,255,255,0.05); }
+
+  .ai-read-box { background: linear-gradient(135deg, rgba(91,124,250,0.09), rgba(91,124,250,0.02)); border: 1px solid rgba(91,124,250,0.2); border-radius: 12px; padding: 14px 16px; margin-bottom: 18px; font-size: 13.5px; line-height: 1.5; }
+  .ai-read-box .ai-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 5px; }
+
+  .trend-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 980px) { .trend-charts { grid-template-columns: 1fr; } }
+  .trend-chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .trend-chart-box h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 10px; }
 </style>
 </head>
 <body>
@@ -222,8 +251,8 @@
   <main class="main">
     <div class="main-header">
       <div>
-        <div class="main-title">Target Tracking</div>
-        <div class="main-sub">Official week-on-week movement, refreshed every Wednesday</div>
+        <div class="main-title" id="mainTitle">Target Tracking</div>
+        <div class="main-sub" id="mainSub">Official week-on-week movement, refreshed every Wednesday</div>
       </div>
     </div>
     <div class="content" id="content"></div>
@@ -631,7 +660,7 @@ function renderTrackedList(tracked) {
     const row = document.createElement('div');
     row.className = 'tracked-item';
     const label = t.artist + ' - ' + t.track;
-    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'INDEPENDENT'}</span></span>
+    row.innerHTML = `<span onclick="showDetail('${t.isrc}')">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'INDEPENDENT'}</span></span>
       <button class="rm" title="Remove">×</button>`;
     row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
     el.appendChild(row);
@@ -727,87 +756,206 @@ function supporterRow(list) {
       </div>
     </div>`).join('') + '</div>';
 }
-function renderCards(tracked, history) {
+function trendBadge(trend, pct) {
+  if (!trend) return '<span class="trend-badge pending">Trend pending</span>';
+  const arrows = { accelerating: '▲', steady: '●', plateauing: '▽', declining: '▼' };
+  const labels = { accelerating: 'Accelerating', steady: 'Steady', plateauing: 'Plateauing', declining: 'Declining' };
+  const pctText = (pct !== null && pct !== undefined) ? ` ${pct > 0 ? '+' : ''}${pct}%` : '';
+  return `<span class="trend-badge ${trend}">${arrows[trend] || ''} ${labels[trend] || trend}${pctText}</span>`;
+}
+function sparkChart(canvas, series, key, color) {
+  new Chart(canvas, {
+    type: 'line',
+    data: { labels: series.map(d => d.date), datasets: [{ data: series.map(d => d[key]), borderColor: color, borderWidth: 1.6, pointRadius: 0, tension: 0.35, fill: false }] },
+    options: { responsive: true, maintainAspectRatio: false, scales: { x: { display: false }, y: { display: false } }, plugins: { legend: { display: false }, tooltip: { enabled: false } } }
+  });
+}
+function trendChart(canvas, series, key, color) {
+  new Chart(canvas, {
+    type: 'line',
+    data: { labels: series.map(d => d.date), datasets: [{ data: series.map(d => d[key]), borderColor: color, backgroundColor: color + '22', fill: true, borderWidth: 2, pointRadius: 0, tension: 0.3 }] },
+    options: { responsive: true, plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#55555f', font: { size: 9 }, maxRotation: 0 }, grid: { display: false } },
+                y: { ticks: { color: '#55555f', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.05)' } } } }
+  });
+}
+
+let _view = 'overview';   // 'overview' | 'detail'
+let _selectedIsrc = null;
+let _lastTracked = null, _lastHistory = null, _lastPulse = null;
+
+function showOverview() { _view = 'overview'; _selectedIsrc = null; renderMain(); }
+function showDetail(isrc) { _view = 'detail'; _selectedIsrc = isrc; renderMain(); }
+
+function renderMain() {
+  if (_view === 'detail' && _selectedIsrc) {
+    renderDetail(_selectedIsrc, _lastTracked, _lastHistory, _lastPulse);
+  } else {
+    renderOverview(_lastTracked, _lastHistory, _lastPulse);
+  }
+}
+
+function renderOverview(tracked, history, pulse) {
+  document.getElementById('mainTitle').textContent = 'Target Tracking';
+  document.getElementById('mainSub').textContent = 'Official week-on-week movement, refreshed every Wednesday · daily trend pulse in between';
   const content = document.getElementById('content');
   if (!tracked.tracks.length) {
     content.innerHTML = `<div class="empty-state"><div class="empty-icon">◎</div><div>Nothing tracked yet.<br>Search for a track on the left to start following it.</div></div>`;
     return;
   }
-  content.innerHTML = '';
+  content.innerHTML = '<div class="overview-grid" id="ovGrid"></div>';
+  const grid = document.getElementById('ovGrid');
+
   tracked.tracks.forEach(t => {
     const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
     const latest = snaps[snaps.length - 1];
-    const card = document.createElement('div');
-    card.className = 'track-card';
-    card.id = 'card-' + t.isrc;
-    if (!latest) {
-      card.innerHTML = `
-        <div class="track-head">
-          <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
-        </div>
-        <div class="empty-note">No snapshot yet — click "Check live now" to pull the first one.</div>`;
-      content.appendChild(card);
-      return;
-    }
-    card.innerHTML = `
-      <div class="card-wash" id="wash-${t.isrc}"></div>
-      <div class="track-head">
-        ${t.image
-          ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
-          : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
+    const pseries = (pulse && pulse[t.isrc]) || [];
+    const platest = pseries[pseries.length - 1];
+
+    const tile = document.createElement('div');
+    tile.className = 'overview-tile';
+    tile.onclick = () => showDetail(t.isrc);
+    tile.innerHTML = `
+      <div class="ov-top">
         <div>
-          <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
-          <div class="track-meta">${t.isrc} · last synced ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}</div>
+          <div class="ov-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
+          <div class="ov-sub">${latest ? (latest.editorial_count + ' editorial · ' + fmtNum(latest.independent_followers_total) + ' indie followers') : 'No weekly snapshot yet'}</div>
         </div>
+        ${trendBadge(platest && platest.trend, platest && platest.trend_pct_change)}
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-label">Editorial playlists</div>
-          <div class="hero-row"><span class="hero-num">${latest.editorial_count}</span>${pill(latest.editorial_count_delta)}</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-label">Independent followers</div>
-          <div class="hero-row"><span class="hero-num">${fmtNum(latest.independent_followers_total)}</span>${pill(latest.independent_followers_delta)}</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-label">Total Shazams</div>
-          <div class="hero-row"><span class="hero-num">${fmtNum(latest.total_shazams)}</span>${pill(latest.total_shazams_delta)}</div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
-        ${supporterRow(latest.key_supporters)}
-      </div>
-      <div class="section">
-        <div class="section-head"><span class="section-title">Shazam chart positions</span><span class="section-count">${(latest.shazam_charts || []).length} charts · UK prioritised</span></div>
-        ${shazamChartRows(latest.shazam_charts)}
-      </div>
-      <div class="duo-grid">
-        <div class="section">
-          <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="section-count">${latest.editorial_count}</span></div>
-          ${editorialListRows(latest.editorial_playlists)}
-        </div>
-        <div class="section">
-          <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
-          ${independentListRows(latest.independent_playlists)}
-        </div>
-      </div>`;
-    content.appendChild(card);
+      <canvas class="ov-spark" id="ovspark-${t.isrc}"></canvas>
+      <div class="ov-read ${platest && platest.ai_read ? '' : 'pending'}">${
+        platest && platest.ai_read ? platest.ai_read :
+        (platest ? 'AI read pending — add an Anthropic API key to enable.' : 'Waiting on the first daily pulse.')
+      }</div>
+    `;
+    grid.appendChild(tile);
   });
+
+  tracked.tracks.forEach(t => {
+    const pseries = (pulse && pulse[t.isrc]) || [];
+    const canvas = document.getElementById('ovspark-' + t.isrc);
+    if (canvas && pseries.length > 1) sparkChart(canvas, pseries, 'daily_shazams', '#5b7cfa');
+  });
+}
+
+function renderDetail(isrc, tracked, history, pulse) {
+  const t = tracked.tracks.find(x => x.isrc === isrc);
+  const content = document.getElementById('content');
+  if (!t) { showOverview(); return; }
+
+  document.getElementById('mainTitle').innerHTML = `<button class="back-link" onclick="showOverview()">← All tracks</button>`;
+  document.getElementById('mainSub').textContent = `${t.artist} - ${t.track}`;
+
+  const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
+  const latest = snaps[snaps.length - 1];
+  const pseries = (pulse && pulse[t.isrc]) || [];
+  const platest = pseries[pseries.length - 1];
+
+  const card = document.createElement('div');
+  card.className = 'track-card';
+  card.id = 'card-' + t.isrc;
+
+  if (!latest) {
+    card.innerHTML = `
+      <div class="track-head">
+        <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
+      </div>
+      <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>`;
+    content.innerHTML = '';
+    content.appendChild(card);
+    return;
+  }
+
+  card.innerHTML = `
+    <div class="card-wash" id="wash-${t.isrc}"></div>
+    <div class="track-head">
+      ${t.image
+        ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
+        : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
+      <div>
+        <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
+        <div class="track-meta">${t.isrc} · last weekly sync ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}${platest ? ' · last pulse ' + platest.date : ''}</div>
+      </div>
+      ${trendBadge(platest && platest.trend, platest && platest.trend_pct_change)}
+    </div>
+    ${platest && platest.ai_read ? `
+      <div class="ai-read-box"><div class="ai-label">Claude's read</div>${platest.ai_read}</div>
+    ` : `
+      <div class="ai-read-box"><div class="ai-label">Claude's read</div>${platest ? 'Pending — add an Anthropic API key as a repo secret to enable daily AI reads.' : 'Waiting on the first daily pulse to have anything to read.'}</div>
+    `}
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-label">Editorial playlists</div>
+        <div class="hero-row"><span class="hero-num">${latest.editorial_count}</span>${pill(latest.editorial_count_delta)}</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-label">Independent followers</div>
+        <div class="hero-row"><span class="hero-num">${fmtNum(latest.independent_followers_total)}</span>${pill(latest.independent_followers_delta)}</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-label">Total Shazams</div>
+        <div class="hero-row"><span class="hero-num">${fmtNum(latest.total_shazams)}</span>${pill(latest.total_shazams_delta)}</div>
+      </div>
+    </div>
+    ${pseries.length > 1 ? `
+    <div class="section">
+      <div class="section-head"><span class="section-title">Daily trend (Shazam)</span><span class="section-count">${pseries.length} day${pseries.length !== 1 ? 's' : ''} of pulse data</span></div>
+      <div class="trend-charts">
+        <div class="trend-chart-box"><h4>Daily Shazams</h4><canvas id="trend-daily-${t.isrc}"></canvas></div>
+        <div class="trend-chart-box"><h4>Playlist count</h4><canvas id="trend-playlists-${t.isrc}"></canvas></div>
+      </div>
+    </div>` : ''}
+    <div class="section">
+      <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
+      ${supporterRow(latest.key_supporters)}
+    </div>
+    <div class="section">
+      <div class="section-head"><span class="section-title">Shazam chart positions</span><span class="section-count">${(latest.shazam_charts || []).length} charts · UK prioritised</span></div>
+      ${shazamChartRows(latest.shazam_charts)}
+    </div>
+    <div class="duo-grid">
+      <div class="section">
+        <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="section-count">${latest.editorial_count}</span></div>
+        ${editorialListRows(latest.editorial_playlists)}
+      </div>
+      <div class="section">
+        <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
+        ${independentListRows(latest.independent_playlists)}
+      </div>
+    </div>`;
+  content.innerHTML = '';
+  content.appendChild(card);
+  applyArtworkWash();
+  if (!t.image) backfillMissingArt({ tracks: [t] });
+  if (pseries.length > 1) {
+    trendChart(document.getElementById('trend-daily-' + t.isrc), pseries, 'daily_shazams', '#5b7cfa');
+    trendChart(document.getElementById('trend-playlists-' + t.isrc), pseries, 'playlist_count', '#34d399');
+  }
 }
 async function loadAll() {
   try {
-    const [tracked, history] = await Promise.all([fetchJson('data/tracked.json'), fetchJson('data/history.json')]);
+    const [tracked, history, pulse] = await Promise.all([
+      fetchJson('data/tracked.json'), fetchJson('data/history.json'), fetchJson('data/pulse.json')
+    ]);
+    _lastTracked = tracked; _lastHistory = history; _lastPulse = pulse;
     renderTrackedList(tracked);
-    renderCards(tracked, history);
-    applyArtworkWash();
+    renderMain();
+    if (_view === 'overview') applyArtworkWash();
     backfillMissingArt(tracked);
     let latestDate = null;
     Object.values(history.snapshots || {}).forEach(list => {
       const d = list[list.length - 1];
       if (d && (!latestDate || d.date > latestDate)) latestDate = d.date;
     });
-    document.getElementById('lastSyncNote').textContent = latestDate ? ('Last data: ' + latestDate) : 'No data yet';
+    let latestPulseDate = null;
+    Object.values(pulse || {}).forEach(list => {
+      const d = list[list.length - 1];
+      if (d && (!latestPulseDate || d.date > latestPulseDate)) latestPulseDate = d.date;
+    });
+    document.getElementById('lastSyncNote').textContent =
+      (latestDate ? ('Weekly: ' + latestDate) : 'No weekly data yet') +
+      (latestPulseDate ? (' · Pulse: ' + latestPulseDate) : '');
     dbg('Loaded ' + tracked.tracks.length + ' tracked track(s).');
   } catch (e) {
     document.getElementById('content').innerHTML = `<div class="empty-state"><div class="empty-icon">!</div><div>${e.message}</div></div>`;
