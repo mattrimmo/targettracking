@@ -219,7 +219,7 @@
       "date": "2026-08-04",
       "total_shazams": null,
       "daily_shazams": null,
-      "playlist_count": 92,
+      "playlist_count": 94,
       "shazam_charts": [
         {
           "country_code": "GB",
@@ -679,7 +679,7 @@
       "date": "2026-08-04",
       "total_shazams": 9469,
       "daily_shazams": null,
-      "playlist_count": 190,
+      "playlist_count": 194,
       "shazam_charts": [
         {
           "country_code": "GB",
@@ -758,6 +758,27 @@
           "type": "shazams",
           "position": 155,
           "previous_position": 191,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "CBEFB2604376": [
+    {
+      "date": "2026-08-04",
+      "total_shazams": null,
+      "daily_shazams": null,
+      "playlist_count": 358,
+      "shazam_charts": [
+        {
+          "country_code": "AR",
+          "type": "discovery",
+          "position": 5,
+          "previous_position": null,
           "genre": null,
           "city": null
         }
