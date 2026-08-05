@@ -273,6 +273,57 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-08-05",
+      "total_shazams": null,
+      "daily_shazams": null,
+      "playlist_count": 94,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 27,
+          "previous_position": 28,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 34,
+          "previous_position": 38,
+          "genre": null,
+          "city": "Belfast"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 37,
+          "previous_position": 44,
+          "genre": null,
+          "city": "Brighton"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 37,
+          "previous_position": 40,
+          "genre": null,
+          "city": "Cardiff"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 104,
+          "previous_position": 107,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ],
   "GBUM72604285": [
@@ -758,6 +809,113 @@
           "type": "shazams",
           "position": 155,
           "previous_position": 191,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    },
+    {
+      "date": "2026-08-05",
+      "total_shazams": 16192,
+      "daily_shazams": null,
+      "playlist_count": 196,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 17,
+          "previous_position": 20,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 21,
+          "previous_position": 17,
+          "genre": null,
+          "city": "Liverpool"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 24,
+          "previous_position": 27,
+          "genre": null,
+          "city": "Birmingham"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 24,
+          "previous_position": 32,
+          "genre": null,
+          "city": "Manchester"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 31,
+          "previous_position": 44,
+          "genre": null,
+          "city": "Leeds"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 35,
+          "previous_position": 46,
+          "genre": null,
+          "city": "Portsmouth"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 36,
+          "previous_position": null,
+          "genre": null,
+          "city": "Nottingham"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 40,
+          "previous_position": 41,
+          "genre": null,
+          "city": "Cardiff"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 41,
+          "previous_position": 44,
+          "genre": null,
+          "city": "Bristol"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 49,
+          "previous_position": null,
+          "genre": null,
+          "city": "Sheffield"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 54,
+          "previous_position": 62,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 149,
+          "previous_position": 155,
           "genre": null,
           "city": null
         }
