@@ -61,6 +61,9 @@ def sot_get(path):
 
 _sp_token = None
 _sp_exp = 0
+_playlist_cache = {}  # spotify_id -> (owner, total, cover) — same playlist often
+                       # appears across multiple tracked tracks in one run;
+                       # this stops it being re-fetched from Spotify each time
 
 
 def sp_token():
@@ -85,7 +88,10 @@ def sp_token():
 
 
 def sp_enrich(spotify_id):
-    """Returns (owner_display_name, total_tracks, cover_url). Retries once on 429."""
+    """Returns (owner_display_name, total_tracks, cover_url). Retries once on 429.
+    Cached per spotify_id for the lifetime of this run — see _playlist_cache."""
+    if spotify_id in _playlist_cache:
+        return _playlist_cache[spotify_id]
     for attempt in range(2):
         tok = sp_token()
         r = requests.get(
@@ -99,14 +105,17 @@ def sp_enrich(spotify_id):
             continue
         if not r.ok:
             print(f"  [debug] Spotify playlist lookup failed for {spotify_id}: {r.status_code} {r.text[:150]}")
-            return "", None, None
+            _playlist_cache[spotify_id] = ("", None, None)
+            return _playlist_cache[spotify_id]
         d = r.json()
         owner = (d.get("owner") or {}).get("display_name") or ""
         total = (d.get("tracks") or {}).get("total")
         images = d.get("images") or []
         cover = images[0]["url"] if images else None
-        return owner, total, cover
-    return "", None, None
+        _playlist_cache[spotify_id] = (owner, total, cover)
+        return _playlist_cache[spotify_id]
+    _playlist_cache[spotify_id] = ("", None, None)
+    return _playlist_cache[spotify_id]
 
 
 def sot_shazam(isrc):
