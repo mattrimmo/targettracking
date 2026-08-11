@@ -2,16 +2,11 @@ name: Sync Long Term Target Tracking
 
 on:
   schedule:
-    # 05:17 UTC every Wednesday — 06:17 BST / 05:17 GMT. Picked deliberately
-    # early and off the exact hour: GitHub's scheduled triggers can run late
-    # during high load, which tends to cluster right on the hour (lots of
-    # repos fire at :00). This leaves a ~2.5-3hr buffer before a 9am arrival,
-    # even accounting for a delayed run.
-    - cron: "17 5 * * 3"
+    - cron: "17 5 * * 3"   # 05:17 UTC every Wednesday — see earlier notes on why this time
   workflow_dispatch:
     inputs:
       official:
-        description: "Treat this run as the official weekly snapshot (normally only the Wednesday schedule does this)"
+        description: "Treat this run as the official weekly snapshot"
         type: boolean
         default: false
 
@@ -46,20 +41,14 @@ jobs:
           SOT_API_KEY: ${{ secrets.SOT_API_KEY }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          # The scheduled trigger is always official; a manual run is official
-          # only if the "official" checkbox was ticked when triggering it.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IS_OFFICIAL: ${{ github.event_name == 'schedule' || inputs.official == true }}
-        # sync.py now commits + pushes a checkpoint after every track itself
-        # (see git_checkpoint() in the script), so progress survives even if
-        # this step gets killed by the timeout-minutes limit above — the
-        # next run picks up with a warmer playlist cache instead of losing
-        # everything and starting cold again.
         run: python scripts/sync.py
 
       - name: Final safety-net commit
         if: always()
         run: |
-          git add data/history.json data/playlist_cache.json
+          git add data/history.json data/playlist_cache.json data/spotify_call_log.json
           git diff --cached --quiet && echo "Nothing left uncommitted" || git commit -m "Sync: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main || true
           git push || true
