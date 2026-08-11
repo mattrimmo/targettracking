@@ -660,7 +660,7 @@ function renderTrackedList(tracked) {
     const row = document.createElement('div');
     row.className = 'tracked-item';
     const label = t.artist + ' - ' + t.track;
-    row.innerHTML = `<span onclick="showDetail('${t.isrc}')">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'INDEPENDENT'}</span></span>
+    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'INDEPENDENT'}</span></span>
       <button class="rm" title="Remove">×</button>`;
     row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
     el.appendChild(row);
@@ -780,22 +780,9 @@ function trendChart(canvas, series, key, color) {
   });
 }
 
-let _view = 'overview';   // 'overview' | 'detail'
-let _selectedIsrc = null;
 let _lastTracked = null, _lastHistory = null, _lastPulse = null;
 
-function showOverview() { _view = 'overview'; _selectedIsrc = null; renderMain(); }
-function showDetail(isrc) { _view = 'detail'; _selectedIsrc = isrc; renderMain(); }
-
-function renderMain() {
-  if (_view === 'detail' && _selectedIsrc) {
-    renderDetail(_selectedIsrc, _lastTracked, _lastHistory, _lastPulse);
-  } else {
-    renderOverview(_lastTracked, _lastHistory, _lastPulse);
-  }
-}
-
-function renderOverview(tracked, history, pulse) {
+function renderAllCards(tracked, history, pulse) {
   document.getElementById('mainTitle').textContent = 'Target Tracking';
   document.getElementById('mainSub').textContent = 'Official week-on-week movement, refreshed every Wednesday · daily trend pulse in between';
   const content = document.getElementById('content');
@@ -803,8 +790,7 @@ function renderOverview(tracked, history, pulse) {
     content.innerHTML = `<div class="empty-state"><div class="empty-icon">◎</div><div>Nothing tracked yet.<br>Search for a track on the left to start following it.</div></div>`;
     return;
   }
-  content.innerHTML = '<div class="overview-grid" id="ovGrid"></div>';
-  const grid = document.getElementById('ovGrid');
+  content.innerHTML = '';
 
   tracked.tracks.forEach(t => {
     const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
@@ -812,126 +798,89 @@ function renderOverview(tracked, history, pulse) {
     const pseries = (pulse && pulse[t.isrc]) || [];
     const platest = pseries[pseries.length - 1];
 
-    const tile = document.createElement('div');
-    tile.className = 'overview-tile';
-    tile.onclick = () => showDetail(t.isrc);
-    tile.innerHTML = `
-      <div class="ov-top">
+    const card = document.createElement('div');
+    card.className = 'track-card';
+    card.id = 'card-' + t.isrc;
+
+    if (!latest) {
+      card.innerHTML = `
+        <div class="track-head">
+          <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
+        </div>
+        <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>`;
+      content.appendChild(card);
+      return;
+    }
+
+    const unclassifiedNote = latest.unclassified_count
+      ? `<div class="empty-note">${latest.unclassified_count} playlist${latest.unclassified_count !== 1 ? 's' : ''} not yet classified this run — will be picked up on a future sync.</div>`
+      : '';
+
+    card.innerHTML = `
+      <div class="card-wash" id="wash-${t.isrc}"></div>
+      <div class="track-head">
+        ${t.image
+          ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
+          : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
         <div>
-          <div class="ov-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
-          <div class="ov-sub">${latest ? (latest.editorial_count + ' editorial · ' + fmtNum(latest.independent_followers_total) + ' indie followers') : 'No weekly snapshot yet'}</div>
+          <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
+          <div class="track-meta">${t.isrc} · last weekly sync ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}${platest ? ' · last pulse ' + platest.date : ''}</div>
         </div>
         ${trendBadge(platest && platest.trend, platest && platest.trend_pct_change)}
       </div>
-      <canvas class="ov-spark" id="ovspark-${t.isrc}"></canvas>
-      <div class="ov-read ${platest && platest.ai_read ? '' : 'pending'}">${
-        platest && platest.ai_read ? platest.ai_read :
-        (platest ? 'AI read pending — add an Anthropic API key to enable.' : 'Waiting on the first daily pulse.')
-      }</div>
-    `;
-    grid.appendChild(tile);
-  });
-
-  tracked.tracks.forEach(t => {
-    const pseries = (pulse && pulse[t.isrc]) || [];
-    const canvas = document.getElementById('ovspark-' + t.isrc);
-    if (canvas && pseries.length > 1) sparkChart(canvas, pseries, 'daily_shazams', '#5b7cfa');
-  });
-}
-
-function renderDetail(isrc, tracked, history, pulse) {
-  const t = tracked.tracks.find(x => x.isrc === isrc);
-  const content = document.getElementById('content');
-  if (!t) { showOverview(); return; }
-
-  document.getElementById('mainTitle').innerHTML = `<button class="back-link" onclick="showOverview()">← All tracks</button>`;
-  document.getElementById('mainSub').textContent = `${t.artist} - ${t.track}`;
-
-  const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
-  const latest = snaps[snaps.length - 1];
-  const pseries = (pulse && pulse[t.isrc]) || [];
-  const platest = pseries[pseries.length - 1];
-
-  const card = document.createElement('div');
-  card.className = 'track-card';
-  card.id = 'card-' + t.isrc;
-
-  if (!latest) {
-    card.innerHTML = `
-      <div class="track-head">
-        <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
+      ${latest.ai_read ? `
+        <div class="ai-read-box"><div class="ai-label">AI read</div>${latest.ai_read}</div>
+      ` : `
+        <div class="ai-read-box"><div class="ai-label">AI read</div>Not enabled yet — add an Anthropic API key as a repo secret when you're ready to turn this on.</div>
+      `}
+      ${unclassifiedNote}
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-label">Editorial playlists</div>
+          <div class="hero-row"><span class="hero-num">${latest.editorial_count}</span>${pill(latest.editorial_count_delta)}</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-label">Independent followers</div>
+          <div class="hero-row"><span class="hero-num">${fmtNum(latest.independent_followers_total)}</span>${pill(latest.independent_followers_delta)}</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-label">Total Shazams</div>
+          <div class="hero-row"><span class="hero-num">${fmtNum(latest.total_shazams)}</span>${pill(latest.total_shazams_delta)}</div>
+        </div>
       </div>
-      <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>`;
-    content.innerHTML = '';
+      ${pseries.length > 1 ? `
+      <div class="section">
+        <div class="section-head"><span class="section-title">Daily trend (Shazam)</span><span class="section-count">${pseries.length} day${pseries.length !== 1 ? 's' : ''} of pulse data</span></div>
+        <div class="trend-charts">
+          <div class="trend-chart-box"><h4>Daily Shazams</h4><canvas id="trend-daily-${t.isrc}"></canvas></div>
+          <div class="trend-chart-box"><h4>Playlist count</h4><canvas id="trend-playlists-${t.isrc}"></canvas></div>
+        </div>
+      </div>` : ''}
+      <div class="section">
+        <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
+        ${supporterRow(latest.key_supporters)}
+      </div>
+      <div class="section">
+        <div class="section-head"><span class="section-title">Shazam chart positions</span><span class="section-count">${(latest.shazam_charts || []).length} charts · UK prioritised</span></div>
+        ${shazamChartRows(latest.shazam_charts)}
+      </div>
+      <div class="duo-grid">
+        <div class="section">
+          <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="section-count">${latest.editorial_count}</span></div>
+          ${editorialListRows(latest.editorial_playlists)}
+        </div>
+        <div class="section">
+          <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
+          ${independentListRows(latest.independent_playlists)}
+        </div>
+      </div>`;
     content.appendChild(card);
-    return;
-  }
 
-  card.innerHTML = `
-    <div class="card-wash" id="wash-${t.isrc}"></div>
-    <div class="track-head">
-      ${t.image
-        ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
-        : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
-      <div>
-        <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
-        <div class="track-meta">${t.isrc} · last weekly sync ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}${platest ? ' · last pulse ' + platest.date : ''}</div>
-      </div>
-      ${trendBadge(platest && platest.trend, platest && platest.trend_pct_change)}
-    </div>
-    ${platest && platest.ai_read ? `
-      <div class="ai-read-box"><div class="ai-label">Claude's read</div>${platest.ai_read}</div>
-    ` : `
-      <div class="ai-read-box"><div class="ai-label">Claude's read</div>${platest ? 'Pending — add an Anthropic API key as a repo secret to enable daily AI reads.' : 'Waiting on the first daily pulse to have anything to read.'}</div>
-    `}
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-label">Editorial playlists</div>
-        <div class="hero-row"><span class="hero-num">${latest.editorial_count}</span>${pill(latest.editorial_count_delta)}</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-label">Independent followers</div>
-        <div class="hero-row"><span class="hero-num">${fmtNum(latest.independent_followers_total)}</span>${pill(latest.independent_followers_delta)}</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-label">Total Shazams</div>
-        <div class="hero-row"><span class="hero-num">${fmtNum(latest.total_shazams)}</span>${pill(latest.total_shazams_delta)}</div>
-      </div>
-    </div>
-    ${pseries.length > 1 ? `
-    <div class="section">
-      <div class="section-head"><span class="section-title">Daily trend (Shazam)</span><span class="section-count">${pseries.length} day${pseries.length !== 1 ? 's' : ''} of pulse data</span></div>
-      <div class="trend-charts">
-        <div class="trend-chart-box"><h4>Daily Shazams</h4><canvas id="trend-daily-${t.isrc}"></canvas></div>
-        <div class="trend-chart-box"><h4>Playlist count</h4><canvas id="trend-playlists-${t.isrc}"></canvas></div>
-      </div>
-    </div>` : ''}
-    <div class="section">
-      <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
-      ${supporterRow(latest.key_supporters)}
-    </div>
-    <div class="section">
-      <div class="section-head"><span class="section-title">Shazam chart positions</span><span class="section-count">${(latest.shazam_charts || []).length} charts · UK prioritised</span></div>
-      ${shazamChartRows(latest.shazam_charts)}
-    </div>
-    <div class="duo-grid">
-      <div class="section">
-        <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="section-count">${latest.editorial_count}</span></div>
-        ${editorialListRows(latest.editorial_playlists)}
-      </div>
-      <div class="section">
-        <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
-        ${independentListRows(latest.independent_playlists)}
-      </div>
-    </div>`;
-  content.innerHTML = '';
-  content.appendChild(card);
-  applyArtworkWash();
-  if (!t.image) backfillMissingArt({ tracks: [t] });
-  if (pseries.length > 1) {
-    trendChart(document.getElementById('trend-daily-' + t.isrc), pseries, 'daily_shazams', '#5b7cfa');
-    trendChart(document.getElementById('trend-playlists-' + t.isrc), pseries, 'playlist_count', '#34d399');
-  }
+    if (pseries.length > 1) {
+      trendChart(document.getElementById('trend-daily-' + t.isrc), pseries, 'daily_shazams', '#5b7cfa');
+      trendChart(document.getElementById('trend-playlists-' + t.isrc), pseries, 'playlist_count', '#34d399');
+    }
+  });
 }
 async function loadAll() {
   try {
@@ -940,8 +889,8 @@ async function loadAll() {
     ]);
     _lastTracked = tracked; _lastHistory = history; _lastPulse = pulse;
     renderTrackedList(tracked);
-    renderMain();
-    if (_view === 'overview') applyArtworkWash();
+    renderAllCards(tracked, history, pulse);
+    applyArtworkWash();
     backfillMissingArt(tracked);
     let latestDate = null;
     Object.values(history.snapshots || {}).forEach(list => {
