@@ -518,9 +518,9 @@
     },
     {
       "date": "2026-08-11",
-      "total_shazams": null,
+      "total_shazams": 9831,
       "daily_shazams": null,
-      "playlist_count": 91,
+      "playlist_count": 92,
       "shazam_charts": [
         {
           "country_code": "GB",
@@ -545,6 +545,14 @@
           "previous_position": null,
           "genre": null,
           "city": "Adelaide"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 118,
+          "previous_position": 121,
+          "genre": null,
+          "city": null
         },
         {
           "country_code": "IE",
@@ -1689,7 +1697,7 @@
       "date": "2026-08-11",
       "total_shazams": 22179,
       "daily_shazams": 731,
-      "playlist_count": 223,
+      "playlist_count": 207,
       "shazam_charts": [
         {
           "country_code": "GB",
@@ -1754,6 +1762,14 @@
           "previous_position": 26,
           "genre": null,
           "city": "Manchester"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 44,
+          "previous_position": 39,
+          "genre": null,
+          "city": null
         },
         {
           "country_code": "GB",
@@ -3257,10 +3273,26 @@
     },
     {
       "date": "2026-08-11",
-      "total_shazams": 54012,
-      "daily_shazams": 3522,
-      "playlist_count": 378,
+      "total_shazams": 57922,
+      "daily_shazams": 3910,
+      "playlist_count": 377,
       "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "discovery",
+          "position": 1,
+          "previous_position": 1,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "NL",
+          "type": "discovery",
+          "position": 5,
+          "previous_position": 4,
+          "genre": null,
+          "city": null
+        },
         {
           "country_code": "GB",
           "type": "shazams",
@@ -3332,6 +3364,14 @@
           "previous_position": 16,
           "genre": null,
           "city": "Sheffield"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 19,
+          "previous_position": 20,
+          "genre": null,
+          "city": null
         },
         {
           "country_code": "GB",
