@@ -13,15 +13,14 @@ daily indefinitely regardless of how many tracks are being watched:
     official sync needs Spotify for and this script doesn't do at all)
 
 From the accumulated daily history, works out a simple trend classification
-(accelerating / steady / plateauing / declining) per track, and — only if
-an Anthropic API key is present — asks Claude for a one-line plain-English
-read combining that trend with the Shazam-vs-playlist balance. If no key
-is set, ai_read is just left null; nothing else in the script depends on it,
-so this can be deployed and run correctly before that key ever gets added.
+(accelerating / steady / plateauing / declining) per track. AI-read
+generation used to live here too, but has moved to scripts/sync.py, which
+has the full weekly picture (editorial vs independent vs Shazam) rather
+than just what this daily script sees — this file no longer touches
+Anthropic at all.
 
 Secrets:
-  SOT_API_KEY        — required (same one sync.py uses)
-  ANTHROPIC_API_KEY  — optional; AI reads are skipped gracefully without it
+  SOT_API_KEY  — required (same one sync.py uses)
 """
 import json
 import os
@@ -35,7 +34,6 @@ TRACKED_FP = os.path.join(REPO_ROOT, "data", "tracked.json")
 PULSE_FP   = os.path.join(REPO_ROOT, "data", "pulse.json")
 
 SOT_KEY = os.environ.get("SOT_API_KEY", "")
-ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 MIN_FOLLOWERS = 100  # same floor used elsewhere
 DAYS_TO_KEEP = 60    # ~2 months of daily granularity is plenty for trend detection
@@ -125,43 +123,19 @@ def classify_trend(daily_series):
     return "steady", pct_change
 
 
-def generate_ai_read(artist, track, label, trend, pct_change, total_shazams, playlist_count, chart_summary):
-    if not ANTHROPIC_KEY:
-        return None
-    try:
-        import anthropic
-        client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
-        prompt = (
-            f"Track: {artist} - {track} (label: {label}).\n"
-            f"Shazam trend: {trend} ({pct_change:+d}% vs the prior few days)"
-            if pct_change is not None else f"Shazam trend: {trend}"
-        )
-        prompt += (
-            f"\nTotal Shazams so far: {total_shazams}\n"
-            f"Currently on {playlist_count} tracked playlists (100+ followers)\n"
-            f"Shazam chart appearances: {chart_summary}\n\n"
-            "In one short sentence (under 25 words), give a plain-English read for "
-            "a music promoter: is this still playlist-driven, or building organically "
-            "via active listener discovery, and should they lean in harder or hold steady? "
-            "Be direct and specific, no hedging, no generic advice."
-        )
-        resp = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=100,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return resp.content[0].text.strip()
-    except Exception as e:
-        print(f"  [debug] AI read failed: {e}")
-        return None
+def generate_ai_read(*args, **kwargs):
+    """Retired — AI read generation now lives in scripts/sync.py, which has
+    the full weekly picture (editorial vs independent vs Shazam) rather
+    than just the daily Shazam trend this script sees. Kept as a no-op
+    stub rather than deleting the call site below, to avoid a bigger diff
+    than necessary — always returns None."""
+    return None
 
 
 def main():
     if not SOT_KEY:
         print("Missing SOT_API_KEY.")
         sys.exit(1)
-    if not ANTHROPIC_KEY:
-        print("No ANTHROPIC_API_KEY set — AI reads will be skipped (this is fine, everything else still runs).")
 
     tracked = load_json(TRACKED_FP, {"tracks": []})
     pulse = load_json(PULSE_FP, {})
