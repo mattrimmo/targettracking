@@ -37261,6 +37261,357 @@
         "editorial_count_delta": 0,
         "independent_followers_delta": 0,
         "total_shazams_delta": null
+      },
+      {
+        "date": "2026-08-11",
+        "official": false,
+        "editorial_count": 10,
+        "editorial_playlists": [
+          {
+            "name": "Housewerk",
+            "spotify_id": "37i9dQZF1DXa8NOEUWPn9W",
+            "followers": 1987547,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "UK House Music",
+            "spotify_id": "37i9dQZF1DWSrVdvTl1tVY",
+            "followers": 744562,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "techno party",
+            "spotify_id": "37i9dQZF1DWTiY3QffFUdg",
+            "followers": 173277,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "Deep & Minimal",
+            "spotify_id": "37i9dQZF1DWSI21IGRaeuC",
+            "followers": 88482,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "Riordan Radio",
+            "spotify_id": "37i9dQZF1E4sG0S7Z8QA00",
+            "followers": 1787,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "Omar+ Radio",
+            "spotify_id": "37i9dQZF1E4yJoUqlYLK4Z",
+            "followers": 1363,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "Robbie Doherty Radio",
+            "spotify_id": "37i9dQZF1E4qQvYFvJJG9n",
+            "followers": 902,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "This Is Robbie Doherty",
+            "spotify_id": "37i9dQZF1DZ06evO1HkShq",
+            "followers": 606,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "Call It What You Like Radio",
+            "spotify_id": "37i9dQZF1E8MuDihrKlIu8",
+            "followers": 522,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "wanna go day drinking? Radio",
+            "spotify_id": "37i9dQZF1E8M9OfKrFB10m",
+            "followers": 367,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          }
+        ],
+        "independent_playlists": [
+          {
+            "name": "House Music Discovery",
+            "spotify_id": "3lk0oO9FXemt7o3MsCDEGQ",
+            "followers": 106188,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cf6752453e64e8b07bfeaf16c",
+            "owner_name": "We Love"
+          },
+          {
+            "name": "Tech House 2026",
+            "spotify_id": "0cZwp1JMLPE3Ka0ldwwLnq",
+            "followers": 41356,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84661654c594a44998f815abb5",
+            "owner_name": "blanc"
+          },
+          {
+            "name": "hey, gimme that aux ",
+            "spotify_id": "6Ri5gwi3bU5SHdd6K15gvw",
+            "followers": 38130,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd169e57aab080759df9c47ae",
+            "owner_name": "hox 247"
+          },
+          {
+            "name": "Locked Up House 2026 - DND RECS",
+            "spotify_id": "64NTaSOGmH5Ls2ufK2VQz3",
+            "followers": 22742,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca3aab3c6266c73b2545aa1ba",
+            "owner_name": "DND RECS"
+          },
+          {
+            "name": "BOOTY CHAKRA TECHNICIAN",
+            "spotify_id": "5l9IyRRaW4Um9KVDx4piLb",
+            "followers": 22618,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84023a90bfeba9e55d022cfd1a",
+            "owner_name": "Whistleface"
+          },
+          {
+            "name": "HOUSE BANGERS UNRELEASED",
+            "spotify_id": "2U4NH8wdR6Y6wtW318bm99",
+            "followers": 9045,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840ab8fe9de4ec3bf14a5cb0e1",
+            "owner_name": "Phil de Witte"
+          },
+          {
+            "name": "BEATS",
+            "spotify_id": "2uRHrTmjjbWVJXRUcltCem",
+            "followers": 6973,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8456593e0f73ae816a1e3cb13f",
+            "owner_name": "lumedj"
+          },
+          {
+            "name": "Luke Dean - Top List (Unreleased)",
+            "spotify_id": "0ElNQrcHZ0qJwo25zbOqrs",
+            "followers": 5898,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8400b32eb06dcf3855a0965020",
+            "owner_name": "Selin Feridunoğlu"
+          },
+          {
+            "name": "This Jam Is Fresh - Sidney Charles",
+            "spotify_id": "52EPyJsgHcvYVYcwD2KFMP",
+            "followers": 4905,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d16469f7c731dd54b7296197",
+            "owner_name": "DelanoKyandro"
+          },
+          {
+            "name": "Higher Tempo - 135+ BPM ⚡",
+            "spotify_id": "6wkYAyNG0yOv7rA9vGV2Wk",
+            "followers": 4480,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da844f70539df1f85d709bfc12eb",
+            "owner_name": "Heldeep Records"
+          },
+          {
+            "name": "Groovy House",
+            "spotify_id": "49M3zha1Wulv9B3v9JiiCo",
+            "followers": 4092,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d5574f64ecae8b81ffdfbe43",
+            "owner_name": "sytse.teeninga"
+          },
+          {
+            "name": "Groove Bassment Uploads",
+            "spotify_id": "26uc5mkENi1M1ylVUdulaG",
+            "followers": 3633,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a2101ee76c292f476ff7b412",
+            "owner_name": "Groove Bassment"
+          },
+          {
+            "name": "Minimal/Deep Tech Music Official Playlist 🎛️ Raw Minimal Sound 2026",
+            "spotify_id": "10jFKfJGtBoKHnTQfyCvoi",
+            "followers": 3496,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da841fd7cf7567bd2165de858eef",
+            "owner_name": "Mirkevel"
+          },
+          {
+            "name": "House",
+            "spotify_id": "20MLA447agNYzBQ9EYOqiH",
+            "followers": 3350,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022154f30ee0dfa2de4b3d00d4ab67616d00001e0233867f92d3c6d64480d6f3f4ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e027ab2e6d2799edb8a16a226c3",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "SubSoul - The most listened songs",
+            "spotify_id": "3dZTUfymp303gY1rshthgj",
+            "followers": 2292,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840304e6d9e846c776919524ce",
+            "owner_name": "Ruben Gonzalez Palacios"
+          },
+          {
+            "name": "Chris Stussy’s USB - Unreleased",
+            "spotify_id": "20SkhdpX08Qv25tsFYtifh",
+            "followers": 2161,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8481070d34baa34859bc06db21",
+            "owner_name": "L.U."
+          },
+          {
+            "name": "House Music 🎉Party",
+            "spotify_id": "33kUwXjw9IihMYNuCizL7O",
+            "followers": 2160,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849193156cc44a34ed6d202f9a",
+            "owner_name": "Waves"
+          },
+          {
+            "name": "House bangertjes",
+            "spotify_id": "44QK0OIZvHg5Ewg1vXYEip",
+            "followers": 2152,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8486adbbfedfe01ccbf7adcc85",
+            "owner_name": "Scoutleeuwarden"
+          },
+          {
+            "name": "HOUSE MUSIC BANGERS🕺",
+            "spotify_id": "7qbCcISd3ygk8epnjSF74J",
+            "followers": 1907,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8491972d6dbba40fd24c9829c4",
+            "owner_name": "archie"
+          },
+          {
+            "name": "💫 🚀✨UP THE STUSS⚡️🔊💥",
+            "spotify_id": "08Vk1aXPUccxcmCCgbCPMM",
+            "followers": 1008,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84636444a3bde145889cb5d58b",
+            "owner_name": "Sander Fredriks"
+          },
+          {
+            "name": "Groovy Tech",
+            "spotify_id": "1hPQVRkFhKjNopuiPO16RD",
+            "followers": 949,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846ba38a194a8e7cb4ac942d9a",
+            "owner_name": "Jimmy Jay"
+          },
+          {
+            "name": "Beatport Top 100 - Minimal / Deep Tech",
+            "spotify_id": "7b079NB4U8vyUpOtwgUSdM",
+            "followers": 742,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c4c44b553600e5c4aed47608f",
+            "owner_name": "Neoternon"
+          },
+          {
+            "name": "The Groove Factory ",
+            "spotify_id": "6kGutPBy2QBfZfxxuElm8X",
+            "followers": 649,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840150be8657662c8d6cf44f75",
+            "owner_name": "Ollie"
+          },
+          {
+            "name": "House is a Feeling",
+            "spotify_id": "2b17pqpysFXiKJjmwcaMs5",
+            "followers": 640,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5673eb34e073b12b6fb822a4",
+            "owner_name": "Music Groove Machine"
+          },
+          {
+            "name": "Max Dean Luke Dean USB - Unreleased ",
+            "spotify_id": "0BChdHrrzZPi4t1EpvwR5X",
+            "followers": 580,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847cb2b9c312a2a3e5e12a5d38",
+            "owner_name": "L.U."
+          },
+          {
+            "name": "Elite Ball Knowledge but its Dance Music",
+            "spotify_id": "7dTDzA9CZA8j0K6BENXa2f",
+            "followers": 577,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cd535bcc36703e22dcd2f810c",
+            "owner_name": "bankruptbrian"
+          },
+          {
+            "name": "Just’s housy tunes",
+            "spotify_id": "7DkbKcs1FMfMB2whP7veu7",
+            "followers": 556,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84304c0fc6cb9c386a7357a83c",
+            "owner_name": "Poppe"
+          },
+          {
+            "name": "chris stussy, kettama & similar sounds ",
+            "spotify_id": "1EWEOntVzLatQm8FYSSnx5",
+            "followers": 554,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8444b584b4d5bcf0eb2b74664f",
+            "owner_name": "ryan campos"
+          },
+          {
+            "name": "ibiza final boss house",
+            "spotify_id": "53luyLVJqppP2vifqa7Mzj",
+            "followers": 550,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b1dfcc848f1094cd13d5fe50",
+            "owner_name": "laura🕺🏼✨🫶🏻🪩"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          },
+          {
+            "name": "A Fresh Energy - Gaskin",
+            "spotify_id": "1F8X47bnlrB37tLIly6hvl",
+            "followers": 342,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84994f255ff0e49253ef82cce2",
+            "owner_name": "Susanna Smith"
+          },
+          {
+            "name": "GroovyBABEY🕺🏽",
+            "spotify_id": "6WZSqn9MFCaZoPKuTwPQLB",
+            "followers": 342,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da842f1809456bd1ec564dcbd216",
+            "owner_name": "Alex Sanderson"
+          },
+          {
+            "name": "Stussy’s USB",
+            "spotify_id": "2ufyevG7IggShiPutlYutN",
+            "followers": 306,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846188451ba5563e9f5508e9e9",
+            "owner_name": "Ray"
+          },
+          {
+            "name": "MINIMAL / DEEP TECH",
+            "spotify_id": "7ApJ1kRfScPQGaE56K9Gwz",
+            "followers": 278,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84154f1a869ab558d8644cdf6b",
+            "owner_name": "Kasper Langendoen"
+          },
+          {
+            "name": "biting down hard",
+            "spotify_id": "4Il2taHDEX9vhO5FqmZAhT",
+            "followers": 128,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6149fe48b2bd6332483d9ed",
+            "owner_name": "Jov"
+          },
+          {
+            "name": "lekker handig",
+            "spotify_id": "2dB8qErOK3Ta3wQYkj6DEw",
+            "followers": 114,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da843738e8d33d65bd2b8e6fdc17",
+            "owner_name": "MEULEM"
+          }
+        ],
+        "independent_followers_total": 296414,
+        "key_supporters": [
+          {
+            "name": "Groove Bassment Uploads",
+            "spotify_id": "26uc5mkENi1M1ylVUdulaG",
+            "followers": 3633,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a2101ee76c292f476ff7b412",
+            "owner_name": "Groove Bassment",
+            "tier": 2,
+            "notes": "Independent bass house channel."
+          }
+        ],
+        "unclassified_count": 0,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": 3,
+        "independent_followers_delta": -48338,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ]
   }
