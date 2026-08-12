@@ -1,0 +1,33 @@
+name: One-time cache cleanup (temporary)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git
+        run: |
+          git config user.name "listenup-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Run cleanup
+        run: python scripts/cleanup_cache.py
+
+      - name: Commit
+        run: |
+          git add data/playlist_cache.json
+          git diff --cached --quiet && echo "Nothing to clean" || git commit -m "One-time: strip mis-cached editorial entries"
+          git pull --rebase origin main
+          git push
