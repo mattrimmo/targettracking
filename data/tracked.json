@@ -70,6 +70,14 @@
       "label": "DANSA",
       "image": "https://i.scdn.co/image/ab67616d00001e02ace7380e8ee73764ea11bbee",
       "added_at": "2026-08-12"
+    },
+    {
+      "isrc": "GBKQU2678893",
+      "artist": "Shermanology",
+      "track": "Let's Go",
+      "label": "D'EAUPE",
+      "image": "https://i.scdn.co/image/ab67616d00001e02ef063831e6b099b50667d7d4",
+      "added_at": "2026-08-12"
     }
   ]
 }
