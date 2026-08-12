@@ -243,8 +243,14 @@ def sp_enrich(spotify_id):
             time.sleep(wait + 0.5)
             continue
         if not r.ok:
+            # Genuinely gone (404) or some other real error — worth caching
+            # permanently, since there's no point re-checking a deleted
+            # playlist every run, but "" is the wrong value to use: that's
+            # exactly what a confirmed editorial playlist looks like. Use a
+            # distinct marker so this gets excluded from both counts
+            # instead of silently miscounted as editorial.
             print(f"  [debug] Spotify playlist lookup failed for {spotify_id}: {r.status_code} {r.text[:150]}")
-            _playlist_cache[spotify_id] = ("", None, None)
+            _playlist_cache[spotify_id] = ("__UNKNOWN__", None, None)
             return _playlist_cache[spotify_id]
         d = r.json()
         owner = (d.get("owner") or {}).get("display_name") or ""
@@ -369,6 +375,11 @@ def process_track(entry, curator_idx):
         owner, _total, cover = sp_enrich(pl["spotify_id"])
         if owner is None:
             unclassified_count += 1
+            print(f"  [debug] playlist='{pl['name']}' -> pending (lookup budget exhausted this window)")
+            continue
+        if owner == "__UNKNOWN__":
+            unclassified_count += 1
+            print(f"  [debug] playlist='{pl['name']}' -> excluded (Spotify says this playlist no longer exists)")
             continue
 
         classification = "editorial" if owner.strip() == "" else "independent"
