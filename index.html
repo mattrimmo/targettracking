@@ -173,6 +173,14 @@
   .trend-badge.pending { color: var(--faint); background: rgba(255,255,255,0.05); }
 
   .ai-read-box { background: linear-gradient(135deg, rgba(91,124,250,0.09), rgba(91,124,250,0.02)); border: 1px solid rgba(91,124,250,0.2); border-radius: 12px; padding: 14px 16px; margin-bottom: 18px; font-size: 13.5px; line-height: 1.5; }
+
+  .status-banner { border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; font-size: 13.5px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .status-banner.complete { background: linear-gradient(135deg, rgba(52,211,153,0.1), rgba(52,211,153,0.02)); border: 1px solid rgba(52,211,153,0.25); }
+  .status-banner.pending { background: linear-gradient(135deg, rgba(232,185,92,0.1), rgba(232,185,92,0.02)); border: 1px solid rgba(232,185,92,0.25); }
+  .status-banner .status-label { font-weight: 700; }
+  .status-banner .status-detail { color: var(--muted); }
+  .status-bar-track { flex: 1; min-width: 120px; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+  .status-bar-fill { height: 100%; background: var(--up); border-radius: 3px; transition: width 0.3s ease; }
   .ai-read-box .ai-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 5px; }
 
   .trend-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -791,6 +799,29 @@ function renderAllCards(tracked, history, pulse) {
     return;
   }
   content.innerHTML = '';
+
+  // Aggregate classification status across every tracked track's LATEST
+  // snapshot — a single honest number instead of checking each card, or
+  // watching Actions logs, to know whether more sync runs are needed.
+  let totalClassified = 0, totalPending = 0;
+  tracked.tracks.forEach(t => {
+    const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
+    const latest = snaps[snaps.length - 1];
+    if (!latest) return;
+    totalClassified += (latest.editorial_count || 0) + (latest.independent_playlists ? latest.independent_playlists.length : 0);
+    totalPending += latest.unclassified_count || 0;
+  });
+  const totalKnown = totalClassified + totalPending;
+  if (totalKnown > 0) {
+    const pct = Math.round((totalClassified / totalKnown) * 100);
+    const banner = document.createElement('div');
+    banner.className = 'status-banner ' + (totalPending === 0 ? 'complete' : 'pending');
+    banner.innerHTML = totalPending === 0
+      ? `<div><span class="status-label">✓ All playlists classified</span> <span class="status-detail">— ${fmtNum(totalClassified)} playlists across every tracked record, fully up to date.</span></div>`
+      : `<div><span class="status-label">${fmtNum(totalClassified)} of ${fmtNum(totalKnown)} playlists classified (${pct}%)</span> <span class="status-detail">— ${fmtNum(totalPending)} pending, picked up automatically over the next few sync runs.</span></div>
+         <div class="status-bar-track"><div class="status-bar-fill" style="width:${pct}%"></div></div>`;
+    content.appendChild(banner);
+  }
 
   tracked.tracks.forEach(t => {
     const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
