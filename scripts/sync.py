@@ -62,7 +62,16 @@ PACING_DELAY_SECONDS = 0.2          # deliberate throttle, every Spotify call
 # there's a clearer sense of the actual ceiling — this is a safe starting
 # guess, not a measured number.
 MAX_TRACKS_PER_RUN = 3
-DAILY_CALL_CIRCUIT_BREAKER = 3000   # generous safety net, not a ration
+# Was a rough guess of 3000 originally. Real evidence from an actual run:
+# ~115 new lookups succeeded before Spotify's own quota wall kicked in
+# (cache grew 609 -> ~724 before the 429s started, then every subsequent
+# call failed instantly). Set with a margin below that measured number so
+# this circuit breaker trips before Spotify's real wall does, rather than
+# continuing to hammer a wall we already know is there. One track landing
+# on an unusually large number of playlists (as happened here) can burn
+# the whole day's allowance on its own — this is a total-calls limit,
+# not a per-track one, which is why it's separate from MAX_TRACKS_PER_RUN.
+DAILY_CALL_CIRCUIT_BREAKER = 90
 CALL_LOG_WINDOW_HOURS = 24
 
 _logged_sample_keys = [False]
