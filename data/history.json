@@ -61482,6 +61482,93 @@
         "total_shazams_delta": null,
         "ai_read": null
       }
+    ],
+    "GBKQU2676309": [
+      {
+        "date": "2026-08-12",
+        "official": false,
+        "editorial_count": 2,
+        "editorial_playlists": [
+          {
+            "name": "🔝 tart tunes 🪩🍒",
+            "spotify_id": "0SZBp63wlFYiGeF4mB1Fbm",
+            "followers": 28285,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          },
+          {
+            "name": "Car Music",
+            "spotify_id": "4jQq2GZUTf7nW5SliP3FaV",
+            "followers": 14230,
+            "cover_url": null,
+            "owner_name": "Spotify"
+          }
+        ],
+        "independent_playlists": [
+          {
+            "name": "New House Music Friday",
+            "spotify_id": "5kyDTxrXdC6Qal62iEO5Ty",
+            "followers": 22487,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9137bec6ee783019be3d3a7b",
+            "owner_name": "Ben Dooks"
+          },
+          {
+            "name": "Electronic Essentials 2026",
+            "spotify_id": "1mW7XCerzFRiL4qNRRfxv4",
+            "followers": 17017,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3de58efd501e2eb3fdf52b3",
+            "owner_name": "mixtank"
+          },
+          {
+            "name": "Dance Music Friday | Ministry of Sound",
+            "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
+            "followers": 8575,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
+            "owner_name": "Ministry of Sound"
+          },
+          {
+            "name": "Pregame house bangers",
+            "spotify_id": "19DzfvIrPg8QkR4dXDRBi4",
+            "followers": 8418,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c66e6cbeb5c548d78b5a58d66",
+            "owner_name": "arialily"
+          },
+          {
+            "name": "New Dance Music Friday, New Music Friday Dance 2026",
+            "spotify_id": "1PysT5HQ1hkH7HrQ5rRpLa",
+            "followers": 5018,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c7e009bc38850be729fde7284",
+            "owner_name": "guettapen"
+          },
+          {
+            "name": "Carrie Ballad : new dance pop ",
+            "spotify_id": "60VYIx9crMV5ggoV3QNEYB",
+            "followers": 1370,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84267a883f52c1af68cc1ac932",
+            "owner_name": "Tiger"
+          }
+        ],
+        "independent_followers_total": 62885,
+        "key_supporters": [
+          {
+            "name": "Dance Music Friday | Ministry of Sound",
+            "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
+            "followers": 8575,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
+            "owner_name": "Ministry of Sound",
+            "tier": 1,
+            "notes": "Major dance brand."
+          }
+        ],
+        "unclassified_count": 3,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
+      }
     ]
   }
 }
