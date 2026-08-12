@@ -230,9 +230,16 @@ def sp_enrich(spotify_id):
         if r.status_code == 429:
             wait = int(r.headers.get("Retry-After", "2"))
             if wait > 30:
-                print(f"  [debug] Spotify quota signal for {spotify_id} — Retry-After {wait}s, treating as failed rather than sleeping")
-                _playlist_cache[spotify_id] = ("", None, None)
-                return _playlist_cache[spotify_id]
+                # This means "we don't know yet", not "confirmed editorial" —
+                # must NOT write "" (empty owner) to the cache here, since ""
+                # is exactly what a real editorial playlist looks like once
+                # genuinely checked. Doing that previously mis-classified
+                # every playlist hit by a quota wall as editorial, permanently,
+                # since it got baked into the persistent cache. Return the
+                # same uncached "pending" sentinel the circuit breaker uses
+                # instead, so it gets a real check on a future run.
+                print(f"  [debug] Spotify quota signal for {spotify_id} — Retry-After {wait}s, treating as pending (not cached)")
+                return (None, None, None)
             time.sleep(wait + 0.5)
             continue
         if not r.ok:
@@ -246,8 +253,7 @@ def sp_enrich(spotify_id):
         cover = images[0]["url"] if images else None
         _playlist_cache[spotify_id] = (owner, total, cover)
         return _playlist_cache[spotify_id]
-    _playlist_cache[spotify_id] = ("", None, None)
-    return _playlist_cache[spotify_id]
+    return (None, None, None)  # retries exhausted — pending, not confirmed editorial
 
 
 def sp_label(album_id):
