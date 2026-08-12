@@ -56,6 +56,12 @@ IS_OFFICIAL = os.environ.get("IS_OFFICIAL", "false").lower() == "true"
 
 MIN_FOLLOWERS = 100
 PACING_DELAY_SECONDS = 0.2          # deliberate throttle, every Spotify call
+
+# Set conservatively below the ~4 tracks that fully succeeded before SOT's
+# limit walled off completely in the last real run. Adjust upward once
+# there's a clearer sense of the actual ceiling — this is a safe starting
+# guess, not a measured number.
+MAX_TRACKS_PER_RUN = 3
 DAILY_CALL_CIRCUIT_BREAKER = 3000   # generous safety net, not a ration
 CALL_LOG_WINDOW_HOURS = 24
 
@@ -142,14 +148,30 @@ def git_checkpoint(message):
 
 
 # ─── Spot On Track ───────────────────────────────────────────────────────
+SOT_PACING_DELAY_SECONDS = 0.15  # same reasoning as the Spotify pacing delay
+
+
 def sot_get(path):
-    r = requests.get(
-        "https://www.spotontrack.com/api/v1" + path,
-        headers={"Authorization": "Bearer " + SOT_KEY},
-        timeout=30,
-    )
+    for attempt in range(2):
+        time.sleep(SOT_PACING_DELAY_SECONDS)
+        r = requests.get(
+            "https://www.spotontrack.com/api/v1" + path,
+            headers={"Authorization": "Bearer " + SOT_KEY},
+            timeout=30,
+        )
+        if r.status_code == 429:
+            wait = int(r.headers.get("Retry-After", "2"))
+            if wait > 30:
+                # Same rule as the Spotify side: never blindly sleep out a
+                # long server-specified cooldown inside a CI job — that's
+                # what caused the multi-hour hangs before. Fail this call
+                # fast instead.
+                r.raise_for_status()
+            time.sleep(wait + 0.5)
+            continue
+        r.raise_for_status()
+        return r.json()
     r.raise_for_status()
-    return r.json()
 
 
 # ─── Spotify ─────────────────────────────────────────────────────────────
@@ -409,7 +431,38 @@ def main():
 
     snapshots_by_isrc = history.setdefault("snapshots", {})
 
-    for entry in tracked.get("tracks", []):
+    # Never-snapshotted tracks first. Spot On Track calls aren't cached or
+    # rationed the way Spotify calls are — every track gets fully re-queried
+    # every run, in whatever order the list is in. If SOT's own rate limit
+    # gets hit partway through a run (as observed), whatever's positioned
+    # after that point never gets reached — and since new tracks always get
+    # appended to the END of the list, they'd be the ones silently starved,
+    # every single run, not just occasionally. Processing brand-new tracks
+    # first means a partial run costs an already-established track its
+    # update, not a track that's never had one at all.
+    all_tracks = tracked.get("tracks", [])
+    never_synced = [t for t in all_tracks if not snapshots_by_isrc.get(t["isrc"])]
+    already_synced = [t for t in all_tracks if snapshots_by_isrc.get(t["isrc"])]
+    ordered_tracks = never_synced + already_synced
+    if never_synced:
+        print(f"Prioritising {len(never_synced)} never-synced track(s) first: "
+              + ", ".join(f"{t.get('artist','?')} - {t.get('track','?')}" for t in never_synced))
+
+    # SOT's own limit looks like a hard quota-per-period, not a smooth
+    # per-second throttle — a run works fine for several tracks then walls
+    # off completely and stays walled for the rest of the run. Pacing
+    # alone can't fix that, so cap how many tracks get FULLY processed in
+    # one run and leave the rest for the next one. Combined with the
+    # never-synced-first ordering above, new tracks get covered well
+    # within this cap; already-synced tracks just take a couple of extra
+    # runs to all get refreshed, which is fine at weekly/daily cadence.
+    if len(ordered_tracks) > MAX_TRACKS_PER_RUN:
+        deferred = ordered_tracks[MAX_TRACKS_PER_RUN:]
+        ordered_tracks = ordered_tracks[:MAX_TRACKS_PER_RUN]
+        print(f"Capping this run to {MAX_TRACKS_PER_RUN} tracks — deferring to next run: "
+              + ", ".join(f"{t.get('artist','?')} - {t.get('track','?')}" for t in deferred))
+
+    for entry in ordered_tracks:
         isrc = entry["isrc"]
         print(f"Syncing {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
         try:
