@@ -473,11 +473,28 @@ def main():
     # first means a partial run costs an already-established track its
     # update, not a track that's never had one at all.
     all_tracks = tracked.get("tracks", [])
-    never_synced = [t for t in all_tracks if not snapshots_by_isrc.get(t["isrc"])]
-    already_synced = [t for t in all_tracks if snapshots_by_isrc.get(t["isrc"])]
+
+    # The playlist_cache.json cleanup (2026-08-12) fixed the underlying
+    # cache, but never touched already-recorded history.json snapshots —
+    # a track's dashboard card shows whatever its LATEST snapshot says,
+    # frozen at whenever that track last actually ran. Any track not
+    # re-synced since the fix is still displaying pre-fix, potentially
+    # mis-classified data, even though the cache underneath it is clean
+    # now. Treat those the same as genuinely never-synced tracks so the
+    # whole list gets a fresh pass, not just brand-new additions. Safe to
+    # remove this cutoff once satisfied every track has had a post-fix run.
+    CACHE_FIX_DATE = "2026-08-12"
+    def needs_priority(t):
+        snaps = snapshots_by_isrc.get(t["isrc"])
+        if not snaps:
+            return True
+        return snaps[-1].get("date", "") < CACHE_FIX_DATE
+
+    never_synced = [t for t in all_tracks if needs_priority(t)]
+    already_synced = [t for t in all_tracks if not needs_priority(t)]
     ordered_tracks = never_synced + already_synced
     if never_synced:
-        print(f"Prioritising {len(never_synced)} never-synced track(s) first: "
+        print(f"Prioritising {len(never_synced)} track(s) needing a fresh pass (never-synced or pre-fix data): "
               + ", ".join(f"{t.get('artist','?')} - {t.get('track','?')}" for t in never_synced))
 
     # SOT's own limit looks like a hard quota-per-period, not a smooth
