@@ -125,6 +125,12 @@ def load_call_log():
         calls = 0
     _call_log = {"window_start": window_start, "calls": calls}
     print(f"Spotify calls this window: {calls}/{DAILY_CALL_CIRCUIT_BREAKER} (safety net, not a ration).")
+    if calls >= DAILY_CALL_CIRCUIT_BREAKER:
+        hours_left = CALL_LOG_WINDOW_HOURS - (datetime.now(timezone.utc) - datetime.fromisoformat(window_start)).total_seconds() / 3600
+        print(f"WARNING: stored call count already meets/exceeds the current cap — this ENTIRE run will make "
+              f"zero new-lookup progress (cache hits still work fine). This happens if DAILY_CALL_CIRCUIT_BREAKER "
+              f"was just lowered below an already-accumulated count. Window resets in ~{hours_left:.1f}h, or "
+              f"manually reset data/spotify_call_log.json to {{}} to unblock immediately.")
 
 
 def save_call_log():
