@@ -33973,6 +33973,1323 @@
         "independent_followers_delta": 405,
         "total_shazams_delta": 0,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-18",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "Tech House 2026",
+            "spotify_id": "7nppx7uLgcmkZHg70HNfOk",
+            "followers": 566334,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce81a4dd2b752630586044a94",
+            "owner_name": "Future House Music"
+          },
+          {
+            "name": "Cercle 2026",
+            "spotify_id": "0HZhnNN4gCakjh0zTf61Me",
+            "followers": 197060,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84150a798d90515f0299666b09",
+            "owner_name": "Cercle Music"
+          },
+          {
+            "name": "I'm a rap fan but these house songs SLAP",
+            "spotify_id": "5IjtxhzvywJewVeNtLjuKK",
+            "followers": 189830,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cac91b7f6c6d502b84bedff4d",
+            "owner_name": "putyouon. by Steve Cardigan"
+          },
+          {
+            "name": "DAGIS BEEATS",
+            "spotify_id": "02uvDe6YDf3Ao8jbZrYDZO",
+            "followers": 158477,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c066e3c00e776aa6cfdb563d2",
+            "owner_name": "Dagi Bee"
+          },
+          {
+            "name": "House Hits 2026  |                                Get Together ",
+            "spotify_id": "7JcJqbGD1q58MkNpnbolvZ",
+            "followers": 136807,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c52cde04d7b58495840c5e65",
+            "owner_name": "Get Together"
+          },
+          {
+            "name": "PRISMATIC by Tiësto",
+            "spotify_id": "5C1xZf4tCOisk1nsiAafAR",
+            "followers": 116339,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca4d32ccd187ba10ae7104550",
+            "owner_name": "Tiësto"
+          },
+          {
+            "name": "House | Remixes 2026 🌴 Summer House Mix",
+            "spotify_id": "0uuYJp1SOkdZpZLn4KFvc7",
+            "followers": 111492,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c570f251ed0cdc840ab69e370",
+            "owner_name": "Emil Gustafsson"
+          },
+          {
+            "name": "House Music In Good Company",
+            "spotify_id": "2QPeCzYhKredh0KV8agEsp",
+            "followers": 106854,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cc2c3b43d76d318707fc62265",
+            "owner_name": "Good Company Records"
+          },
+          {
+            "name": "IBIZA RESIDENCE TECH HOUSE",
+            "spotify_id": "7CScNyyszWr8Hae2sOtnWg",
+            "followers": 78992,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb029e3e14b0f98e2057f3421",
+            "owner_name": "EMPO Electronic Meeting Point"
+          },
+          {
+            "name": "CLUB HOUSE 2026 🔥 Tech House & Club Hits",
+            "spotify_id": "2Cf5jMBP07fLmR2OB9g628",
+            "followers": 60987,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c202c4a1eebfe1890cdc17faa",
+            "owner_name": "Leandro Da Silva"
+          },
+          {
+            "name": "Oliver Heldens - Best Of Heldeep Radio",
+            "spotify_id": "5yukQNUdlkAILE0PgGtKDH",
+            "followers": 56594,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cafe8d0dd4904be73c2e82d70",
+            "owner_name": "Oliver Heldens"
+          },
+          {
+            "name": "Electronic Sunrise 🌞🌴 | Dance Pop, Ibiza Chillout, Deep House, Dance, Summer, Ibiza",
+            "spotify_id": "7m2GBDQiFuLUxdF5l92SVs",
+            "followers": 53021,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b3a1ca10ae028ccdfa5f9321",
+            "owner_name": "Bolier"
+          },
+          {
+            "name": "Pete Tong’s Essential Selection Radio Playlist",
+            "spotify_id": "38JmDMAI5MztUH9klEQWU6",
+            "followers": 50479,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c453bf8967b1e305fabe590a5",
+            "owner_name": "Pete Tong"
+          },
+          {
+            "name": "IBIZA TECHNO HOUSE 2026 ⚡ Best Tech House & Club Tracks",
+            "spotify_id": "5cLLIeVd2X2b55YhSkzmLN",
+            "followers": 44688,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb33d8bb07f45fe8b17442733",
+            "owner_name": "Ibiza Techno House Music"
+          },
+          {
+            "name": "Beatport Top 100     (Daily updated)",
+            "spotify_id": "4W7jnrqeKfVEnb1BVHMG5b",
+            "followers": 44225,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9b3d329a187d804ac7f27dde",
+            "owner_name": "Kasper Langendoen"
+          },
+          {
+            "name": "DANCE 2026 HITS⚡| ELECTRONICA | AFTER 😎🌞 Summer 2026 | PARTY  DANCE✨",
+            "spotify_id": "5B3yHgvHrnwSit19JeezPv",
+            "followers": 43089,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c205426520d84b6b48b744dae",
+            "owner_name": "rodneysson"
+          },
+          {
+            "name": "GROOVY HOUSE TUNES",
+            "spotify_id": "28uvf8KexyRdwUZflITrHx",
+            "followers": 41525,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce69f297e86b36035b035e27f",
+            "owner_name": "Harrison Rodrigoe"
+          },
+          {
+            "name": "Tech House 2026",
+            "spotify_id": "0cZwp1JMLPE3Ka0ldwwLnq",
+            "followers": 41368,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84661654c594a44998f815abb5",
+            "owner_name": "blanc"
+          },
+          {
+            "name": "AFROHOUSE",
+            "spotify_id": "2rj34RPGCIkI0SOMFXd2QK",
+            "followers": 38993,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84413668782e0cc4b641fa64c7",
+            "owner_name": "yascepeda"
+          },
+          {
+            "name": "hey, gimme that aux ",
+            "spotify_id": "6Ri5gwi3bU5SHdd6K15gvw",
+            "followers": 38326,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd169e57aab080759df9c47ae",
+            "owner_name": "hox 247"
+          },
+          {
+            "name": "MEDUZA Radio 🎧",
+            "spotify_id": "4fpFQz1qH46tazytatykGf",
+            "followers": 37860,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847e147259c2840d719efaebfd",
+            "owner_name": "MEDUZA"
+          },
+          {
+            "name": "LOUD BY LOUD LUXURY",
+            "spotify_id": "0JpNDMZYjKQDBciUvCuAYp",
+            "followers": 36772,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a4cc2a35586882b1bf7563d9",
+            "owner_name": "Loud Luxury"
+          },
+          {
+            "name": "AFRO HOUSE TECH HOUSE 2026",
+            "spotify_id": "2EOAr0CMD9pvCWI980jWWd",
+            "followers": 35551,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c1c125a7982d0bbf7952619ff",
+            "owner_name": "yascepeda"
+          },
+          {
+            "name": "Tech House Slappers",
+            "spotify_id": "0rvPxkmlJZ5EX4JXutyP6I",
+            "followers": 32622,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cf5788bad455164cde6ff1255",
+            "owner_name": "Ravemoments"
+          },
+          {
+            "name": "BEST HOUSE SONGS OF ALL TIME",
+            "spotify_id": "0YiTIZ1xvw6SozNmItSPwC",
+            "followers": 31275,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca1945df9bab0729df75c6299",
+            "owner_name": "ThomasStudio"
+          },
+          {
+            "name": "Top 50🔥 Música Eletrônica ",
+            "spotify_id": "5eFtD4YG9uoXYQPQoVBhXr",
+            "followers": 30902,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c88e3e9c85fc78f3e3d813f71",
+            "owner_name": "foxelmusic"
+          },
+          {
+            "name": "Wakacyjna impreza 2026",
+            "spotify_id": "7vSMbitTYLZQSCtqoE2isT",
+            "followers": 29351,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c54831f4c67495a62b751a80a",
+            "owner_name": "uDiscover Polska"
+          },
+          {
+            "name": "Skiing House Tunes ⛷️🎿",
+            "spotify_id": "3uKN3yS5qExdRMwAJCSZTr",
+            "followers": 28674,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cceb966a85d2479116f1470b2",
+            "owner_name": "2SnoozeMusic"
+          },
+          {
+            "name": "Locked Up House 2026 - DND RECS",
+            "spotify_id": "64NTaSOGmH5Ls2ufK2VQz3",
+            "followers": 22736,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca3aab3c6266c73b2545aa1ba",
+            "owner_name": "DND RECS"
+          },
+          {
+            "name": "Experts Only: Music Without Limits",
+            "spotify_id": "3HPnEh65cfZxTflZP42tkv",
+            "followers": 21295,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845165e679fd4b62b3aaa318ee",
+            "owner_name": "John Summit"
+          },
+          {
+            "name": "Ibiza 2026 🍒",
+            "spotify_id": "050Rm6hbmKoJewavIqK8kQ",
+            "followers": 20315,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c24c546a40e9b1396e9c2e665",
+            "owner_name": "Grace jordan"
+          },
+          {
+            "name": "Beatport Top 100 - Today",
+            "spotify_id": "0Q4JvzeT0q3FLsj5fqffMV",
+            "followers": 19901,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8413eefd3fa0824de200fa2ba3",
+            "owner_name": "Symphoria"
+          },
+          {
+            "name": "Electronic Essentials 2026",
+            "spotify_id": "1mW7XCerzFRiL4qNRRfxv4",
+            "followers": 16998,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3de58efd501e2eb3fdf52b3",
+            "owner_name": "mixtank"
+          },
+          {
+            "name": "SUMMER PARTY 2026 🔥 Summer Dance & House Hits",
+            "spotify_id": "0Adj250PoRDUej5YOi1SHT",
+            "followers": 16317,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84bb0bacba433f7d9c92772b21",
+            "owner_name": "Leandro Da Silva"
+          },
+          {
+            "name": "House is a feeling",
+            "spotify_id": "4qVa0x8ia47xudRs6ulrFS",
+            "followers": 15688,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c11b215db3b3a8719eb7b4128",
+            "owner_name": "Msand"
+          },
+          {
+            "name": "538 Dance Department by Armin van Buuren",
+            "spotify_id": "0G0TyzNgv06xV75q8WGfFL",
+            "followers": 15612,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c1e4952061e63ba4a4f619261",
+            "owner_name": "Armin van Buuren"
+          },
+          {
+            "name": "Late Night Drive 🚗 House & EDM",
+            "spotify_id": "1cBVouBncFSZUOHQjMuksy",
+            "followers": 15312,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c86246d1e71225b75f14fa055",
+            "owner_name": "Frequency"
+          },
+          {
+            "name": "deep and minimal house 2026",
+            "spotify_id": "4zpaBQD8UiK5sFCzTg6knJ",
+            "followers": 14152,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840cd900ec31075d7d1c05f048",
+            "owner_name": "hox 247"
+          },
+          {
+            "name": "Eletrônica remix 2026 | electronic",
+            "spotify_id": "47LlILYIeNV2dzNAUYXiRb",
+            "followers": 13710,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd09cb9e027a7210061edde41",
+            "owner_name": "evaldorcardoso"
+          },
+          {
+            "name": "TECH HOUSE | House, Techno, Tech, Minimal House",
+            "spotify_id": "15PRID4HyR7LCnYw4tT7RS",
+            "followers": 13322,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c18392ad70b681e246433d8cc",
+            "owner_name": "Elation Music"
+          },
+          {
+            "name": "HOUSE🕺🏻",
+            "spotify_id": "234wrWIbseI1jcOUenNewL",
+            "followers": 13003,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cf274b1b72e31fce2d7b7a765",
+            "owner_name": "Tim van Cuilenborg"
+          },
+          {
+            "name": "VIBE | Hottest Hits & Beats ",
+            "spotify_id": "0n8dJCeKY13KcLvFIhnHC2",
+            "followers": 11785,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ca4b7da2b4d181fd9aa01ba6a",
+            "owner_name": "TASTEMAKERS"
+          },
+          {
+            "name": "DJ Blighty – The Playlist | Dance & Electronic Music",
+            "spotify_id": "0qasaUpCfUe437qcd37x4L",
+            "followers": 11363,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847ba456cb2fc692e1b657c9f4",
+            "owner_name": "dj_blighty"
+          },
+          {
+            "name": "Bershka Playlist 2026 • House & Dance In Store Fashion Music ",
+            "spotify_id": "2ZiRkku2N0VdYtBSVOzRL9",
+            "followers": 11162,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c1cc3be70212b7c5fe56c10dc",
+            "owner_name": "113th Street Music"
+          },
+          {
+            "name": "Techno House 2026| Tech House Hits 2026",
+            "spotify_id": "5ISQA2eWfQ1yLzPaqH1zdE",
+            "followers": 10803,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c69c2632b1aa1a9daec410ac8",
+            "owner_name": "DeeVu Records"
+          },
+          {
+            "name": "Waushouse🔊🔊🔊",
+            "spotify_id": "4iSeuiIn8SqZ78tMVSOhst",
+            "followers": 10562,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b9622bfcafed3e212c47e64a",
+            "owner_name": "Peer.heuvel"
+          },
+          {
+            "name": "Future Sounds - Tech House / Melodic Techno",
+            "spotify_id": "7AW2k6LNqmOACWfkxi9gzs",
+            "followers": 9907,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84352758e277cba8457461b4bc",
+            "owner_name": "Future Plan Sounds"
+          },
+          {
+            "name": "Top Overall Tracks - 1001Tracklists [Follow For Weekly Updates]",
+            "spotify_id": "23qaL0O0AR1aPSqvBSjKG4",
+            "followers": 9643,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84766157f70427488d1bb8dfb6",
+            "owner_name": "1001tracklists"
+          },
+          {
+            "name": "Tech House Bangerz",
+            "spotify_id": "30ivbx7Xo2ZaQzMY6o6kAE",
+            "followers": 9161,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44d1a7cd73d19db11d27a258",
+            "owner_name": "Jack Rose"
+          },
+          {
+            "name": "HOUSE BANGERS UNRELEASED",
+            "spotify_id": "2U4NH8wdR6Y6wtW318bm99",
+            "followers": 9051,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840ab8fe9de4ec3bf14a5cb0e1",
+            "owner_name": "Phil de Witte"
+          },
+          {
+            "name": "House Workout - Summer 2026 Dance & House Music",
+            "spotify_id": "210GNuboojT87jL85tgMzT",
+            "followers": 8944,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb1fb44587d844e05f5d5c0c7",
+            "owner_name": "Dan Gurr"
+          },
+          {
+            "name": "Pregame house bangers",
+            "spotify_id": "19DzfvIrPg8QkR4dXDRBi4",
+            "followers": 8496,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c66e6cbeb5c548d78b5a58d66",
+            "owner_name": "arialily"
+          },
+          {
+            "name": "BEST HOUSE PLAYLIST🕺🏽🪩🍒",
+            "spotify_id": "64jXRDs8X3D0n62lPuhVkC",
+            "followers": 8483,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c0423e1cde15655e7d921d590",
+            "owner_name": "bxiley11"
+          },
+          {
+            "name": "SUNSHINE FORECAST",
+            "spotify_id": "4oFBllFCzZKAYRD78REnrZ",
+            "followers": 7047,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cf5645dc0c99b3dec93b95e61",
+            "owner_name": "Tommie Sunshine"
+          },
+          {
+            "name": "PULSE by Factory 93",
+            "spotify_id": "1xwMXjlFjVFyKIETmsqCLD",
+            "followers": 6972,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84ff64590d20cc5b08c902ed2f",
+            "owner_name": "Factory 93"
+          },
+          {
+            "name": "Funkerman House Selection",
+            "spotify_id": "3gOZuWFhWw6xP7kK0DplVL",
+            "followers": 6606,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb52878398d496c7e54b21abe",
+            "owner_name": "Funkerman"
+          },
+          {
+            "name": "Limitless Beats! Lato Network ",
+            "spotify_id": "54aXqW2RTp8DDZinfbFX7F",
+            "followers": 6417,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da841f3dd6e1b1a171c5359edd85",
+            "owner_name": "lato.network"
+          },
+          {
+            "name": "Old Money House Music",
+            "spotify_id": "45iFgtomgU0Cwyg1rXWDPS",
+            "followers": 6398,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845378b4de5bbb8419195e79a8",
+            "owner_name": "2SnoozeMusic"
+          },
+          {
+            "name": "Essential House",
+            "spotify_id": "0vwjl5bPOb6WfSJCrMFbRv",
+            "followers": 6009,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84bccbe2adbedd437ec5ced6e3",
+            "owner_name": "earthndays"
+          },
+          {
+            "name": "Glitterbox Ibiza 2026",
+            "spotify_id": "7J7V3yfZf4reHk2zkbnP8v",
+            "followers": 5901,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84e4eb2cd2bcadb50d9f7d68d4",
+            "owner_name": "Jürgen Prunk"
+          },
+          {
+            "name": "Luke Dean - Top List (Unreleased)",
+            "spotify_id": "0ElNQrcHZ0qJwo25zbOqrs",
+            "followers": 5899,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8400b32eb06dcf3855a0965020",
+            "owner_name": "Selin Feridunoğlu"
+          },
+          {
+            "name": "Uprise Essentials",
+            "spotify_id": "0bTXXmj1wUAbdc701KE5Z4",
+            "followers": 5819,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847cb4d776185b5044447a2754",
+            "owner_name": "Uprise Music"
+          },
+          {
+            "name": "chris stussy unreleased vibes",
+            "spotify_id": "2Lln3wXeeezCUneUEvYwCH",
+            "followers": 5490,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0204dca98ec5bd3f31934c1ceeab67616d00001e0223f07f82c872e60f419ef8f0ab67616d00001e023d6e85c1774143c28f238e62ab67616d00001e0265f1f242d0de8bc06174ddd9",
+            "owner_name": "Carlijne Brand"
+          },
+          {
+            "name": "This Jam Is Fresh - Sidney Charles",
+            "spotify_id": "52EPyJsgHcvYVYcwD2KFMP",
+            "followers": 5101,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d16469f7c731dd54b7296197",
+            "owner_name": "DelanoKyandro"
+          },
+          {
+            "name": "Beatport House Top 100  (updated)",
+            "spotify_id": "0MCvjH6AftvpUsYxjMpRm5",
+            "followers": 5098,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8497bca215df18092e7355e7b4",
+            "owner_name": "Kasper Langendoen"
+          },
+          {
+            "name": "Ibiza  Summer House (DC10, Circoloco, Hi, Ushuaia, UNVRS)",
+            "spotify_id": "0kq6AUkNhk8MMuKXdXDqoC",
+            "followers": 4990,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84e7ebb53b76e63b48aa9a45a0",
+            "owner_name": "Southbeat Music"
+          },
+          {
+            "name": "Dave Treacy Selects",
+            "spotify_id": "6q9LNImoxjh4nQo9tPO9Ln",
+            "followers": 4513,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da844baed31b62d24970adf86a3d",
+            "owner_name": "Dave Treacy"
+          },
+          {
+            "name": "Vodka Red Bull🧊☀️",
+            "spotify_id": "3dldT4J1sKEOZds6uX9f6X",
+            "followers": 4482,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84af496172f4d719c5a0d6df5f",
+            "owner_name": "Pep"
+          },
+          {
+            "name": "Capital dance latest songs ",
+            "spotify_id": "16QBbVd4dQ7EPbHR41uUaY",
+            "followers": 4445,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849389f30bb3ea8946d9e90455",
+            "owner_name": "mageanHarls128"
+          },
+          {
+            "name": "Deutsche DJ Charts",
+            "spotify_id": "2fBaH8GW6nS8ev9vxHl8Wo",
+            "followers": 4049,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c0b02879abe14deb3e2736866",
+            "owner_name": "www.ddjc.de"
+          },
+          {
+            "name": "Hugel - Movin to the Sun (Tech House Mix)",
+            "spotify_id": "2709SImhYY5Y8zbfYL5JJL",
+            "followers": 3903,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c584d538ac1c95cdc17b4cb49",
+            "owner_name": "KILOHM RECORDS"
+          },
+          {
+            "name": "MistaJam Reacts",
+            "spotify_id": "1s9CvyjdYBS8poknZ8a4xk",
+            "followers": 3767,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c2dde457eed1cc65b2947ec84",
+            "owner_name": "MistaJam"
+          },
+          {
+            "name": "Deep Grooves",
+            "spotify_id": "72ohyLjUNKU6Mg7jLz42bx",
+            "followers": 3361,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84af4cad51072af0f1d9914f67",
+            "owner_name": "Deep Grooves"
+          },
+          {
+            "name": "House",
+            "spotify_id": "20MLA447agNYzBQ9EYOqiH",
+            "followers": 3348,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022154f30ee0dfa2de4b3d00d4ab67616d00001e0233867f92d3c6d64480d6f3f4ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e027ab2e6d2799edb8a16a226c3",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "FUTURE HOUSE BANGERS 💯 🔥😤",
+            "spotify_id": "3Mc5XsqG06HWVHd1F9sBwo",
+            "followers": 3315,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02088d0090113b0605eef29bf2ab67616d00001e0242b4a74cc143f35fdf0a2167ab67616d00001e028e373c5dc1b53cac0705c028ab67616d00001e02bf95257575c35bc27fccd930",
+            "owner_name": "Timchic"
+          },
+          {
+            "name": "Deep / Tech House 2026🔥",
+            "spotify_id": "72HoVuOO7pGbzbuFHLd0RM",
+            "followers": 3229,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9b7479966541a31e46bb0578",
+            "owner_name": "RensvdHelden"
+          },
+          {
+            "name": "Vibing 👽",
+            "spotify_id": "7HQZipl81iFQA6W75tyFhz",
+            "followers": 2967,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0279348f95e66a3bac402f11e9ab67616d00001e02a487deeecb334b6619489d74ab67616d00001e02a6040d7fb7d28182d383ac54ab67616d00001e02ade4d1b4270ec52017577f0c",
+            "owner_name": "Tyler Condrasky"
+          },
+          {
+            "name": "ANTS Ushuaïa Ibiza 2026",
+            "spotify_id": "7mR8ruOWgkG2JXXLAbOIDi",
+            "followers": 2808,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845874f61a2857623c82169f28",
+            "owner_name": "Dave de Vries"
+          },
+          {
+            "name": "Peter Luts presents VYGR Club Sounds",
+            "spotify_id": "4wrmmFdYDcSIOwDay3SWFp",
+            "followers": 2659,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ce87cd7d6435ce3833a01566",
+            "owner_name": "Peter Luts"
+          },
+          {
+            "name": "Hit des Clubs DJBuzz",
+            "spotify_id": "0r1w7PI0JOMFl0pozN1ZVr",
+            "followers": 2544,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da843d3a835cc7abc0f249b01739",
+            "owner_name": "DJBuzz Promo"
+          },
+          {
+            "name": "Floatin 🖖🏽",
+            "spotify_id": "0YJA17JkXerJJFLt6acYdW",
+            "followers": 2295,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da844a4ba8b9037fafaa930cbe14",
+            "owner_name": "TJR"
+          },
+          {
+            "name": "SubSoul - The most listened songs",
+            "spotify_id": "3dZTUfymp303gY1rshthgj",
+            "followers": 2294,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840304e6d9e846c776919524ce",
+            "owner_name": "Ruben Gonzalez Palacios"
+          },
+          {
+            "name": "SLAM! MixMarathon Chart (updated weekly)",
+            "spotify_id": "2Xgee4WcSTK03DCIWLLEx8",
+            "followers": 2250,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ffddaee87d10f45bedc68ea4",
+            "owner_name": "SLAM Official"
+          },
+          {
+            "name": "NEW MUSIC MONDAY",
+            "spotify_id": "1gasLAHFon1IBbvF3gWWen",
+            "followers": 2246,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cff534783a5e4e97cdab78ef5",
+            "owner_name": "Life In Technocolor"
+          },
+          {
+            "name": "Chris Stussy’s USB - Unreleased",
+            "spotify_id": "20SkhdpX08Qv25tsFYtifh",
+            "followers": 2199,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8481070d34baa34859bc06db21",
+            "owner_name": "L.U."
+          },
+          {
+            "name": "House Music 🎉Party",
+            "spotify_id": "33kUwXjw9IihMYNuCizL7O",
+            "followers": 2159,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849193156cc44a34ed6d202f9a",
+            "owner_name": "Waves"
+          },
+          {
+            "name": "House bangertjes",
+            "spotify_id": "44QK0OIZvHg5Ewg1vXYEip",
+            "followers": 2147,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8486adbbfedfe01ccbf7adcc85",
+            "owner_name": "Scoutleeuwarden"
+          },
+          {
+            "name": "TURNT Dance Hits 2026 | EDM, House, Tech House & Festival Anthems",
+            "spotify_id": "0qm7EPsta6aIujHRlRPqGk",
+            "followers": 2143,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c0143429e705e396d99e37525",
+            "owner_name": "TURNT"
+          },
+          {
+            "name": "remixes x dubstep x house ",
+            "spotify_id": "4ZFROcSDzbwCSE3rs0Dfwt",
+            "followers": 1993,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0212e387523930f17efbff093bab67616d00001e0228eec1bed4fe754299ea1e96ab67616d00001e02750d4a1b362296d1b815a223ab67616d00001e02b3e70fb498006743b7412305",
+            "owner_name": "libbymeredith14_"
+          },
+          {
+            "name": "Bailar como forma de supervivencia",
+            "spotify_id": "0EaZQFxDGI96xHzi87LKwG",
+            "followers": 1927,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da841fc7d4be28cfab95daf067c3",
+            "owner_name": "Isa Pujo"
+          },
+          {
+            "name": "HOUSE MUSIC BANGERS🕺",
+            "spotify_id": "7qbCcISd3ygk8epnjSF74J",
+            "followers": 1912,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8491972d6dbba40fd24c9829c4",
+            "owner_name": "archie"
+          },
+          {
+            "name": "Welcome to my HOUSE",
+            "spotify_id": "3C2KyqfKFbYpCHcFADM0tL",
+            "followers": 1882,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84485562c2ef7b87ddce0c2051",
+            "owner_name": "calvinwong1966"
+          },
+          {
+            "name": "DANCE HITS  2020s",
+            "spotify_id": "3PwRhj6cXNAayWirZLtDyb",
+            "followers": 1881,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84e077db5754beee360247d91f",
+            "owner_name": "Vane86"
+          },
+          {
+            "name": "summer haus  🤌",
+            "spotify_id": "2VtjpsDHbQ03B8VqECDBCT",
+            "followers": 1828,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c540400acaa1aacd89235eafe",
+            "owner_name": "prestonheebbb"
+          },
+          {
+            "name": "Deju stacija ar Lindu Samsonovu",
+            "spotify_id": "4qFlTHeaHkZeMoLX0tOCwR",
+            "followers": 1792,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845e1447d5c229f716e6499364",
+            "owner_name": "Radio Pieci"
+          },
+          {
+            "name": "Underground House Lounge 🛋️",
+            "spotify_id": "46Vnqc9BxJKE1IXla3hf71",
+            "followers": 1786,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848946403559b0c760543b1120",
+            "owner_name": "DF Originals Records"
+          },
+          {
+            "name": "BBC Radio 1 Dance - Morning Playlists",
+            "spotify_id": "19prY3UVoCqMs8mWLn10XZ",
+            "followers": 1700,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0233b1d76e961360b1a48c15e1ab67616d00001e02368963c2df82d3cabc8af955ab67616d00001e02725ab0c2c550da63d1f9926fab67616d00001e02c3447754971fae63f496204b",
+            "owner_name": "Daniele⚡️Saitta"
+          },
+          {
+            "name": "Warehouse House Grooves",
+            "spotify_id": "4dk6QDqVcQt4Um24OCSbFE",
+            "followers": 1691,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8423dc92d64547994a2030d894",
+            "owner_name": "Juves"
+          },
+          {
+            "name": "Tech House Waves",
+            "spotify_id": "65DtgvkSsUx80ZFsA3bgmM",
+            "followers": 1604,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8451979e52d0ddf37b9d66c583",
+            "owner_name": "Lorenzo Mazzotta"
+          },
+          {
+            "name": "PIV HOUSE",
+            "spotify_id": "7n1qyDLgZod14PzgCelrzm",
+            "followers": 1533,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd425e035166ec4cfe28ca851",
+            "owner_name": "Benjah"
+          },
+          {
+            "name": "BeatPilot Dance Collection",
+            "spotify_id": "5a0JkEm2ie4ncYlMns8kL5",
+            "followers": 1399,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ccf3cd467cce2d44775ba58a7",
+            "owner_name": "BeatPilot"
+          },
+          {
+            "name": "Drop That Beat",
+            "spotify_id": "2JXega55x0m56XiBIvHouL",
+            "followers": 1329,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84eb5050406effe99b6836e656",
+            "owner_name": "Digster Italy"
+          },
+          {
+            "name": "tech house bangers 🍒",
+            "spotify_id": "4yYLHluaFPjvYQl8yie7uM",
+            "followers": 1282,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84eaffe5f351d5b466099360ae",
+            "owner_name": "Joe"
+          },
+          {
+            "name": "Mazified House",
+            "spotify_id": "2G7Wnq2H23XWCzdQYCJwCu",
+            "followers": 1259,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f5c03a6280da8ac548465a8b",
+            "owner_name": "Luca Mazzei"
+          },
+          {
+            "name": "Future Sounds - Deep House / Organic House",
+            "spotify_id": "0j9E4Unw6h93IZJRCEtqPm",
+            "followers": 1168,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c13c634a6794ea51ed6690a15",
+            "owner_name": "Future Plan Sounds"
+          },
+          {
+            "name": "Beatport Top 100 House Tracks (Auto Generated)",
+            "spotify_id": "7CcbpQaJPoY21QZ5jkwRtw",
+            "followers": 1163,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e0283748156313744d83f92dec7ab67616d00001e02b42ed7f52290f1583760a7e2ab67616d00001e02f8c4be6b1bc907907c74d585",
+            "owner_name": "voidet"
+          },
+          {
+            "name": "Timeless House and Deep House Belters - North Origin",
+            "spotify_id": "2DRRlDejUIwMClodB7k2L7",
+            "followers": 1136,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c584697419b53b3785e24eee2",
+            "owner_name": "NorthOriginMusic"
+          },
+          {
+            "name": "BBC Radio 1 Hits",
+            "spotify_id": "72hKuAbU23PrG9SmzMPPsY",
+            "followers": 1063,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c462e34ac3bd486cd6c0f935d",
+            "owner_name": "Ricardo Márquez"
+          },
+          {
+            "name": "Electro News 🆕 Friday Tunes ⚡",
+            "spotify_id": "0K1c99lDyxUAufA7PjnX7O",
+            "followers": 1043,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da841431c6e2136676025e43b278",
+            "owner_name": "EMPO Electronic Meeting Point"
+          },
+          {
+            "name": "Dance & Electronic Mix 2026 🚀 | Party EDM | Music to get ready before the festival",
+            "spotify_id": "6jwo9ahFbuIDWjYjI5zcgg",
+            "followers": 1014,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849a5fce39bbf9ae544f8a5893",
+            "owner_name": "113th Street Music"
+          },
+          {
+            "name": "Group Therapy",
+            "spotify_id": "4wllvqLAd4y30VfnoHo49P",
+            "followers": 983,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b3d59813178ded9e2a5d535c",
+            "owner_name": "Fach"
+          },
+          {
+            "name": "Let It Happen (OMNOM Remix) - Tame Impala",
+            "spotify_id": "7m1dLTXOccuosdIBpx5yte",
+            "followers": 959,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c2e868fcc18bc6d5520d7a15",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "Groovy Tech",
+            "spotify_id": "1hPQVRkFhKjNopuiPO16RD",
+            "followers": 949,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846ba38a194a8e7cb4ac942d9a",
+            "owner_name": "Jimmy Jay"
+          },
+          {
+            "name": "Mykonos Beach Club 2026 | Best Pool & Sunset Party Hits",
+            "spotify_id": "31LTatcJNvRMUYIRY15mYp",
+            "followers": 816,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84086b6c4dd57e01394e599995",
+            "owner_name": "113th Street Music"
+          },
+          {
+            "name": "Tech House Flow 🔊 Tech & Deep Grooves 2026",
+            "spotify_id": "50NrgDnb0gpNeMQkS2BDtg",
+            "followers": 784,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c0770ca6ae0bdc4cced6d06ed",
+            "owner_name": "Stefano Albanese"
+          },
+          {
+            "name": "Sweat Sesh",
+            "spotify_id": "4ubgFBxNl0xg1qDT5ALPtJ",
+            "followers": 752,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d2681e11094f67b3e44c005e",
+            "owner_name": "Sweat It Out"
+          },
+          {
+            "name": "Chris Stussy Set IDs",
+            "spotify_id": "5SxxvKIRnhzf8G58SfkvNK",
+            "followers": 738,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022bbab7d9b8c455e6c418d2b5ab67616d00001e025930974eb9955dd58afee03dab67616d00001e02a29ce664a938d2c071e173a8ab67616d00001e02d4927c2d56641d753de90e8f",
+            "owner_name": "Michael Mahan"
+          },
+          {
+            "name": "Selected by Mees",
+            "spotify_id": "6SYWW8lbdGxli0wBVnWsBy",
+            "followers": 737,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da844aa876d0c3a1531b949337c9",
+            "owner_name": "meesvandekuil"
+          },
+          {
+            "name": "ZARA 2026 · House & Dance Fashion Store Music · Shopping Vibes Playlist",
+            "spotify_id": "3xMoYXPXyPQhaQUGT9MDNj",
+            "followers": 722,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849107f91ac774db4a6b46e797",
+            "owner_name": "113th Street Music"
+          },
+          {
+            "name": "Radio 1's Dance Party with Danny Howard",
+            "spotify_id": "3Wbka37VEyaXdgrhQ0roQk",
+            "followers": 719,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0210ee142090268c962424e065ab67616d00001e02295253387629aef59e51c143ab67616d00001e026a432f681cfdaee97b9cff4dab67616d00001e02f8c4be6b1bc907907c74d585",
+            "owner_name": "Daniele⚡️Saitta"
+          },
+          {
+            "name": "FISHER & Florence Arman - What A Life (Viral Top 50)",
+            "spotify_id": "3ORU7fNKFB8a9TgtfXXDvI",
+            "followers": 661,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847eb0e15e94f41742b5823584",
+            "owner_name": "House Music Network"
+          },
+          {
+            "name": "Buzz Chart DJBuzz",
+            "spotify_id": "0HELYYTWGWJlHCTf85d3uv",
+            "followers": 659,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847db3f1577cd68dadd62d82a7",
+            "owner_name": "DJBuzz Promo"
+          },
+          {
+            "name": "UK MINIMAL DEEP TECH HOUSE 2026",
+            "spotify_id": "57FQMCRkzcqODljczWvBEP",
+            "followers": 655,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849d4043b53e353667b7ca1c59",
+            "owner_name": "Magios Collective"
+          },
+          {
+            "name": "The Groove Factory ",
+            "spotify_id": "6kGutPBy2QBfZfxxuElm8X",
+            "followers": 649,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840150be8657662c8d6cf44f75",
+            "owner_name": "Ollie"
+          },
+          {
+            "name": "DJ SELECTION",
+            "spotify_id": "6xLM4XNFSBrcnEXyAG3oXc",
+            "followers": 615,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84db7fc8c788798762ba21a29a",
+            "owner_name": "Do It Yourself"
+          },
+          {
+            "name": "Hollister Co. Store Music 2026 | Music To Play In Stores",
+            "spotify_id": "7KqisbTZ6SZRtcFX6WpLqh",
+            "followers": 609,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84242bf15f0fed16bcec40ac48",
+            "owner_name": "113th Street Music"
+          },
+          {
+            "name": "Househaven 2026🕺",
+            "spotify_id": "6iNpG2n5h2kEUZJ6X91C0G",
+            "followers": 607,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f3bbd87fc528967e19e7b8da",
+            "owner_name": "Hartjeveld"
+          },
+          {
+            "name": "Max Dean Luke Dean USB - Unreleased ",
+            "spotify_id": "0BChdHrrzZPi4t1EpvwR5X",
+            "followers": 600,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847cb2b9c312a2a3e5e12a5d38",
+            "owner_name": "L.U."
+          },
+          {
+            "name": "Just’s housy tunes",
+            "spotify_id": "7DkbKcs1FMfMB2whP7veu7",
+            "followers": 556,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84304c0fc6cb9c386a7357a83c",
+            "owner_name": "Poppe"
+          },
+          {
+            "name": "ibiza final boss house",
+            "spotify_id": "53luyLVJqppP2vifqa7Mzj",
+            "followers": 549,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b1dfcc848f1094cd13d5fe50",
+            "owner_name": "laura🕺🏼✨🫶🏻🪩"
+          },
+          {
+            "name": "KETBOI69",
+            "spotify_id": "3RS58PkulRoG24d9pCE40C",
+            "followers": 546,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c849a2c8aad2f1da463dc055",
+            "owner_name": "Sarah Harasemiuc"
+          },
+          {
+            "name": "Boiler room (Spotify transitions)",
+            "spotify_id": "4r5JRebyrwlgYz4qNpSo0H",
+            "followers": 525,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ce7e4deb9be1e00a2c82a27ff",
+            "owner_name": "Brandon"
+          },
+          {
+            "name": "Belmoro's Hits ⚡",
+            "spotify_id": "4r9zOrtn5DLcOasnEe173q",
+            "followers": 488,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84025d009d809bffd91f0bd440",
+            "owner_name": "Belmoro (private)"
+          },
+          {
+            "name": "GROOVEDEALER",
+            "spotify_id": "11gDl1hyBe1SdTDzJlV2Vt",
+            "followers": 482,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da845d42cea6816907bbab7f9d15",
+            "owner_name": "Ludde"
+          },
+          {
+            "name": "Missing - Franky Rizardo ",
+            "spotify_id": "1iX1T6swhtutgxBGHz1Wev",
+            "followers": 470,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0234dc561906b1e3e8d811e7b9ab67616d00001e0241270818b946d16331c7cff6ab67616d00001e02586475e0e7697109f9c69a49ab67616d00001e02fd3152982f31088b8b217db0",
+            "owner_name": "filippo"
+          },
+          {
+            "name": "Radio 1 - Today's Dance Anthems",
+            "spotify_id": "5gKXviY4DdfpqhFXhZl2xh",
+            "followers": 439,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02193241cda50c27e1ce5ba626ab67616d00001e025958dec5acf1c3dc8b355d50ab67616d00001e0297d6a4fd696892a3d81ef2e3ab67616d00001e02d1f3c40cd2e251e04ae6413f",
+            "owner_name": "Daniele⚡️Saitta"
+          },
+          {
+            "name": "DeeVu Tech House",
+            "spotify_id": "1EpeRZxwKREXqthNpXq66H",
+            "followers": 392,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8453796ac02358302455e916cc",
+            "owner_name": "DeeVu Records"
+          },
+          {
+            "name": "Music In Store - Deep & House 2026",
+            "spotify_id": "7ySvbplD8ZJnUAQdAgDdZN",
+            "followers": 391,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84301bf7de6d63545c24242ffd",
+            "owner_name": "Ci!"
+          },
+          {
+            "name": "Extended mix",
+            "spotify_id": "4ZDro3vrp0uDDPVrp9oYJR",
+            "followers": 374,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8497240d7b6c44a3773855626c",
+            "owner_name": "famslagmolen"
+          },
+          {
+            "name": "클럽 노래 (CLUB MUSIC)",
+            "spotify_id": "3MmFpcTFTFb1HVn5aqlBl2",
+            "followers": 365,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84bb3db0284893c0121d08e0f2",
+            "owner_name": "Jihee"
+          },
+          {
+            "name": "house bangers 🕺",
+            "spotify_id": "2DRnfC7rGrvnTgIX2EisIO",
+            "followers": 352,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ac3d68a4125b0079d2d7af1c",
+            "owner_name": "Abby 🤍"
+          },
+          {
+            "name": "GroovyBABEY🕺🏽",
+            "spotify_id": "6WZSqn9MFCaZoPKuTwPQLB",
+            "followers": 341,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da842f1809456bd1ec564dcbd216",
+            "owner_name": "Alex Sanderson"
+          },
+          {
+            "name": "The One ",
+            "spotify_id": "2k0FwqxzhOXlJluNQScv5F",
+            "followers": 328,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84fa981409572e47da381c7421",
+            "owner_name": "giacomofabris"
+          },
+          {
+            "name": "Stussy’s USB",
+            "spotify_id": "2ufyevG7IggShiPutlYutN",
+            "followers": 307,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846188451ba5563e9f5508e9e9",
+            "owner_name": "Ray"
+          },
+          {
+            "name": "🍾",
+            "spotify_id": "07MNg6TtC6l0wXrFqWPryH",
+            "followers": 304,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84677a24a6ebee29916cdf49a0",
+            "owner_name": "blakebatchelder"
+          },
+          {
+            "name": "Dance Hits - Mixed Playlist",
+            "spotify_id": "3LmW92m3P3PlzcuSrYiRVH",
+            "followers": 242,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847c39a0efe622c20678ccdc23",
+            "owner_name": "Daniele⚡️Saitta"
+          },
+          {
+            "name": "Chill Vibes ☯",
+            "spotify_id": "0lsn3M5aDZhEofQ04y2zMU",
+            "followers": 240,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02639fea4197e676cfe9512e04ab67616d00001e027048657fa42f9985ee264780ab67616d00001e028596df2f2646ab9aba464c30ab67616d00001e029700390e9c33c62cfcd915ce",
+            "owner_name": "Tyler Condrasky"
+          },
+          {
+            "name": "Minimal Mondays",
+            "spotify_id": "1dYx4SzIOYTjfqVLwcJlaz",
+            "followers": 236,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a01f198c2bca0aa2bdb16b2d",
+            "owner_name": "PROFOUND"
+          },
+          {
+            "name": "Beatport Chart (BPC) 2026 Top 50 Week 34",
+            "spotify_id": "5FU9z5HXyY8QG9vqVns4v1",
+            "followers": 235,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02193241cda50c27e1ce5ba626ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e02a3c886ee9b32417992f8839aab67616d00001e02d50b5c70ef516aa0d6caf0b9",
+            "owner_name": "ronta"
+          },
+          {
+            "name": "Stussy, Deano's, josh baker, rossi, Robbie Doherty, Franky Rizardo, Sidney Charles, Omar+",
+            "spotify_id": "6UEf67ukhcBmjh4qGNvN7N",
+            "followers": 224,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0204dca98ec5bd3f31934c1ceeab67616d00001e02055d75b984e531f13bba0088ab67616d00001e023467eb7a58dab24f4d07242bab67616d00001e02ef5a855ad724281ca0209572",
+            "owner_name": "JoeRichardson.20"
+          },
+          {
+            "name": "KavvaJeff",
+            "spotify_id": "18xpWSN5eyHtiTe0yh0Iul",
+            "followers": 218,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b41d4f1a301fa321ac556b2e",
+            "owner_name": "jf.wph"
+          },
+          {
+            "name": "Hype Tracks - Dance",
+            "spotify_id": "4jXj0yHHYZbsbw0luv7NTi",
+            "followers": 192,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a4c242fd08f3435f9ca49f43",
+            "owner_name": "trendchartsgermany"
+          },
+          {
+            "name": "Elevator 1  going up",
+            "spotify_id": "7a1M8Cy8sEj75fJDLETDiq",
+            "followers": 191,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02245ab730b8d586ddfeb382cbab67616d00001e02b3cb2da518db6d6fd153ddfcab67616d00001e02d7ebf17b19f13ddf8be4974eab67616d00001e02e7d6bb7d3485d309c8f317d7",
+            "owner_name": "Jason Jamz"
+          },
+          {
+            "name": "NIET THUIS WEL HOUSE",
+            "spotify_id": "3PWGcYgTkWxsxsSWKXZdSb",
+            "followers": 188,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a2d057b4ccd68754ba8b2545",
+            "owner_name": "Raoulvdh"
+          },
+          {
+            "name": "raul 🕺🏼",
+            "spotify_id": "2OPfto8QD8qsUCV4F5ieVT",
+            "followers": 187,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8409b65ef0aea9b62225770acb",
+            "owner_name": "jns."
+          },
+          {
+            "name": " Circoloco New York 2026 ",
+            "spotify_id": "1ipTXuMC2YxsOAkmB8gaHO",
+            "followers": 186,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3f1fce10d7ef2faee7bdbd1",
+            "owner_name": "Filippo Dangelo"
+          },
+          {
+            "name": "Ibiza Hits 2026 Summer MIX 🌴 | House Party Music | Ibiza Is Love ☀️",
+            "spotify_id": "2dSXD6T0dgD0lLFGt5v7fq",
+            "followers": 185,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846f74d9103034282821d7eac4",
+            "owner_name": "113th Street Music"
+          },
+          {
+            "name": "USB HOUSE",
+            "spotify_id": "7w01Axiz3CJpaXtOzLhu7Q",
+            "followers": 173,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84263aba9ee915194b82ea4412",
+            "owner_name": "Bryson Bursik"
+          },
+          {
+            "name": "No whistle no party",
+            "spotify_id": "6Qdx5U2ioImSUDbbdJ6a4X",
+            "followers": 159,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8495b01f795f3fb5f12fb19d4f",
+            "owner_name": "holly coops"
+          },
+          {
+            "name": "Franky Rizardo Live Mix 2026 | Franky Rizardo More To Life Mix",
+            "spotify_id": "73doAHf6oEQWz0hidmB99q",
+            "followers": 157,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c55011418f0f1435e234f0ac7",
+            "owner_name": "Festival Music Playlists"
+          },
+          {
+            "name": "Afro House By Hiding Waves (CH)",
+            "spotify_id": "3IfxyGjuwlBwnHIDXMSE5V",
+            "followers": 131,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ba9469752cd49774f5524b04",
+            "owner_name": "Subakh"
+          },
+          {
+            "name": "biting down hard",
+            "spotify_id": "4Il2taHDEX9vhO5FqmZAhT",
+            "followers": 128,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6149fe48b2bd6332483d9ed",
+            "owner_name": "Jov"
+          },
+          {
+            "name": "House House 1738",
+            "spotify_id": "0ftcJwnGdNNsge4slD6eXy",
+            "followers": 117,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e023f59ff6c5182a7d02f535135ab67616d00001e024194dd6b324eeb0f902566c0ab67616d00001e0257c3c61f3173dee907e7b410ab67616d00001e02654ddf5725b164761d445181",
+            "owner_name": "Javi Prez"
+          },
+          {
+            "name": "Danny Howard's Club Mix",
+            "spotify_id": "06EPd7poQskKLduijV1IBU",
+            "followers": 115,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02200e5e6588b72479e9302a9eab67616d00001e0221f4cc12a0526d8cf370e985ab67616d00001e0270e67a7ad7772bbf9bd96f1cab67616d00001e02f844b2fe5679a13ea40ab56c",
+            "owner_name": "Daniele⚡️Saitta"
+          },
+          {
+            "name": "Munich basic 🐝s",
+            "spotify_id": "7lsxeclexsdilyt33L1koQ",
+            "followers": 114,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84e6fb4b4607f4c9ebddc27154",
+            "owner_name": "katja.steinhart"
+          },
+          {
+            "name": "Chanté",
+            "spotify_id": "3rgfibixUGPvLuWV8ClcNz",
+            "followers": 112,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f780b11e4e28c8d829a53dad",
+            "owner_name": "Momar Diagne"
+          },
+          {
+            "name": "The Official UK Charts: Dance Singles Top 40 Weekly",
+            "spotify_id": "0MNde9cYznWFjSLfs0KYG3",
+            "followers": 111,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84229f2cc9218b5c26a7093e52",
+            "owner_name": "Maicon"
+          },
+          {
+            "name": "Deep House & Dance-Pop 2025",
+            "spotify_id": "5ubayF2c2fx5j8STEt2vvH",
+            "followers": 101,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8406e0cb577ed37347a7539736",
+            "owner_name": "Melodic Nation"
+          }
+        ],
+        "independent_followers_total": 2978828,
+        "key_supporters": [
+          {
+            "name": "Tech House 2026",
+            "spotify_id": "7nppx7uLgcmkZHg70HNfOk",
+            "followers": 566334,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce81a4dd2b752630586044a94",
+            "owner_name": "Future House Music",
+            "tier": 2,
+            "notes": "Well-known independent future house aggregator."
+          }
+        ],
+        "unclassified_count": 55,
+        "total_shazams": 22901,
+        "daily_shazams": 722,
+        "shazam_charts": [
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 12,
+            "previous_position": 11,
+            "genre": "Dance",
+            "city": null
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 14,
+            "previous_position": 13,
+            "genre": null,
+            "city": "Nottingham"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 15,
+            "previous_position": 20,
+            "genre": null,
+            "city": "Leeds"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 15,
+            "previous_position": 13,
+            "genre": null,
+            "city": "Liverpool"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 25,
+            "previous_position": 21,
+            "genre": null,
+            "city": "Birmingham"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 27,
+            "previous_position": 21,
+            "genre": null,
+            "city": "Sheffield"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 30,
+            "previous_position": 45,
+            "genre": null,
+            "city": "Manchester"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 35,
+            "previous_position": 33,
+            "genre": null,
+            "city": "Newcastle upon Tyne"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 37,
+            "previous_position": 36,
+            "genre": null,
+            "city": "Cardiff"
+          },
+          {
+            "country_code": "IE",
+            "type": "shazams",
+            "position": 41,
+            "previous_position": 48,
+            "genre": null,
+            "city": null
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 41,
+            "previous_position": 48,
+            "genre": null,
+            "city": null
+          },
+          {
+            "country_code": "IE",
+            "type": "shazams",
+            "position": 46,
+            "previous_position": 46,
+            "genre": null,
+            "city": "Dublin"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 47,
+            "previous_position": null,
+            "genre": null,
+            "city": "Portsmouth"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 49,
+            "previous_position": 47,
+            "genre": null,
+            "city": "Edinburgh"
+          }
+        ],
+        "editorial_count_delta": -50,
+        "independent_followers_delta": 300464,
+        "total_shazams_delta": 0,
+        "ai_read": null
       }
     ],
     "QMBZ92642899": [
