@@ -138550,6 +138550,118 @@
         "independent_followers_delta": null,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-19",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "Sport Motivation Music 2026 💪🏋️",
+            "spotify_id": "6rkZzuLbq5LbbFl3u0nTxf",
+            "followers": 756355,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c178c61ac2b3de9ba64ffcb47",
+            "owner_name": "Bass Music Girl"
+          },
+          {
+            "name": "beach club aux  ",
+            "spotify_id": "2Dv3SdyycrJXQWTd5aDjqF",
+            "followers": 20433,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c45f02d79474d378ac33324ad",
+            "owner_name": "Marcos Moreira"
+          },
+          {
+            "name": "Electronic Essentials 2026",
+            "spotify_id": "1mW7XCerzFRiL4qNRRfxv4",
+            "followers": 16992,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3de58efd501e2eb3fdf52b3",
+            "owner_name": "mixtank"
+          },
+          {
+            "name": "Beatport Best New House",
+            "spotify_id": "49jfZzu0Zk8zz2SyJnsbMW",
+            "followers": 16459,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c2fe4e36cb0616467bcfd739c",
+            "owner_name": "Beatport"
+          },
+          {
+            "name": "Car Music",
+            "spotify_id": "4jQq2GZUTf7nW5SliP3FaV",
+            "followers": 14342,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd6c997aee2eab6f21cc256e9",
+            "owner_name": "De Music"
+          },
+          {
+            "name": "New Music Friday @ LabelWorx",
+            "spotify_id": "4wlJrYBlzM1d6G1N9EZNz6",
+            "followers": 5971,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84fed48672966781025e0a317c",
+            "owner_name": "LabelWorx"
+          },
+          {
+            "name": "House",
+            "spotify_id": "20MLA447agNYzBQ9EYOqiH",
+            "followers": 3348,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022154f30ee0dfa2de4b3d00d4ab67616d00001e0233867f92d3c6d64480d6f3f4ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e027ab2e6d2799edb8a16a226c3",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "Beatport Top 100 - House",
+            "spotify_id": "0mpX2EakDLmFjifuh1fQKU",
+            "followers": 3073,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce0849df6c8aa2c4aed58f8ab",
+            "owner_name": "Neoternon"
+          },
+          {
+            "name": "Tech House Flow 🔊 Tech & Deep Grooves 2026",
+            "spotify_id": "50NrgDnb0gpNeMQkS2BDtg",
+            "followers": 785,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c0770ca6ae0bdc4cced6d06ed",
+            "owner_name": "Stefano Albanese"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          },
+          {
+            "name": "Free Your Soul",
+            "spotify_id": "2rAVCYSttWSrVo3aArwkeu",
+            "followers": 374,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8417c6f53b668dcacf15e025b9",
+            "owner_name": "cocoandbreezy"
+          },
+          {
+            "name": "Latin House 2026",
+            "spotify_id": "0kHtgqgRivk8wzUxJE1tYh",
+            "followers": 355,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84adb8285aae0c130e2e80f150",
+            "owner_name": "Future House Music"
+          }
+        ],
+        "independent_followers_total": 839008,
+        "key_supporters": [
+          {
+            "name": "Latin House 2026",
+            "spotify_id": "0kHtgqgRivk8wzUxJE1tYh",
+            "followers": 355,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84adb8285aae0c130e2e80f150",
+            "owner_name": "Future House Music",
+            "tier": 2,
+            "notes": "Well-known independent future house aggregator."
+          }
+        ],
+        "unclassified_count": 19,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "CA5KR2664880": [
