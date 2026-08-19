@@ -627,6 +627,13 @@ async function checkLiveNow() {
   btn.disabled = true;
   notice('syncNotice', 'Triggering sync on GitHub Actions…', 'loading');
   try {
+    // Snapshot the currently-live data BEFORE triggering, so we can tell
+    // once GitHub Pages has actually rebuilt with the new commit — a fixed
+    // 15s wait guessed wrong often enough that the page looked "not
+    // updating" even when the sync itself had succeeded.
+    let before = null;
+    try { before = JSON.stringify(await fetchJson('data/history.json')); } catch (e) { /* fine, treat as no baseline */ }
+
     await ghTriggerSync(false); // never touches the official weekly delta
     await new Promise(r => setTimeout(r, 4000)); // give the run a moment to register
     let run = await ghLatestRun();
@@ -639,8 +646,20 @@ async function checkLiveNow() {
     }
     if (run && run.conclusion === 'success') {
       notice('syncNotice', 'Waiting for the page to rebuild…', 'loading');
-      await new Promise(r => setTimeout(r, 15000)); // Pages rebuild delay
-      notice('syncNotice', '✓ Synced.', 'success');
+      let after = before;
+      let waitedMs = 0;
+      const maxWaitMs = 90000; // GitHub Pages rebuilds usually land well inside this
+      while (waitedMs < maxWaitMs) {
+        await new Promise(r => setTimeout(r, 5000));
+        waitedMs += 5000;
+        try { after = JSON.stringify(await fetchJson('data/history.json')); } catch (e) { continue; }
+        if (after !== before) break;
+      }
+      if (before !== null && after === before) {
+        notice('syncNotice', 'Sync finished, but the page is still serving the old data — GitHub Pages can occasionally take longer than a minute to rebuild. Give it a bit and refresh.', 'error');
+      } else {
+        notice('syncNotice', '✓ Synced.', 'success');
+      }
       loadAll();
     } else {
       notice('syncNotice', 'Run finished with status: ' + (run ? run.conclusion : 'unknown') + '. Check the Actions tab.', 'error');
