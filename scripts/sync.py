@@ -57,20 +57,23 @@ IS_OFFICIAL = os.environ.get("IS_OFFICIAL", "false").lower() == "true"
 MIN_FOLLOWERS = 100
 PACING_DELAY_SECONDS = 0.2          # deliberate throttle, every Spotify call
 
-# Set conservatively below the ~4 tracks that fully succeeded before SOT's
-# limit walled off completely in the last real run. Adjust upward once
-# there's a clearer sense of the actual ceiling — this is a safe starting
-# guess, not a measured number.
-MAX_TRACKS_PER_RUN = 3
+# REMOVED: this used to cap a run to a fixed number of tracks (3), from
+# when we didn't know if one oversized track could burn the whole budget
+# alone. Evidence from a real run (2026-08-19) showed the opposite problem
+# once the cache matured: a run had 42 calls of real headroom left but
+# stopped after exactly 3 tracks anyway, leaving budget unused every
+# single run — the track cap became the bottleneck, not the API quota.
+# The circuit breaker below is what actually reflects real API cost, so
+# it's now the only thing limiting how much a run does — process
+# prioritized tracks until DAILY_CALL_CIRCUIT_BREAKER is genuinely
+# exhausted, not until an arbitrary track count is hit.
+#
 # Was a rough guess of 3000 originally. Real evidence from an actual run:
 # ~115 new lookups succeeded before Spotify's own quota wall kicked in
 # (cache grew 609 -> ~724 before the 429s started, then every subsequent
 # call failed instantly). Set with a margin below that measured number so
 # this circuit breaker trips before Spotify's real wall does, rather than
-# continuing to hammer a wall we already know is there. One track landing
-# on an unusually large number of playlists (as happened here) can burn
-# the whole day's allowance on its own — this is a total-calls limit,
-# not a per-track one, which is why it's separate from MAX_TRACKS_PER_RUN.
+# continuing to hammer a wall we already know is there.
 DAILY_CALL_CIRCUIT_BREAKER = 90
 CALL_LOG_WINDOW_HOURS = 24
 
@@ -514,19 +517,14 @@ def main():
         print(f"Prioritising {len(never_synced)} track(s) needing a fresh pass (never-synced or pre-fix data): "
               + ", ".join(f"{t.get('artist','?')} - {t.get('track','?')}" for t in never_synced))
 
-    # SOT's own limit looks like a hard quota-per-period, not a smooth
-    # per-second throttle — a run works fine for several tracks then walls
-    # off completely and stays walled for the rest of the run. Pacing
-    # alone can't fix that, so cap how many tracks get FULLY processed in
-    # one run and leave the rest for the next one. Combined with the
-    # never-synced-first ordering above, new tracks get covered well
-    # within this cap; already-synced tracks just take a couple of extra
-    # runs to all get refreshed, which is fine at weekly/daily cadence.
-    if len(ordered_tracks) > MAX_TRACKS_PER_RUN:
-        deferred = ordered_tracks[MAX_TRACKS_PER_RUN:]
-        ordered_tracks = ordered_tracks[:MAX_TRACKS_PER_RUN]
-        print(f"Capping this run to {MAX_TRACKS_PER_RUN} tracks — deferring to next run: "
-              + ", ".join(f"{t.get('artist','?')} - {t.get('track','?')}" for t in deferred))
+    # No track-count cap anymore — see the constant's comment above for
+    # why. The circuit breaker inside sp_enrich() already stops new
+    # lookups once DAILY_CALL_CIRCUIT_BREAKER is hit, regardless of how
+    # many tracks that spans; SOT's own pacing/retry (sot_get) handles
+    # that side independently. This loop just keeps going through every
+    # prioritized track until there's genuinely nothing left to do or the
+    # job's timeout is reached — no artificial stop before either of
+    # those, so real budget never goes unused the way it was here.
 
     for entry in ordered_tracks:
         isrc = entry["isrc"]
