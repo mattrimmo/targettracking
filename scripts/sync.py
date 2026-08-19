@@ -481,14 +481,31 @@ def main():
     # re-synced since the fix is still displaying pre-fix, potentially
     # mis-classified data, even though the cache underneath it is clean
     # now. Treat those the same as genuinely never-synced tracks so the
-    # whole list gets a fresh pass, not just brand-new additions. Safe to
-    # remove this cutoff once satisfied every track has had a post-fix run.
-    CACHE_FIX_DATE = "2026-08-12"
+    # whole list gets a fresh pass, not just brand-new additions.
+    #
+    # A track was previously dropping out of priority after just ONE
+    # snapshot dated on/after the fix — even if that snapshot still had
+    # playlists sitting in unclassified_count, genuinely unfinished. That
+    # let a track get stuck behind everything else in normal list order
+    # while still incomplete, which is exactly why a successful run could
+    # show zero visible progress: real calls were landing on tracks that
+    # no longer needed them, not the ones that did.
+    #
+    # Now a track stays high-priority until it BOTH has a post-fix-dated
+    # snapshot AND that snapshot shows zero pending playlists — actually
+    # finished, not just "touched once". Safe to remove the CACHE_FIX_DATE
+    # part once satisfied every track has had a genuine post-fix pass.
+    CACHE_FIX_DATE = "2026-08-13"
     def needs_priority(t):
         snaps = snapshots_by_isrc.get(t["isrc"])
         if not snaps:
             return True
-        return snaps[-1].get("date", "") < CACHE_FIX_DATE
+        latest = snaps[-1]
+        if latest.get("date", "") < CACHE_FIX_DATE:
+            return True
+        if (latest.get("unclassified_count") or 0) > 0:
+            return True
+        return False
 
     never_synced = [t for t in all_tracks if needs_priority(t)]
     already_synced = [t for t in all_tracks if not needs_priority(t)]
