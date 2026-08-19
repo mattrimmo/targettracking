@@ -365,53 +365,75 @@ generic trend summary."""
 
 
 # ─── core per-track processing ──────────────────────────────────────────
-def process_track(entry, curator_idx):
-    isrc = entry["isrc"]
+def fetch_current_placements(isrc):
+    """SOT call only — not rationed, safe to do for every tracked track
+    every run regardless of Spotify budget."""
     current = sot_get(f"/tracks/{isrc}/spotify/playlists/current")
-    current = [p for p in current if (p.get("playlist", {}).get("followers") or 0) >= MIN_FOLLOWERS]
+    return [p for p in current if (p.get("playlist", {}).get("followers") or 0) >= MIN_FOLLOWERS]
 
-    editorial_playlists, independent_playlists = [], []
-    unclassified_count = 0
+
+def classify_playlists_fairly(track_states):
+    """Round-robin the scarce Spotify lookup budget ACROSS tracks instead of
+    draining it on whichever track happens to be first in the list.
+
+    Previously this ran one track fully to completion (or until the circuit
+    breaker tripped) before moving to the next — so on a live run, the first
+    2-3 tracks in tracked.json ate the whole DAILY_CALL_CIRCUIT_BREAKER
+    budget every single week, and anything later in the list never got a
+    single new lookup, staying stuck on old (potentially pre-classification-
+    fix) data indefinitely. Taking one playlist per track per round instead
+    means every track makes some progress every run, and the backlog shrinks
+    evenly instead of some tracks never starting.
+    """
     lookups_since_checkpoint = 0
+    progressed = True
+    while progressed:
+        progressed = False
+        for isrc, st in track_states.items():
+            if not st["queue"]:
+                continue
+            progressed = True
+            p = st["queue"].pop(0)
+            pl = p["playlist"]
+            if not _logged_sample_keys[0]:
+                print(f"  [debug] sample SOT playlist object keys: {list(pl.keys())}")
+                _logged_sample_keys[0] = True
 
-    for p in current:
-        pl = p["playlist"]
-        if not _logged_sample_keys[0]:
-            print(f"  [debug] sample SOT playlist object keys: {list(pl.keys())}")
-            _logged_sample_keys[0] = True
+            was_cached = pl["spotify_id"] in _playlist_cache
+            owner, _total, cover = sp_enrich(pl["spotify_id"])
+            if owner is None:
+                st["unclassified"] += 1
+                continue
+            if owner == "__UNKNOWN__":
+                st["unclassified"] += 1
+                continue
 
-        was_cached = pl["spotify_id"] in _playlist_cache
-        owner, _total, cover = sp_enrich(pl["spotify_id"])
-        if owner is None:
-            unclassified_count += 1
-            print(f"  [debug] playlist='{pl['name']}' -> pending (lookup budget exhausted this window)")
-            continue
-        if owner == "__UNKNOWN__":
-            unclassified_count += 1
-            print(f"  [debug] playlist='{pl['name']}' -> excluded (Spotify says this playlist no longer exists)")
-            continue
+            classification = "editorial" if owner.strip() == "" else "independent"
+            row = {"name": pl["name"], "spotify_id": pl["spotify_id"], "followers": pl.get("followers") or 0, "cover_url": cover}
+            if classification == "editorial":
+                row["owner_name"] = "Spotify"
+                st["editorial"].append(row)
+            else:
+                row["owner_name"] = owner
+                st["independent"].append(row)
 
-        classification = "editorial" if owner.strip() == "" else "independent"
-        print(f"  [debug] playlist='{pl['name']}' owner='{owner}' -> {classification}")
-        row = {"name": pl["name"], "spotify_id": pl["spotify_id"], "followers": pl.get("followers") or 0, "cover_url": cover}
-        if owner.strip() == "":
-            row["owner_name"] = "Spotify"
-            editorial_playlists.append(row)
-        else:
-            row["owner_name"] = owner
-            independent_playlists.append(row)
+            # Checkpoint every 15 NEW lookups overall (cache hits are free
+            # and don't count) — a single track can have 100+ playlists, so
+            # a run cut off mid-way still keeps everything found so far, and
+            # the next run starts from a warmer cache instead of from scratch.
+            if not was_cached:
+                lookups_since_checkpoint += 1
+                if lookups_since_checkpoint >= 15:
+                    save_playlist_cache()
+                    save_call_log()
+                    git_checkpoint(f"Mid-sync checkpoint: {len(_playlist_cache)} playlists cached")
+                    lookups_since_checkpoint = 0
 
-        # Mid-track checkpoint every 15 NEW lookups (cache hits are free and
-        # don't count) — a single track can have 100+ playlists, so a run
-        # cut off mid-track still keeps everything found so far, and the
-        # next run starts from a warmer cache instead of from scratch.
-        if not was_cached:
-            lookups_since_checkpoint += 1
-            if lookups_since_checkpoint >= 15:
-                save_playlist_cache()
-                save_call_log()
-                git_checkpoint(f"Mid-track checkpoint: {len(_playlist_cache)} playlists cached")
-                lookups_since_checkpoint = 0
+
+def finalize_track_snapshot(isrc, st, curator_idx):
+    editorial_playlists = st["editorial"]
+    independent_playlists = st["independent"]
+    unclassified_count = st["unclassified"]
 
     independent_followers_total = sum(p["followers"] for p in independent_playlists)
 
@@ -521,16 +543,50 @@ def main():
     # why. The circuit breaker inside sp_enrich() already stops new
     # lookups once DAILY_CALL_CIRCUIT_BREAKER is hit, regardless of how
     # many tracks that spans; SOT's own pacing/retry (sot_get) handles
-    # that side independently. This loop just keeps going through every
-    # prioritized track until there's genuinely nothing left to do or the
-    # job's timeout is reached — no artificial stop before either of
-    # those, so real budget never goes unused the way it was here.
+    # that side independently.
+    #
+    # 2026-08-19 fix: this used to loop through ordered_tracks one at a time,
+    # running each track to completion before starting the next. With more
+    # tracks tracked than the circuit breaker's weekly budget can fully
+    # cover in one pass, that meant the first 2-3 tracks in tracked.json ate
+    # the entire budget every single run, and everything after them never
+    # got a single new lookup — visible on the live site as those tracks
+    # never updating, and (worse) staying frozen on whatever pre-fix,
+    # potentially misclassified data they last had. Fetching every track's
+    # current placements first, then round-robining the actual Spotify
+    # lookups one playlist per track per round (classify_playlists_fairly),
+    # means every tracked song gets a share of the budget every run.
 
+    # Phase 1: pull current placements from Spot On Track for every tracked
+    # song (cheap — SOT calls aren't rationed the way Spotify calls are).
+    track_states = {}
     for entry in ordered_tracks:
         isrc = entry["isrc"]
-        print(f"Syncing {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
+        print(f"Fetching current placements: {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
         try:
-            snap = process_track(entry, curator_idx)
+            current = fetch_current_placements(isrc)
+        except Exception as e:
+            print(f"  ERROR fetching SOT placements: {e}")
+            current = []
+        track_states[isrc] = {
+            "entry": entry,
+            "queue": list(current),
+            "editorial": [],
+            "independent": [],
+            "unclassified": 0,
+        }
+
+    # Phase 2: classify playlists round-robin across every track (see
+    # classify_playlists_fairly docstring for why this replaced the old
+    # one-track-at-a-time approach).
+    classify_playlists_fairly(track_states)
+
+    # Phase 3: build + save a snapshot per track from whatever got resolved.
+    for entry in ordered_tracks:
+        isrc = entry["isrc"]
+        print(f"Saving snapshot: {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
+        try:
+            snap = finalize_track_snapshot(isrc, track_states[isrc], curator_idx)
         except Exception as e:
             print(f"  ERROR: {e}")
             continue
