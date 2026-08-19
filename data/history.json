@@ -139102,6 +139102,87 @@
         "independent_followers_delta": null,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-19",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "The Vibecast: Dance",
+            "spotify_id": "5LJWsoLcOUUyWjGuEEYTs5",
+            "followers": 38957,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c90f50ca18796fd27a0a8c3ca",
+            "owner_name": "The Vibecast"
+          },
+          {
+            "name": "Dancing On My Own",
+            "spotify_id": "4CE9rfkuJPSLEXXyDLpocY",
+            "followers": 38942,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9bc0565591ce19f767de3600",
+            "owner_name": "EDT"
+          },
+          {
+            "name": "actually good house mix",
+            "spotify_id": "0KUw9B4k1u5CbqaqZ5YmCJ",
+            "followers": 29789,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848271897818a8c87b8b2c3839",
+            "owner_name": "Eli Myers"
+          },
+          {
+            "name": "Dance Pop 2026 - Party & Club Hits",
+            "spotify_id": "4SHp9keDLz4iDuo0fnL7BH",
+            "followers": 19472,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5ec191e28301c87128db9455",
+            "owner_name": "R-VIBE Network"
+          },
+          {
+            "name": "Electronic Essentials 2026",
+            "spotify_id": "1mW7XCerzFRiL4qNRRfxv4",
+            "followers": 16992,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3de58efd501e2eb3fdf52b3",
+            "owner_name": "mixtank"
+          },
+          {
+            "name": "Car Music",
+            "spotify_id": "4jQq2GZUTf7nW5SliP3FaV",
+            "followers": 14342,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd6c997aee2eab6f21cc256e9",
+            "owner_name": "De Music"
+          },
+          {
+            "name": "Nantucket ‘08",
+            "spotify_id": "1VORwlUgBNlzWGvX2mIeCA",
+            "followers": 11385,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8477ca72f761b91ec3f5c971b5",
+            "owner_name": "Otto Smith"
+          },
+          {
+            "name": "Pregame house bangers",
+            "spotify_id": "19DzfvIrPg8QkR4dXDRBi4",
+            "followers": 8507,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c66e6cbeb5c548d78b5a58d66",
+            "owner_name": "arialily"
+          },
+          {
+            "name": "Carrie Ballad : new dance pop ",
+            "spotify_id": "60VYIx9crMV5ggoV3QNEYB",
+            "followers": 1370,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84267a883f52c1af68cc1ac932",
+            "owner_name": "Tiger"
+          }
+        ],
+        "independent_followers_total": 179756,
+        "key_supporters": [],
+        "unclassified_count": 4,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ]
   }
