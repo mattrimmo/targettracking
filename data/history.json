@@ -177690,6 +177690,237 @@
         "independent_followers_delta": -5,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-26",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "Tech House 2026",
+            "spotify_id": "7nppx7uLgcmkZHg70HNfOk",
+            "followers": 566298,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce81a4dd2b752630586044a94",
+            "owner_name": "Future House Music"
+          },
+          {
+            "name": "I'm a rap fan but these house songs slap.",
+            "spotify_id": "5IjtxhzvywJewVeNtLjuKK",
+            "followers": 190032,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cac91b7f6c6d502b84bedff4d",
+            "owner_name": "putyouon. by Steve Cardigan"
+          },
+          {
+            "name": "Oliver Heldens - Best Of Heldeep Radio",
+            "spotify_id": "5yukQNUdlkAILE0PgGtKDH",
+            "followers": 56541,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cafe8d0dd4904be73c2e82d70",
+            "owner_name": "Oliver Heldens"
+          },
+          {
+            "name": "Feeling Tech House 2026",
+            "spotify_id": "6PtNcTSTIFv7AIYM064idO",
+            "followers": 33339,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847debdf9438f0b7cca9094959",
+            "owner_name": "housemusic.us"
+          },
+          {
+            "name": "HILLS HOUSE",
+            "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
+            "followers": 30254,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
+            "owner_name": "HILLS"
+          },
+          {
+            "name": "BOOTY CHAKRA TECHNICIAN",
+            "spotify_id": "5l9IyRRaW4Um9KVDx4piLb",
+            "followers": 22592,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84023a90bfeba9e55d022cfd1a",
+            "owner_name": "Whistleface"
+          },
+          {
+            "name": "House Music 2026",
+            "spotify_id": "3W3pcV9Mbs7rEv4jUBEkSW",
+            "followers": 15904,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c5771e18205a60f2259fca1fc",
+            "owner_name": "Uprise Music"
+          },
+          {
+            "name": "TECH HOUSE | House, Techno, Tech, Minimal House",
+            "spotify_id": "15PRID4HyR7LCnYw4tT7RS",
+            "followers": 13316,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c18392ad70b681e246433d8cc",
+            "owner_name": "Elation Music"
+          },
+          {
+            "name": "Techno House 2026| Tech House Hits 2026",
+            "spotify_id": "5ISQA2eWfQ1yLzPaqH1zdE",
+            "followers": 10798,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c69c2632b1aa1a9daec410ac8",
+            "owner_name": "DeeVu Records"
+          },
+          {
+            "name": "house heads",
+            "spotify_id": "02QmcFnzil2S45aDpcFkEx",
+            "followers": 9746,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84cc183a859f8a572eb568d887",
+            "owner_name": "Chrisz"
+          },
+          {
+            "name": "Tech House Bangerz",
+            "spotify_id": "30ivbx7Xo2ZaQzMY6o6kAE",
+            "followers": 9158,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44d1a7cd73d19db11d27a258",
+            "owner_name": "Jack Rose"
+          },
+          {
+            "name": "This Jam Is Fresh - Sidney Charles",
+            "spotify_id": "52EPyJsgHcvYVYcwD2KFMP",
+            "followers": 5220,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d16469f7c731dd54b7296197",
+            "owner_name": "DelanoKyandro"
+          },
+          {
+            "name": "Beatport Top 100 - Tech House",
+            "spotify_id": "5N4YeF9NI6wmUkjQDy3flN",
+            "followers": 4548,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b974364ccb40ac5289a66165",
+            "owner_name": "Neoternon"
+          },
+          {
+            "name": "Tech House Grooves by DONTEK",
+            "spotify_id": "2z2GpQyW9BU6HzwrhrY55I",
+            "followers": 3975,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849ac63d0d281d66f22b249541",
+            "owner_name": "DONTEK"
+          },
+          {
+            "name": "Michael Bibi & KETTAMA - Mystery Of Raw",
+            "spotify_id": "618kbLSRbAJmPt9zAuOnT2",
+            "followers": 3810,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c0399c3436bbbb1369cbf01a1",
+            "owner_name": "House Culture"
+          },
+          {
+            "name": "House",
+            "spotify_id": "20MLA447agNYzBQ9EYOqiH",
+            "followers": 3346,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022154f30ee0dfa2de4b3d00d4ab67616d00001e0233867f92d3c6d64480d6f3f4ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e027ab2e6d2799edb8a16a226c3",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "FUTURE HOUSE BANGERS 💯 🔥😤",
+            "spotify_id": "3Mc5XsqG06HWVHd1F9sBwo",
+            "followers": 3321,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02088d0090113b0605eef29bf2ab67616d00001e0242b4a74cc143f35fdf0a2167ab67616d00001e028e373c5dc1b53cac0705c028ab67616d00001e02bf95257575c35bc27fccd930",
+            "owner_name": "Timchic"
+          },
+          {
+            "name": "FRESH HOUSE by DJ BIG S",
+            "spotify_id": "3A0qtauAmJ2Mpn1en0gmko",
+            "followers": 2879,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da841f3c0183b88f474e20df348b",
+            "owner_name": "Sam"
+          },
+          {
+            "name": "House Bunker",
+            "spotify_id": "07d5L8snksTMDicoQ5x8vp",
+            "followers": 2685,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8449a88cac358a16d711feafe4",
+            "owner_name": "SEGERA"
+          },
+          {
+            "name": "Beatport Best New Hype Tech House",
+            "spotify_id": "6vOxSPgszInu9FT8hZXuGs",
+            "followers": 2486,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb9076cfd2772927d1c10b116",
+            "owner_name": "Beatport"
+          },
+          {
+            "name": "House & Minimal 2026",
+            "spotify_id": "1w7NES9mVjBpNyaxiDt5S2",
+            "followers": 1580,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da843a8dfd6f62e163817fae6385",
+            "owner_name": "Dansu Discs"
+          },
+          {
+            "name": "PIV HOUSE",
+            "spotify_id": "7n1qyDLgZod14PzgCelrzm",
+            "followers": 1539,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd425e035166ec4cfe28ca851",
+            "owner_name": "Benjah"
+          },
+          {
+            "name": "UK MINIMAL DEEP TECH HOUSE 2026",
+            "spotify_id": "57FQMCRkzcqODljczWvBEP",
+            "followers": 661,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849d4043b53e353667b7ca1c59",
+            "owner_name": "Magios Collective"
+          },
+          {
+            "name": "Desire Tune",
+            "spotify_id": "3KGix7IX54AxVzDwKqERIj",
+            "followers": 614,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84e83aa8a9c0e2f00ee6ed251c",
+            "owner_name": "Music Groove Machine"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          },
+          {
+            "name": "DeeVu Tech House",
+            "spotify_id": "1EpeRZxwKREXqthNpXq66H",
+            "followers": 392,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8453796ac02358302455e916cc",
+            "owner_name": "DeeVu Records"
+          },
+          {
+            "name": "Minimal Mondays",
+            "spotify_id": "1dYx4SzIOYTjfqVLwcJlaz",
+            "followers": 236,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a01f198c2bca0aa2bdb16b2d",
+            "owner_name": "PROFOUND"
+          },
+          {
+            "name": "Beatport Hype 100 - Tech House",
+            "spotify_id": "2qMWcuyVNyV3ML96bIAKti",
+            "followers": 136,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da841011d4b5dbaffbadc15028bd",
+            "owner_name": "Neoternon"
+          },
+          {
+            "name": "Tech House 100",
+            "spotify_id": "2ve4J8gh7f4UngrEqOegQP",
+            "followers": 121,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a61f0b436123e67ffead3136",
+            "owner_name": "Coulson"
+          }
+        ],
+        "independent_followers_total": 996048,
+        "key_supporters": [
+          {
+            "name": "Tech House 2026",
+            "spotify_id": "7nppx7uLgcmkZHg70HNfOk",
+            "followers": 566298,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce81a4dd2b752630586044a94",
+            "owner_name": "Future House Music",
+            "tier": 2,
+            "notes": "Well-known independent future house aggregator."
+          }
+        ],
+        "unclassified_count": 2,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": 0,
+        "independent_followers_delta": -5,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "GBKQU2676309": [
