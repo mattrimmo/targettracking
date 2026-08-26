@@ -178839,6 +178839,97 @@
         "independent_followers_delta": null,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-26",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "Locked Up House 2026 - DND RECS",
+            "spotify_id": "64NTaSOGmH5Ls2ufK2VQz3",
+            "followers": 22731,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca3aab3c6266c73b2545aa1ba",
+            "owner_name": "DND RECS"
+          },
+          {
+            "name": "house bangers 2026 🕺 minimal & deep tech house summer mix",
+            "spotify_id": "7lLU9tAJlUFVaawhltJcIk",
+            "followers": 17009,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cc8d0defabc3874ae9066a82b",
+            "owner_name": "The Function"
+          },
+          {
+            "name": "deep and minimal house 2026",
+            "spotify_id": "4zpaBQD8UiK5sFCzTg6knJ",
+            "followers": 14140,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840cd900ec31075d7d1c05f048",
+            "owner_name": "hox 247"
+          },
+          {
+            "name": "Tomorrowland Official House",
+            "spotify_id": "0qlDLUSeQtGFDvTsmjeZS5",
+            "followers": 12247,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44c004bac33f2f9c796c7e2c",
+            "owner_name": "Tomorrowland"
+          },
+          {
+            "name": "House bangertjes",
+            "spotify_id": "44QK0OIZvHg5Ewg1vXYEip",
+            "followers": 2142,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8486adbbfedfe01ccbf7adcc85",
+            "owner_name": "Scoutleeuwarden"
+          },
+          {
+            "name": "House & Minimal 2026",
+            "spotify_id": "1w7NES9mVjBpNyaxiDt5S2",
+            "followers": 1580,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da843a8dfd6f62e163817fae6385",
+            "owner_name": "Dansu Discs"
+          },
+          {
+            "name": "Beatport Top 100 - Minimal / Deep Tech",
+            "spotify_id": "7b079NB4U8vyUpOtwgUSdM",
+            "followers": 767,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c4c44b553600e5c4aed47608f",
+            "owner_name": "Neoternon"
+          },
+          {
+            "name": "ibiza final boss house",
+            "spotify_id": "53luyLVJqppP2vifqa7Mzj",
+            "followers": 546,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b1dfcc848f1094cd13d5fe50",
+            "owner_name": "laura🕺🏼✨🫶🏻🪩"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          }
+        ],
+        "independent_followers_total": 71683,
+        "key_supporters": [
+          {
+            "name": "Tomorrowland Official House",
+            "spotify_id": "0qlDLUSeQtGFDvTsmjeZS5",
+            "followers": 12247,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44c004bac33f2f9c796c7e2c",
+            "owner_name": "Tomorrowland",
+            "tier": 1,
+            "notes": "Global festival brand."
+          }
+        ],
+        "unclassified_count": 4,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "CBEFB2605054": [
