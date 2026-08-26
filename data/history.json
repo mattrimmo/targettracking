@@ -155215,6 +155215,34 @@
         "total_shazams_delta": null,
         "ai_read": null
       }
+    ],
+    "CBEFB2605054": [
+      {
+        "date": "2026-08-26",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [],
+        "independent_followers_total": 0,
+        "key_supporters": [],
+        "unclassified_count": 0,
+        "total_shazams": 7117,
+        "daily_shazams": 396,
+        "shazam_charts": [
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 39,
+            "previous_position": 39,
+            "genre": "Dance",
+            "city": null
+          }
+        ],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
+      }
     ]
   }
 }
