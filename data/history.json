@@ -164469,6 +164469,486 @@
         "independent_followers_delta": 11,
         "total_shazams_delta": 0,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-26",
+        "official": true,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "F1 Tracks",
+            "spotify_id": "1gH4FFUMWSI98MKPeBaa8x",
+            "followers": 176033,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8457caf82de718f25c02f23227",
+            "owner_name": "F1"
+          },
+          {
+            "name": "Night Drive 2026 | Car Music | Bass Boosted EDM & Deep House",
+            "spotify_id": "5XH2pJTgq4qi7HQgTBACvz",
+            "followers": 146889,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44cabc1b4e4b4db95ead8ad4",
+            "owner_name": "The Sound Of"
+          },
+          {
+            "name": "House | Remixes 2026 🌴 Summer House Mix",
+            "spotify_id": "0uuYJp1SOkdZpZLn4KFvc7",
+            "followers": 111442,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c570f251ed0cdc840ab69e370",
+            "owner_name": "Emil Gustafsson"
+          },
+          {
+            "name": "Summer Hits 2026 🌞  Sommer Vibes Playlist🍹",
+            "spotify_id": "0QCFckzoTVfZgb5j5n2Nl4",
+            "followers": 83327,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c6a0cc83731ca2e76ae31970e",
+            "owner_name": "Mega Hits"
+          },
+          {
+            "name": "House Party 2026 || Dance Music | EDM Hits | Club Beats | Deep | Slap | Techno",
+            "spotify_id": "5OhjR3QIvNYUdsQVuJKWmu",
+            "followers": 77786,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c3c97936fc31eb4a0b4cbe70",
+            "owner_name": "The Sound Of"
+          },
+          {
+            "name": "Lift, Run, Sweat | Workout Beats | Run | Gym",
+            "spotify_id": "4dtLm3bLBYPQPgYu0jiekM",
+            "followers": 58251,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84ffad2684d5a989b2e1c2b43f",
+            "owner_name": "Universal Music AU"
+          },
+          {
+            "name": "Gaming Music 2026 | Top EDM & Techno Tracks zum Zocken | Gamer Playlist ",
+            "spotify_id": "0DTKOux2jsaSuJKPO01ayX",
+            "followers": 54493,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c83bf646758a350b3f1b41cde",
+            "owner_name": "The Sound Of"
+          },
+          {
+            "name": "Tomorrowland Official One World Radio Playlist",
+            "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
+            "followers": 53074,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
+            "owner_name": "Tomorrowland"
+          },
+          {
+            "name": "CHILL EDM 🍁",
+            "spotify_id": "0rA7eold66Wk05o4irdrqq",
+            "followers": 51777,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c461b415b752630ff34102c6d",
+            "owner_name": "Akhil Sagar"
+          },
+          {
+            "name": "Joggen - Musik zum Laufen | Running Music |  Jogging Playlist | Cardio Hits",
+            "spotify_id": "6xav46LbeVDRnCP8DBgXyc",
+            "followers": 37918,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a3b3b52967d36a152a6568aa",
+            "owner_name": "The Sound Of"
+          },
+          {
+            "name": "NOW | New Music | Updated Weekly",
+            "spotify_id": "4qyWvIU2glVqsXAzwXcPXR",
+            "followers": 34505,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f4538d9856566253b725f94a",
+            "owner_name": "Universal Music AU"
+          },
+          {
+            "name": "Tech House Slappers",
+            "spotify_id": "0rvPxkmlJZ5EX4JXutyP6I",
+            "followers": 32738,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cf5788bad455164cde6ff1255",
+            "owner_name": "Ravemoments"
+          },
+          {
+            "name": "HILLS HOUSE",
+            "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
+            "followers": 30254,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
+            "owner_name": "HILLS"
+          },
+          {
+            "name": "Wriggy Loves",
+            "spotify_id": "0voSs7XxySrezBVoHyLEHk",
+            "followers": 29355,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e020c31b438e80f8f2c61d8c468ab67616d00001e020f1733693310e523fd381e0bab67616d00001e022377dd5caff8b0841bc8b7c1ab67616d00001e02e5d7b8c784e58fd869823b9d",
+            "owner_name": "Wriggy"
+          },
+          {
+            "name": "Selected : Soundplate",
+            "spotify_id": "1rRqxKuXUfenuLGadvQ0VN",
+            "followers": 22887,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84411d9ff95b258da396cc8375",
+            "owner_name": "Soundplate"
+          },
+          {
+            "name": "HouseMusic Summer 2026",
+            "spotify_id": "0YPQd4L1wqaNHpkRPNo8xW",
+            "followers": 18851,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ca574490519420bea73b378d5",
+            "owner_name": "housemusic.us"
+          },
+          {
+            "name": "Summer Mix 2026 - Afro House | Stutter House| Ibiza Lounge | Tropical  Deep House",
+            "spotify_id": "54xsWBJfXhv90NR6DCRI6l",
+            "followers": 16669,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84bd4662ed03e6519c58347634",
+            "owner_name": "Virtual Dance House"
+          },
+          {
+            "name": "Fresh Taste",
+            "spotify_id": "7HoCj7EiW6so0p8k9zmZTB",
+            "followers": 15906,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84174bd813db2d1086ff139742",
+            "owner_name": "Universal Music Czech & Slovakia"
+          },
+          {
+            "name": "Electronic Dance Music 2026 🔥 Top 100 EDM Songs 🔥",
+            "spotify_id": "5naKPTSE4Y1OI5YE97KvoO",
+            "followers": 14902,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8450fca8942dd4153b3f143465",
+            "owner_name": "daveepa"
+          },
+          {
+            "name": "PREMIER",
+            "spotify_id": "0yEzwHMHU3AzJahZTastNJ",
+            "followers": 13533,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8430cc6feaa58e34b741481b27",
+            "owner_name": "uDiscover Magyarország"
+          },
+          {
+            "name": "Dance Hits 2026 - House Party Mix",
+            "spotify_id": "2BeVmihvldSb6KCqGmczsq",
+            "followers": 12497,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da846fec6fa5545c2f1ffa5ece9e",
+            "owner_name": "Mega Hits"
+          },
+          {
+            "name": "VIBE | Good Vibes Only!  ",
+            "spotify_id": "0n8dJCeKY13KcLvFIhnHC2",
+            "followers": 12442,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ca4b7da2b4d181fd9aa01ba6a",
+            "owner_name": "TASTEMAKERS"
+          },
+          {
+            "name": "Tomorrowland Official House",
+            "spotify_id": "0qlDLUSeQtGFDvTsmjeZS5",
+            "followers": 12247,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44c004bac33f2f9c796c7e2c",
+            "owner_name": "Tomorrowland"
+          },
+          {
+            "name": "Electro Pop Hits",
+            "spotify_id": "6Twu8gfKVjKriGP4g9Qzvf",
+            "followers": 11729,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c23c434251d379b837863a066",
+            "owner_name": "uDiscover Éxitos"
+          },
+          {
+            "name": "DJ Blighty – The Playlist | Dance & Electronic Music",
+            "spotify_id": "0qasaUpCfUe437qcd37x4L",
+            "followers": 11385,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847ba456cb2fc692e1b657c9f4",
+            "owner_name": "dj_blighty"
+          },
+          {
+            "name": "Yabancı Pop Hit 2026 | %100 Hit Müzik",
+            "spotify_id": "3uDb6eGceJtNMMGW94bfwX",
+            "followers": 9249,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c0e5a8f424d24d5694c2601d8",
+            "owner_name": "SSL Music"
+          },
+          {
+            "name": "It's Giving... House",
+            "spotify_id": "65Og8ik5kiiaO9tCjBWJjw",
+            "followers": 7744,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ea00a9bdca224538250f05ac",
+            "owner_name": "The Cross Records"
+          },
+          {
+            "name": "Top 50 Ireland | Trending in Ireland ",
+            "spotify_id": "208x7wteifzqVWsAmQtYSu",
+            "followers": 7062,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b13b33d1b1a51301895bb6a2",
+            "owner_name": "Topsify Ireland"
+          },
+          {
+            "name": "WHAT'S GOOD",
+            "spotify_id": "3GUrzmJip7PEf2H1amWnpZ",
+            "followers": 6817,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c4ef5b7e55b5936153202b41a",
+            "owner_name": "bridget-hustwaite"
+          },
+          {
+            "name": "HITS DANCE 2026 - MUSICA DANCE DEL MOMENTO 2026",
+            "spotify_id": "4tG9NmQECpt0HzhgVxPG6D",
+            "followers": 6299,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022511cf5651b698686ab4acd3ab67616d00001e02296d05fd4b9e99e88f28eac1ab67616d00001e02aaa95d2bf32d30cdb3bd74fdab67616d00001e02f5ab3d9bdd0e97ab6691e036",
+            "owner_name": "musicadelmomento"
+          },
+          {
+            "name": "Uprise Essentials",
+            "spotify_id": "0bTXXmj1wUAbdc701KE5Z4",
+            "followers": 5819,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847cb4d776185b5044447a2754",
+            "owner_name": "Uprise Music"
+          },
+          {
+            "name": "Deep / UK House 2026",
+            "spotify_id": "2yGo8ViKRBf0WrokkE7spZ",
+            "followers": 5804,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f0e2493becb7d139d8bf79a6",
+            "owner_name": "Future House Music"
+          },
+          {
+            "name": "WAKACYJNE HITY 2026 + MUZYKA TANECZNA",
+            "spotify_id": "0dfs21jOpkpeDjyfF48qXq",
+            "followers": 5240,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c6158511392ef410f03ed35d6",
+            "owner_name": "PLUS ©"
+          },
+          {
+            "name": "Dave Treacy Selects",
+            "spotify_id": "6q9LNImoxjh4nQo9tPO9Ln",
+            "followers": 4517,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da844baed31b62d24970adf86a3d",
+            "owner_name": "Dave Treacy"
+          },
+          {
+            "name": "Capital dance latest songs ",
+            "spotify_id": "16QBbVd4dQ7EPbHR41uUaY",
+            "followers": 4505,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849389f30bb3ea8946d9e90455",
+            "owner_name": "mageanHarls128"
+          },
+          {
+            "name": "Fiesta Electrónica",
+            "spotify_id": "5ieQy2lzydWF22xJ9uMt1U",
+            "followers": 4199,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8447d6de7987ae561736a6bd8b",
+            "owner_name": "uDiscover Éxitos"
+          },
+          {
+            "name": "MistaJam Reacts",
+            "spotify_id": "1s9CvyjdYBS8poknZ8a4xk",
+            "followers": 3839,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c2dde457eed1cc65b2947ec84",
+            "owner_name": "MistaJam"
+          },
+          {
+            "name": "House Party Mix - Best Electronic Music & Dance Playlist 2026",
+            "spotify_id": "5YWlNFForfuiYqYb9AtblV",
+            "followers": 3828,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8419211ddfe243acb8fdedaf6c",
+            "owner_name": "Virtual Dance House"
+          },
+          {
+            "name": "FUTURE HOUSE BANGERS 💯 🔥😤",
+            "spotify_id": "3Mc5XsqG06HWVHd1F9sBwo",
+            "followers": 3321,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02088d0090113b0605eef29bf2ab67616d00001e0242b4a74cc143f35fdf0a2167ab67616d00001e028e373c5dc1b53cac0705c028ab67616d00001e02bf95257575c35bc27fccd930",
+            "owner_name": "Timchic"
+          },
+          {
+            "name": "EDM Lovers - Valentinstag ❤️ Valentine's Day 2026",
+            "spotify_id": "6UJo5f9tMm8TFj5OgZKBQh",
+            "followers": 3295,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f8c49516f28278e84a7f0a57",
+            "owner_name": "Mega Hits"
+          },
+          {
+            "name": "Nieuwe Releases",
+            "spotify_id": "6aYAiIdPeGpVcA3cPsO2JC",
+            "followers": 3213,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c66f2cce83e9dfa6485acfe5",
+            "owner_name": "Nederlandse Top 40"
+          },
+          {
+            "name": "EDM Workout Motivation 2026 | Dance Hits | Fitness Beats | Energy Boost ",
+            "spotify_id": "4eHFwYeeej8FuAxnnqk9Eg",
+            "followers": 2791,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84cd6e62c8bd53d9f595f47423",
+            "owner_name": "The Sound Of"
+          },
+          {
+            "name": "Samo Novo",
+            "spotify_id": "078NMj7UAymav4ZSADWFdK",
+            "followers": 2216,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c672130d03d4025752dca3d21",
+            "owner_name": "uDiscover Adria"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "2ZthqFUHnxUR50Q1VTPaFB",
+            "followers": 2047,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e021aa009083cdad1b29161f6beab67616d00001e029b21cf1b6d3cd85926d994e1ab67616d00001e02edd455c68b4f20c12a76c8c6ab67616d00001e02ff86507cb1a9c7645a330314",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "Heartfeldt Radio",
+            "spotify_id": "32rkWsrPmhySIfwRZY5g0O",
+            "followers": 1908,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84851bdbf9e1cdba9a7c95e868",
+            "owner_name": "Heartfeldt Records"
+          },
+          {
+            "name": "Musikfreitag - Deutschland",
+            "spotify_id": "2ix7HSpjdZCTMFG2TMYwL7",
+            "followers": 1738,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b8b063051193c144b18376f8",
+            "owner_name": "Musikfreitag"
+          },
+          {
+            "name": "Home Is Where The House Is",
+            "spotify_id": "0YWsuL0Sns2fBA9EHIp2g5",
+            "followers": 1526,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84bd286269d9726781d9822e1d",
+            "owner_name": "THIS SONG IS SICK"
+          },
+          {
+            "name": "UPLIFTING HOUSE 2026",
+            "spotify_id": "3GhX8hHAWcenYzjEH58o9g",
+            "followers": 1459,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c8b27de6210aad8857f9cbb34",
+            "owner_name": "Tom Lantis"
+          },
+          {
+            "name": "Future Hits",
+            "spotify_id": "394uy6wJmHLdR58C9JH6vD",
+            "followers": 1393,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ca5bfe05ac82edfcae840f18f",
+            "owner_name": "uDiscover Romania"
+          },
+          {
+            "name": "Electrónica 2026",
+            "spotify_id": "793uxx9tb6FdwOMT5YmOka",
+            "followers": 1376,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84af9d48168fb981c88c2da6ba",
+            "owner_name": "uDiscover Éxitos"
+          },
+          {
+            "name": "Carrie Ballad : new dance pop ",
+            "spotify_id": "60VYIx9crMV5ggoV3QNEYB",
+            "followers": 1370,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84267a883f52c1af68cc1ac932",
+            "owner_name": "Tiger"
+          },
+          {
+            "name": "Drop That Beat",
+            "spotify_id": "2JXega55x0m56XiBIvHouL",
+            "followers": 1329,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84eb5050406effe99b6836e656",
+            "owner_name": "Digster Italy"
+          },
+          {
+            "name": "Dance Anthems - Massive EDM Hits",
+            "spotify_id": "6AhybzrWa38SFWxim2Gaup",
+            "followers": 1308,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cfe96fa91c313aaf636e3336f",
+            "owner_name": "BlindingTalent.com/Playlists"
+          },
+          {
+            "name": "Feel Good Party 2026",
+            "spotify_id": "1WUdntz82NiwyTYpS1gr2O",
+            "followers": 528,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84d3e07e57b61897f99c02f3a3",
+            "owner_name": "Kasper Langendoen"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          },
+          {
+            "name": "Swedish Dance Chart (SDC) 2026 Top 40 Week 35",
+            "spotify_id": "0OwTMtYKQQE2z4u5ZRqkMr",
+            "followers": 499,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e029dd585c32969d87f1720d7d0ab67616d00001e029e3cb8f24532aab90426a589ab67616d00001e029ef5d48a5ccdee3b2fc4a888ab67616d00001e02b3bdcaa81cd49122022e0653",
+            "owner_name": "ronta"
+          },
+          {
+            "name": "European Hit Radio :: TOP 100",
+            "spotify_id": "5SKSFN2JSUTU9LDxuLE6kS",
+            "followers": 418,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848fd11e108b9462dbf6e14629",
+            "owner_name": "RDS.lt"
+          },
+          {
+            "name": "Rolling Stone UK's Hot New Songs",
+            "spotify_id": "7KGN3IDyIqcAneGh34fmyr",
+            "followers": 381,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c79fbe632317284f2c228b3fe",
+            "owner_name": "Rolling Stone UK"
+          },
+          {
+            "name": "Freshlist.",
+            "spotify_id": "4sPalpoIFUYTaYqkvH6fkZ",
+            "followers": 380,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c38f9f79f5642879cbd3e3a99",
+            "owner_name": "Sony Music Publishing UK"
+          },
+          {
+            "name": "Farra Electrónica",
+            "spotify_id": "1GRoCAm7RH4U5jjrNpowrx",
+            "followers": 214,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84062d6c07e805f49523eae33d",
+            "owner_name": "uDiscover Éxitos"
+          },
+          {
+            "name": "Just Dance",
+            "spotify_id": "3FlnRDUxKL6wAxoMCAunCA",
+            "followers": 201,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d066d5691234650414882ce5",
+            "owner_name": "uDiscover Romania"
+          },
+          {
+            "name": "Musica elettronica 🏖️🪩🔊",
+            "spotify_id": "5IqCgHl6QCe0qu1RMHWuOX",
+            "followers": 162,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0230a55b575f6c887e1a9ff39bab67616d00001e029e3ffbc9245852e20a4d0c83ab67616d00001e02a42fe72b1e274688eb82f0d6ab67616d00001e02d4c0243b55cdf7394323e710",
+            "owner_name": "Martin Nikmon"
+          }
+        ],
+        "independent_followers_total": 1249406,
+        "key_supporters": [
+          {
+            "name": "Tomorrowland Official One World Radio Playlist",
+            "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
+            "followers": 53074,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
+            "owner_name": "Tomorrowland",
+            "tier": 1,
+            "notes": "Global festival brand."
+          },
+          {
+            "name": "Tomorrowland Official House",
+            "spotify_id": "0qlDLUSeQtGFDvTsmjeZS5",
+            "followers": 12247,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c44c004bac33f2f9c796c7e2c",
+            "owner_name": "Tomorrowland",
+            "tier": 1,
+            "notes": "Global festival brand."
+          },
+          {
+            "name": "Deep / UK House 2026",
+            "spotify_id": "2yGo8ViKRBf0WrokkE7spZ",
+            "followers": 5804,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f0e2493becb7d139d8bf79a6",
+            "owner_name": "Future House Music",
+            "tier": 2,
+            "notes": "Well-known independent future house aggregator."
+          }
+        ],
+        "unclassified_count": 12,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": 0,
+        "independent_followers_delta": 11,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "CBEFB2604917": [
