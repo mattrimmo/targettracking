@@ -187280,6 +187280,23 @@
         "independent_followers_delta": null,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-26",
+        "official": true,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [],
+        "independent_followers_total": 0,
+        "key_supporters": [],
+        "unclassified_count": 0,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "CBEFB2605244": [
