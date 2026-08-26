@@ -187112,6 +187112,104 @@
         "independent_followers_delta": null,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-08-26",
+        "official": true,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [],
+        "independent_followers_total": 0,
+        "key_supporters": [],
+        "unclassified_count": 0,
+        "total_shazams": 4928,
+        "daily_shazams": 589,
+        "shazam_charts": [
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 13,
+            "previous_position": 20,
+            "genre": "Dance",
+            "city": null
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 20,
+            "previous_position": 19,
+            "genre": null,
+            "city": "Brighton"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 23,
+            "previous_position": 29,
+            "genre": null,
+            "city": "Portsmouth"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 31,
+            "previous_position": 45,
+            "genre": null,
+            "city": "Birmingham"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 33,
+            "previous_position": 36,
+            "genre": null,
+            "city": "Bristol"
+          },
+          {
+            "country_code": "IE",
+            "type": "shazams",
+            "position": 47,
+            "previous_position": 107,
+            "genre": null,
+            "city": null
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 48,
+            "previous_position": null,
+            "genre": null,
+            "city": "Cardiff"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 49,
+            "previous_position": null,
+            "genre": null,
+            "city": "Liverpool"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 51,
+            "previous_position": 62,
+            "genre": null,
+            "city": null
+          },
+          {
+            "country_code": "AU",
+            "type": "shazams",
+            "position": 105,
+            "previous_position": 199,
+            "genre": "Dance",
+            "city": null
+          }
+        ],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "QMDA62629312": [
