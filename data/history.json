@@ -220194,6 +220194,241 @@
         "independent_followers_delta": 6,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-09-09",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": " TECH HOUSE MAFIA 2026 🔥 Tech House | Club, Party & Ibiza -  Hugel,  Just A little Bit More - MAU P",
+            "spotify_id": "1kZHISlhzJxT4QNsrm98cv",
+            "followers": 184553,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c6676299fd87d95b146fe589b",
+            "owner_name": "DISCO MAFIA"
+          },
+          {
+            "name": "Oliver Heldens - Best Of Heldeep Radio",
+            "spotify_id": "5yukQNUdlkAILE0PgGtKDH",
+            "followers": 56456,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cafe8d0dd4904be73c2e82d70",
+            "owner_name": "Oliver Heldens"
+          },
+          {
+            "name": "Pete Tong’s Essential Selection Radio Playlist",
+            "spotify_id": "38JmDMAI5MztUH9klEQWU6",
+            "followers": 50465,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c453bf8967b1e305fabe590a5",
+            "owner_name": "Pete Tong"
+          },
+          {
+            "name": "HILLS HOUSE",
+            "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
+            "followers": 30532,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
+            "owner_name": "HILLS"
+          },
+          {
+            "name": "STOP COLLIN‘ ME.",
+            "spotify_id": "0HtLpeEhJC0rVesJnRNCpO",
+            "followers": 29458,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84dbc58bca50ba11b97e055c3b",
+            "owner_name": "Sam S. Collins"
+          },
+          {
+            "name": "Tech House 2026 🖤🔊| Best Club & Festival Tracks | Missing ( John Summit Remix)",
+            "spotify_id": "6W5e64Q6rmq9KufgXBLxzt",
+            "followers": 19453,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84fe8588dd782534e3e6d711e7",
+            "owner_name": "Digital Empire Records"
+          },
+          {
+            "name": "New Music Friday 2026  | New Music  2025 | Satisfaction - David Guetta, Bob Sinclair",
+            "spotify_id": "6w9EqfwieVAhNtwB2PqNc7",
+            "followers": 17118,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849e481a6534969970abe3271d",
+            "owner_name": "Digital Empire Records"
+          },
+          {
+            "name": "House Music 2026",
+            "spotify_id": "3W3pcV9Mbs7rEv4jUBEkSW",
+            "followers": 16108,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c5771e18205a60f2259fca1fc",
+            "owner_name": "Uprise Music"
+          },
+          {
+            "name": "Tech House Party",
+            "spotify_id": "2yNg6AGxM4liENyBAE8Wyr",
+            "followers": 15185,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cf0f4771c068c90d78836e220",
+            "owner_name": "PROFOUND"
+          },
+          {
+            "name": "House Workout - Summer 2026 Dance & House Music",
+            "spotify_id": "210GNuboojT87jL85tgMzT",
+            "followers": 8946,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb1fb44587d844e05f5d5c0c7",
+            "owner_name": "Dan Gurr"
+          },
+          {
+            "name": "Öwnboss House",
+            "spotify_id": "724WKo2zrCsxncpENsOe1b",
+            "followers": 8177,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da844ec1985ff1650389954bb88b",
+            "owner_name": "ÖWNBOSS"
+          },
+          {
+            "name": "NEW TECH HOUSE FRIDAY 🔥",
+            "spotify_id": "0OHMqJFrCKSirqxkpculRz",
+            "followers": 6264,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c0e19a6ff72e3a23fe8030607",
+            "owner_name": "EDM FAMILY"
+          },
+          {
+            "name": "Uprise Essentials",
+            "spotify_id": "0bTXXmj1wUAbdc701KE5Z4",
+            "followers": 5817,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847cb4d776185b5044447a2754",
+            "owner_name": "Uprise Music"
+          },
+          {
+            "name": "Electronic Workout 2026",
+            "spotify_id": "5Fo9wZcI1axRAI2qDRiuWx",
+            "followers": 5369,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ceee8da659ae590fd830b0a63",
+            "owner_name": "Electronic Nature"
+          },
+          {
+            "name": "Party Tech House",
+            "spotify_id": "3LLzdlnpPOSSXnDCISmxTa",
+            "followers": 4308,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84cd2ee89299cb5c6fbe90b2d1",
+            "owner_name": "Max Low"
+          },
+          {
+            "name": "🏚 H O U S E (heaters)",
+            "spotify_id": "4GYXf2sGAqE1qyV0vYQ5Wv",
+            "followers": 3844,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f4d5662d73e8c3ee69dc8cc0",
+            "owner_name": "JERICHO"
+          },
+          {
+            "name": "House Cat - Best & Latest House Music Releases ",
+            "spotify_id": "5AXXPKwCShVfZECQk1igN6",
+            "followers": 3444,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c275bc3d7c79f653fdd3ff0f9",
+            "owner_name": "Stage Hoppers"
+          },
+          {
+            "name": "House Of Dance",
+            "spotify_id": "60Wo7MUWairImwo7ijpT6L",
+            "followers": 3430,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c4e309fcadde9cb3d76e63fe9",
+            "owner_name": "Satsuma Music"
+          },
+          {
+            "name": "House",
+            "spotify_id": "20MLA447agNYzBQ9EYOqiH",
+            "followers": 3345,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e022154f30ee0dfa2de4b3d00d4ab67616d00001e0233867f92d3c6d64480d6f3f4ab67616d00001e0238974737cba5770d9dba1cd6ab67616d00001e027ab2e6d2799edb8a16a226c3",
+            "owner_name": "genisvm"
+          },
+          {
+            "name": "Bali Beach Club 2025 🏖️🍹☀️",
+            "spotify_id": "65ZAXhpHb0i6H5zQH8V3R4",
+            "followers": 2770,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8473e6ba66ff92d0a120c7edda",
+            "owner_name": "Iswahyudi Islahi"
+          },
+          {
+            "name": "Hit des Clubs DJBuzz",
+            "spotify_id": "0r1w7PI0JOMFl0pozN1ZVr",
+            "followers": 2559,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da843d3a835cc7abc0f249b01739",
+            "owner_name": "DJBuzz Promo"
+          },
+          {
+            "name": "NEW MUSIC MONDAY",
+            "spotify_id": "1gasLAHFon1IBbvF3gWWen",
+            "followers": 2327,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cff534783a5e4e97cdab78ef5",
+            "owner_name": "Life In Technocolor"
+          },
+          {
+            "name": "Ushuaïa Ibiza Closing Party 2026: ANTS Takeover",
+            "spotify_id": "0TsJMIcIkhIGUrEIBdddpk",
+            "followers": 1762,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c08098f1f41ec104df7f439e",
+            "owner_name": "Ushuaïa Ibiza"
+          },
+          {
+            "name": "Home Is Where The House Is",
+            "spotify_id": "0YWsuL0Sns2fBA9EHIp2g5",
+            "followers": 1525,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84bd286269d9726781d9822e1d",
+            "owner_name": "THIS SONG IS SICK"
+          },
+          {
+            "name": "Dave Winnel House Party",
+            "spotify_id": "0ENZG3tgtfkGLaHy9ieA5G",
+            "followers": 1254,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da842859caab3b1c4b2ba4af1f83",
+            "owner_name": "Dave Winnel"
+          },
+          {
+            "name": "Electro News 🆕 Friday Tunes ⚡",
+            "spotify_id": "0K1c99lDyxUAufA7PjnX7O",
+            "followers": 1040,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da841431c6e2136676025e43b278",
+            "owner_name": "EMPO Electronic Meeting Point"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          },
+          {
+            "name": "4 To The Floor U.K. House'26/Remixes/ 2026",
+            "spotify_id": "15KsOrVWrMwsSeBavSFdq2",
+            "followers": 288,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846a3a98f6a08cc4a26576e1fc",
+            "owner_name": "James D'angelo"
+          },
+          {
+            "name": "Lost in the Lasers",
+            "spotify_id": "3ekYNg8fgPz1ENL3XtXYjE",
+            "followers": 262,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da843069a2abf74f11951672a5a1",
+            "owner_name": "Dro"
+          },
+          {
+            "name": "🔊 DAILY DOSE",
+            "spotify_id": "6FyFJqXHXNCdbbnxedycGt",
+            "followers": 164,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8494fa734af83c3fe974444b43",
+            "owner_name": "theDustRealm Music"
+          },
+          {
+            "name": "EDM 2026",
+            "spotify_id": "6dMzz10rJMVwAdKAzqxe4M",
+            "followers": 144,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84e90dfaa095879cafa9a7badf",
+            "owner_name": "Majo Montemayor"
+          }
+        ],
+        "independent_followers_total": 486888,
+        "key_supporters": [],
+        "unclassified_count": 6,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": 0,
+        "independent_followers_delta": 6,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ],
     "CBEFB2605244": [
