@@ -79,6 +79,14 @@
       "label": "COLUMBIA",
       "image": "https://i.scdn.co/image/ab67616d00001e020c24b6adb0431b337056c7e6",
       "added_at": "2026-09-09"
+    },
+    {
+      "isrc": "USUG12608701",
+      "artist": "Mau P",
+      "track": "Just A Little Bit More",
+      "label": "INTERSCOPE RECORDS",
+      "image": "https://i.scdn.co/image/ab67616d00001e02b063f96e99a788df90029270",
+      "added_at": "2026-09-09"
     }
   ]
 }
