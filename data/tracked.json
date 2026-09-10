@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "CBEFB2605054",
-      "artist": "Sapian",
-      "track": "Reason Why",
-      "label": "PROPHECY",
-      "image": "https://i.scdn.co/image/ab67616d00001e0237c2768e3e00bd872d1695ae",
-      "added_at": "2026-08-26"
-    },
-    {
       "isrc": "GXKXT2600581",
       "artist": "Sonny Fodera & Becky Hill",
       "track": "Say Something",
