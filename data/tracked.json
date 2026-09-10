@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "CBEFB2604584",
-      "artist": "Jamback",
-      "track": "Landslide",
-      "image": "https://i.scdn.co/image/ab67616d00001e02324fb94758ae9b84bd952bc7",
-      "added_at": "2026-07-28",
-      "label": "JAMBACK"
-    },
-    {
       "isrc": "CBEFB2605054",
       "artist": "Sapian",
       "track": "Reason Why",
