@@ -18557,6 +18557,41 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-09-12",
+      "total_shazams": 21401,
+      "daily_shazams": 1350,
+      "playlist_count": 342,
+      "shazam_charts": [
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 50,
+          "previous_position": 52,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "NZ",
+          "type": "shazams",
+          "position": 56,
+          "previous_position": 93,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 156,
+          "previous_position": 96,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ],
   "CBEFB2605244": [
@@ -18594,6 +18629,25 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-09-12",
+      "total_shazams": 18257,
+      "daily_shazams": 1019,
+      "playlist_count": 186,
+      "shazam_charts": [
+        {
+          "country_code": "CA",
+          "type": "shazams",
+          "position": 107,
+          "previous_position": 107,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ],
   "GBARL2601108": [
@@ -18612,6 +18666,16 @@
           "city": null
         }
       ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    },
+    {
+      "date": "2026-09-12",
+      "total_shazams": 3012,
+      "daily_shazams": 555,
+      "playlist_count": 100,
+      "shazam_charts": [],
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
