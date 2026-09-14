@@ -237416,6 +237416,87 @@
         "independent_followers_delta": null,
         "total_shazams_delta": null,
         "ai_read": null
+      },
+      {
+        "date": "2026-09-14",
+        "official": false,
+        "editorial_count": 0,
+        "editorial_playlists": [],
+        "independent_playlists": [
+          {
+            "name": "Dance For Days 🪩🕺 2026 EDM",
+            "spotify_id": "68bXT1MZWZvLOJc0FZrgf7",
+            "followers": 91379,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d76e7a2556584b0e36659bde",
+            "owner_name": "Filtr US"
+          },
+          {
+            "name": "ZENITH",
+            "spotify_id": "2tj1iOLK9Uwef7ooLgJMtJ",
+            "followers": 17538,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84517f2450ab944f431f3970eb",
+            "owner_name": "Dancing Astronaut"
+          },
+          {
+            "name": "Ultra Records New Releases",
+            "spotify_id": "1uQ4QCJhdIZodiLvE6dXKN",
+            "followers": 13939,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848cb99378562c18a8dc957696",
+            "owner_name": "Ultra Records"
+          },
+          {
+            "name": "BEATS",
+            "spotify_id": "2uRHrTmjjbWVJXRUcltCem",
+            "followers": 7033,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8456593e0f73ae816a1e3cb13f",
+            "owner_name": "lumedj"
+          },
+          {
+            "name": "Funkerman House Selection",
+            "spotify_id": "3gOZuWFhWw6xP7kK0DplVL",
+            "followers": 6625,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb52878398d496c7e54b21abe",
+            "owner_name": "Funkerman"
+          },
+          {
+            "name": "Archie Hamilton: Club Selects",
+            "spotify_id": "7wwbXAby0fWDAWCPgwizuc",
+            "followers": 3100,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848f589ccce7cdaa7b755e0d00",
+            "owner_name": "Arch-e Ham-lton"
+          },
+          {
+            "name": "Groovy Tech",
+            "spotify_id": "1hPQVRkFhKjNopuiPO16RD",
+            "followers": 947,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846ba38a194a8e7cb4ac942d9a",
+            "owner_name": "Jimmy Jay"
+          },
+          {
+            "name": "Dance",
+            "spotify_id": "6kB3M3s9xyrLvl6tR9SvDm",
+            "followers": 521,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b6209aaec4cd56119da78a51",
+            "owner_name": "Tyler Oakley"
+          },
+          {
+            "name": "Chanté",
+            "spotify_id": "3rgfibixUGPvLuWV8ClcNz",
+            "followers": 111,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f780b11e4e28c8d829a53dad",
+            "owner_name": "Momar Diagne"
+          }
+        ],
+        "independent_followers_total": 141193,
+        "key_supporters": [],
+        "unclassified_count": 0,
+        "total_shazams": null,
+        "daily_shazams": null,
+        "shazam_charts": [],
+        "editorial_count_delta": null,
+        "independent_followers_delta": null,
+        "total_shazams_delta": null,
+        "ai_read": null
       }
     ]
   }
