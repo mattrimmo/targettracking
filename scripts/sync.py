@@ -1,40 +1,28 @@
 #!/usr/bin/env python3
 """
-Long Term Target Tracking — sync script (rebuilt).
+Long Term Target Tracking — sync script.
 
-Runs weekly (official Wednesday snapshot) or on-demand via "Check live now"
-(unofficial). Reads the tracked track list, pulls current playlist
-placements from Spot On Track, classifies each as editorial or independent
-via Spotify, tracks week-on-week movement, and layers in Shazam data +
-an AI pitch-readiness read.
+Runs inside GitHub Actions (scheduled every Wednesday, or on-demand via the
+"Check live now" button in the app). Reads the tracked track list, pulls
+current playlist placements from Spot On Track, enriches each placement with
+its Spotify owner + follower count + cover art, classifies editorial vs
+independent, matches independent curators against the master list, works out
+week-on-week movement, and writes the result back to data/history.json.
 
-Built against the original grandfathered Spotify app — shared with the
-report generator and (paused) Campaign Dashboard — so this is deliberately
-throttled to be a good citizen of that shared quota, not just fast.
+Editorial vs independent is decided by Spotify's owner account ID, not the
+display name — Spotify's own editorial playlists are always owned by the
+account id "spotify" specifically, regardless of what (if any) display name
+or language that account returns. Matching on display name text was the
+original approach here and proved unreliable — it is intentionally not used.
 
-Secrets:
+Secrets (set as GitHub Actions repo secrets, never committed):
   SOT_API_KEY            — Spot On Track bearer token
   SPOTIFY_CLIENT_ID       — Spotify app client id
   SPOTIFY_CLIENT_SECRET   — Spotify app client secret
-  ANTHROPIC_API_KEY       — optional; AI reads skip gracefully without it
-
-Quota protection, two layers:
-  1. PACING_DELAY_SECONDS — a small fixed wait before every Spotify call,
-     all the time, not just after getting rate-limited. Keeps us well
-     under the ceiling instead of sprinting into it.
-  2. A persistent playlist-ownership cache (data/playlist_cache.json) —
-     once a playlist's owner is known, it's essentially never re-fetched.
-     This is the real long-term protection: as the cache fills in over
-     the coming weeks, the number of genuinely new Spotify calls per run
-     should trend toward zero.
-  3. DAILY_CALL_CIRCUIT_BREAKER is a generous safety net (a bug runaway
-     stopper), not active rationing — it should basically never trigger
-     under normal use against the old app's known-good quota.
 """
 import base64
 import json
 import os
-import subprocess
 import sys
 import time
 from datetime import datetime, timezone
@@ -45,48 +33,21 @@ REPO_ROOT   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRACKED_FP  = os.path.join(REPO_ROOT, "data", "tracked.json")
 HISTORY_FP  = os.path.join(REPO_ROOT, "data", "history.json")
 CURATORS_FP = os.path.join(REPO_ROOT, "data", "curators.json")
-PLAYLIST_CACHE_FP = os.path.join(REPO_ROOT, "data", "playlist_cache.json")
-CALL_LOG_FP = os.path.join(REPO_ROOT, "data", "spotify_call_log.json")
 
 SOT_KEY   = os.environ.get("SOT_API_KEY", "")
 SP_ID     = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SP_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
-ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+# "true" on the scheduled Wednesday run, "false" on an ad-hoc manual run
 IS_OFFICIAL = os.environ.get("IS_OFFICIAL", "false").lower() == "true"
 
-MIN_FOLLOWERS = 100
-PACING_DELAY_SECONDS = 0.2          # deliberate throttle, every Spotify call
-
-# REMOVED: this used to cap a run to a fixed number of tracks (3), from
-# when we didn't know if one oversized track could burn the whole budget
-# alone. Evidence from a real run (2026-08-19) showed the opposite problem
-# once the cache matured: a run had 42 calls of real headroom left but
-# stopped after exactly 3 tracks anyway, leaving budget unused every
-# single run — the track cap became the bottleneck, not the API quota.
-# The circuit breaker below is what actually reflects real API cost, so
-# it's now the only thing limiting how much a run does — process
-# prioritized tracks until DAILY_CALL_CIRCUIT_BREAKER is genuinely
-# exhausted, not until an arbitrary track count is hit.
-#
-# Was a rough guess of 3000 originally. Real evidence from an actual run:
-# ~115 new lookups succeeded before Spotify's own quota wall kicked in
-# (cache grew 609 -> ~724 before the 429s started, then every subsequent
-# call failed instantly). Set with a margin below that measured number so
-# this circuit breaker trips before Spotify's real wall does, rather than
-# continuing to hammer a wall we already know is there.
-DAILY_CALL_CIRCUIT_BREAKER = 90
-CALL_LOG_WINDOW_HOURS = 24
-
-_logged_sample_keys = [False]
+MIN_FOLLOWERS = 100  # same floor as the report generator
+SPOTIFY_EDITORIAL_OWNER_ID = "spotify"  # Spotify's own account id — stable across locales
+_logged_sample_keys = [False]  # print the raw SOT playlist schema once, for debugging
 
 
-# ─── generic json helpers ───────────────────────────────────────────────
-def load_json(path, default=None):
-    if not os.path.exists(path):
-        return default if default is not None else {}
+def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
-        content = f.read().strip()
-        return json.loads(content) if content else (default if default is not None else {})
+        return json.load(f)
 
 
 def save_json(path, data):
@@ -95,104 +56,16 @@ def save_json(path, data):
         f.write("\n")
 
 
-# ─── persistent playlist cache ──────────────────────────────────────────
-_playlist_cache = {}
-
-
-def load_playlist_cache():
-    global _playlist_cache
-    raw = load_json(PLAYLIST_CACHE_FP, {})
-    _playlist_cache = {k: tuple(v) for k, v in raw.items()}
-    print(f"Loaded playlist cache: {len(_playlist_cache)} known playlists.")
-
-
-def save_playlist_cache():
-    save_json(PLAYLIST_CACHE_FP, {k: list(v) for k, v in _playlist_cache.items()})
-
-
-# ─── circuit breaker (safety net, not rationing) ────────────────────────
-_call_log = {"window_start": None, "calls": 0}
-
-
-def load_call_log():
-    global _call_log
-    raw = load_json(CALL_LOG_FP, {})
-    window_start = raw.get("window_start")
-    calls = raw.get("calls", 0)
-    if window_start:
-        age_h = (datetime.now(timezone.utc) - datetime.fromisoformat(window_start)).total_seconds() / 3600
-        if age_h >= CALL_LOG_WINDOW_HOURS:
-            window_start, calls = None, 0
-    if not window_start:
-        window_start = datetime.now(timezone.utc).isoformat()
-        calls = 0
-    _call_log = {"window_start": window_start, "calls": calls}
-    print(f"Spotify calls this window: {calls}/{DAILY_CALL_CIRCUIT_BREAKER} (safety net, not a ration).")
-    if calls >= DAILY_CALL_CIRCUIT_BREAKER:
-        hours_left = CALL_LOG_WINDOW_HOURS - (datetime.now(timezone.utc) - datetime.fromisoformat(window_start)).total_seconds() / 3600
-        print(f"WARNING: stored call count already meets/exceeds the current cap — this ENTIRE run will make "
-              f"zero new-lookup progress (cache hits still work fine). This happens if DAILY_CALL_CIRCUIT_BREAKER "
-              f"was just lowered below an already-accumulated count. Window resets in ~{hours_left:.1f}h, or "
-              f"manually reset data/spotify_call_log.json to {{}} to unblock immediately.")
-
-
-def save_call_log():
-    save_json(CALL_LOG_FP, _call_log)
-
-
-def circuit_breaker_tripped():
-    return _call_log["calls"] >= DAILY_CALL_CIRCUIT_BREAKER
-
-
-def log_call():
-    _call_log["calls"] += 1
-
-
-# ─── git checkpointing ──────────────────────────────────────────────────
-def git_checkpoint(message):
-    try:
-        subprocess.run(
-            ["git", "add", "data/history.json", "data/playlist_cache.json", "data/spotify_call_log.json"],
-            cwd=REPO_ROOT, check=True,
-        )
-        if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO_ROOT).returncode == 0:
-            return
-        subprocess.run(["git", "commit", "-m", message], cwd=REPO_ROOT, check=True)
-        subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=REPO_ROOT, check=True)
-        subprocess.run(["git", "push"], cwd=REPO_ROOT, check=True)
-        print(f"  [checkpoint] {message}")
-    except subprocess.CalledProcessError as e:
-        print(f"  [checkpoint] git step failed, continuing anyway: {e}")
-
-
-# ─── Spot On Track ───────────────────────────────────────────────────────
-SOT_PACING_DELAY_SECONDS = 0.15  # same reasoning as the Spotify pacing delay
-
-
 def sot_get(path):
-    for attempt in range(2):
-        time.sleep(SOT_PACING_DELAY_SECONDS)
-        r = requests.get(
-            "https://www.spotontrack.com/api/v1" + path,
-            headers={"Authorization": "Bearer " + SOT_KEY},
-            timeout=30,
-        )
-        if r.status_code == 429:
-            wait = int(r.headers.get("Retry-After", "2"))
-            if wait > 30:
-                # Same rule as the Spotify side: never blindly sleep out a
-                # long server-specified cooldown inside a CI job — that's
-                # what caused the multi-hour hangs before. Fail this call
-                # fast instead.
-                r.raise_for_status()
-            time.sleep(wait + 0.5)
-            continue
-        r.raise_for_status()
-        return r.json()
+    r = requests.get(
+        "https://www.spotontrack.com/api/v1" + path,
+        headers={"Authorization": "Bearer " + SOT_KEY},
+        timeout=30,
+    )
     r.raise_for_status()
+    return r.json()
 
 
-# ─── Spotify ─────────────────────────────────────────────────────────────
 _sp_token = None
 _sp_exp = 0
 
@@ -204,7 +77,8 @@ def sp_token():
     r = requests.post(
         "https://accounts.spotify.com/api/token",
         headers={
-            "Authorization": "Basic " + base64.b64encode(f"{SP_ID}:{SP_SECRET}".encode()).decode(),
+            "Authorization": "Basic "
+            + base64.b64encode(f"{SP_ID}:{SP_SECRET}".encode()).decode(),
             "Content-Type": "application/x-www-form-urlencoded",
         },
         data={"grant_type": "client_credentials"},
@@ -218,82 +92,32 @@ def sp_token():
 
 
 def sp_enrich(spotify_id):
-    """Returns (owner_display_name, total_tracks, cover_url).
-    Cache hit -> free, no call, no delay. Otherwise: pace, call, cache."""
-    if spotify_id in _playlist_cache:
-        return _playlist_cache[spotify_id]
-    if circuit_breaker_tripped():
-        print(f"  [debug] circuit breaker tripped ({DAILY_CALL_CIRCUIT_BREAKER} calls this window) — skipping {spotify_id}, will retry next run")
-        return (None, None, None)  # not cached — genuinely not checked yet
-
+    """Returns (owner_id, owner_display_name, total_tracks, cover_url). Retries once on 429."""
     for attempt in range(2):
-        time.sleep(PACING_DELAY_SECONDS)  # deliberate pacing, every call
         tok = sp_token()
         r = requests.get(
             f"https://api.spotify.com/v1/playlists/{spotify_id}",
             headers={"Authorization": "Bearer " + tok},
-            params={"fields": "owner.display_name,tracks.total,images"},
+            params={"fields": "owner.id,owner.display_name,tracks.total,images"},
             timeout=30,
         )
-        log_call()
         if r.status_code == 429:
-            wait = int(r.headers.get("Retry-After", "2"))
-            if wait > 30:
-                # This means "we don't know yet", not "confirmed editorial" —
-                # must NOT write "" (empty owner) to the cache here, since ""
-                # is exactly what a real editorial playlist looks like once
-                # genuinely checked. Doing that previously mis-classified
-                # every playlist hit by a quota wall as editorial, permanently,
-                # since it got baked into the persistent cache. Return the
-                # same uncached "pending" sentinel the circuit breaker uses
-                # instead, so it gets a real check on a future run.
-                print(f"  [debug] Spotify quota signal for {spotify_id} — Retry-After {wait}s, treating as pending (not cached)")
-                return (None, None, None)
-            time.sleep(wait + 0.5)
+            time.sleep(int(r.headers.get("Retry-After", "2")) + 0.5)
             continue
         if not r.ok:
-            # Genuinely gone (404) or some other real error — worth caching
-            # permanently, since there's no point re-checking a deleted
-            # playlist every run, but "" is the wrong value to use: that's
-            # exactly what a confirmed editorial playlist looks like. Use a
-            # distinct marker so this gets excluded from both counts
-            # instead of silently miscounted as editorial.
             print(f"  [debug] Spotify playlist lookup failed for {spotify_id}: {r.status_code} {r.text[:150]}")
-            _playlist_cache[spotify_id] = ("__UNKNOWN__", None, None)
-            return _playlist_cache[spotify_id]
+            return "", "", None, None
         d = r.json()
-        owner = (d.get("owner") or {}).get("display_name") or ""
+        owner_obj = d.get("owner") or {}
+        owner_id = owner_obj.get("id") or ""
+        owner_name = owner_obj.get("display_name") or ""
         total = (d.get("tracks") or {}).get("total")
         images = d.get("images") or []
         cover = images[0]["url"] if images else None
-        _playlist_cache[spotify_id] = (owner, total, cover)
-        return _playlist_cache[spotify_id]
-    return (None, None, None)  # retries exhausted — pending, not confirmed editorial
+        return owner_id, owner_name, total, cover
+    return "", "", None, None
 
 
-def sp_label(album_id):
-    """Best-effort label lookup — Spotify removed this field from the API
-    in Feb 2026 and it may return nothing. Left in in case it's restored."""
-    try:
-        time.sleep(PACING_DELAY_SECONDS)
-        tok = sp_token()
-        r = requests.get(
-            f"https://api.spotify.com/v1/albums/{album_id}",
-            headers={"Authorization": "Bearer " + tok},
-            params={"fields": "label"},
-            timeout=30,
-        )
-        log_call()
-        if r.ok:
-            label = r.json().get("label")
-            if label and label != "INDEPENDENT":
-                return label.upper()
-    except Exception:
-        pass
-    return None
-
-
-# ─── curators ────────────────────────────────────────────────────────────
 def build_curator_index(curators_doc):
     idx = {}
     for c in curators_doc.get("curators", []):
@@ -301,139 +125,37 @@ def build_curator_index(curators_doc):
     return idx
 
 
-# ─── Shazam (Spot On Track only, no Spotify cost) ───────────────────────
-def sot_shazam(isrc):
-    shazams = sot_get(f"/tracks/{isrc}/shazam/shazams")
-    total = shazams[0]["total"] if shazams else None
-    daily = shazams[0]["daily"] if shazams else None
-    charts = sot_get(f"/tracks/{isrc}/shazam/charts/current")
-    chart_positions = [
-        {
-            "country_code": c.get("country_code"), "type": c.get("type"),
-            "position": c.get("position"), "previous_position": c.get("previous_position"),
-            "genre": c.get("genre"), "city": c.get("city"),
-        }
-        for c in charts
-    ]
-    return total, daily, chart_positions
-
-
-# ─── AI read — pitch-readiness, not just trend description ─────────────
-def generate_ai_read(artist, track, label, snap, prior_official):
-    if not ANTHROPIC_KEY:
-        return None
-    try:
-        import anthropic
-        client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
-
-        editorial_delta = snap.get("editorial_count_delta")
-        indie_delta = snap.get("independent_followers_delta")
-        shazam_delta = snap.get("total_shazams_delta")
-
-        prompt = f"""Track: {artist} - {track} (label: {label}).
-
-This week: {snap['editorial_count']} editorial playlists (change: {editorial_delta}),
-{snap['independent_followers_total']:,} independent playlist followers (change: {indie_delta}),
-{snap.get('total_shazams') or 0:,} total Shazams (change: {shazam_delta}).
-{snap.get('unclassified_count', 0)} playlists not yet classified (budget/cache pending).
-
-You're advising a UK dance/house playlist promotion company on whether this
-track is ready to approach the artist/label about working it. Their actual
-judgment criteria: a track holding steady or growing on INDEPENDENT
-placements (not just editorial, which is algorithmic and can fade fast) is
-a strong positive sign. A track with zero editorial support but real
-independent traction is often the best kind of opportunity, not a gap.
-A drop-off after week 1-2 driven specifically by editorial playlists
-falling away (independent holding) is a normal pattern, not a red flag.
-Genuine decline across independent AND Shazam together is the real warning
-sign.
-
-In one direct sentence (under 30 words), tell them: is this worth
-approaching now, worth watching a bit longer, or not there yet — and why,
-referencing the actual shape of editorial vs independent vs Shazam, not a
-generic trend summary."""
-
-        resp = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=100,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return resp.content[0].text.strip()
-    except Exception as e:
-        print(f"  [debug] AI read failed: {e}")
-        return None
-
-
-# ─── core per-track processing ──────────────────────────────────────────
-def fetch_current_placements(isrc):
-    """SOT call only — not rationed, safe to do for every tracked track
-    every run regardless of Spotify budget."""
+def process_track(entry, curator_idx):
+    isrc = entry["isrc"]
     current = sot_get(f"/tracks/{isrc}/spotify/playlists/current")
-    return [p for p in current if (p.get("playlist", {}).get("followers") or 0) >= MIN_FOLLOWERS]
+    current = [p for p in current if (p.get("playlist", {}).get("followers") or 0) >= MIN_FOLLOWERS]
 
+    editorial_playlists = []
+    independent_playlists = []
 
-def classify_playlists_fairly(track_states):
-    """Round-robin the scarce Spotify lookup budget ACROSS tracks instead of
-    draining it on whichever track happens to be first in the list.
+    for p in current:
+        pl = p["playlist"]
+        if not _logged_sample_keys[0]:
+            print(f"  [debug] sample SOT playlist object keys: {list(pl.keys())}")
+            _logged_sample_keys[0] = True
 
-    Previously this ran one track fully to completion (or until the circuit
-    breaker tripped) before moving to the next — so on a live run, the first
-    2-3 tracks in tracked.json ate the whole DAILY_CALL_CIRCUIT_BREAKER
-    budget every single week, and anything later in the list never got a
-    single new lookup, staying stuck on old (potentially pre-classification-
-    fix) data indefinitely. Taking one playlist per track per round instead
-    means every track makes some progress every run, and the backlog shrinks
-    evenly instead of some tracks never starting.
-    """
-    lookups_since_checkpoint = 0
-    progressed = True
-    while progressed:
-        progressed = False
-        for isrc, st in track_states.items():
-            if not st["queue"]:
-                continue
-            progressed = True
-            p = st["queue"].pop(0)
-            pl = p["playlist"]
-            if not _logged_sample_keys[0]:
-                print(f"  [debug] sample SOT playlist object keys: {list(pl.keys())}")
-                _logged_sample_keys[0] = True
+        owner_id, owner_name, _total, cover = sp_enrich(pl["spotify_id"])
+        is_editorial = owner_id.strip().lower() == SPOTIFY_EDITORIAL_OWNER_ID
+        print(f"  [debug] playlist='{pl['name']}' owner_id='{owner_id}' owner_name='{owner_name}' -> "
+              f"{'editorial' if is_editorial else 'independent'}, cover={'yes' if cover else 'no'}")
 
-            was_cached = pl["spotify_id"] in _playlist_cache
-            owner, _total, cover = sp_enrich(pl["spotify_id"])
-            if owner is None:
-                st["unclassified"] += 1
-                continue
-            if owner == "__UNKNOWN__":
-                st["unclassified"] += 1
-                continue
-
-            classification = "editorial" if owner.strip() == "" else "independent"
-            row = {"name": pl["name"], "spotify_id": pl["spotify_id"], "followers": pl.get("followers") or 0, "cover_url": cover}
-            if classification == "editorial":
-                row["owner_name"] = "Spotify"
-                st["editorial"].append(row)
-            else:
-                row["owner_name"] = owner
-                st["independent"].append(row)
-
-            # Checkpoint every 15 NEW lookups overall (cache hits are free
-            # and don't count) — a single track can have 100+ playlists, so
-            # a run cut off mid-way still keeps everything found so far, and
-            # the next run starts from a warmer cache instead of from scratch.
-            if not was_cached:
-                lookups_since_checkpoint += 1
-                if lookups_since_checkpoint >= 15:
-                    save_playlist_cache()
-                    save_call_log()
-                    git_checkpoint(f"Mid-sync checkpoint: {len(_playlist_cache)} playlists cached")
-                    lookups_since_checkpoint = 0
-
-
-def finalize_track_snapshot(isrc, st, curator_idx):
-    editorial_playlists = st["editorial"]
-    independent_playlists = st["independent"]
-    unclassified_count = st["unclassified"]
+        row = {
+            "name": pl["name"],
+            "spotify_id": pl["spotify_id"],
+            "followers": pl.get("followers") or 0,
+            "cover_url": cover,
+        }
+        if is_editorial:
+            row["owner_name"] = "Spotify"
+            editorial_playlists.append(row)
+        else:
+            row["owner_name"] = owner_name or "Unknown curator"
+            independent_playlists.append(row)
 
     independent_followers_total = sum(p["followers"] for p in independent_playlists)
 
@@ -443,14 +165,9 @@ def finalize_track_snapshot(isrc, st, curator_idx):
         if match:
             key_supporters.append({**p, "tier": match["tier"], "notes": match.get("notes", "")})
     key_supporters.sort(key=lambda k: (k["tier"], -k["followers"]))
+
     editorial_playlists.sort(key=lambda k: -k["followers"])
     independent_playlists.sort(key=lambda k: -k["followers"])
-
-    try:
-        total_shazams, daily_shazams, shazam_charts = sot_shazam(isrc)
-    except Exception as e:
-        print(f"  [debug] Shazam lookup failed: {e}")
-        total_shazams, daily_shazams, shazam_charts = None, None, []
 
     return {
         "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
@@ -460,10 +177,6 @@ def finalize_track_snapshot(isrc, st, curator_idx):
         "independent_playlists": independent_playlists,
         "independent_followers_total": independent_followers_total,
         "key_supporters": key_supporters,
-        "unclassified_count": unclassified_count,
-        "total_shazams": total_shazams,
-        "daily_shazams": daily_shazams,
-        "shazam_charts": shazam_charts,
     }
 
 
@@ -476,117 +189,19 @@ def main():
     if not (SOT_KEY and SP_ID and SP_SECRET):
         print("Missing one or more required secrets (SOT_API_KEY / SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET).")
         sys.exit(1)
-    if not ANTHROPIC_KEY:
-        print("No ANTHROPIC_API_KEY set — AI reads will be skipped, everything else still runs.")
 
-    load_playlist_cache()
-    load_call_log()
-    tracked = load_json(TRACKED_FP, {"tracks": []})
-    history = load_json(HISTORY_FP, {})
-    curators = load_json(CURATORS_FP, {"curators": []})
+    tracked   = load_json(TRACKED_FP)
+    history   = load_json(HISTORY_FP)
+    curators  = load_json(CURATORS_FP)
     curator_idx = build_curator_index(curators)
 
     snapshots_by_isrc = history.setdefault("snapshots", {})
 
-    # Never-snapshotted tracks first. Spot On Track calls aren't cached or
-    # rationed the way Spotify calls are — every track gets fully re-queried
-    # every run, in whatever order the list is in. If SOT's own rate limit
-    # gets hit partway through a run (as observed), whatever's positioned
-    # after that point never gets reached — and since new tracks always get
-    # appended to the END of the list, they'd be the ones silently starved,
-    # every single run, not just occasionally. Processing brand-new tracks
-    # first means a partial run costs an already-established track its
-    # update, not a track that's never had one at all.
-    all_tracks = tracked.get("tracks", [])
-
-    # The playlist_cache.json cleanup (2026-08-12) fixed the underlying
-    # cache, but never touched already-recorded history.json snapshots —
-    # a track's dashboard card shows whatever its LATEST snapshot says,
-    # frozen at whenever that track last actually ran. Any track not
-    # re-synced since the fix is still displaying pre-fix, potentially
-    # mis-classified data, even though the cache underneath it is clean
-    # now. Treat those the same as genuinely never-synced tracks so the
-    # whole list gets a fresh pass, not just brand-new additions.
-    #
-    # A track was previously dropping out of priority after just ONE
-    # snapshot dated on/after the fix — even if that snapshot still had
-    # playlists sitting in unclassified_count, genuinely unfinished. That
-    # let a track get stuck behind everything else in normal list order
-    # while still incomplete, which is exactly why a successful run could
-    # show zero visible progress: real calls were landing on tracks that
-    # no longer needed them, not the ones that did.
-    #
-    # Now a track stays high-priority until it BOTH has a post-fix-dated
-    # snapshot AND that snapshot shows zero pending playlists — actually
-    # finished, not just "touched once". Safe to remove the CACHE_FIX_DATE
-    # part once satisfied every track has had a genuine post-fix pass.
-    CACHE_FIX_DATE = "2026-08-13"
-    def needs_priority(t):
-        snaps = snapshots_by_isrc.get(t["isrc"])
-        if not snaps:
-            return True
-        latest = snaps[-1]
-        if latest.get("date", "") < CACHE_FIX_DATE:
-            return True
-        if (latest.get("unclassified_count") or 0) > 0:
-            return True
-        return False
-
-    never_synced = [t for t in all_tracks if needs_priority(t)]
-    already_synced = [t for t in all_tracks if not needs_priority(t)]
-    ordered_tracks = never_synced + already_synced
-    if never_synced:
-        print(f"Prioritising {len(never_synced)} track(s) needing a fresh pass (never-synced or pre-fix data): "
-              + ", ".join(f"{t.get('artist','?')} - {t.get('track','?')}" for t in never_synced))
-
-    # No track-count cap anymore — see the constant's comment above for
-    # why. The circuit breaker inside sp_enrich() already stops new
-    # lookups once DAILY_CALL_CIRCUIT_BREAKER is hit, regardless of how
-    # many tracks that spans; SOT's own pacing/retry (sot_get) handles
-    # that side independently.
-    #
-    # 2026-08-19 fix: this used to loop through ordered_tracks one at a time,
-    # running each track to completion before starting the next. With more
-    # tracks tracked than the circuit breaker's weekly budget can fully
-    # cover in one pass, that meant the first 2-3 tracks in tracked.json ate
-    # the entire budget every single run, and everything after them never
-    # got a single new lookup — visible on the live site as those tracks
-    # never updating, and (worse) staying frozen on whatever pre-fix,
-    # potentially misclassified data they last had. Fetching every track's
-    # current placements first, then round-robining the actual Spotify
-    # lookups one playlist per track per round (classify_playlists_fairly),
-    # means every tracked song gets a share of the budget every run.
-
-    # Phase 1: pull current placements from Spot On Track for every tracked
-    # song (cheap — SOT calls aren't rationed the way Spotify calls are).
-    track_states = {}
-    for entry in ordered_tracks:
+    for entry in tracked.get("tracks", []):
         isrc = entry["isrc"]
-        print(f"Fetching current placements: {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
+        print(f"Syncing {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
         try:
-            current = fetch_current_placements(isrc)
-        except Exception as e:
-            print(f"  ERROR fetching SOT placements: {e}")
-            current = []
-        track_states[isrc] = {
-            "entry": entry,
-            "queue": list(current),
-            "editorial": [],
-            "independent": [],
-            "unclassified": 0,
-        }
-
-    # Phase 2: classify playlists round-robin across every track (see
-    # classify_playlists_fairly docstring for why this replaced the old
-    # one-track-at-a-time approach).
-    classify_playlists_fairly(track_states)
-
-    # Phase 3: build + save a snapshot per track from whatever got resolved.
-    for entry in ordered_tracks:
-        isrc = entry["isrc"]
-        print(f"Saving snapshot: {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
-        try:
-            snap = finalize_track_snapshot(isrc, track_states[isrc], curator_idx)
+            snap = process_track(entry, curator_idx)
         except Exception as e:
             print(f"  ERROR: {e}")
             continue
@@ -595,30 +210,19 @@ def main():
         prior_official = last_official(prior_list)
         if prior_official:
             snap["editorial_count_delta"] = snap["editorial_count"] - prior_official["editorial_count"]
-            snap["independent_followers_delta"] = snap["independent_followers_total"] - prior_official["independent_followers_total"]
-            if snap.get("total_shazams") is not None and prior_official.get("total_shazams") is not None:
-                snap["total_shazams_delta"] = snap["total_shazams"] - prior_official["total_shazams"]
-            else:
-                snap["total_shazams_delta"] = None
+            snap["independent_followers_delta"] = (
+                snap["independent_followers_total"] - prior_official["independent_followers_total"]
+            )
         else:
             snap["editorial_count_delta"] = None
             snap["independent_followers_delta"] = None
-            snap["total_shazams_delta"] = None
-
-        snap["ai_read"] = generate_ai_read(
-            entry.get("artist", ""), entry.get("track", ""), entry.get("label", "INDEPENDENT"),
-            snap, prior_official,
-        )
 
         prior_list.append(snap)
+        # Keep at most 52 snapshots per track (a year of weekly history) to keep the file small
         snapshots_by_isrc[isrc] = prior_list[-52:]
 
-        save_json(HISTORY_FP, history)
-        save_playlist_cache()
-        save_call_log()
-        git_checkpoint(f"Sync checkpoint: {entry.get('artist','?')} - {entry.get('track','?')}")
-
-    print(f"Done. Playlist cache: {len(_playlist_cache)} known. Spotify calls this window: {_call_log['calls']}.")
+    save_json(HISTORY_FP, history)
+    print("Done.")
 
 
 if __name__ == "__main__":
