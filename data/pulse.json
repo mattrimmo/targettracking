@@ -19133,6 +19133,97 @@
       "trend": "plateauing",
       "trend_pct_change": -7,
       "ai_read": null
+    },
+    {
+      "date": "2026-09-20",
+      "total_shazams": 29593,
+      "daily_shazams": 1072,
+      "playlist_count": 357,
+      "shazam_charts": [
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 4,
+          "previous_position": 4,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 15,
+          "previous_position": 26,
+          "genre": null,
+          "city": "Adelaide"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 16,
+          "previous_position": 19,
+          "genre": null,
+          "city": "Sydney"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 20,
+          "previous_position": 18,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 30,
+          "previous_position": 31,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 31,
+          "previous_position": 26,
+          "genre": null,
+          "city": "Perth"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 34,
+          "previous_position": 37,
+          "genre": null,
+          "city": "Brisbane"
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 37,
+          "previous_position": 36,
+          "genre": null,
+          "city": "Dublin"
+        },
+        {
+          "country_code": "NZ",
+          "type": "shazams",
+          "position": 43,
+          "previous_position": 36,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 51,
+          "previous_position": 52,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "steady",
+      "trend_pct_change": 4,
+      "ai_read": null
     }
   ],
   "CBEFB2605244": [
@@ -19474,6 +19565,33 @@
       "trend": "declining",
       "trend_pct_change": -15,
       "ai_read": null
+    },
+    {
+      "date": "2026-09-20",
+      "total_shazams": 25324,
+      "daily_shazams": 917,
+      "playlist_count": 202,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 34,
+          "previous_position": 32,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "US",
+          "type": "shazams",
+          "position": 164,
+          "previous_position": 165,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "plateauing",
+      "trend_pct_change": -9,
+      "ai_read": null
     }
   ],
   "GBARL2601108": [
@@ -19636,6 +19754,25 @@
       ],
       "trend": "steady",
       "trend_pct_change": 1,
+      "ai_read": null
+    },
+    {
+      "date": "2026-09-20",
+      "total_shazams": 5529,
+      "daily_shazams": 287,
+      "playlist_count": 104,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 79,
+          "previous_position": 63,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "steady",
+      "trend_pct_change": 4,
       "ai_read": null
     }
   ]
