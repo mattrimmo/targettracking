@@ -19323,6 +19323,41 @@
       "trend": "steady",
       "trend_pct_change": 9,
       "ai_read": null
+    },
+    {
+      "date": "2026-09-22",
+      "total_shazams": 31278,
+      "daily_shazams": 828,
+      "playlist_count": 362,
+      "shazam_charts": [
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 24,
+          "previous_position": 20,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 32,
+          "previous_position": 33,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 53,
+          "previous_position": 54,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "steady",
+      "trend_pct_change": 10,
+      "ai_read": null
     }
   ],
   "CBEFB2605244": [
@@ -19718,6 +19753,25 @@
       "trend": "plateauing",
       "trend_pct_change": -3,
       "ai_read": null
+    },
+    {
+      "date": "2026-09-22",
+      "total_shazams": 26644,
+      "daily_shazams": 684,
+      "playlist_count": 203,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 33,
+          "previous_position": 34,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "plateauing",
+      "trend_pct_change": -5,
+      "ai_read": null
     }
   ],
   "GBARL2601108": [
@@ -19918,6 +19972,25 @@
       ],
       "trend": "steady",
       "trend_pct_change": 5,
+      "ai_read": null
+    },
+    {
+      "date": "2026-09-22",
+      "total_shazams": 5942,
+      "daily_shazams": 214,
+      "playlist_count": 106,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 80,
+          "previous_position": 79,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "plateauing",
+      "trend_pct_change": -11,
       "ai_read": null
     }
   ]
