@@ -64,6 +64,14 @@
       "label": "GOOD MUSIC FOR BAD PEOPLE",
       "image": "https://i.scdn.co/image/ab67616d00001e0223dbdb911905231be9a2578f",
       "added_at": "2026-09-15"
+    },
+    {
+      "isrc": "GBUM72605108",
+      "artist": "Rossi.",
+      "track": "Misery",
+      "label": "CHAOS",
+      "image": "https://i.scdn.co/image/ab67616d00001e02845be665e7592c583c463eb5",
+      "added_at": "2026-09-23"
     }
   ]
 }
