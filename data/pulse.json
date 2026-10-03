@@ -20100,6 +20100,73 @@
       "trend": "plateauing",
       "trend_pct_change": -10,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-03",
+      "total_shazams": 41686,
+      "daily_shazams": 1145,
+      "playlist_count": 353,
+      "shazam_charts": [
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 23,
+          "previous_position": 27,
+          "genre": null,
+          "city": "Melbourne"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 26,
+          "previous_position": 20,
+          "genre": null,
+          "city": "Adelaide"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 27,
+          "previous_position": 26,
+          "genre": null,
+          "city": "Sydney"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 34,
+          "previous_position": 30,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 76,
+          "previous_position": 76,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "IT",
+          "type": "shazams",
+          "position": 147,
+          "previous_position": 146,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 165,
+          "previous_position": 164,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "steady",
+      "trend_pct_change": 4,
+      "ai_read": null
     }
   ],
   "CBEFB2605244": [
@@ -20666,6 +20733,16 @@
       "trend": "declining",
       "trend_pct_change": -18,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-03",
+      "total_shazams": 33906,
+      "daily_shazams": 799,
+      "playlist_count": 204,
+      "shazam_charts": [],
+      "trend": "plateauing",
+      "trend_pct_change": -3,
+      "ai_read": null
     }
   ],
   "GBARL2601108": [
@@ -21054,6 +21131,25 @@
       "shazam_charts": [],
       "trend": "steady",
       "trend_pct_change": 1,
+      "ai_read": null
+    },
+    {
+      "date": "2026-10-03",
+      "total_shazams": 9160,
+      "daily_shazams": 457,
+      "playlist_count": 91,
+      "shazam_charts": [
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 152,
+          "previous_position": 171,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "accelerating",
+      "trend_pct_change": 22,
       "ai_read": null
     }
   ]
