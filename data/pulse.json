@@ -20285,6 +20285,49 @@
       "trend": "steady",
       "trend_pct_change": 5,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-06",
+      "total_shazams": 44111,
+      "daily_shazams": 788,
+      "playlist_count": 348,
+      "shazam_charts": [
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 27,
+          "previous_position": 27,
+          "genre": null,
+          "city": "Sydney"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 33,
+          "previous_position": 33,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "NZ",
+          "type": "shazams",
+          "position": 61,
+          "previous_position": 61,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 73,
+          "previous_position": 83,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "steady",
+      "trend_pct_change": 6,
+      "ai_read": null
     }
   ],
   "CBEFB2605244": [
@@ -20881,6 +20924,25 @@
       "trend": "accelerating",
       "trend_pct_change": 34,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-06",
+      "total_shazams": 35636,
+      "daily_shazams": 529,
+      "playlist_count": 209,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "discovery",
+          "position": 9,
+          "previous_position": 9,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "steady",
+      "trend_pct_change": 12,
+      "ai_read": null
     }
   ],
   "GBARL2601108": [
@@ -21308,6 +21370,25 @@
       "shazam_charts": [],
       "trend": "accelerating",
       "trend_pct_change": 32,
+      "ai_read": null
+    },
+    {
+      "date": "2026-10-06",
+      "total_shazams": 9951,
+      "daily_shazams": 272,
+      "playlist_count": 91,
+      "shazam_charts": [
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 104,
+          "previous_position": 115,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "accelerating",
+      "trend_pct_change": 21,
       "ai_read": null
     }
   ]
