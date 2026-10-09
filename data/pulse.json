@@ -20462,6 +20462,57 @@
       "trend": "declining",
       "trend_pct_change": -16,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-09",
+      "total_shazams": 46732,
+      "daily_shazams": 861,
+      "playlist_count": 354,
+      "shazam_charts": [
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 30,
+          "previous_position": 31,
+          "genre": null,
+          "city": "Melbourne"
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 37,
+          "previous_position": 33,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 40,
+          "previous_position": 40,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 46,
+          "previous_position": 47,
+          "genre": null,
+          "city": "Brisbane"
+        },
+        {
+          "country_code": "NZ",
+          "type": "shazams",
+          "position": 71,
+          "previous_position": 58,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "plateauing",
+      "trend_pct_change": -4,
+      "ai_read": null
     }
   ],
   "CBEFB2605244": [
@@ -21123,6 +21174,25 @@
       "trend": "plateauing",
       "trend_pct_change": -9,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-09",
+      "total_shazams": 37821,
+      "daily_shazams": 738,
+      "playlist_count": 211,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 39,
+          "previous_position": 36,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "plateauing",
+      "trend_pct_change": -2,
+      "ai_read": null
     }
   ],
   "GBARL2601108": [
@@ -21606,6 +21676,25 @@
       "shazam_charts": [],
       "trend": "declining",
       "trend_pct_change": -26,
+      "ai_read": null
+    },
+    {
+      "date": "2026-10-09",
+      "total_shazams": 10785,
+      "daily_shazams": 321,
+      "playlist_count": 88,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 75,
+          "previous_position": 78,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "plateauing",
+      "trend_pct_change": -10,
       "ai_read": null
     }
   ]
