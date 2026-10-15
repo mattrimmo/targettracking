@@ -23,7 +23,7 @@ Classification order for each current playlist:
 
 Secrets (GitHub Actions): SOT_API_KEY (required), SPOTIFY_CLIENT_ID and
 SPOTIFY_CLIENT_SECRET (optional, only used for step 4).
-Optional env: SPOTIFY_LOOKUPS_PER_RUN (default 60, 0 disables Spotify entirely),
+Optional env: SPOTIFY_LOOKUPS_PER_RUN (default 85, 0 disables Spotify entirely),
 MIN_FOLLOWERS (default 100).
 """
 import base64
@@ -49,7 +49,7 @@ SP_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 IS_OFFICIAL = os.environ.get("IS_OFFICIAL", "false").lower() == "true"
 
 MIN_FOLLOWERS = int(os.environ.get("MIN_FOLLOWERS", "100") or 100)
-SPOTIFY_PER_RUN = int(os.environ.get("SPOTIFY_LOOKUPS_PER_RUN", "60") or 0)
+SPOTIFY_PER_RUN = int(os.environ.get("SPOTIFY_LOOKUPS_PER_RUN", "85") or 0)
 SPOTIFY_DAILY_CAP = 90          # rolling 24h safety cap, same as before
 SOT_DELAY = 0.4                 # seconds between SOT calls
 EDITORIAL_ID_PREFIX = "37i9dQZF1"
@@ -348,6 +348,8 @@ def main():
         snap["independent_followers_delta"] = delta(snap["independent_followers_total"], po and po.get("independent_followers_total"))
         snap["total_shazams_delta"] = delta(snap["total_shazams"], po and po.get("total_shazams"))
         snap["ai_read"] = None
+        # keep every official snapshot, but only the newest unofficial one (it's just a live check)
+        prior = [x for x in prior if x.get("official")]
         prior.append(snap)
         by_isrc[isrc] = prior[-52:]
         print(f"  editorial={snap['editorial_count']} independent={len(snap['independent_playlists'])} "
