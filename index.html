@@ -226,7 +226,7 @@
       <div id="pendingAdd" style="display:none; margin-top:10px; padding:10px; background:var(--surface); border:1px solid var(--border2); border-radius:8px;">
         <div style="font-size:13px;font-weight:600;" id="pendingName"></div>
         <label class="field-label">Label</label>
-        <input type="text" id="pendingLabel" placeholder="e.g. INDEPENDENT">
+        <input type="text" id="pendingLabel" placeholder="Fills in automatically; if empty, leave blank">
         <button class="btn-accent" onclick="confirmAddTrack()">Add to tracking</button>
       </div>
     </div>
@@ -547,11 +547,10 @@ async function selectTrackForAdd(spotifyTrack) {
   labelInput.value = '';
   document.getElementById('pendingAdd').style.display = 'block';
 
-  // Best-effort label lookup — Spotify removed the `label` field from album
-  // objects in their Feb 2026 API changes and it wasn't restored, so this
-  // will likely come back empty right now. Left in deliberately: if Spotify
-  // ever brings it back, this starts working again with no code change.
-  // Either way, the field above is always editable/fallback.
+  // Auto-fill the label from Spotify's album object. Spotify removed `label` for newer
+  // apps (Feb 2026), but an older app can still return it, so this only works when the
+  // Client ID/Secret saved in Settings belong to the OLDER Spotify app.
+  // If nothing comes back, leave the box blank: the daily sync fills it in later.
   try {
     const albumId = spotifyTrack.album && spotifyTrack.album.id;
     if (albumId) {
@@ -560,17 +559,17 @@ async function selectTrackForAdd(spotifyTrack) {
         labelInput.value = album.label.toUpperCase();
         dbg('Label auto-filled: ' + album.label);
       } else {
-        dbg('No usable label field returned by Spotify for this album.');
+        dbg('Spotify returned no label for this album (the Spotify app in Settings may be the newer one).');
       }
     }
   } catch (e) {
-    dbg('Label lookup failed (expected — Spotify removed this field in Feb 2026): ' + e.message);
+    dbg('Label lookup failed: ' + e.message);
   }
 }
 
 async function confirmAddTrack() {
   if (!_pendingTrack) return;
-  const label = document.getElementById('pendingLabel').value.trim() || 'INDEPENDENT';
+  const label = document.getElementById('pendingLabel').value.trim();
   await addTrack(_pendingTrack, label);
   document.getElementById('pendingAdd').style.display = 'none';
   _pendingTrack = null;
@@ -590,12 +589,12 @@ async function addTrack(spotifyTrack, label) {
       isrc,
       artist: spotifyTrack.artists.map(a => a.name).join(' & '),
       track:  spotifyTrack.name,
-      label:  label || 'INDEPENDENT',
+      label:  label || '',
       image:  (spotifyTrack.album && spotifyTrack.album.images && (spotifyTrack.album.images[1] || spotifyTrack.album.images[0]) || {}).url || null,
       added_at: new Date().toISOString().slice(0, 10)
     });
     await ghPutFile('data/tracked.json', content, sha, `Add track: ${spotifyTrack.artists[0].name} - ${spotifyTrack.name}`);
-    notice('searchNotice', '✓ Added. Run "Check live now" to pull its first snapshot.', 'success');
+    notice('searchNotice', '✓ Added. Run "Check live now" to pull its first snapshot (the label fills in automatically).', 'success');
     document.getElementById('results').innerHTML = '';
     document.getElementById('q').value = '';
     dbg('Added ' + isrc);
@@ -687,7 +686,7 @@ function renderTrackedList(tracked) {
     const row = document.createElement('div');
     row.className = 'tracked-item';
     const label = t.artist + ' - ' + t.track;
-    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'INDEPENDENT'}</span></span>
+    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'LABEL PENDING'}</span></span>
       <button class="rm" title="Remove">×</button>`;
     row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
     el.appendChild(row);
@@ -855,7 +854,7 @@ function renderAllCards(tracked, history, pulse) {
     if (!latest) {
       card.innerHTML = `
         <div class="track-head">
-          <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
+          <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'LABEL PENDING'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
         </div>
         <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>`;
       content.appendChild(card);
@@ -873,7 +872,7 @@ function renderAllCards(tracked, history, pulse) {
           ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
           : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
         <div>
-          <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'INDEPENDENT'}</span></div>
+          <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'LABEL PENDING'}</span></div>
           <div class="track-meta">${t.isrc} · last weekly sync ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}${platest ? ' · last pulse ' + platest.date : ''}</div>
         </div>
         ${trendBadge(platest && platest.trend, platest && platest.trend_pct_change)}
