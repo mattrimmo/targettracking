@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "CBEFB2605244",
-      "artist": "Tommy Phillips",
-      "track": "Sun is Shining (Lovelee Dae)",
-      "label": "SAFELIGHT RECORDS",
-      "image": "https://i.scdn.co/image/ab67616d00001e0257b1c886078278e4308afc34",
-      "added_at": "2026-08-26"
-    },
-    {
       "isrc": "GBARL2601108",
       "artist": "MK & Tristan Henry",
       "track": "Leaving (feat. Tristan Henry)",
