@@ -41,7 +41,7 @@ jobs:
           SOT_API_KEY: ${{ secrets.SOT_API_KEY }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SPOTIFY_LOOKUPS_PER_RUN: "60"   # set to 0 to rely on Spot On Track owner names only
           IS_OFFICIAL: ${{ github.event_name == 'schedule' || inputs.official == true }}
         run: python scripts/sync.py
 
