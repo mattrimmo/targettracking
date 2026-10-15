@@ -240,6 +240,66 @@ def classify(pl, cache):
     return None, "", sot_cover
 
 
+_logged_label_miss = [0]
+
+
+def _deezer_json(url):
+    for attempt in range(3):
+        r = requests.get(url, timeout=20)
+        if r.status_code == 429:
+            time.sleep(3)
+            continue
+        if not r.ok:
+            return None
+        d = r.json()
+        if isinstance(d, dict) and d.get("error"):
+            if (d["error"] or {}).get("code") == 4:      # Deezer's quota error: back off and retry
+                time.sleep(3)
+                continue
+            return None
+        return d
+    return None
+
+
+def label_for_isrc(isrc):
+    """Record label for a track via Deezer's free public API (Spot On Track and Spotify no longer supply it).
+    ISRC -> track -> album -> album.label. Returns the label in capitals, or None."""
+    try:
+        track = _deezer_json(f"https://api.deezer.com/track/isrc:{isrc}")
+        album_id = ((track or {}).get("album") or {}).get("id")
+        if not album_id:
+            return None
+        album = _deezer_json(f"https://api.deezer.com/album/{album_id}") or {}
+        label = (album.get("label") or "").strip()
+        time.sleep(0.3)
+        if label and label.lower() not in ("independent", "unknown", "n/a", "not applicable"):
+            return label.upper()
+    except Exception as e:
+        print(f"  [label] Deezer lookup failed for {isrc}: {e}")
+    return None
+
+
+def fill_missing_labels(tracked):
+    """Fill blank (or placeholder INDEPENDENT) labels in tracked.json from Deezer."""
+    todo = [t for t in tracked.get("tracks", []) if not (t.get("label") or "").strip()
+            or t["label"].strip().upper() == "INDEPENDENT"]
+    found = {}
+    for t in todo:
+        lab = label_for_isrc(t["isrc"])
+        if lab:
+            found[t["isrc"]] = lab
+            print(f"  [label] {t.get('artist','?')} - {t.get('track','?')}: {lab}")
+    if todo:
+        print(f"Labels: {len(found)} of {len(todo)} found via Deezer")
+    if found:
+        fresh = load_json(TRACKED_FP, {"tracks": []})   # re-read so we never overwrite a UI edit
+        for t in fresh.get("tracks", []):
+            if t["isrc"] in found:
+                t["label"] = found[t["isrc"]]
+        save_json(TRACKED_FP, fresh)
+    return found
+
+
 def build_curator_index(doc):
     return {c["owner_name"].strip().lower(): c for c in (doc or {}).get("curators", [])}
 
@@ -258,10 +318,43 @@ def fetch_shazam(isrc):
     return total, daily, charts
 
 
-def process_track(entry, curator_idx, cache):
+def fetch_current(entry):
+    """Current playlist placements for one track from Spot On Track (no Spotify involved)."""
     isrc = entry["isrc"]
     current = sot_get(f"/tracks/{isrc}/spotify/playlists/current") or []
-    current = [p for p in current if ((p.get("playlist") or {}).get("followers") or 0) >= MIN_FOLLOWERS]
+    return [p for p in current if ((p.get("playlist") or {}).get("followers") or 0) >= MIN_FOLLOWERS]
+
+
+def prefetch_owners(all_current, cache):
+    """Spend the Spotify budget on the BIGGEST unresolved playlists first, across all tracks,
+    looking each distinct playlist up once however many tracks it appears on."""
+    pending = {}
+    for current in all_current.values():
+        for p in current:
+            pl = p["playlist"]
+            sid = pl["spotify_id"]
+            if sid.startswith(EDITORIAL_ID_PREFIX) or sid in cache or sot_owner(pl):
+                continue
+            pending[sid] = max(pending.get(sid, 0), pl.get("followers") or 0, 0)
+    order = sorted(pending, key=lambda k: -pending[k])
+    print(f"Prefetch: {len(order)} distinct playlists need a Spotify lookup (biggest first)")
+    for sid in order:
+        if not spotify_allowed():
+            break
+        res = sp_lookup(sid)
+        if res[0] == "ok":
+            stats["spotify"] += 1
+            _, oid, oname, cover = res
+            cache[sid] = ["Spotify" if oid == "spotify" else (oname or "Unknown curator"), None, cover]
+        elif res[0] == "missing":
+            stats["not_found"] += 1
+            cache[sid] = [UNKNOWN, None, None]
+    left = sum(1 for sid in order if sid not in cache)
+    print(f"Prefetch done: {len(order) - left} resolved, {left} still waiting for a future run")
+
+
+def process_track(entry, current, curator_idx, cache):
+    isrc = entry["isrc"]
     if current and not _logged_keys[0]:
         _logged_keys[0] = True
         print("  [sot] playlist object keys:", sorted(current[0]["playlist"].keys()))
@@ -332,11 +425,25 @@ def main():
     by_isrc = history.setdefault("snapshots", {})
 
     ok = failed = 0
+    fill_missing_labels(tracked)
+    all_current = {}
+    for entry in tracked.get("tracks", []):
+        try:
+            all_current[entry["isrc"]] = fetch_current(entry)
+        except Exception as e:
+            print(f"  ERROR fetching {entry.get('track','?')}: {e}")
+    prefetch_owners(all_current, cache)
+    save_json(CACHE_FP, cache)
+    save_json(CALLLOG_FP, _call_log)
+
     for entry in tracked.get("tracks", []):
         isrc = entry["isrc"]
         print(f"Syncing {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
+        if isrc not in all_current:
+            failed += 1
+            continue
         try:
-            snap = process_track(entry, curator_idx, cache)
+            snap = process_track(entry, all_current[isrc], curator_idx, cache)
         except Exception as e:
             print(f"  ERROR: {e}")
             failed += 1
