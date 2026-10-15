@@ -6,8 +6,8 @@ and Shazam trend, with week-on-week change.
 
 ## How it works
 - `index.html` is a static page (GitHub Pages). It only reads `data/*.json`.
-- `scripts/sync.py` runs in GitHub Actions every Wednesday (official snapshot) or on
-  demand from the page ("Check live now", unofficial). It pulls current playlists
+- `scripts/sync.py` runs in GitHub Actions every Wednesday 05:17 UTC (official snapshot), daily at 06:30 UTC
+  (unofficial, works through the Spotify backlog), or on demand from the page ("Check live now"). It pulls current playlists
   and Shazam data from Spot On Track, works out editorial vs independent, and writes
   `data/history.json`.
 - `scripts/pulse.py` runs daily, Spot On Track only, for the Shazam trend (`data/pulse.json`).
@@ -17,7 +17,7 @@ and Shazam trend, with week-on-week change.
 1. Playlist id starts `37i9dQZF1` -> editorial (Spotify answers 404 for these anyway)
 2. Already in `data/playlist_cache.json` -> reuse
 3. Spot On Track supplies an owner name -> use and cache
-4. Otherwise a Spotify lookup, capped by `SPOTIFY_LOOKUPS_PER_RUN` (default 60; 0 = never call Spotify)
+4. Otherwise a Spotify lookup, capped by `SPOTIFY_LOOKUPS_PER_RUN` (default 85; 0 = never call Spotify). Biggest playlists are looked up first, each only once
 5. Anything still unresolved is retried next run and shown as "not yet classified"
 
 ## Files
@@ -28,6 +28,9 @@ scripts/    sync.py  pulse.py  sot_diag.py  requirements.txt
 .github/workflows/  sync.yml  pulse.yml  sot_diag.yml
 ```
 `sot_diag` is a diagnostic: it prints which fields Spot On Track returns for a playlist. Delete it once not needed.
+
+## Labels
+Spotify no longer returns record labels to newer apps and Spot On Track has no label field. Type the label when adding a track, or leave it blank and the sync tries Deezer.
 
 ## Troubleshooting
 - Open Actions, open the latest "Sync" run, and read the last line starting `SUMMARY`. It says where each classification came from, how many Spotify calls were used, and whether Spotify's quota wall was hit.
