@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "USUS12600499",
-      "artist": "George Smeddles",
-      "track": "Slipstream",
-      "label": "ULTRA RECORDS",
-      "image": "https://i.scdn.co/image/ab67616d00001e027167c3950991c348dc65d67f",
-      "added_at": "2026-09-09"
-    },
-    {
       "isrc": "USUG12608881",
       "artist": "Max Dean & Nafe Smallz & Luke Dean",
       "track": "Not A Problem",
