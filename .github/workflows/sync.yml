@@ -49,7 +49,7 @@ jobs:
       - name: Final safety-net commit
         if: always()
         run: |
-          git add data/history.json data/playlist_cache.json data/spotify_call_log.json
+          git add data/history.json data/playlist_cache.json data/spotify_call_log.json data/tracked.json
           git diff --cached --quiet && echo "Nothing left uncommitted" || git commit -m "Sync: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main || true
           git push || true
