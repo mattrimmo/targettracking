@@ -1,13 +1,4 @@
 {
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
-  "tracks": [
-    {
-      "isrc": "USUG12608881",
-      "artist": "Max Dean & Nafe Smallz & Luke Dean",
-      "track": "Not A Problem",
-      "label": "INTERSCOPE RECORDS",
-      "image": "https://i.scdn.co/image/ab67616d00001e02a2115638486cbf558f4351e3",
-      "added_at": "2026-09-14"
-    }
-  ]
+  "tracks": []
 }
