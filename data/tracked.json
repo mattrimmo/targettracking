@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "GBARL2601108",
-      "artist": "MK & Tristan Henry",
-      "track": "Leaving (feat. Tristan Henry)",
-      "label": "COLUMBIA",
-      "image": "https://i.scdn.co/image/ab67616d00001e020c24b6adb0431b337056c7e6",
-      "added_at": "2026-09-09"
-    },
-    {
       "isrc": "USUG12608701",
       "artist": "Mau P",
       "track": "Just A Little Bit More",
