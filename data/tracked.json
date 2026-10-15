@@ -1,13 +1,4 @@
 {
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
-  "tracks": [
-    {
-      "isrc": "USUYG1835818",
-      "artist": "Aluna & Jengi",
-      "track": "Moaning",
-      "label": "INDEPENDENT",
-      "image": "https://i.scdn.co/image/ab67616d00001e02f35406ce4d7f4dad7626b43b",
-      "added_at": "2026-10-15"
-    }
-  ]
+  "tracks": []
 }
