@@ -2,7 +2,8 @@ name: Sync Long Term Target Tracking
 
 on:
   schedule:
-    - cron: "17 5 * * 3"   # 05:17 UTC every Wednesday — see earlier notes on why this time
+    - cron: "17 5 * * 3"   # 05:17 UTC every Wednesday: the OFFICIAL weekly snapshot
+    - cron: "30 6 * * *"   # 06:30 UTC daily: unofficial run that works through the Spotify backlog
   workflow_dispatch:
     inputs:
       official:
@@ -41,8 +42,8 @@ jobs:
           SOT_API_KEY: ${{ secrets.SOT_API_KEY }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          SPOTIFY_LOOKUPS_PER_RUN: "60"   # set to 0 to rely on Spot On Track owner names only
-          IS_OFFICIAL: ${{ github.event_name == 'schedule' || inputs.official == true }}
+          SPOTIFY_LOOKUPS_PER_RUN: "85"   # set to 0 to rely on Spot On Track owner names only
+          IS_OFFICIAL: ${{ github.event.schedule == '17 5 * * 3' || inputs.official == true }}
         run: python scripts/sync.py
 
       - name: Final safety-net commit
