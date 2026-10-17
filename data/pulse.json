@@ -22494,5 +22494,17 @@
       "trend_pct_change": -23,
       "ai_read": null
     }
+  ],
+  "CBEFB2607257": [
+    {
+      "date": "2026-10-17",
+      "total_shazams": 14,
+      "daily_shazams": null,
+      "playlist_count": 206,
+      "shazam_charts": [],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
   ]
 }
