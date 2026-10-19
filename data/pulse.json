@@ -22515,6 +22515,16 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-19",
+      "total_shazams": 159,
+      "daily_shazams": 71,
+      "playlist_count": 294,
+      "shazam_charts": [],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ]
 }
