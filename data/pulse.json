@@ -22535,6 +22535,37 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-10-21",
+      "total_shazams": 858,
+      "daily_shazams": 650,
+      "playlist_count": 329,
+      "shazam_charts": [],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "CBEFB2606643": [
+    {
+      "date": "2026-10-21",
+      "total_shazams": null,
+      "daily_shazams": null,
+      "playlist_count": 183,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 151,
+          "previous_position": null,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ]
 }
