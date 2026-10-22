@@ -229376,35 +229376,35 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
         "editorial_count": 6,
         "editorial_playlists": [
           {
             "name": "Dance Rising",
             "spotify_id": "37i9dQZF1DX8tZsk68tuDw",
-            "followers": 1810070,
+            "followers": 1809895,
             "cover_url": "https://i.scdn.co/image/ab67706f000000022e227c9f19765c1ab70306eb",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance 2026",
             "spotify_id": "37i9dQZF1DWWrJKwf0q9nn",
-            "followers": 156499,
+            "followers": 156490,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000237f28198d12c8d4de6aa298e",
             "owner_name": "Spotify"
           },
           {
             "name": "sidewaves",
             "spotify_id": "37i9dQZF1DWUaaerD0tOpr",
-            "followers": 118717,
+            "followers": 118720,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b0c73b9d3bf86ce41cac8252",
             "owner_name": "Spotify"
           },
           {
             "name": "The Dance List",
             "spotify_id": "37i9dQZF1DX7364T8tu1TH",
-            "followers": 113897,
+            "followers": 113903,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002e2f27b24a63b903922827052",
             "owner_name": "Spotify"
           },
@@ -229427,14 +229427,14 @@
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland"
           },
           {
             "name": "Locked Up House 2026 - DND RECS",
             "spotify_id": "64NTaSOGmH5Ls2ufK2VQz3",
-            "followers": 22725,
+            "followers": 22723,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca3aab3c6266c73b2545aa1ba",
             "owner_name": "DND RECS"
           },
@@ -229448,7 +229448,7 @@
           {
             "name": "New Music Friday 2026  | New Music  2025 | Satisfaction - David Guetta, Bob Sinclair",
             "spotify_id": "6w9EqfwieVAhNtwB2PqNc7",
-            "followers": 17104,
+            "followers": 17103,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849e481a6534969970abe3271d",
             "owner_name": "Digital Empire Records"
           },
@@ -229462,14 +229462,14 @@
           {
             "name": "SLAM! FM - Dance Hits 2026",
             "spotify_id": "5zBmKy4ZN0H6RmWjms7pkt",
-            "followers": 11943,
+            "followers": 11942,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cc0a78142205417cff636863c",
             "owner_name": "New Skool Records"
           },
           {
             "name": "Techno House 2026| Tech House Hits 2026",
             "spotify_id": "5ISQA2eWfQ1yLzPaqH1zdE",
-            "followers": 10763,
+            "followers": 10762,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c69c2632b1aa1a9daec410ac8",
             "owner_name": "DeeVu Records"
           },
@@ -229532,7 +229532,7 @@
           {
             "name": "ELECTRONICS",
             "spotify_id": "1rjQXQDCGyNJl71vfLb0K7",
-            "followers": 3199,
+            "followers": 3200,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ab148d5b5ebf5a7ca10a34b8",
             "owner_name": "DMY"
           },
@@ -229616,7 +229616,7 @@
           {
             "name": "Free Your Soul",
             "spotify_id": "2rAVCYSttWSrVo3aArwkeu",
-            "followers": 401,
+            "followers": 402,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8417c6f53b668dcacf15e025b9",
             "owner_name": "cocoandbreezy"
           },
@@ -229677,12 +229677,12 @@
             "owner_name": "Josh Parto"
           }
         ],
-        "independent_followers_total": 216577,
+        "independent_followers_total": 216567,
         "key_supporters": [
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland",
             "tier": 1,
@@ -229703,7 +229703,7 @@
         "daily_shazams": null,
         "shazam_charts": [],
         "editorial_count_delta": 0,
-        "independent_followers_delta": 0,
+        "independent_followers_delta": -10,
         "total_shazams_delta": null,
         "ai_read": null
       }
@@ -231056,224 +231056,224 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
-        "editorial_count": 33,
+        "editorial_count": 34,
         "editorial_playlists": [
           {
             "name": "mint",
             "spotify_id": "37i9dQZF1DX4dyzvuaRJ0n",
-            "followers": 5445410,
+            "followers": 5444467,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002edfc628be2044100d44b3de5",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday",
             "spotify_id": "37i9dQZF1DX4JAvHpjipBk",
-            "followers": 4647586,
+            "followers": 4647341,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b299b91ee0cfcac7d8c15f1c",
             "owner_name": "Spotify"
           },
           {
             "name": "Housewerk",
             "spotify_id": "37i9dQZF1DXa8NOEUWPn9W",
-            "followers": 2021340,
+            "followers": 2021974,
             "cover_url": "https://i.scdn.co/image/ab67706f000000021bb5370dd5eb5f40ffe449c2",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday UK & Ireland",
             "spotify_id": "37i9dQZF1DX4W3aJJYCDfV",
-            "followers": 1039688,
+            "followers": 1039576,
             "cover_url": "https://i.scdn.co/image/ab67706f000000025b76868b8f19bbf89e3090f2",
             "owner_name": "Spotify"
           },
           {
             "name": "Singled Out",
             "spotify_id": "37i9dQZF1DX8f6LHxMjnzD",
-            "followers": 921967,
+            "followers": 921890,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023a4d04b799a47ef8fb185987",
             "owner_name": "Spotify"
           },
           {
             "name": "All New All Now",
             "spotify_id": "37i9dQZF1DX8vwRmUsEIMT",
-            "followers": 613633,
+            "followers": 613596,
             "cover_url": "https://i.scdn.co/image/ab67706f000000024e2059adc33eee7e2d2e2ddf",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Canada",
             "spotify_id": "37i9dQZF1DX5DfG8gQdC3F",
-            "followers": 599167,
+            "followers": 599120,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000227fa4f49867abb6e0a1d8d37",
             "owner_name": "Spotify"
           },
           {
             "name": "All New Dance",
             "spotify_id": "37i9dQZF1DXa41CMuUARjl",
-            "followers": 578439,
+            "followers": 578470,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002a930454e81964040a1f3bd89",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday",
             "spotify_id": "37i9dQZF1DWXJfnUiYjUKT",
-            "followers": 523165,
+            "followers": 523174,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002623b1be5517b5640080ef77d",
             "owner_name": "Spotify"
           },
           {
             "name": "House Supreme",
             "spotify_id": "37i9dQZF1DXacX3REVaOqV",
-            "followers": 499128,
+            "followers": 499130,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b69499cfbf7258b189df1b4e",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday AU & NZ",
             "spotify_id": "37i9dQZF1DWT2SPAYawYcO",
-            "followers": 461420,
+            "followers": 461394,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023b466619a7600b75bd71e18d",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday France",
             "spotify_id": "37i9dQZF1DX742okrrpwah",
-            "followers": 416946,
+            "followers": 416910,
             "cover_url": "https://i.scdn.co/image/ab67706f000000027c98d9eec1ae52eca8b95175",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Italia",
             "spotify_id": "37i9dQZF1DWVKDF4ycOESi",
-            "followers": 370752,
+            "followers": 370735,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002d0289188ac6e1fde23274082",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Brandneu",
             "spotify_id": "37i9dQZF1DXcfWvNFKxjDo",
-            "followers": 351763,
+            "followers": 351748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ca85510aec1af11c8955c03f",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Room 2026",
             "spotify_id": "37i9dQZF1DX2ENAPP1Tyed",
-            "followers": 338273,
+            "followers": 338249,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002cef5a25728ae803c1104fd4c",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday NL",
             "spotify_id": "37i9dQZF1DXb5BKLTO7ULa",
-            "followers": 301960,
+            "followers": 301942,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002e75f5ef82facc5ecd71e4c2a",
             "owner_name": "Spotify"
           },
           {
             "name": "mint Canada",
             "spotify_id": "37i9dQZF1DXdIpacQDPDV5",
-            "followers": 298447,
+            "followers": 298420,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000223eb7ab513edf39ba3d00742",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Sweden",
             "spotify_id": "37i9dQZF1DXcecv7ESbOPu",
-            "followers": 236702,
+            "followers": 236694,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b203f27e98c83fb7f25adc0f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Norway",
             "spotify_id": "37i9dQZF1DWV3RrjH1jDkx",
-            "followers": 204568,
+            "followers": 204562,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023529a920e3d082d2d4cce71f",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance 2026",
             "spotify_id": "37i9dQZF1DX12meDmp2yzx",
-            "followers": 192310,
+            "followers": 192335,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ffe0a15124ea7f44a7e3bb6e",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance 2026",
             "spotify_id": "37i9dQZF1DWWrJKwf0q9nn",
-            "followers": 156499,
+            "followers": 156490,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000237f28198d12c8d4de6aa298e",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance Beats",
             "spotify_id": "37i9dQZF1DXaqIZ7YXxc6o",
-            "followers": 148914,
+            "followers": 148913,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002028b32084540b294c64ff79e",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Denmark",
             "spotify_id": "37i9dQZF1DWWuIAAkPM0Lu",
-            "followers": 130383,
+            "followers": 130376,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000204c3d356307337f5443fabaa",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Polska",
             "spotify_id": "37i9dQZF1DXaMTfp0LE4AZ",
-            "followers": 127675,
+            "followers": 127677,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002dc89e55b90ea03ae88169999",
             "owner_name": "Spotify"
           },
           {
             "name": "sidewaves",
             "spotify_id": "37i9dQZF1DWUaaerD0tOpr",
-            "followers": 118717,
+            "followers": 118720,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b0c73b9d3bf86ce41cac8252",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Suomi",
             "spotify_id": "37i9dQZF1DWXtcXUwhuzFM",
-            "followers": 108924,
+            "followers": 108912,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023bba6d90f4723939ea7f7dd2",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Egypt",
             "spotify_id": "37i9dQZF1DXbl0AgQqLnw1",
-            "followers": 67321,
+            "followers": 67323,
             "cover_url": "https://i.scdn.co/image/ab67706f000000021d2d05580a6169a7da65fd7a",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Maghreb",
             "spotify_id": "37i9dQZF1DXbVCaQthfsdD",
-            "followers": 63374,
+            "followers": 63385,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000261e5f4446b2293cbb3e70ed9",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday BE",
             "spotify_id": "37i9dQZF1DXbUOvbOBAiPu",
-            "followers": 54412,
+            "followers": 54419,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002c2b1d8731e805bcfc4307afd",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday UAE",
             "spotify_id": "37i9dQZF1DX51I48C1U653",
-            "followers": 52793,
+            "followers": 52792,
             "cover_url": "https://i.scdn.co/image/ab67706f000000029cdfd112e25f66c064a521a5",
             "owner_name": "Spotify"
           },
           {
             "name": "This Is ANOTR",
             "spotify_id": "37i9dQZF1DZ06evO2zQGoV",
-            "followers": 14566,
+            "followers": 14584,
             "cover_url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/4p5WgeiPSPpqPDs7T6OkWf/en",
             "owner_name": "Spotify"
           },
@@ -231290,76 +231290,97 @@
             "followers": 6986,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002cdd5acf49aa94162f650040f",
             "owner_name": "Spotify"
+          },
+          {
+            "name": "MAFRO Radio",
+            "spotify_id": "37i9dQZF1E4A2VDue1uSDv",
+            "followers": 156,
+            "cover_url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2Y9v3pyVuYM0o8bSLAUUZm/en",
+            "owner_name": "Spotify"
           }
         ],
         "independent_playlists": [
           {
             "name": "F1 Tracks",
             "spotify_id": "1gH4FFUMWSI98MKPeBaa8x",
-            "followers": 178991,
+            "followers": 178958,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8457caf82de718f25c02f23227",
             "owner_name": "F1"
           },
           {
+            "name": "Funky House 2026 🪩",
+            "spotify_id": "111k2mfSlw3amm9JLiXtdZ",
+            "followers": 89770,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c25987e23eadb9a245f52f05c",
+            "owner_name": "Vokall Records"
+          },
+          {
             "name": "IBIZA RESIDENCE TECH HOUSE",
             "spotify_id": "7CScNyyszWr8Hae2sOtnWg",
-            "followers": 78822,
+            "followers": 78817,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb029e3e14b0f98e2057f3421",
             "owner_name": "EMPO Electronic Meeting Point"
           },
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland"
           },
           {
             "name": "Pete Tong’s Essential Selection Radio Playlist",
             "spotify_id": "38JmDMAI5MztUH9klEQWU6",
-            "followers": 50412,
+            "followers": 50409,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c453bf8967b1e305fabe590a5",
             "owner_name": "Pete Tong"
           },
           {
+            "name": "Boat Party 2026 🚤 🌞 Ibiza Vibes ☀️ Summer Dance Hits",
+            "spotify_id": "24hgp0ejYeN6iVKTC5qebK",
+            "followers": 35791,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c6ecd7c9ea96ea6c3b0a1759b",
+            "owner_name": "Relavel Records"
+          },
+          {
             "name": "EDM Running Songs 2026 🏃Energetic EDM to run | finding Running Motivation 🚀",
             "spotify_id": "5ugaUSHdmdlUOrqBr94hoA",
-            "followers": 35014,
+            "followers": 35026,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c828617f3bd292988eb90c1e5",
             "owner_name": "ERA Music"
           },
           {
             "name": "HILLS HOUSE",
             "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
-            "followers": 31732,
+            "followers": 31769,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
             "owner_name": "HILLS"
           },
           {
             "name": "3voor12 #NIEUWEMUZIEK",
             "spotify_id": "5Gcrd1lrmaTeACswEBQKRR",
-            "followers": 28565,
+            "followers": 28574,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb8ed9eaf26aaed902f3c5a37",
             "owner_name": "3voor12"
           },
           {
             "name": "Alternative Weekly 2026 / Best New Indie Music 2026 / 🚀",
             "spotify_id": "0cnNivIcBiCI50ozDfcHyb",
-            "followers": 24858,
+            "followers": 24859,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84fd3e32a6a05ad08f8d2a668f",
             "owner_name": "indiemono"
           },
           {
             "name": "NEW EDM FRIDAY 🔥",
             "spotify_id": "69WI1EYhCyop1JWowR9wq5",
-            "followers": 23895,
+            "followers": 23911,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbd8d10ba10d4ddb9f38183a8",
             "owner_name": "EDM FAMILY"
           },
           {
             "name": "New House Music Friday",
             "spotify_id": "5kyDTxrXdC6Qal62iEO5Ty",
-            "followers": 23088,
+            "followers": 23087,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9137bec6ee783019be3d3a7b",
             "owner_name": "Ben Dooks"
           },
@@ -231373,21 +231394,21 @@
           {
             "name": "Top Hity 🔥🎉🎵 ",
             "spotify_id": "19zHVSpAeY9zVXBML8gCpS",
-            "followers": 22698,
+            "followers": 22693,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8429bee9bb3b196b3d3ceac7ff",
             "owner_name": "Ľuboš Košický"
           },
           {
             "name": "Beatport Top 100 - Today",
             "spotify_id": "0Q4JvzeT0q3FLsj5fqffMV",
-            "followers": 20112,
+            "followers": 20120,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8413eefd3fa0824de200fa2ba3",
             "owner_name": "Symphoria"
           },
           {
             "name": "ADE 2026 || DAILY UPDATED",
             "spotify_id": "36Ju33lIc2jAEmIOAjwyug",
-            "followers": 18615,
+            "followers": 18679,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8467e4b0a2afec1147aa2bc95a",
             "owner_name": "MILLER"
           },
@@ -231401,7 +231422,7 @@
           {
             "name": "New Music, Radar de Novidades, Friday EDM e +",
             "spotify_id": "4PV7pMQADb2plazslbmFoY",
-            "followers": 16626,
+            "followers": 16630,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840cd197f29f2c7a6d88e1ef8b",
             "owner_name": "eletrovibez"
           },
@@ -231415,14 +231436,14 @@
           {
             "name": "New Music Friday, Electronic, EDM Releases 2026 🔥",
             "spotify_id": "02drWIbmrqJigXSikPo8Vi",
-            "followers": 14641,
+            "followers": 14640,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ecb300ff49e77d407ae742a",
             "owner_name": "New EDM Friday"
           },
           {
             "name": "Lost - Vintage Culture & Gabss",
             "spotify_id": "40hRWMKxb18GxBjpULzN6t",
-            "followers": 14353,
+            "followers": 14351,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9c917987ebb22d65eefa5f19",
             "owner_name": "House Culture"
           },
@@ -231436,7 +231457,7 @@
           {
             "name": "Fresh House Friday",
             "spotify_id": "28QA6xyCDHBDvHPvcn89ve",
-            "followers": 12225,
+            "followers": 12224,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845d05fc81216d4030f9da0435",
             "owner_name": "Stevie Paladini PLAYLISTS"
           },
@@ -231450,7 +231471,7 @@
           {
             "name": "SLAM! FM - Dance Hits 2026",
             "spotify_id": "5zBmKy4ZN0H6RmWjms7pkt",
-            "followers": 11943,
+            "followers": 11942,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cc0a78142205417cff636863c",
             "owner_name": "New Skool Records"
           },
@@ -231464,28 +231485,28 @@
           {
             "name": "Bershka Playlist 2026 • In Store Fashion Music ",
             "spotify_id": "2ZiRkku2N0VdYtBSVOzRL9",
-            "followers": 11233,
+            "followers": 11234,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c1cc3be70212b7c5fe56c10dc",
             "owner_name": "113th Street Music"
           },
           {
             "name": "Música Eletrônica 2026  | É Som de Front",
             "spotify_id": "1g2PwJKcwADJXgyLcuxI2w",
-            "followers": 10679,
+            "followers": 10680,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b8dfbf865e0641fe4ae41f42",
             "owner_name": "CICLO Records"
           },
           {
             "name": "house music that’s actually good",
             "spotify_id": "2QAH8d3Vt2ZVMRV1xCd1D0",
-            "followers": 10529,
+            "followers": 10528,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c1373e52511431592e5ceda36",
             "owner_name": "Sophia Lahlou"
           },
           {
             "name": "Waushouse🔊🔊🔊",
             "spotify_id": "4iSeuiIn8SqZ78tMVSOhst",
-            "followers": 10438,
+            "followers": 10432,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b9622bfcafed3e212c47e64a",
             "owner_name": "Peer.heuvel"
           },
@@ -231513,7 +231534,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound"
           },
@@ -231884,7 +231905,7 @@
           {
             "name": "(good) new music friday",
             "spotify_id": "1GyTl6JeZPk0pGSTave43G",
-            "followers": 1053,
+            "followers": 1052,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02349f6c0133abbfca063891c1ab67616d00001e02428ff5823a4693cbf827f9b9ab67616d00001e0247ff4d4b28c0f4fad26667dfab67616d00001e02cf5e9bd3c7533d7c3d471a62",
             "owner_name": "fistintheair"
           },
@@ -231926,7 +231947,7 @@
           {
             "name": "Lost Frequencies Tom Odell Black Friday (pretty like the sun)",
             "spotify_id": "3CuQU3qUkaCVYu9O3MK7xi",
-            "followers": 945,
+            "followers": 943,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8401580e32acb3ea58f7cc1f7f",
             "owner_name": "House Culture"
           },
@@ -231947,7 +231968,7 @@
           {
             "name": "New Music Friday EDM | Best New EDM Releases 2026 - EDMNOMAD ",
             "spotify_id": "7cVJGf1jA6qnv33MQBBLmW",
-            "followers": 860,
+            "followers": 861,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840a8d72bcae4a43301379f21b",
             "owner_name": "EDMNOMAD"
           },
@@ -231961,7 +231982,7 @@
           {
             "name": "Mykonos Beach Club 2026 | Mykonos Calling",
             "spotify_id": "31LTatcJNvRMUYIRY15mYp",
-            "followers": 816,
+            "followers": 817,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84086b6c4dd57e01394e599995",
             "owner_name": "113th Street Music"
           },
@@ -231982,7 +232003,7 @@
           {
             "name": "Radio 1's Dance Party with Danny Howard",
             "spotify_id": "3Wbka37VEyaXdgrhQ0roQk",
-            "followers": 732,
+            "followers": 733,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0210ee142090268c962424e065ab67616d00001e02295253387629aef59e51c143ab67616d00001e026a432f681cfdaee97b9cff4dab67616d00001e02f8c4be6b1bc907907c74d585",
             "owner_name": "Daniele⚡️Saitta"
           },
@@ -232017,7 +232038,7 @@
           {
             "name": "crystallized - John Summit",
             "spotify_id": "6jENS2VE1LMcZsRu4eJYGA",
-            "followers": 692,
+            "followers": 694,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca43563baa6e9b82535646a47",
             "owner_name": "House Culture"
           },
@@ -232092,6 +232113,13 @@
             "owner_name": "mennodeboer"
           },
           {
+            "name": "Favour - FISHER & Tones And I",
+            "spotify_id": "3xQaMxOfqEYkVj8CudRGRi",
+            "followers": 489,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848d5d63e30a26747f4134e218",
+            "owner_name": "House Culture"
+          },
+          {
             "name": "lo nuevo esta semana",
             "spotify_id": "6VorUGnQyb6YLVtBpUc6VR",
             "followers": 489,
@@ -232099,16 +232127,9 @@
             "owner_name": "lrnzmrtnz"
           },
           {
-            "name": "Favour - FISHER & Tones And I",
-            "spotify_id": "3xQaMxOfqEYkVj8CudRGRi",
-            "followers": 488,
-            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848d5d63e30a26747f4134e218",
-            "owner_name": "House Culture"
-          },
-          {
             "name": "Hot N*gga (SIDEPIECE Remix) - Bobby Shmurda",
             "spotify_id": "2QwBqeSn5IdBTsCiDPFmLw",
-            "followers": 486,
+            "followers": 485,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84563a06c1289ecbebd93f021d",
             "owner_name": "House Culture"
           },
@@ -232122,7 +232143,7 @@
           {
             "name": "Electronic Chill 2026",
             "spotify_id": "046T5gEwKeQTLjbgaSkQGN",
-            "followers": 456,
+            "followers": 457,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d83b488dd9f243b7b435d450",
             "owner_name": "Electronic Nature"
           },
@@ -232157,7 +232178,7 @@
           {
             "name": "LPFJ (HNTR Remix) - Dom Dolla x A$AP Rocky",
             "spotify_id": "3VNXiCAedQlnvAxf00fHLN",
-            "followers": 393,
+            "followers": 394,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c4c2b22b79086a1a857200af",
             "owner_name": "House Culture"
           },
@@ -232206,7 +232227,7 @@
           {
             "name": "Cristian Gatti (Experts Only) NMF 10/16 mike",
             "spotify_id": "0Dplyx9XiocTCAHlvmitCj",
-            "followers": 291,
+            "followers": 290,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0286c9566284b71edf22791472ab67616d00001e02c20f069becca8273c7ee6e7dab67616d00001e02cd104592394577141cb64014ab67616d00001e02e1be94018ba6da2c6299a460",
             "owner_name": "Mike"
           },
@@ -232220,7 +232241,7 @@
           {
             "name": "Dance Hits - Mixed Playlist",
             "spotify_id": "3LmW92m3P3PlzcuSrYiRVH",
-            "followers": 249,
+            "followers": 250,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847c39a0efe622c20678ccdc23",
             "owner_name": "Daniele⚡️Saitta"
           },
@@ -232248,7 +232269,7 @@
           {
             "name": " Circoloco New York 2026 ",
             "spotify_id": "1ipTXuMC2YxsOAkmB8gaHO",
-            "followers": 206,
+            "followers": 208,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3f1fce10d7ef2faee7bdbd1",
             "owner_name": "Filippo Dangelo"
           },
@@ -232309,6 +232330,13 @@
             "owner_name": "Juan Bolinaga"
           },
           {
+            "name": "Beach Music 2026 🌞 Beach House ⛱️ Summer Vibes 🌅",
+            "spotify_id": "4nnPlx4J64vttorJTTDT2V",
+            "followers": 130,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c94b7348c5329e18cdb9fc877",
+            "owner_name": "Relavel Records"
+          },
+          {
             "name": "HOUSE MUSIC 2026 & 2000s",
             "spotify_id": "0sVVaIXetkPYhqKxn5yxEv",
             "followers": 125,
@@ -232325,7 +232353,7 @@
           {
             "name": "Fresh Finds | Nieuwste Hits",
             "spotify_id": "36BCisIPNNWb5m5G2S0f65",
-            "followers": 120,
+            "followers": 121,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849c9a251b01bf0f8c2083a040",
             "owner_name": "Tijmen Horstman"
           },
@@ -232344,12 +232372,12 @@
             "owner_name": "TOH!Magazine"
           }
         ],
-        "independent_followers_total": 1041177,
+        "independent_followers_total": 1166960,
         "key_supporters": [
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland",
             "tier": 1,
@@ -232367,7 +232395,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound",
             "tier": 1,
@@ -232384,20 +232412,20 @@
           }
         ],
         "unclassified_count": 0,
-        "total_shazams": null,
+        "total_shazams": 2268,
         "daily_shazams": null,
         "shazam_charts": [
           {
             "country_code": "GB",
             "type": "shazams",
-            "position": 151,
-            "previous_position": null,
+            "position": 129,
+            "previous_position": 151,
             "genre": "Dance",
             "city": null
           }
         ],
-        "editorial_count_delta": 0,
-        "independent_followers_delta": 206,
+        "editorial_count_delta": 1,
+        "independent_followers_delta": 125989,
         "total_shazams_delta": null,
         "ai_read": null
       }
@@ -233160,28 +233188,28 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
         "editorial_count": 7,
         "editorial_playlists": [
           {
             "name": "All New Dance",
             "spotify_id": "37i9dQZF1DXa41CMuUARjl",
-            "followers": 578439,
+            "followers": 578470,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002a930454e81964040a1f3bd89",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Brandneu",
             "spotify_id": "37i9dQZF1DXcfWvNFKxjDo",
-            "followers": 351763,
+            "followers": 351748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ca85510aec1af11c8955c03f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Türkiye",
             "spotify_id": "37i9dQZF1DXd8Yptw1g5FC",
-            "followers": 328478,
+            "followers": 328464,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000217348deff1effd5c3366dd04",
             "owner_name": "Spotify"
           },
@@ -233195,7 +233223,7 @@
           {
             "name": "Today's Ireland",
             "spotify_id": "37i9dQZF1DXcvmeS1jhCQv",
-            "followers": 121007,
+            "followers": 121032,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000278aec991ce3e7c1411be3a92",
             "owner_name": "Spotify"
           },
@@ -233218,91 +233246,91 @@
           {
             "name": "F1 Tracks",
             "spotify_id": "1gH4FFUMWSI98MKPeBaa8x",
-            "followers": 178991,
+            "followers": 178958,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8457caf82de718f25c02f23227",
             "owner_name": "F1"
           },
           {
             "name": "House Hits 2026  |                                Get Together ",
             "spotify_id": "7JcJqbGD1q58MkNpnbolvZ",
-            "followers": 138577,
+            "followers": 138601,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c52cde04d7b58495840c5e65",
             "owner_name": "Get Together"
           },
           {
             "name": "House Party 2026 || Dance Music | EDM Hits | Club Beats | Deep | Slap | Techno",
             "spotify_id": "5OhjR3QIvNYUdsQVuJKWmu",
-            "followers": 77582,
+            "followers": 77571,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c3c97936fc31eb4a0b4cbe70",
             "owner_name": "The Sound Of"
           },
           {
             "name": "Gaming Music 2026 | Top EDM & Techno Tracks zum Zocken | Gamer Playlist ",
             "spotify_id": "0DTKOux2jsaSuJKPO01ayX",
-            "followers": 54145,
+            "followers": 54140,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c83bf646758a350b3f1b41cde",
             "owner_name": "The Sound Of"
           },
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland"
           },
           {
             "name": "Liverpool FC Official Playlist",
             "spotify_id": "78lxjrcD1yI1KnTcx4zY9d",
-            "followers": 41551,
+            "followers": 41547,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbefade02b9718ddef356e489",
             "owner_name": "Sport Playlists"
           },
           {
             "name": "Ibiza Calling 🌴 Afro House & House 2026",
             "spotify_id": "3QcnMVZ7qiAm86U9KWLYCA",
-            "followers": 37769,
+            "followers": 37813,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849e6c9e294f39e62166b92ea5",
             "owner_name": "Sound of Ibiza"
           },
           {
             "name": "HILLS HOUSE",
             "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
-            "followers": 31732,
+            "followers": 31769,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
             "owner_name": "HILLS"
           },
           {
             "name": "NEW EDM FRIDAY 🔥",
             "spotify_id": "69WI1EYhCyop1JWowR9wq5",
-            "followers": 23895,
+            "followers": 23911,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbd8d10ba10d4ddb9f38183a8",
             "owner_name": "EDM FAMILY"
           },
           {
             "name": "New House Music Friday",
             "spotify_id": "5kyDTxrXdC6Qal62iEO5Ty",
-            "followers": 23088,
+            "followers": 23087,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9137bec6ee783019be3d3a7b",
             "owner_name": "Ben Dooks"
           },
           {
             "name": "Top Hity 🔥🎉🎵 ",
             "spotify_id": "19zHVSpAeY9zVXBML8gCpS",
-            "followers": 22698,
+            "followers": 22693,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8429bee9bb3b196b3d3ceac7ff",
             "owner_name": "Ľuboš Košický"
           },
           {
             "name": "New Music, Radar de Novidades, Friday EDM e +",
             "spotify_id": "4PV7pMQADb2plazslbmFoY",
-            "followers": 16626,
+            "followers": 16630,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840cd197f29f2c7a6d88e1ef8b",
             "owner_name": "eletrovibez"
           },
           {
             "name": "New Music Friday, Electronic, EDM Releases 2026 🔥",
             "spotify_id": "02drWIbmrqJigXSikPo8Vi",
-            "followers": 14641,
+            "followers": 14640,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ecb300ff49e77d407ae742a",
             "owner_name": "New EDM Friday"
           },
@@ -233316,7 +233344,7 @@
           {
             "name": "Fresh House Friday",
             "spotify_id": "28QA6xyCDHBDvHPvcn89ve",
-            "followers": 12225,
+            "followers": 12224,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845d05fc81216d4030f9da0435",
             "owner_name": "Stevie Paladini PLAYLISTS"
           },
@@ -233351,7 +233379,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound"
           },
@@ -233435,7 +233463,7 @@
           {
             "name": "EDM Lovers - Valentinstag ❤️ Valentine's Day 2026",
             "spotify_id": "6UJo5f9tMm8TFj5OgZKBQh",
-            "followers": 3276,
+            "followers": 3275,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f8c49516f28278e84a7f0a57",
             "owner_name": "Mega Hits"
           },
@@ -233617,14 +233645,14 @@
           {
             "name": "New Music Friday EDM | Best New EDM Releases 2026 - EDMNOMAD ",
             "spotify_id": "7cVJGf1jA6qnv33MQBBLmW",
-            "followers": 860,
+            "followers": 861,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840a8d72bcae4a43301379f21b",
             "owner_name": "EDMNOMAD"
           },
           {
             "name": "Everton FC Official Playlist",
             "spotify_id": "3UE79dw2YRMRshYlkATDze",
-            "followers": 853,
+            "followers": 854,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8404ceb6d164c2e39d6f47eabb",
             "owner_name": "Sport Playlists"
           },
@@ -233687,7 +233715,7 @@
           {
             "name": "Hotspur Hits",
             "spotify_id": "3zvD2x6jOJWjYu11oqCcAm",
-            "followers": 608,
+            "followers": 609,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c328d953d77ca0333c9a7db60",
             "owner_name": "Sport Playlists"
           },
@@ -233867,12 +233895,12 @@
             "owner_name": "kikothecurator"
           }
         ],
-        "independent_followers_total": 906303,
+        "independent_followers_total": 906360,
         "key_supporters": [
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland",
             "tier": 1,
@@ -233890,7 +233918,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound",
             "tier": 1,
@@ -233911,7 +233939,7 @@
         "daily_shazams": null,
         "shazam_charts": [],
         "editorial_count_delta": 0,
-        "independent_followers_delta": -1,
+        "independent_followers_delta": 56,
         "total_shazams_delta": null,
         "ai_read": null
       }
@@ -236286,224 +236314,224 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
         "editorial_count": 45,
         "editorial_playlists": [
           {
             "name": "Dance Party",
             "spotify_id": "37i9dQZF1DXaXB8fQg7xif",
-            "followers": 9243159,
+            "followers": 9242931,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002d2c23cff8e4056e5c891216d",
             "owner_name": "Spotify"
           },
           {
             "name": "mint",
             "spotify_id": "37i9dQZF1DX4dyzvuaRJ0n",
-            "followers": 5445410,
+            "followers": 5444467,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002edfc628be2044100d44b3de5",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday",
             "spotify_id": "37i9dQZF1DX4JAvHpjipBk",
-            "followers": 4647586,
+            "followers": 4647341,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b299b91ee0cfcac7d8c15f1c",
             "owner_name": "Spotify"
           },
           {
             "name": "Hot Hits UK & Ireland",
             "spotify_id": "37i9dQZF1DWY4lFlS4Pnso",
-            "followers": 2962297,
+            "followers": 2961726,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000296879e63bbbf0ea766372f75",
             "owner_name": "Spotify"
           },
           {
             "name": "Housewerk",
             "spotify_id": "37i9dQZF1DXa8NOEUWPn9W",
-            "followers": 2021340,
+            "followers": 2021974,
             "cover_url": "https://i.scdn.co/image/ab67706f000000021bb5370dd5eb5f40ffe449c2",
             "owner_name": "Spotify"
           },
           {
             "name": "Massive Dance Hits",
             "spotify_id": "37i9dQZF1DX5uokaTN4FTR",
-            "followers": 1407856,
+            "followers": 1407686,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023d8d9dd6f1f713db6d717148",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday UK & Ireland",
             "spotify_id": "37i9dQZF1DX4W3aJJYCDfV",
-            "followers": 1039688,
+            "followers": 1039576,
             "cover_url": "https://i.scdn.co/image/ab67706f000000025b76868b8f19bbf89e3090f2",
             "owner_name": "Spotify"
           },
           {
             "name": "Singled Out",
             "spotify_id": "37i9dQZF1DX8f6LHxMjnzD",
-            "followers": 921967,
+            "followers": 921890,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023a4d04b799a47ef8fb185987",
             "owner_name": "Spotify"
           },
           {
             "name": "UK House Music",
             "spotify_id": "37i9dQZF1DWSrVdvTl1tVY",
-            "followers": 742786,
+            "followers": 742748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002675fc7b78e448e6fdff3d5ae",
             "owner_name": "Spotify"
           },
           {
             "name": "All New All Now",
             "spotify_id": "37i9dQZF1DX8vwRmUsEIMT",
-            "followers": 613633,
+            "followers": 613596,
             "cover_url": "https://i.scdn.co/image/ab67706f000000024e2059adc33eee7e2d2e2ddf",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Canada",
             "spotify_id": "37i9dQZF1DX5DfG8gQdC3F",
-            "followers": 599167,
+            "followers": 599120,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000227fa4f49867abb6e0a1d8d37",
             "owner_name": "Spotify"
           },
           {
             "name": "All New Dance",
             "spotify_id": "37i9dQZF1DXa41CMuUARjl",
-            "followers": 578439,
+            "followers": 578470,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002a930454e81964040a1f3bd89",
             "owner_name": "Spotify"
           },
           {
             "name": "Altar",
             "spotify_id": "37i9dQZF1DXa71eg5j9dKZ",
-            "followers": 546757,
+            "followers": 546764,
             "cover_url": "https://i.scdn.co/image/ab67706f000000025d1d2053bf908f8cd2ce9614",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday",
             "spotify_id": "37i9dQZF1DWXJfnUiYjUKT",
-            "followers": 523165,
+            "followers": 523174,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002623b1be5517b5640080ef77d",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday AU & NZ",
             "spotify_id": "37i9dQZF1DWT2SPAYawYcO",
-            "followers": 461420,
+            "followers": 461394,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023b466619a7600b75bd71e18d",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Generation",
             "spotify_id": "37i9dQZF1DX1lp03JVa0o6",
-            "followers": 449672,
+            "followers": 449646,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002529b33362ddfc37ad0fa70d6",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday France",
             "spotify_id": "37i9dQZF1DX742okrrpwah",
-            "followers": 416946,
+            "followers": 416910,
             "cover_url": "https://i.scdn.co/image/ab67706f000000027c98d9eec1ae52eca8b95175",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday India",
             "spotify_id": "37i9dQZF1DX4ghkRUdIogy",
-            "followers": 406063,
+            "followers": 406090,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002339cbfcd848e300a37c0a287",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Italia",
             "spotify_id": "37i9dQZF1DWVKDF4ycOESi",
-            "followers": 370752,
+            "followers": 370735,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002d0289188ac6e1fde23274082",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Brandneu",
             "spotify_id": "37i9dQZF1DXcfWvNFKxjDo",
-            "followers": 351763,
+            "followers": 351748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ca85510aec1af11c8955c03f",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Room 2026",
             "spotify_id": "37i9dQZF1DX2ENAPP1Tyed",
-            "followers": 338273,
+            "followers": 338249,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002cef5a25728ae803c1104fd4c",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday NL",
             "spotify_id": "37i9dQZF1DXb5BKLTO7ULa",
-            "followers": 301960,
+            "followers": 301942,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002e75f5ef82facc5ecd71e4c2a",
             "owner_name": "Spotify"
           },
           {
             "name": "mint Canada",
             "spotify_id": "37i9dQZF1DXdIpacQDPDV5",
-            "followers": 298447,
+            "followers": 298420,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000223eb7ab513edf39ba3d00742",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Sweden",
             "spotify_id": "37i9dQZF1DXcecv7ESbOPu",
-            "followers": 236702,
+            "followers": 236694,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b203f27e98c83fb7f25adc0f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Norway",
             "spotify_id": "37i9dQZF1DWV3RrjH1jDkx",
-            "followers": 204568,
+            "followers": 204562,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023529a920e3d082d2d4cce71f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Japan",
             "spotify_id": "37i9dQZF1DXc57cuGAMEkA",
-            "followers": 173732,
+            "followers": 173719,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002bcf38e7b3dd0b1286c58aaff",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance 2026",
             "spotify_id": "37i9dQZF1DWWrJKwf0q9nn",
-            "followers": 156499,
+            "followers": 156490,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000237f28198d12c8d4de6aa298e",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance Beats",
             "spotify_id": "37i9dQZF1DXaqIZ7YXxc6o",
-            "followers": 148914,
+            "followers": 148913,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002028b32084540b294c64ff79e",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Denmark",
             "spotify_id": "37i9dQZF1DWWuIAAkPM0Lu",
-            "followers": 130383,
+            "followers": 130376,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000204c3d356307337f5443fabaa",
             "owner_name": "Spotify"
           },
           {
             "name": "Today's Ireland",
             "spotify_id": "37i9dQZF1DXcvmeS1jhCQv",
-            "followers": 121007,
+            "followers": 121032,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000278aec991ce3e7c1411be3a92",
             "owner_name": "Spotify"
           },
           {
             "name": "sidewaves",
             "spotify_id": "37i9dQZF1DWUaaerD0tOpr",
-            "followers": 118717,
+            "followers": 118720,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b0c73b9d3bf86ce41cac8252",
             "owner_name": "Spotify"
           },
@@ -236517,42 +236545,42 @@
           {
             "name": "New Music Friday Suomi",
             "spotify_id": "37i9dQZF1DWXtcXUwhuzFM",
-            "followers": 108924,
+            "followers": 108912,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023bba6d90f4723939ea7f7dd2",
             "owner_name": "Spotify"
           },
           {
             "name": "Beats of Tomorrow",
             "spotify_id": "37i9dQZF1DXdUF3ACtrQn3",
-            "followers": 69196,
+            "followers": 69192,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002345d11920811a852cf9e0d65",
             "owner_name": "Spotify"
           },
           {
             "name": "mint Japan",
             "spotify_id": "37i9dQZF1DWZASvfwxHkco",
-            "followers": 68540,
+            "followers": 68541,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002eee0ebf7e559fe3d4dc30bb7",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Maghreb",
             "spotify_id": "37i9dQZF1DXbVCaQthfsdD",
-            "followers": 63374,
+            "followers": 63385,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000261e5f4446b2293cbb3e70ed9",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday BE",
             "spotify_id": "37i9dQZF1DXbUOvbOBAiPu",
-            "followers": 54412,
+            "followers": 54419,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002c2b1d8731e805bcfc4307afd",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday UAE",
             "spotify_id": "37i9dQZF1DX51I48C1U653",
-            "followers": 52793,
+            "followers": 52792,
             "cover_url": "https://i.scdn.co/image/ab67706f000000029cdfd112e25f66c064a521a5",
             "owner_name": "Spotify"
           },
@@ -236566,14 +236594,14 @@
           {
             "name": "This Is KETTAMA",
             "spotify_id": "37i9dQZF1DZ06evO1PGok9",
-            "followers": 11062,
+            "followers": 11102,
             "cover_url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/3an9rnsXKPCAMlZgH4A0n4/en",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Sri Lanka",
             "spotify_id": "37i9dQZF1DWSo1plf4t3cl",
-            "followers": 10856,
+            "followers": 10854,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002746f6faa1787cf96cb4a39a8",
             "owner_name": "Spotify"
           },
@@ -236610,77 +236638,77 @@
           {
             "name": "HOUSE PARTY 2026 🔥",
             "spotify_id": "3MnaeVYyif6bTqO2PO8wVU",
-            "followers": 515266,
+            "followers": 515454,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd9ee89f52260ed56f7cb340c",
             "owner_name": "2NIGHT RECORDINGS"
           },
           {
             "name": "HOUSE & TECHNO 2026 | MAHOOL RECORDS",
             "spotify_id": "2RKQYncirog247iUEeAnGq",
-            "followers": 217788,
+            "followers": 217769,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5b3fad9914e372d845549989",
             "owner_name": "MDLBEAST"
           },
           {
             "name": "F1 Tracks",
             "spotify_id": "1gH4FFUMWSI98MKPeBaa8x",
-            "followers": 178991,
+            "followers": 178958,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8457caf82de718f25c02f23227",
             "owner_name": "F1"
           },
           {
             "name": "EDM HITS 2026 🔥",
             "spotify_id": "6IQjuIvUtRYBq2HjYIEdmL",
-            "followers": 114248,
+            "followers": 114229,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c7a4eab6ab203b3c0341eb5ea",
             "owner_name": "TheonlyMajed"
           },
           {
             "name": "House Music In Good Company",
             "spotify_id": "2QPeCzYhKredh0KV8agEsp",
-            "followers": 107717,
+            "followers": 107739,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cc2c3b43d76d318707fc62265",
             "owner_name": "Good Company Records"
           },
           {
             "name": "Electronic House 2026",
             "spotify_id": "1aEpZP1E4VhsCztpEExdOW",
-            "followers": 89946,
+            "followers": 89986,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c7bb81fd85d915ee317b2eadf",
             "owner_name": "Electronic Nature"
           },
           {
             "name": "IBIZA RESIDENCE TECH HOUSE",
             "spotify_id": "7CScNyyszWr8Hae2sOtnWg",
-            "followers": 78822,
+            "followers": 78817,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb029e3e14b0f98e2057f3421",
             "owner_name": "EMPO Electronic Meeting Point"
           },
           {
             "name": "Boiler Room Mixes 2026: Best Club DJ Mix Sets 🔥🎧",
             "spotify_id": "2eApjDnN0FTMSy4ANoNF6M",
-            "followers": 60010,
+            "followers": 60036,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84615214b6cbab77c3089a1fcf",
             "owner_name": "Bass Bender"
           },
           {
             "name": "George FM Playlist",
             "spotify_id": "6GROdaoUCgxHuPVKv4veq4",
-            "followers": 58753,
+            "followers": 58757,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c880382a299f7189e1728715a",
             "owner_name": "George FM"
           },
           {
             "name": "House Music - Ibiza 2026",
             "spotify_id": "2HY8bBDndLGDvZcDMtoqrl",
-            "followers": 56731,
+            "followers": 56732,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c729f00a007c2efa2287cbd8a",
             "owner_name": "Mike Thurston"
           },
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland"
           },
@@ -236694,91 +236722,91 @@
           {
             "name": "Pete Tong’s Essential Selection Radio Playlist",
             "spotify_id": "38JmDMAI5MztUH9klEQWU6",
-            "followers": 50412,
+            "followers": 50409,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c453bf8967b1e305fabe590a5",
             "owner_name": "Pete Tong"
           },
           {
             "name": "IBIZA TECHNO HOUSE 2026 ⚡ Best Tech House & Club Tracks",
             "spotify_id": "5cLLIeVd2X2b55YhSkzmLN",
-            "followers": 44827,
+            "followers": 44821,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb33d8bb07f45fe8b17442733",
             "owner_name": "Ibiza Techno House Music"
           },
           {
             "name": "Cycling 2026 | Spinning Workout Music",
             "spotify_id": "3tf5eWwAFKf0m8yaLP0DzJ",
-            "followers": 43562,
+            "followers": 43560,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84bcec413853077d84081180f3",
             "owner_name": "House Culture"
           },
           {
             "name": "GROOVY HOUSE TUNES",
             "spotify_id": "28uvf8KexyRdwUZflITrHx",
-            "followers": 41530,
+            "followers": 41534,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce69f297e86b36035b035e27f",
             "owner_name": "Harrison Rodrigoe"
           },
           {
             "name": "Club Remixes 2026 🔥🔊 Best Remixes Of All Time, Remix Club Music, DJ Club Remixes of Popular Songs",
             "spotify_id": "31n1OfgQYfnPCWYczBxPEA",
-            "followers": 39324,
+            "followers": 39346,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cf278b164b38c1503a95d4d87",
             "owner_name": "Groove Stream"
           },
           {
             "name": "House Bangers🔥 House Music 2026 🎉 Summer House Mix ",
             "spotify_id": "0gcLohgT3ETukSoT1gyXK3",
-            "followers": 36861,
+            "followers": 36857,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8425d5dc2ad3b321e8bce7ac13",
             "owner_name": "House Culture"
           },
           {
             "name": "Hits of TMRW",
             "spotify_id": "1BfjXo7tou7m4SbM9iHu1z",
-            "followers": 35847,
+            "followers": 35843,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8483d8a1266403958fca03e3c2",
             "owner_name": "TMRW Music"
           },
           {
             "name": "Feel good house.",
             "spotify_id": "2xAt5wjAO5JJW7s7CVBFV3",
-            "followers": 34573,
+            "followers": 35731,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8457ee021157fc764edf812119",
             "owner_name": "Leon"
           },
           {
             "name": "Tech House Slappers",
             "spotify_id": "0rvPxkmlJZ5EX4JXutyP6I",
-            "followers": 33673,
+            "followers": 33695,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cf5788bad455164cde6ff1255",
             "owner_name": "Ravemoments"
           },
           {
             "name": "HILLS HOUSE",
             "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
-            "followers": 31732,
+            "followers": 31769,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
             "owner_name": "HILLS"
           },
           {
             "name": "Sub Focus Selects",
             "spotify_id": "7MGauBXssMrJ7JMa2RTp2w",
-            "followers": 30575,
+            "followers": 30576,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a5f8c33ee35336a99e6d672c",
             "owner_name": "Sub Focus"
           },
           {
             "name": "Hot New Dance 2026 | Let's Dance",
             "spotify_id": "7JHfOdUVhOTLqSRglkp3aL",
-            "followers": 29795,
+            "followers": 29794,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a7357da447864e909e397dc7",
             "owner_name": "Black Hole Recordings"
           },
           {
             "name": "3voor12 #NIEUWEMUZIEK",
             "spotify_id": "5Gcrd1lrmaTeACswEBQKRR",
-            "followers": 28565,
+            "followers": 28574,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb8ed9eaf26aaed902f3c5a37",
             "owner_name": "3voor12"
           },
@@ -236790,30 +236818,37 @@
             "owner_name": "The Function"
           },
           {
+            "name": "Ibiza 2026 🍒",
+            "spotify_id": "050Rm6hbmKoJewavIqK8kQ",
+            "followers": 24323,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c24c546a40e9b1396e9c2e665",
+            "owner_name": "Grace jordan"
+          },
+          {
             "name": "NEW EDM FRIDAY 🔥",
             "spotify_id": "69WI1EYhCyop1JWowR9wq5",
-            "followers": 23895,
+            "followers": 23911,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbd8d10ba10d4ddb9f38183a8",
             "owner_name": "EDM FAMILY"
           },
           {
             "name": "New House Music Friday",
             "spotify_id": "5kyDTxrXdC6Qal62iEO5Ty",
-            "followers": 23088,
+            "followers": 23087,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9137bec6ee783019be3d3a7b",
             "owner_name": "Ben Dooks"
           },
           {
             "name": "Locked Up House 2026 - DND RECS",
             "spotify_id": "64NTaSOGmH5Ls2ufK2VQz3",
-            "followers": 22725,
+            "followers": 22723,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca3aab3c6266c73b2545aa1ba",
             "owner_name": "DND RECS"
           },
           {
             "name": "BOOTY CHAKRA TECHNICIAN",
             "spotify_id": "5l9IyRRaW4Um9KVDx4piLb",
-            "followers": 22544,
+            "followers": 22543,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84023a90bfeba9e55d022cfd1a",
             "owner_name": "Whistleface"
           },
@@ -236827,7 +236862,7 @@
           {
             "name": "Beatport Top 100 - Today",
             "spotify_id": "0Q4JvzeT0q3FLsj5fqffMV",
-            "followers": 20112,
+            "followers": 20120,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8413eefd3fa0824de200fa2ba3",
             "owner_name": "Symphoria"
           },
@@ -236841,7 +236876,7 @@
           {
             "name": "Electronic Essentials 2026",
             "spotify_id": "1mW7XCerzFRiL4qNRRfxv4",
-            "followers": 18044,
+            "followers": 18041,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3de58efd501e2eb3fdf52b3",
             "owner_name": "mixtank"
           },
@@ -236855,49 +236890,49 @@
           {
             "name": "New Music, Radar de Novidades, Friday EDM e +",
             "spotify_id": "4PV7pMQADb2plazslbmFoY",
-            "followers": 16626,
+            "followers": 16630,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840cd197f29f2c7a6d88e1ef8b",
             "owner_name": "eletrovibez"
           },
           {
             "name": "House Music 2026",
             "spotify_id": "3W3pcV9Mbs7rEv4jUBEkSW",
-            "followers": 16463,
+            "followers": 16472,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c5771e18205a60f2259fca1fc",
             "owner_name": "Uprise Music"
           },
           {
             "name": "bpm: house 🏠",
             "spotify_id": "63PuXDlRL2bruH6cpF4Ygx",
-            "followers": 15399,
+            "followers": 15395,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8470c3c671f251c3468ea15c3c",
             "owner_name": "Aymes"
           },
           {
             "name": "Electronic Dance Music 2026 🔥 Top 100 EDM Songs 🔥",
             "spotify_id": "5naKPTSE4Y1OI5YE97KvoO",
-            "followers": 15187,
+            "followers": 15199,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8450fca8942dd4153b3f143465",
             "owner_name": "daveepa"
           },
           {
             "name": "HOUSE🕺🏻",
             "spotify_id": "234wrWIbseI1jcOUenNewL",
-            "followers": 14876,
+            "followers": 14872,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cf274b1b72e31fce2d7b7a765",
             "owner_name": "Tim van Cuilenborg"
           },
           {
             "name": "New Music Friday, Electronic, EDM Releases 2026 🔥",
             "spotify_id": "02drWIbmrqJigXSikPo8Vi",
-            "followers": 14641,
+            "followers": 14640,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ecb300ff49e77d407ae742a",
             "owner_name": "New EDM Friday"
           },
           {
             "name": "Lost - Vintage Culture & Gabss",
             "spotify_id": "40hRWMKxb18GxBjpULzN6t",
-            "followers": 14353,
+            "followers": 14351,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9c917987ebb22d65eefa5f19",
             "owner_name": "House Culture"
           },
@@ -236909,6 +236944,13 @@
             "owner_name": "Reddit EDM"
           },
           {
+            "name": "TECH HOUSE | House, Techno, Tech, Minimal House",
+            "spotify_id": "15PRID4HyR7LCnYw4tT7RS",
+            "followers": 13294,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c18392ad70b681e246433d8cc",
+            "owner_name": "Elation Music"
+          },
+          {
             "name": "CLUB GOOD WIBES (Trance, UKG)",
             "spotify_id": "4sLyCqMVYpN27wTIrMj4Jk",
             "followers": 12889,
@@ -236918,14 +236960,14 @@
           {
             "name": "Deep Minimal Tech House 2026",
             "spotify_id": "5JRnyg9tdI6ComxTYDv07P",
-            "followers": 12753,
+            "followers": 12752,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84600111a01b922e6839451d7b",
             "owner_name": "Dan White"
           },
           {
             "name": "Fresh House Friday",
             "spotify_id": "28QA6xyCDHBDvHPvcn89ve",
-            "followers": 12225,
+            "followers": 12224,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845d05fc81216d4030f9da0435",
             "owner_name": "Stevie Paladini PLAYLISTS"
           },
@@ -236939,7 +236981,7 @@
           {
             "name": "SLAM! FM - Dance Hits 2026",
             "spotify_id": "5zBmKy4ZN0H6RmWjms7pkt",
-            "followers": 11943,
+            "followers": 11942,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cc0a78142205417cff636863c",
             "owner_name": "New Skool Records"
           },
@@ -236953,21 +236995,21 @@
           {
             "name": "Bershka Playlist 2026 • In Store Fashion Music ",
             "spotify_id": "2ZiRkku2N0VdYtBSVOzRL9",
-            "followers": 11233,
+            "followers": 11234,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c1cc3be70212b7c5fe56c10dc",
             "owner_name": "113th Street Music"
           },
           {
             "name": "house music that’s actually good",
             "spotify_id": "2QAH8d3Vt2ZVMRV1xCd1D0",
-            "followers": 10529,
+            "followers": 10528,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c1373e52511431592e5ceda36",
             "owner_name": "Sophia Lahlou"
           },
           {
             "name": "Waushouse🔊🔊🔊",
             "spotify_id": "4iSeuiIn8SqZ78tMVSOhst",
-            "followers": 10438,
+            "followers": 10432,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b9622bfcafed3e212c47e64a",
             "owner_name": "Peer.heuvel"
           },
@@ -236988,7 +237030,7 @@
           {
             "name": "Top Overall Tracks - 1001Tracklists [Follow For Weekly Updates]",
             "spotify_id": "23qaL0O0AR1aPSqvBSjKG4",
-            "followers": 9714,
+            "followers": 9716,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84766157f70427488d1bb8dfb6",
             "owner_name": "1001tracklists"
           },
@@ -237023,7 +237065,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound"
           },
@@ -237037,7 +237079,7 @@
           {
             "name": "Henry Fong's Night Market",
             "spotify_id": "50pHbAqSjGa7ftInrac6J5",
-            "followers": 8090,
+            "followers": 8091,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84776eb68b5bf9f170aad7261c",
             "owner_name": "Henry Fong"
           },
@@ -237245,6 +237287,13 @@
             "owner_name": "Dave Treacy"
           },
           {
+            "name": "TJO Radio",
+            "spotify_id": "4Pe6Xi0YFecwQXJ1qjJk23",
+            "followers": 4494,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da842f4aec2c665c8c99608d8880",
+            "owner_name": "TJO"
+          },
+          {
             "name": "GUDFELLA - Morning Coffee",
             "spotify_id": "6Rto2CvP4Mc8WWa9NrKVBs",
             "followers": 4488,
@@ -237345,7 +237394,7 @@
           {
             "name": "ELECTRONICS",
             "spotify_id": "1rjQXQDCGyNJl71vfLb0K7",
-            "followers": 3199,
+            "followers": 3200,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ab148d5b5ebf5a7ca10a34b8",
             "owner_name": "DMY"
           },
@@ -237460,6 +237509,13 @@
             "followers": 2301,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840304e6d9e846c776919524ce",
             "owner_name": "Ruben Gonzalez Palacios"
+          },
+          {
+            "name": "life",
+            "spotify_id": "1pichgmK4CdICOnYcGacl0",
+            "followers": 2296,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b51a0cba82fa726bae0d4ec4",
+            "owner_name": "Siena Mirabella"
           },
           {
             "name": "House bangertjes",
@@ -237772,7 +237828,7 @@
           {
             "name": "(good) new music friday",
             "spotify_id": "1GyTl6JeZPk0pGSTave43G",
-            "followers": 1053,
+            "followers": 1052,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02349f6c0133abbfca063891c1ab67616d00001e02428ff5823a4693cbf827f9b9ab67616d00001e0247ff4d4b28c0f4fad26667dfab67616d00001e02cf5e9bd3c7533d7c3d471a62",
             "owner_name": "fistintheair"
           },
@@ -237821,7 +237877,7 @@
           {
             "name": "Think Of You - KETTAMA, Prospa",
             "spotify_id": "1l4K0hS11lkFhlWPhH6XDR",
-            "followers": 995,
+            "followers": 996,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84367e09b30379383d58af35dd",
             "owner_name": "Carlota Matos"
           },
@@ -237835,21 +237891,21 @@
           {
             "name": "Top Hits Spain – Trending Tracks and Viral Songs",
             "spotify_id": "14uoAOBaGjzlnKd8IKZ1Cj",
-            "followers": 977,
+            "followers": 978,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a0f515ff550e0dcb51132c04",
             "owner_name": "kolibrimusic"
           },
           {
             "name": "Best of Spain – Pop, Rock, and Regional Hits",
             "spotify_id": "4kCRwBU4lLcXZZrapYOEcL",
-            "followers": 953,
+            "followers": 952,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84280cee66d9d1e631983b215b",
             "owner_name": "kolibrimusic"
           },
           {
             "name": "Lost Frequencies Tom Odell Black Friday (pretty like the sun)",
             "spotify_id": "3CuQU3qUkaCVYu9O3MK7xi",
-            "followers": 945,
+            "followers": 943,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8401580e32acb3ea58f7cc1f7f",
             "owner_name": "House Culture"
           },
@@ -237882,18 +237938,18 @@
             "owner_name": "JositoRudeBoy"
           },
           {
+            "name": "Mykonos Beach Club 2026 | Mykonos Calling",
+            "spotify_id": "31LTatcJNvRMUYIRY15mYp",
+            "followers": 817,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84086b6c4dd57e01394e599995",
+            "owner_name": "113th Street Music"
+          },
+          {
             "name": "Colombian Hits – Trending Tracks and Local Vibes",
             "spotify_id": "78QsaYTOwcYdV7DRW5D93h",
             "followers": 817,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84516148605e9f0fa07599a741",
             "owner_name": "kolibrimusic"
-          },
-          {
-            "name": "Mykonos Beach Club 2026 | Mykonos Calling",
-            "spotify_id": "31LTatcJNvRMUYIRY15mYp",
-            "followers": 816,
-            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84086b6c4dd57e01394e599995",
-            "owner_name": "113th Street Music"
           },
           {
             "name": "House Music that will make you black out and get arrested",
@@ -237905,16 +237961,23 @@
           {
             "name": "Max Dean Luke Dean USB - Unreleased ",
             "spotify_id": "0BChdHrrzZPi4t1EpvwR5X",
-            "followers": 769,
+            "followers": 772,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847cb2b9c312a2a3e5e12a5d38",
             "owner_name": "L.U."
           },
           {
             "name": "ELROW 🚀 IBIZA 2026🔥",
             "spotify_id": "21xVlLaYzwd08L7G2a1WBe",
-            "followers": 765,
+            "followers": 769,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca7311228c13433018a2927de",
             "owner_name": "Ibiza Techno House Music"
+          },
+          {
+            "name": "House Release Radar |  Fresh House Finds 2026 ★ ",
+            "spotify_id": "12w92cKr29ojeUJrReQTE2",
+            "followers": 763,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cde0e422521fc9256924a58a1",
+            "owner_name": "marliealexander"
           },
           {
             "name": "Chile's Top Tracks – Local Hits and Trending Songs",
@@ -237922,13 +237985,6 @@
             "followers": 757,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84118aede9e9d1e445f55466a0",
             "owner_name": "kolibrimusic"
-          },
-          {
-            "name": "House Release Radar |  Fresh House Finds 2026 ★ ",
-            "spotify_id": "12w92cKr29ojeUJrReQTE2",
-            "followers": 754,
-            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cde0e422521fc9256924a58a1",
-            "owner_name": "marliealexander"
           },
           {
             "name": "Sonny Kane - Never Leave U",
@@ -237954,7 +238010,7 @@
           {
             "name": "Radio 1's Dance Party with Danny Howard",
             "spotify_id": "3Wbka37VEyaXdgrhQ0roQk",
-            "followers": 732,
+            "followers": 733,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0210ee142090268c962424e065ab67616d00001e02295253387629aef59e51c143ab67616d00001e026a432f681cfdaee97b9cff4dab67616d00001e02f8c4be6b1bc907907c74d585",
             "owner_name": "Daniele⚡️Saitta"
           },
@@ -237989,16 +238045,23 @@
           {
             "name": "crystallized - John Summit",
             "spotify_id": "6jENS2VE1LMcZsRu4eJYGA",
-            "followers": 692,
+            "followers": 694,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca43563baa6e9b82535646a47",
             "owner_name": "House Culture"
           },
           {
             "name": "Shinjuku - Franky Rizardo",
             "spotify_id": "4UarnBevuNIVqk76CRtxhv",
-            "followers": 688,
+            "followers": 689,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02200e5e6588b72479e9302a9eab67616d00001e02324fb94758ae9b84bd952bc7ab67616d00001e0234dc561906b1e3e8d811e7b9ab67616d00001e02a4119c26a0aeee9e42e7ef09",
             "owner_name": "W.i.n.s.t.o.n."
+          },
+          {
+            "name": "Trending in Japan – Popular J-Pop and Local Hits",
+            "spotify_id": "1iqMi7ZKK5GDtdTWjuy48O",
+            "followers": 687,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84c223250fd1e623bc4bde20ba",
+            "owner_name": "kolibrimusic"
           },
           {
             "name": "E-SCOOTER🎢",
@@ -238008,18 +238071,18 @@
             "owner_name": "Jann Saathoff"
           },
           {
+            "name": "ADE House 2026🕺",
+            "spotify_id": "6iNpG2n5h2kEUZJ6X91C0G",
+            "followers": 674,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f3bbd87fc528967e19e7b8da",
+            "owner_name": "Hartjeveld"
+          },
+          {
             "name": "Mexican Hits – Trending Tracks and Local Favorites",
             "spotify_id": "0GWu1btUtBeA6PBtXKYAA9",
             "followers": 672,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84fdf2cb38dbc4fe4ecb155e86",
             "owner_name": "kolibrimusic"
-          },
-          {
-            "name": "ADE House 2026🕺",
-            "spotify_id": "6iNpG2n5h2kEUZJ6X91C0G",
-            "followers": 670,
-            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f3bbd87fc528967e19e7b8da",
-            "owner_name": "Hartjeveld"
           },
           {
             "name": "German Hits – Trending Tracks and Local Favorites",
@@ -238036,18 +238099,18 @@
             "owner_name": "113th Street Music"
           },
           {
+            "name": "Mall Grab and Kettama Sets",
+            "spotify_id": "6yZSMQUZ5aVHK5qi1rLPRc",
+            "followers": 638,
+            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0299015f773892bedb525ee26cab67616d00001e02adaa5d0b4b8ee80c87e5f2f1ab67616d00001e02d9b568ed77af3b6dfbc30027ab67616d00001e02e67388ac93c020ac795491d4",
+            "owner_name": "Shane Grimes 1996"
+          },
+          {
             "name": "Peruvian Hits – Trending Tracks and Local Vibes",
             "spotify_id": "3DPaN6ZREBKLlI3uorSqFF",
             "followers": 637,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8483b525018965d88bf47581cc",
             "owner_name": "kolibrimusic"
-          },
-          {
-            "name": "Mall Grab and Kettama Sets",
-            "spotify_id": "6yZSMQUZ5aVHK5qi1rLPRc",
-            "followers": 637,
-            "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0299015f773892bedb525ee26cab67616d00001e02adaa5d0b4b8ee80c87e5f2f1ab67616d00001e02d9b568ed77af3b6dfbc30027ab67616d00001e02e67388ac93c020ac795491d4",
-            "owner_name": "Shane Grimes 1996"
           },
           {
             "name": "Dance Hub",
@@ -238059,14 +238122,14 @@
           {
             "name": "Club Space Miami 🌴🔥",
             "spotify_id": "5EywfCAT6b6J7FETdgFerF",
-            "followers": 605,
+            "followers": 606,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f37e72405f29d9a6c7698c5c",
             "owner_name": "Bass Bender"
           },
           {
             "name": "No skips. 🤞💗",
             "spotify_id": "1F1Frwk4iNrRK8ugObPzbC",
-            "followers": 601,
+            "followers": 603,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c4e90c6c432d480db5db4a21",
             "owner_name": "Emily Grace"
           },
@@ -238136,7 +238199,7 @@
           {
             "name": "everybody get naked",
             "spotify_id": "2TjYdJcOXeZkAKEwiFGXrX",
-            "followers": 524,
+            "followers": 525,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da840815f875c43ed0805cb014ac",
             "owner_name": "viv :D"
           },
@@ -238162,6 +238225,13 @@
             "owner_name": "mennodeboer"
           },
           {
+            "name": "Favour - FISHER & Tones And I",
+            "spotify_id": "3xQaMxOfqEYkVj8CudRGRi",
+            "followers": 489,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848d5d63e30a26747f4134e218",
+            "owner_name": "House Culture"
+          },
+          {
             "name": "lo nuevo esta semana",
             "spotify_id": "6VorUGnQyb6YLVtBpUc6VR",
             "followers": 489,
@@ -238169,16 +238239,9 @@
             "owner_name": "lrnzmrtnz"
           },
           {
-            "name": "Favour - FISHER & Tones And I",
-            "spotify_id": "3xQaMxOfqEYkVj8CudRGRi",
-            "followers": 488,
-            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848d5d63e30a26747f4134e218",
-            "owner_name": "House Culture"
-          },
-          {
             "name": "Hot N*gga (SIDEPIECE Remix) - Bobby Shmurda",
             "spotify_id": "2QwBqeSn5IdBTsCiDPFmLw",
-            "followers": 486,
+            "followers": 485,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84563a06c1289ecbebd93f021d",
             "owner_name": "House Culture"
           },
@@ -238213,7 +238276,7 @@
           {
             "name": "JOSH BAKER & JOSEPH CAPRIATI @ AMNESIA IBIZA 🫆 UK TECH HOUSE",
             "spotify_id": "0IZF2QcvtKNpE6ENL0pMrQ",
-            "followers": 437,
+            "followers": 440,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c81d8e363aa9e5aa469482f2c",
             "owner_name": "@ibizatechnohouse"
           },
@@ -238232,16 +238295,23 @@
             "owner_name": "Proximity"
           },
           {
+            "name": "Aberdeen Lynx In-Game music",
+            "spotify_id": "13CBJd6VTc0lygtt4mcJ8S",
+            "followers": 402,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84331bb29fcbcd6e47b948dff2",
+            "owner_name": "DJ Edgy"
+          },
+          {
             "name": "LPFJ (HNTR Remix) - Dom Dolla x A$AP Rocky",
             "spotify_id": "3VNXiCAedQlnvAxf00fHLN",
-            "followers": 393,
+            "followers": 394,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84c4c2b22b79086a1a857200af",
             "owner_name": "House Culture"
           },
           {
             "name": "BBC Radio 1 Playlist",
             "spotify_id": "1YrQpKIhPDGDmOBRxWB5s1",
-            "followers": 389,
+            "followers": 390,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e020893a0c33fd4b8497b0ef2f6ab67616d00001e02a3c886ee9b32417992f8839aab67616d00001e02ac9d5d5263e9f03802d6864cab67616d00001e02cf3de6b538d8b1ed73a4d5d1",
             "owner_name": "Daniele⚡️Saitta"
           },
@@ -238304,14 +238374,14 @@
           {
             "name": "Cristian Gatti (Experts Only) NMF 10/16 mike",
             "spotify_id": "0Dplyx9XiocTCAHlvmitCj",
-            "followers": 291,
+            "followers": 290,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0286c9566284b71edf22791472ab67616d00001e02c20f069becca8273c7ee6e7dab67616d00001e02cd104592394577141cb64014ab67616d00001e02e1be94018ba6da2c6299a460",
             "owner_name": "Mike"
           },
           {
             "name": "Franky Rizardo Live Mix 2026 | Franky Rizardo More To Life Mix",
             "spotify_id": "73doAHf6oEQWz0hidmB99q",
-            "followers": 278,
+            "followers": 279,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c55011418f0f1435e234f0ac7",
             "owner_name": "Festival Music Playlists"
           },
@@ -238321,6 +238391,13 @@
             "followers": 277,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8450883d0830973798a39728f2",
             "owner_name": "Top50Clean.com"
+          },
+          {
+            "name": "Lost in the Lasers",
+            "spotify_id": "3ekYNg8fgPz1ENL3XtXYjE",
+            "followers": 264,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da843069a2abf74f11951672a5a1",
+            "owner_name": "Dro"
           },
           {
             "name": "Top 50 Ireland CLEAN",
@@ -238339,7 +238416,7 @@
           {
             "name": "Dance Hits - Mixed Playlist",
             "spotify_id": "3LmW92m3P3PlzcuSrYiRVH",
-            "followers": 249,
+            "followers": 250,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da847c39a0efe622c20678ccdc23",
             "owner_name": "Daniele⚡️Saitta"
           },
@@ -238374,7 +238451,7 @@
           {
             "name": "Stussy, Deano's, josh baker, rossi, Robbie Doherty, Franky Rizardo, Sidney Charles, Omar+",
             "spotify_id": "6UEf67ukhcBmjh4qGNvN7N",
-            "followers": 231,
+            "followers": 232,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0204dca98ec5bd3f31934c1ceeab67616d00001e02055d75b984e531f13bba0088ab67616d00001e023467eb7a58dab24f4d07242bab67616d00001e02ef5a855ad724281ca0209572",
             "owner_name": "JoeRichardson.20"
           },
@@ -238395,23 +238472,30 @@
           {
             "name": "Traxsource Top 100 - Minimal / Deep Tech",
             "spotify_id": "7hqbCCASrS7zqFvqICjMyj",
-            "followers": 220,
+            "followers": 221,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a17d70d6caf5e8db9bed48bc",
             "owner_name": "Neoternon"
           },
           {
             "name": "Mix Credits",
             "spotify_id": "3RyW915AOoqJJvLOrOkVyi",
-            "followers": 216,
+            "followers": 215,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8467696dc171a205e088401be0",
             "owner_name": "nathanboddy"
           },
           {
             "name": " Circoloco New York 2026 ",
             "spotify_id": "1ipTXuMC2YxsOAkmB8gaHO",
-            "followers": 206,
+            "followers": 208,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cb3f1fce10d7ef2faee7bdbd1",
             "owner_name": "Filippo Dangelo"
+          },
+          {
+            "name": "Top Tracks Poland – Viral Pop & Hip-Hop 2025",
+            "spotify_id": "2SafPtUBJOOQkZPEG74aQi",
+            "followers": 206,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8499582bab3c35e693b319a70d",
+            "owner_name": "kolibrimusic"
           },
           {
             "name": "date party / formal ",
@@ -238419,13 +238503,6 @@
             "followers": 206,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce48081c5478c4fab12e7655e",
             "owner_name": "anniewinkler"
-          },
-          {
-            "name": "Top Tracks Poland – Viral Pop & Hip-Hop 2025",
-            "spotify_id": "2SafPtUBJOOQkZPEG74aQi",
-            "followers": 205,
-            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8499582bab3c35e693b319a70d",
-            "owner_name": "kolibrimusic"
           },
           {
             "name": "Fresh Indie & Alt Discoveries – 2025 Highlights",
@@ -238449,11 +238526,25 @@
             "owner_name": "Raoulvdh"
           },
           {
+            "name": "Hype Tracks - Dance",
+            "spotify_id": "4jXj0yHHYZbsbw0luv7NTi",
+            "followers": 192,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a4c242fd08f3435f9ca49f43",
+            "owner_name": "trendchartsgermany"
+          },
+          {
             "name": "Peter Millar",
             "spotify_id": "7FGKxd2mY46SjlRwFLr2UP",
-            "followers": 190,
+            "followers": 191,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8455b31018079bd8b60a571b34",
             "owner_name": "Vinny Drane"
+          },
+          {
+            "name": "High Fade Disco Set ",
+            "spotify_id": "0cDqehbT8x1qdeDw4caGfw",
+            "followers": 190,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da849b5db56228a0095c9761c65b",
+            "owner_name": "Harry Valentino"
           },
           {
             "name": "Ibiza Hits 2026 Summer MIX 🌴 | House Party Music | Ibiza Is Love ☀️",
@@ -238500,7 +238591,7 @@
           {
             "name": "Trending Now Portugal – Viral Latin & Pop 2025",
             "spotify_id": "4RWy8Wsa2AWW2nfP48IgvM",
-            "followers": 167,
+            "followers": 168,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ffe34468b3f7e9e2946df51c",
             "owner_name": "kolibrimusic"
           },
@@ -238547,17 +238638,17 @@
             "owner_name": "kolibrimusic"
           },
           {
+            "name": "Honduran Hits – Top Trending Tracks",
+            "spotify_id": "1Cvukbw1ftMSGPG8SKCLvY",
+            "followers": 141,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84630094ac5498293d061c572d",
+            "owner_name": "kolibrimusic"
+          },
+          {
             "name": "Costa Rican Hits – Top Trending Tracks",
             "spotify_id": "1iHPA8xxdYPEoibVE4Xqss",
             "followers": 140,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840bc0db9e1673b65eb3b78a91",
-            "owner_name": "kolibrimusic"
-          },
-          {
-            "name": "Honduran Hits – Top Trending Tracks",
-            "spotify_id": "1Cvukbw1ftMSGPG8SKCLvY",
-            "followers": 140,
-            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84630094ac5498293d061c572d",
             "owner_name": "kolibrimusic"
           },
           {
@@ -238566,6 +238657,13 @@
             "followers": 129,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e026739a132c6c0ca96bd8dbd7cab67616d00001e026c0748107dd80673c6f0d395ab67616d00001e0293c18ac7e5e3fa08f8122abeab67616d00001e02b99962eaf1251e4a73f8a045",
             "owner_name": "markvdleer"
+          },
+          {
+            "name": "DANCE/EUPHORIC🌸",
+            "spotify_id": "1byjX0yPvhFbp9MDN8VMuT",
+            "followers": 127,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da846d94b6ac5b9e5bfebcb03783",
+            "owner_name": "Jann Saathoff"
           },
           {
             "name": "biting down hard",
@@ -238603,12 +238701,12 @@
             "owner_name": "Melodic Nation"
           }
         ],
-        "independent_followers_total": 3000924,
+        "independent_followers_total": 3048689,
         "key_supporters": [
           {
             "name": "HOUSE & TECHNO 2026 | MAHOOL RECORDS",
             "spotify_id": "2RKQYncirog247iUEeAnGq",
-            "followers": 217788,
+            "followers": 217769,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5b3fad9914e372d845549989",
             "owner_name": "MDLBEAST",
             "tier": 1,
@@ -238617,7 +238715,7 @@
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland",
             "tier": 1,
@@ -238635,7 +238733,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound",
             "tier": 1,
@@ -238644,7 +238742,7 @@
           {
             "name": "EDM HITS 2026 🔥",
             "spotify_id": "6IQjuIvUtRYBq2HjYIEdmL",
-            "followers": 114248,
+            "followers": 114229,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c7a4eab6ab203b3c0341eb5ea",
             "owner_name": "TheonlyMajed",
             "tier": 3,
@@ -238652,12 +238750,101 @@
           }
         ],
         "unclassified_count": 0,
-        "total_shazams": 858,
-        "daily_shazams": 650,
-        "shazam_charts": [],
+        "total_shazams": 120060,
+        "daily_shazams": 119202,
+        "shazam_charts": [
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 19,
+            "previous_position": null,
+            "genre": null,
+            "city": "Nottingham"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 24,
+            "previous_position": null,
+            "genre": null,
+            "city": "Cardiff"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 28,
+            "previous_position": null,
+            "genre": null,
+            "city": "Newcastle upon Tyne"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 34,
+            "previous_position": null,
+            "genre": null,
+            "city": "Glasgow"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 38,
+            "previous_position": null,
+            "genre": null,
+            "city": "Belfast"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 38,
+            "previous_position": null,
+            "genre": null,
+            "city": "Edinburgh"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 40,
+            "previous_position": null,
+            "genre": null,
+            "city": "Portsmouth"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 44,
+            "previous_position": null,
+            "genre": null,
+            "city": "Bristol"
+          },
+          {
+            "country_code": "GB",
+            "type": "shazams",
+            "position": 44,
+            "previous_position": null,
+            "genre": null,
+            "city": "Manchester"
+          },
+          {
+            "country_code": "GLOBAL",
+            "type": "shazams",
+            "position": 115,
+            "previous_position": null,
+            "genre": "Dance",
+            "city": null
+          },
+          {
+            "country_code": "FR",
+            "type": "shazams",
+            "position": 174,
+            "previous_position": null,
+            "genre": "Dance",
+            "city": null
+          }
+        ],
         "editorial_count_delta": 0,
-        "independent_followers_delta": 595,
-        "total_shazams_delta": 0,
+        "independent_followers_delta": 48360,
+        "total_shazams_delta": 119202,
         "ai_read": null
       }
     ],
@@ -239486,133 +239673,133 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
         "editorial_count": 22,
         "editorial_playlists": [
           {
             "name": "Housewerk",
             "spotify_id": "37i9dQZF1DXa8NOEUWPn9W",
-            "followers": 2021340,
+            "followers": 2021974,
             "cover_url": "https://i.scdn.co/image/ab67706f000000021bb5370dd5eb5f40ffe449c2",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday UK & Ireland",
             "spotify_id": "37i9dQZF1DX4W3aJJYCDfV",
-            "followers": 1039688,
+            "followers": 1039576,
             "cover_url": "https://i.scdn.co/image/ab67706f000000025b76868b8f19bbf89e3090f2",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Deutschland",
             "spotify_id": "37i9dQZF1DWUW2bvSkjcJ6",
-            "followers": 936525,
+            "followers": 936448,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002865ae62325fef921a46ec4f0",
             "owner_name": "Spotify"
           },
           {
             "name": "UK House Music",
             "spotify_id": "37i9dQZF1DWSrVdvTl1tVY",
-            "followers": 742786,
+            "followers": 742748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002675fc7b78e448e6fdff3d5ae",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Canada",
             "spotify_id": "37i9dQZF1DX5DfG8gQdC3F",
-            "followers": 599167,
+            "followers": 599120,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000227fa4f49867abb6e0a1d8d37",
             "owner_name": "Spotify"
           },
           {
             "name": "All New Dance",
             "spotify_id": "37i9dQZF1DXa41CMuUARjl",
-            "followers": 578439,
+            "followers": 578470,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002a930454e81964040a1f3bd89",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday AU & NZ",
             "spotify_id": "37i9dQZF1DWT2SPAYawYcO",
-            "followers": 461420,
+            "followers": 461394,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023b466619a7600b75bd71e18d",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance Pop",
             "spotify_id": "37i9dQZF1DWWOGXILUAh53",
-            "followers": 458245,
+            "followers": 458348,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000282b847106fff471b996a3f44",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday India",
             "spotify_id": "37i9dQZF1DX4ghkRUdIogy",
-            "followers": 406063,
+            "followers": 406090,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002339cbfcd848e300a37c0a287",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Brandneu",
             "spotify_id": "37i9dQZF1DXcfWvNFKxjDo",
-            "followers": 351763,
+            "followers": 351748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ca85510aec1af11c8955c03f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Sweden",
             "spotify_id": "37i9dQZF1DXcecv7ESbOPu",
-            "followers": 236702,
+            "followers": 236694,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002b203f27e98c83fb7f25adc0f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Norway",
             "spotify_id": "37i9dQZF1DWV3RrjH1jDkx",
-            "followers": 204568,
+            "followers": 204562,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023529a920e3d082d2d4cce71f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Denmark",
             "spotify_id": "37i9dQZF1DWWuIAAkPM0Lu",
-            "followers": 130383,
+            "followers": 130376,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000204c3d356307337f5443fabaa",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Suomi",
             "spotify_id": "37i9dQZF1DWXtcXUwhuzFM",
-            "followers": 108924,
+            "followers": 108912,
             "cover_url": "https://i.scdn.co/image/ab67706f000000023bba6d90f4723939ea7f7dd2",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Switzerland",
             "spotify_id": "37i9dQZF1DX3crNbt46mRU",
-            "followers": 54947,
+            "followers": 54948,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ecb77f321bdf028d4e7da6e0",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday UAE",
             "spotify_id": "37i9dQZF1DX51I48C1U653",
-            "followers": 52793,
+            "followers": 52792,
             "cover_url": "https://i.scdn.co/image/ab67706f000000029cdfd112e25f66c064a521a5",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday Pakistan",
             "spotify_id": "37i9dQZF1DWYza9Q5qYsiV",
-            "followers": 43854,
+            "followers": 43879,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ccea5100033902a94b07a2f7",
             "owner_name": "Spotify"
           },
           {
             "name": "This Is MK",
             "spotify_id": "37i9dQZF1DZ06evO0RxUbK",
-            "followers": 28845,
+            "followers": 28852,
             "cover_url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/1yqxFtPHKcGcv6SXZNdyT9/en",
             "owner_name": "Spotify"
           },
@@ -239626,7 +239813,7 @@
           {
             "name": "New Music Friday Sri Lanka",
             "spotify_id": "37i9dQZF1DWSo1plf4t3cl",
-            "followers": 10856,
+            "followers": 10854,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002746f6faa1787cf96cb4a39a8",
             "owner_name": "Spotify"
           },
@@ -239649,119 +239836,119 @@
           {
             "name": "DEEP HOUSE 2026  🔴 Electronic Dance Hits, Covers & Remixes for Gym, Workout, Running, Sport, Car ",
             "spotify_id": "5h1oEk4W9KVMHkOd8WWWlC",
-            "followers": 1011253,
+            "followers": 1011638,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ccb49bc61dc5b4289d46b2849",
             "owner_name": "THE NIGHT DRIVE"
           },
           {
             "name": "NIGHT DRIVE ⚫️ Late Night Drive ⚫️ Deep House, Melancholic Dance, Electronic Dance Music",
             "spotify_id": "55kXFRgaWu8Vu0ko7CfbXB",
-            "followers": 312444,
+            "followers": 312485,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8451e3376054bd5d1fd2cd4c74",
             "owner_name": "THE NIGHT DRIVE"
           },
           {
             "name": "F1 Tracks",
             "spotify_id": "1gH4FFUMWSI98MKPeBaa8x",
-            "followers": 178991,
+            "followers": 178958,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8457caf82de718f25c02f23227",
             "owner_name": "F1"
           },
           {
             "name": "Hot songs to make out to🥵",
             "spotify_id": "4AkXXHPrY7KLzUXgVXNWZr",
-            "followers": 79953,
+            "followers": 79954,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cc169de9b51d8850a4333ec50",
             "owner_name": "KjilleMinke"
           },
           {
             "name": "Feel Good Mood ",
             "spotify_id": "11dmFZe33fvcHr0Xn5E9HS",
-            "followers": 77018,
+            "followers": 77007,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8404e7dceaa71ea3b4a23bc57c",
             "owner_name": "Filtr Nederland"
           },
           {
             "name": "Ny Musik 2026 🔥 Kygo & Ava Max m fl",
             "spotify_id": "2BkvZh4A1UVPQIps6ILKvd",
-            "followers": 62711,
+            "followers": 62704,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da841ac41f2fef19ad05424ad183",
             "owner_name": "Filtr Sweden"
           },
           {
             "name": "Música Electrónica🥇",
             "spotify_id": "4yH33Sitb3dpsphgyTSZcS",
-            "followers": 57613,
+            "followers": 57608,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84adaccd5df92b1e7fde62e5a0",
             "owner_name": "EMPO Electronic Meeting Point"
           },
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland"
           },
           {
             "name": "2026 HITS  | Best New Music",
             "spotify_id": "5JdSiPrPxXEhFdb7uXMhyT",
-            "followers": 51446,
+            "followers": 51441,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84448cfea8d66f9a7f319cbcfe",
             "owner_name": "Filtr Australia\t"
           },
           {
             "name": "EDM 潮電音",
             "spotify_id": "6lx1fDRyqdXaP21vlj42fR",
-            "followers": 47702,
+            "followers": 47700,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848e2e6f77f38794451d0f270a",
             "owner_name": "Filtr Taiwan"
           },
           {
             "name": "HILLS HOUSE",
             "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
-            "followers": 31732,
+            "followers": 31769,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
             "owner_name": "HILLS"
           },
           {
             "name": "Weekly Workout 🏃",
             "spotify_id": "7EYxnpva8IlIgJ42z96zXH",
-            "followers": 31050,
+            "followers": 31042,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84cec8179caaa47df7795fbd84",
             "owner_name": "Filtr Australia\t"
           },
           {
             "name": "PRIDE 2026 ANTHEMS 🏳️‍🌈🏳️‍⚧️ BRAT SUMMER PARTY 🌈🪩",
             "spotify_id": "5VNW7yCNsNGPfZgFR2FOuc",
-            "followers": 27476,
+            "followers": 27474,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847edef27a1ef5409cdb54212c",
             "owner_name": "Filtr US"
           },
           {
             "name": "BEST NEW | 2026 MUSIC",
             "spotify_id": "5MZ9NB8TxCE9MVeHM0NAl1",
-            "followers": 24387,
+            "followers": 24386,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da842d0341a115b4cb21b11d230c",
             "owner_name": "Filtr US"
           },
           {
             "name": "NEW EDM FRIDAY 🔥",
             "spotify_id": "69WI1EYhCyop1JWowR9wq5",
-            "followers": 23895,
+            "followers": 23911,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbd8d10ba10d4ddb9f38183a8",
             "owner_name": "EDM FAMILY"
           },
           {
             "name": "New House Music Friday",
             "spotify_id": "5kyDTxrXdC6Qal62iEO5Ty",
-            "followers": 23088,
+            "followers": 23087,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9137bec6ee783019be3d3a7b",
             "owner_name": "Ben Dooks"
           },
           {
             "name": "Top Hity 🔥🎉🎵 ",
             "spotify_id": "19zHVSpAeY9zVXBML8gCpS",
-            "followers": 22698,
+            "followers": 22693,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8429bee9bb3b196b3d3ceac7ff",
             "owner_name": "Ľuboš Košický"
           },
@@ -239775,21 +239962,21 @@
           {
             "name": "Morning Mood",
             "spotify_id": "4JbtV5SJHOtVB6T8CL0uUI",
-            "followers": 19373,
+            "followers": 19369,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84ccc5ffd399dc8c860b4aca58",
             "owner_name": "Filtr Nederland"
           },
           {
             "name": "New Music, Radar de Novidades, Friday EDM e +",
             "spotify_id": "4PV7pMQADb2plazslbmFoY",
-            "followers": 16626,
+            "followers": 16630,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840cd197f29f2c7a6d88e1ef8b",
             "owner_name": "eletrovibez"
           },
           {
             "name": "New Music Friday, Electronic, EDM Releases 2026 🔥",
             "spotify_id": "02drWIbmrqJigXSikPo8Vi",
-            "followers": 14641,
+            "followers": 14640,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ecb300ff49e77d407ae742a",
             "owner_name": "New EDM Friday"
           },
@@ -239803,14 +239990,14 @@
           {
             "name": "Ultra Records New Releases",
             "spotify_id": "1uQ4QCJhdIZodiLvE6dXKN",
-            "followers": 13923,
+            "followers": 13924,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da848cb99378562c18a8dc957696",
             "owner_name": "Ultra Records"
           },
           {
             "name": "Fresh House Friday",
             "spotify_id": "28QA6xyCDHBDvHPvcn89ve",
-            "followers": 12225,
+            "followers": 12224,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845d05fc81216d4030f9da0435",
             "owner_name": "Stevie Paladini PLAYLISTS"
           },
@@ -239831,21 +240018,21 @@
           {
             "name": "House Gods",
             "spotify_id": "5Y8HY0aRROhofNOQk8wovk",
-            "followers": 11009,
+            "followers": 11015,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9bfaa70bfa504daf0758af4d",
             "owner_name": "Kucherov"
           },
           {
             "name": "Yabancı Pop Hit 2026 | %100 Hit Müzik",
             "spotify_id": "3uDb6eGceJtNMMGW94bfwX",
-            "followers": 10085,
+            "followers": 10098,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c0e5a8f424d24d5694c2601d8",
             "owner_name": "SSL Music"
           },
           {
             "name": "Be Happy",
             "spotify_id": "22h7ngPNSKWBpAJ2zlNcYF",
-            "followers": 9458,
+            "followers": 9457,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84200acb697f390df76f718350",
             "owner_name": "Filtr Belgium"
           },
@@ -239866,7 +240053,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound"
           },
@@ -239915,7 +240102,7 @@
           {
             "name": "Uuden musiikin lista",
             "spotify_id": "5m7isToOWoXl3KB11ebznI",
-            "followers": 5412,
+            "followers": 5411,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c8af4f8a652314540c4c8aa7c",
             "owner_name": "Filtr Finland"
           },
@@ -240027,7 +240214,7 @@
           {
             "name": "歐陸流行指標 Hits from Europe",
             "spotify_id": "3P5Wg3jCE46i9OFBEGOkeI",
-            "followers": 2011,
+            "followers": 2012,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8431c6a3e8873018e8df28b9d9",
             "owner_name": "Filtr Taiwan"
           },
@@ -240090,7 +240277,7 @@
           {
             "name": "(good) new music friday",
             "spotify_id": "1GyTl6JeZPk0pGSTave43G",
-            "followers": 1053,
+            "followers": 1052,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02349f6c0133abbfca063891c1ab67616d00001e02428ff5823a4693cbf827f9b9ab67616d00001e0247ff4d4b28c0f4fad26667dfab67616d00001e02cf5e9bd3c7533d7c3d471a62",
             "owner_name": "fistintheair"
           },
@@ -240111,7 +240298,7 @@
           {
             "name": "New Music Friday EDM | Best New EDM Releases 2026 - EDMNOMAD ",
             "spotify_id": "7cVJGf1jA6qnv33MQBBLmW",
-            "followers": 860,
+            "followers": 861,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840a8d72bcae4a43301379f21b",
             "owner_name": "EDMNOMAD"
           },
@@ -240188,7 +240375,7 @@
           {
             "name": "Cristian Gatti (Experts Only) NMF 10/16 mike",
             "spotify_id": "0Dplyx9XiocTCAHlvmitCj",
-            "followers": 291,
+            "followers": 290,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0286c9566284b71edf22791472ab67616d00001e02c20f069becca8273c7ee6e7dab67616d00001e02cd104592394577141cb64014ab67616d00001e02e1be94018ba6da2c6299a460",
             "owner_name": "Mike"
           },
@@ -240242,12 +240429,12 @@
             "owner_name": "<|R"
           }
         ],
-        "independent_followers_total": 2432736,
+        "independent_followers_total": 2433143,
         "key_supporters": [
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland",
             "tier": 1,
@@ -240265,7 +240452,7 @@
           {
             "name": "Dance Music Friday | Ministry of Sound",
             "spotify_id": "5F13KTaxemrVfpPtJLXuv4",
-            "followers": 8602,
+            "followers": 8600,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3de60022f6f52a97233a394f",
             "owner_name": "Ministry of Sound",
             "tier": 1,
@@ -240283,7 +240470,7 @@
           {
             "name": "DEEP HOUSE 2026  🔴 Electronic Dance Hits, Covers & Remixes for Gym, Workout, Running, Sport, Car ",
             "spotify_id": "5h1oEk4W9KVMHkOd8WWWlC",
-            "followers": 1011253,
+            "followers": 1011638,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ccb49bc61dc5b4289d46b2849",
             "owner_name": "THE NIGHT DRIVE",
             "tier": 3,
@@ -240292,7 +240479,7 @@
           {
             "name": "NIGHT DRIVE ⚫️ Late Night Drive ⚫️ Deep House, Melancholic Dance, Electronic Dance Music",
             "spotify_id": "55kXFRgaWu8Vu0ko7CfbXB",
-            "followers": 312444,
+            "followers": 312485,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8451e3376054bd5d1fd2cd4c74",
             "owner_name": "THE NIGHT DRIVE",
             "tier": 3,
@@ -240304,7 +240491,7 @@
         "daily_shazams": null,
         "shazam_charts": [],
         "editorial_count_delta": 0,
-        "independent_followers_delta": 20,
+        "independent_followers_delta": 427,
         "total_shazams_delta": null,
         "ai_read": null
       }
@@ -240561,9 +240748,9 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
-        "editorial_count": 1,
+        "editorial_count": 2,
         "editorial_playlists": [
           {
             "name": "This Is Kolter",
@@ -240571,55 +240758,62 @@
             "followers": 1954,
             "cover_url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/2Invsp3HSrAeJy4u7Retry/en",
             "owner_name": "Spotify"
+          },
+          {
+            "name": "Matrefakt Radio",
+            "spotify_id": "37i9dQZF1E4ooJgP5Vk7Qp",
+            "followers": 128,
+            "cover_url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/6RkLsuBe0imAJH9uZrWgNI/en",
+            "owner_name": "Spotify"
           }
         ],
         "independent_playlists": [
           {
             "name": "Droid House",
             "spotify_id": "5goz1LXB9uVqXyUGg2ZeZs",
-            "followers": 62483,
+            "followers": 62519,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c60d70f5def0756422427d681",
             "owner_name": "LNRT"
           },
           {
             "name": "hey, gimme that aux ",
             "spotify_id": "6Ri5gwi3bU5SHdd6K15gvw",
-            "followers": 41265,
+            "followers": 41306,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd169e57aab080759df9c47ae",
             "owner_name": "hox 247"
           },
           {
             "name": "NEW EDM FRIDAY 🔥",
             "spotify_id": "69WI1EYhCyop1JWowR9wq5",
-            "followers": 23895,
+            "followers": 23911,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbd8d10ba10d4ddb9f38183a8",
             "owner_name": "EDM FAMILY"
           },
           {
             "name": "ADE 2026 || DAILY UPDATED",
             "spotify_id": "36Ju33lIc2jAEmIOAjwyug",
-            "followers": 18615,
+            "followers": 18679,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8467e4b0a2afec1147aa2bc95a",
             "owner_name": "MILLER"
           },
           {
             "name": "New Music, Radar de Novidades, Friday EDM e +",
             "spotify_id": "4PV7pMQADb2plazslbmFoY",
-            "followers": 16626,
+            "followers": 16630,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840cd197f29f2c7a6d88e1ef8b",
             "owner_name": "eletrovibez"
           },
           {
             "name": "Fresh House Friday",
             "spotify_id": "28QA6xyCDHBDvHPvcn89ve",
-            "followers": 12225,
+            "followers": 12224,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845d05fc81216d4030f9da0435",
             "owner_name": "Stevie Paladini PLAYLISTS"
           },
           {
             "name": "Flex Afro & Melodic House Selects",
             "spotify_id": "3iyceJ7IXjTQbLnmrzcttS",
-            "followers": 10376,
+            "followers": 10380,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84804a88f642ce936fe396796a",
             "owner_name": "Flex Orlando"
           },
@@ -240703,7 +240897,7 @@
           {
             "name": "House Release Radar |  Fresh House Finds 2026 ★ ",
             "spotify_id": "12w92cKr29ojeUJrReQTE2",
-            "followers": 754,
+            "followers": 763,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cde0e422521fc9256924a58a1",
             "owner_name": "marliealexander"
           },
@@ -240729,6 +240923,13 @@
             "owner_name": "Magios Collective"
           },
           {
+            "name": "ibiza final boss house",
+            "spotify_id": "53luyLVJqppP2vifqa7Mzj",
+            "followers": 540,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b1dfcc848f1094cd13d5fe50",
+            "owner_name": "laura🕺🏼✨🫶🏻🪩"
+          },
+          {
             "name": "Diego’s NMF",
             "spotify_id": "3hMyWaOxg31s0LBv1qaXBB",
             "followers": 425,
@@ -240745,7 +240946,7 @@
           {
             "name": "Cristian Gatti (Experts Only) NMF 10/16 mike",
             "spotify_id": "0Dplyx9XiocTCAHlvmitCj",
-            "followers": 291,
+            "followers": 290,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0286c9566284b71edf22791472ab67616d00001e02c20f069becca8273c7ee6e7dab67616d00001e02cd104592394577141cb64014ab67616d00001e02e1be94018ba6da2c6299a460",
             "owner_name": "Mike"
           },
@@ -240759,7 +240960,7 @@
           {
             "name": "Stussy, Deano's, josh baker, rossi, Robbie Doherty, Franky Rizardo, Sidney Charles, Omar+",
             "spotify_id": "6UEf67ukhcBmjh4qGNvN7N",
-            "followers": 231,
+            "followers": 232,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e0204dca98ec5bd3f31934c1ceeab67616d00001e02055d75b984e531f13bba0088ab67616d00001e023467eb7a58dab24f4d07242bab67616d00001e02ef5a855ad724281ca0209572",
             "owner_name": "JoeRichardson.20"
           },
@@ -240799,14 +241000,14 @@
             "owner_name": "Matthias Beijeman"
           }
         ],
-        "independent_followers_total": 227491,
+        "independent_followers_total": 228204,
         "key_supporters": [],
         "unclassified_count": 0,
         "total_shazams": null,
         "daily_shazams": null,
         "shazam_charts": [],
-        "editorial_count_delta": 0,
-        "independent_followers_delta": 0,
+        "editorial_count_delta": 1,
+        "independent_followers_delta": 713,
         "total_shazams_delta": null,
         "ai_read": null
       }
@@ -241312,35 +241513,35 @@
         "ai_read": null
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-22",
         "official": false,
         "editorial_count": 6,
         "editorial_playlists": [
           {
             "name": "All New Dance",
             "spotify_id": "37i9dQZF1DXa41CMuUARjl",
-            "followers": 578439,
+            "followers": 578470,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002a930454e81964040a1f3bd89",
             "owner_name": "Spotify"
           },
           {
             "name": "Dance Brandneu",
             "spotify_id": "37i9dQZF1DXcfWvNFKxjDo",
-            "followers": 351763,
+            "followers": 351748,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002ca85510aec1af11c8955c03f",
             "owner_name": "Spotify"
           },
           {
             "name": "New Music Friday NL",
             "spotify_id": "37i9dQZF1DXb5BKLTO7ULa",
-            "followers": 301960,
+            "followers": 301942,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002e75f5ef82facc5ecd71e4c2a",
             "owner_name": "Spotify"
           },
           {
             "name": "New Dance 2026",
             "spotify_id": "37i9dQZF1DWWrJKwf0q9nn",
-            "followers": 156499,
+            "followers": 156490,
             "cover_url": "https://i.scdn.co/image/ab67706f0000000237f28198d12c8d4de6aa298e",
             "owner_name": "Spotify"
           },
@@ -241354,7 +241555,7 @@
           {
             "name": "New Music Friday BE",
             "spotify_id": "37i9dQZF1DXbUOvbOBAiPu",
-            "followers": 54412,
+            "followers": 54419,
             "cover_url": "https://i.scdn.co/image/ab67706f00000002c2b1d8731e805bcfc4307afd",
             "owner_name": "Spotify"
           }
@@ -241363,70 +241564,84 @@
           {
             "name": "DANCE-CHARTS - TOP 100 official",
             "spotify_id": "58tYZLFxvWZbfSJK61uXpn",
-            "followers": 137727,
+            "followers": 137749,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84f51379891c5259dc59f0db6b",
             "owner_name": "Dance-Charts"
           },
           {
+            "name": "Funky House 2026 🪩",
+            "spotify_id": "111k2mfSlw3amm9JLiXtdZ",
+            "followers": 89770,
+            "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c25987e23eadb9a245f52f05c",
+            "owner_name": "Vokall Records"
+          },
+          {
             "name": "Soulful Tech House 🪽",
             "spotify_id": "4X0TMfRXglNMcN8lPTMJnC",
-            "followers": 85280,
+            "followers": 85334,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84d431827ffb9eaa31c9118634",
             "owner_name": "Jay Bird"
           },
           {
             "name": "Tech House 2026 💿 🎧✨",
             "spotify_id": "3NO81FId9ANA3L5cbRwa5k",
-            "followers": 72986,
+            "followers": 72993,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9a01abbd6e7f1c9f754c4c80",
             "owner_name": "Jay Bird"
           },
           {
             "name": "Toolroom House 2026",
             "spotify_id": "6J1r02xyO2qkMA9dDNZytJ",
-            "followers": 63492,
+            "followers": 63491,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9397888315ace201302c2691",
             "owner_name": "Toolroom Records"
           },
           {
             "name": "Oliver Heldens - Best Of Heldeep Radio",
             "spotify_id": "5yukQNUdlkAILE0PgGtKDH",
-            "followers": 56258,
+            "followers": 56256,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cafe8d0dd4904be73c2e82d70",
             "owner_name": "Oliver Heldens"
           },
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland"
           },
           {
+            "name": "Boat Party 2026 🚤 🌞 Ibiza Vibes ☀️ Summer Dance Hits",
+            "spotify_id": "24hgp0ejYeN6iVKTC5qebK",
+            "followers": 35791,
+            "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c6ecd7c9ea96ea6c3b0a1759b",
+            "owner_name": "Relavel Records"
+          },
+          {
             "name": "HILLS HOUSE",
             "spotify_id": "3zk8c5D7VDxd9Q6gsYjyMC",
-            "followers": 31732,
+            "followers": 31769,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840880600732ec1dc6c37118cd",
             "owner_name": "HILLS"
           },
           {
             "name": "NEW EDM FRIDAY 🔥",
             "spotify_id": "69WI1EYhCyop1JWowR9wq5",
-            "followers": 23895,
+            "followers": 23911,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cbd8d10ba10d4ddb9f38183a8",
             "owner_name": "EDM FAMILY"
           },
           {
             "name": "New House Music Friday",
             "spotify_id": "5kyDTxrXdC6Qal62iEO5Ty",
-            "followers": 23088,
+            "followers": 23087,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c9137bec6ee783019be3d3a7b",
             "owner_name": "Ben Dooks"
           },
           {
             "name": "Locked Up House 2026 - DND RECS",
             "spotify_id": "64NTaSOGmH5Ls2ufK2VQz3",
-            "followers": 22725,
+            "followers": 22723,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca3aab3c6266c73b2545aa1ba",
             "owner_name": "DND RECS"
           },
@@ -241440,14 +241655,14 @@
           {
             "name": "New Music Friday, Electronic, EDM Releases 2026 🔥",
             "spotify_id": "02drWIbmrqJigXSikPo8Vi",
-            "followers": 14641,
+            "followers": 14640,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9ecb300ff49e77d407ae742a",
             "owner_name": "New EDM Friday"
           },
           {
             "name": "Fresh House Friday",
             "spotify_id": "28QA6xyCDHBDvHPvcn89ve",
-            "followers": 12225,
+            "followers": 12224,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da845d05fc81216d4030f9da0435",
             "owner_name": "Stevie Paladini PLAYLISTS"
           },
@@ -241461,14 +241676,14 @@
           {
             "name": "Deep House 2026 🎧",
             "spotify_id": "214sqFuM71ysPuJKqDCyb6",
-            "followers": 12001,
+            "followers": 12000,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8427995a2a7ee35c92b96672af",
             "owner_name": "BIP Records"
           },
           {
             "name": "Top Overall Tracks - 1001Tracklists [Follow For Weekly Updates]",
             "spotify_id": "23qaL0O0AR1aPSqvBSjKG4",
-            "followers": 9714,
+            "followers": 9716,
             "cover_url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84766157f70427488d1bb8dfb6",
             "owner_name": "1001tracklists"
           },
@@ -241496,7 +241711,7 @@
           {
             "name": "Toolroom New Releases (House, Tech House, Techno)",
             "spotify_id": "4MhfZtFGgi4Sm1vRXQ8ZOW",
-            "followers": 6412,
+            "followers": 6413,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a0a6af6bd20f460b236a6717",
             "owner_name": "Toolroom Records"
           },
@@ -241524,7 +241739,7 @@
           {
             "name": "Killer Cuts by Mark Knight",
             "spotify_id": "1TMcTavc7NLhINUNtoN8Pr",
-            "followers": 4158,
+            "followers": 4160,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c7ce1b578d4e95893dc35088d",
             "owner_name": "Mark Knight"
           },
@@ -241650,7 +241865,7 @@
           {
             "name": "(good) new music friday",
             "spotify_id": "1GyTl6JeZPk0pGSTave43G",
-            "followers": 1053,
+            "followers": 1052,
             "cover_url": "https://mosaic.scdn.co/640/ab67616d00001e02349f6c0133abbfca063891c1ab67616d00001e02428ff5823a4693cbf827f9b9ab67616d00001e0247ff4d4b28c0f4fad26667dfab67616d00001e02cf5e9bd3c7533d7c3d471a62",
             "owner_name": "fistintheair"
           },
@@ -241678,7 +241893,7 @@
           {
             "name": "New Music Friday EDM | Best New EDM Releases 2026 - EDMNOMAD ",
             "spotify_id": "7cVJGf1jA6qnv33MQBBLmW",
-            "followers": 860,
+            "followers": 861,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840a8d72bcae4a43301379f21b",
             "owner_name": "EDMNOMAD"
           },
@@ -241753,12 +241968,12 @@
             "owner_name": "Adam Fostenes"
           }
         ],
-        "independent_followers_total": 752094,
+        "independent_followers_total": 877780,
         "key_supporters": [
           {
             "name": "Toolroom House 2026",
             "spotify_id": "6J1r02xyO2qkMA9dDNZytJ",
-            "followers": 63492,
+            "followers": 63491,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9397888315ace201302c2691",
             "owner_name": "Toolroom Records",
             "tier": 1,
@@ -241767,7 +241982,7 @@
           {
             "name": "Tomorrowland Official One World Radio Playlist",
             "spotify_id": "4N0v1mk7Itbn0ovl16ywlO",
-            "followers": 52927,
+            "followers": 52920,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840fc18eacf47cb8f052908d7d",
             "owner_name": "Tomorrowland",
             "tier": 1,
@@ -241785,7 +242000,7 @@
           {
             "name": "Toolroom New Releases (House, Tech House, Techno)",
             "spotify_id": "4MhfZtFGgi4Sm1vRXQ8ZOW",
-            "followers": 6412,
+            "followers": 6413,
             "cover_url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a0a6af6bd20f460b236a6717",
             "owner_name": "Toolroom Records",
             "tier": 1,
@@ -241806,7 +242021,7 @@
         "daily_shazams": null,
         "shazam_charts": [],
         "editorial_count_delta": 0,
-        "independent_followers_delta": 0,
+        "independent_followers_delta": 125686,
         "total_shazams_delta": null,
         "ai_read": null
       }
