@@ -32,6 +32,14 @@
       "label": "COLUMBIA",
       "image": "https://i.scdn.co/image/ab67616d00001e021352007840a0829fd1b2d1bb",
       "added_at": "2026-10-30"
+    },
+    {
+      "isrc": "QTAB32780958",
+      "artist": "Brunello",
+      "track": "Clown Shoes",
+      "label": "MELLOW CIRCUS RECORDS",
+      "image": "https://i.scdn.co/image/ab67616d00001e02f52ee3940895253f5e41dd4b",
+      "added_at": "2026-11-03"
     }
   ]
 }
