@@ -24050,6 +24050,89 @@
       "trend": "accelerating",
       "trend_pct_change": 19,
       "ai_read": null
+    },
+    {
+      "date": "2026-11-10",
+      "total_shazams": 141943,
+      "daily_shazams": 955,
+      "playlist_count": 349,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 12,
+          "previous_position": 13,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GLOBAL",
+          "type": "shazams",
+          "position": 24,
+          "previous_position": 22,
+          "genre": "House",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 40,
+          "previous_position": null,
+          "genre": null,
+          "city": "Liverpool"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 49,
+          "previous_position": 38,
+          "genre": null,
+          "city": "Newcastle upon Tyne"
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 77,
+          "previous_position": 66,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "US",
+          "type": "shazams",
+          "position": 78,
+          "previous_position": 72,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 83,
+          "previous_position": 79,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "AU",
+          "type": "shazams",
+          "position": 119,
+          "previous_position": 118,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "CA",
+          "type": "shazams",
+          "position": 144,
+          "previous_position": 118,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": "accelerating",
+      "trend_pct_change": 44,
+      "ai_read": null
     }
   ],
   "CBEFB2606643": [
@@ -24711,6 +24794,49 @@
       "trend": "steady",
       "trend_pct_change": 11,
       "ai_read": null
+    },
+    {
+      "date": "2026-11-10",
+      "total_shazams": 12949,
+      "daily_shazams": 467,
+      "playlist_count": 138,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 13,
+          "previous_position": 14,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GLOBAL",
+          "type": "shazams",
+          "position": 39,
+          "previous_position": 37,
+          "genre": "House",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 92,
+          "previous_position": 86,
+          "genre": null,
+          "city": null
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 153,
+          "previous_position": 143,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "accelerating",
+      "trend_pct_change": 22,
+      "ai_read": null
     }
   ],
   "GBARL2601134": [
@@ -24820,6 +24946,25 @@
           "type": "shazams",
           "position": 67,
           "previous_position": 56,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    },
+    {
+      "date": "2026-11-10",
+      "total_shazams": 3088,
+      "daily_shazams": 152,
+      "playlist_count": 120,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 76,
+          "previous_position": 67,
           "genre": "Dance",
           "city": null
         }
