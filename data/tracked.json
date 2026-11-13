@@ -72,6 +72,14 @@
       "label": "POSITIVA",
       "image": "https://i.scdn.co/image/ab67616d00001e0258bded1c7159124f6ecbf8c8",
       "added_at": "2026-11-13"
+    },
+    {
+      "isrc": "CBEFB2607481",
+      "artist": "Soldier Boy",
+      "track": "When U Were Mine",
+      "label": "REMAPPED",
+      "image": "https://i.scdn.co/image/ab67616d00001e026c150402793460e8e4ebb0b4",
+      "added_at": "2026-11-13"
     }
   ]
 }
