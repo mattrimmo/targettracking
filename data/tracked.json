@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "CBEFB2607257",
-      "artist": "KETTAMA & Prospa & Rohan Pinnock-Hamilton",
-      "track": "Think of You",
-      "label": "STEEL CITY DANCE DISCS",
-      "image": "https://i.scdn.co/image/ab67616d00001e02905df05c683b600c87832fb7",
-      "added_at": "2026-10-16"
-    },
-    {
       "isrc": "GBLV62606473",
       "artist": "Beave",
       "track": "Zoolander",
