@@ -80,6 +80,14 @@
       "label": "WARNER MUSIC",
       "image": "https://i.scdn.co/image/ab67616d00001e02d31e258999e23b5a70fd392b",
       "added_at": "2026-11-20"
+    },
+    {
+      "isrc": "NLF712603021",
+      "artist": "Don Diablo & Wax Motif & Natural Born Chillers",
+      "track": "Rock The Funky Beat",
+      "label": "ARMADA MUSIC",
+      "image": "https://i.scdn.co/image/ab67616d00001e028cbc2442dd2e076e47af6463",
+      "added_at": "2026-11-20"
     }
   ]
 }
