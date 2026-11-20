@@ -2,14 +2,6 @@
   "_readme": "List of tracks currently being long-term tracked. Managed via the app UI (Add/Remove) — you shouldn't normally need to hand-edit this, but it's plain JSON if you ever do.",
   "tracks": [
     {
-      "isrc": "GBLV62606473",
-      "artist": "Beave",
-      "track": "Zoolander",
-      "label": "SOLID GROOVES",
-      "image": "https://i.scdn.co/image/ab67616d00001e02d8a1711f6275c55d5f1de1ee",
-      "added_at": "2026-10-26"
-    },
-    {
       "isrc": "USA2P2645384",
       "artist": "Obskür & Robbie Doherty",
       "track": "Gimme A Beat",
