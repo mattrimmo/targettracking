@@ -25947,6 +25947,33 @@
       "trend": "declining",
       "trend_pct_change": -32,
       "ai_read": null
+    },
+    {
+      "date": "2026-11-20",
+      "total_shazams": 17674,
+      "daily_shazams": 460,
+      "playlist_count": 130,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 25,
+          "previous_position": 25,
+          "genre": "Dance",
+          "city": null
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 188,
+          "previous_position": 183,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": "declining",
+      "trend_pct_change": -36,
+      "ai_read": null
     }
   ],
   "GBARL2601134": [
@@ -26104,6 +26131,25 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-11-20",
+      "total_shazams": 9384,
+      "daily_shazams": 325,
+      "playlist_count": 117,
+      "shazam_charts": [
+        {
+          "country_code": "AE",
+          "type": "shazams",
+          "position": 68,
+          "previous_position": 68,
+          "genre": null,
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ],
   "USA2P2645384": [
@@ -26213,6 +26259,25 @@
           "type": "shazams",
           "position": 174,
           "previous_position": 147,
+          "genre": "Dance",
+          "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    },
+    {
+      "date": "2026-11-20",
+      "total_shazams": 2348,
+      "daily_shazams": 78,
+      "playlist_count": 70,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 174,
+          "previous_position": 174,
           "genre": "Dance",
           "city": null
         }
