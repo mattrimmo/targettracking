@@ -89,6 +89,7 @@ def fetch_history(ident):
     out = {}
     try:
         body = ss.ss_get("tracks/historic_stats", dict(params, source=",".join(HIST_SOURCES), with_aggregates="true"))
+        out["_release"] = d(((body.get("track_info") or {}).get("release_date")))
         for s in body.get("stats") or []:
             data = s.get("data")
             out[s.get("source")] = (data.get("history") if isinstance(data, dict) else None) or []
@@ -103,8 +104,12 @@ def fetch_history(ident):
     return out
 
 
-def series(hist, field):
+def series(hist, field, release=None, flow=False):
     pts = sorted((d(h.get("date")), h.get(field)) for h in hist or [] if d(h.get("date")) and h.get(field) is not None)
+    # New release: Songstats history only starts on release day, so a running total was 0 before that.
+    # Without this, a record out for under 2 weeks has no "week ago" value and shows no data at all.
+    if flow and pts and release and pts[0][0] - timedelta(days=14) <= release <= pts[0][0] + timedelta(days=1):
+        pts.insert(0, (date(2000, 1, 1), 0))
     return pts
 
 
@@ -295,7 +300,7 @@ def build_record(entry, prev_rec):
     hist = fetch_history(ident)
     metrics = []
     for key, label, group, src, field, kind, floor in METRICS:
-        m = metric(series(hist.get(src), field), kind)
+        m = metric(series(hist.get(src), field, hist.get("_release"), kind == "flow"), kind)
         if not m:
             continue
         low = (m["week"] or 0) < floor and (m["prev"] or 0) < floor
@@ -338,7 +343,7 @@ def build_record(entry, prev_rec):
     score = ups - downs
     momentum = "accelerating" if score >= 2 else "cooling" if downs > ups else "steady"
     tags = sorted({t for s in signals if s["positive"] and not s.get("low_volume") for t in tags_for(s)})
-    return dict(isrc=entry["isrc"], updated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    return dict(isrc=entry["isrc"], release_date=(hist.get("_release") or date.min).isoformat() if hist.get("_release") else None, updated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 momentum=momentum, ups=ups, downs=downs, signal_count=ups, tags=tags,
                 metrics=metrics, signals=signals, counts=counts, daily=daily_series(hist), placements=placed, count_log=log, songstats=ident)
 
