@@ -1,0 +1,2908 @@
+{
+ "records": {
+  "USA2P2645384": {
+   "isrc": "USA2P2645384",
+   "updated": "2026-11-25T12:23:00+00:00",
+   "momentum": "cooling",
+   "ups": 2,
+   "downs": 4,
+   "signal_count": 2,
+   "tags": [
+    "social"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": false,
+     "week": 241084,
+     "prev": 248980,
+     "pct": -3,
+     "total": 635854,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      248980,
+      241084
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 10757896,
+     "prev": 11069480,
+     "pct": -3,
+     "total": 10757896,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      7620941,
+      11069480,
+      10757896
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": false,
+     "week": 786,
+     "prev": 1504,
+     "pct": -48,
+     "total": 2882,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1504,
+      786
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": false,
+     "week": 204,
+     "prev": 227,
+     "pct": -10,
+     "total": 481,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      227,
+      204
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": false,
+     "week": 25,
+     "prev": 4,
+     "pct": 525,
+     "total": 69,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      4,
+      25
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 249529,
+     "prev": 114560,
+     "pct": 118,
+     "total": 396749,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      28251,
+      114560,
+      249529
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": 11,
+     "prev": null,
+     "pct": null,
+     "total": 18,
+     "as_of": "2026-11-19",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      11
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 188143,
+     "prev": null,
+     "pct": null,
+     "total": 261096,
+     "as_of": "2026-11-19",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      188143
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": 0,
+     "prev": 0,
+     "pct": null,
+     "total": 0,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      0
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 9566,
+     "prev": 32159,
+     "pct": -70,
+     "total": 53433,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      32159,
+      9566
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": false,
+     "week": 7,
+     "prev": 9,
+     "pct": -22,
+     "total": 28,
+     "as_of": "2026-11-24",
+     "spark": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      7,
+      9,
+      7
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": false,
+     "week": 21435,
+     "prev": 23341,
+     "pct": -8,
+     "total": 66388,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      23341,
+      21435
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Social",
+     "text": "TikTok videos +525% (25 this week vs 4 last week)",
+     "strength": 525,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_videos"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok views +118% (249,529 this week vs 114,560 last week)",
+     "strength": 118,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_views"
+    },
+    {
+     "group": "Streaming",
+     "text": "Spotify streams -3% (241,084 this week vs 248,980 last week)",
+     "strength": -3,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "spotify_streams"
+    },
+    {
+     "group": "Streaming",
+     "text": "Spotify playlist reach -3% (10,757,896 now vs 11,069,480 a week ago)",
+     "strength": -3,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "spotify_reach"
+    },
+    {
+     "group": "DJ & club",
+     "text": "SoundCloud plays -8% (21,435 this week vs 23,341 last week)",
+     "strength": -8,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "sc_plays"
+    },
+    {
+     "group": "Discovery",
+     "text": "Radio plays -10% (204 this week vs 227 last week)",
+     "strength": -10,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "radio_plays"
+    },
+    {
+     "group": "DJ & club",
+     "text": "DJ supports (1001Tracklists) -22% (7 this week vs 9 last week)",
+     "strength": -22,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "dj_supports"
+    },
+    {
+     "group": "Discovery",
+     "text": "Shazams -48% (786 this week vs 1,504 last week)",
+     "strength": -48,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "shazams"
+    },
+    {
+     "group": "Social",
+     "text": "YouTube views -70% (9,566 this week vs 32,159 last week)",
+     "strength": -70,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "yt_views"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 6,
+    "apple_editorial": 5,
+    "deezer_editorial": 0,
+    "amazon_editorial": 7,
+    "beatport_charts": 1,
+    "shazam_charts": 0
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 6,
+     "apple_editorial": 5,
+     "deezer_editorial": 0,
+     "amazon_editorial": 7,
+     "beatport_charts": 1,
+     "shazam_charts": 0
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "9grxaspd",
+    "songstats_artist_id": "mv16rxpq"
+   }
+  },
+  "GBUM72606042": {
+   "isrc": "GBUM72606042",
+   "updated": "2026-11-25T12:23:03+00:00",
+   "momentum": "accelerating",
+   "ups": 7,
+   "downs": 1,
+   "signal_count": 7,
+   "tags": [
+    "dj",
+    "editorial",
+    "social"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": false,
+     "week": 293171,
+     "prev": null,
+     "pct": null,
+     "total": 386919,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      293171
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 3105103,
+     "prev": 4018516,
+     "pct": -23,
+     "total": 3105103,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      4018516,
+      3105103
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": false,
+     "week": 316,
+     "prev": null,
+     "pct": null,
+     "total": 421,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      316
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": false,
+     "week": 277,
+     "prev": 144,
+     "pct": 92,
+     "total": 434,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      3,
+      144,
+      277
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": false,
+     "week": 411,
+     "prev": null,
+     "pct": null,
+     "total": 3570,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      411
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 6066666,
+     "prev": 1961280,
+     "pct": 209,
+     "total": 11391315,
+     "as_of": "2026-11-24",
+     "spark": [
+      267098,
+      287624,
+      310103,
+      331364,
+      381332,
+      515122,
+      1961280,
+      6066666
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": 0,
+     "prev": null,
+     "pct": null,
+     "total": 11,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": true,
+     "week": 16448,
+     "prev": null,
+     "pct": null,
+     "total": 17060,
+     "as_of": "2026-11-12",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      16448
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": 0,
+     "prev": null,
+     "pct": null,
+     "total": 0,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 30131,
+     "prev": null,
+     "pct": null,
+     "total": 138867,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      30131
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": false,
+     "week": 3,
+     "prev": 2,
+     "pct": 50,
+     "total": 6,
+     "as_of": "2026-11-22",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      2,
+      3
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": false,
+     "week": 45990,
+     "prev": null,
+     "pct": null,
+     "total": 113393,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      45990
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: Club Hits 2026",
+     "strength": 301,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Apple Music editorial: House Nation",
+     "strength": 281,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: 2026!, Dance UK",
+     "strength": 272,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok views +209% (6,066,666 this week vs 1,961,280 last week)",
+     "strength": 209,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_views"
+    },
+    {
+     "group": "Discovery",
+     "text": "Radio plays +92% (277 this week vs 144 last week)",
+     "strength": 92,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "radio_plays"
+    },
+    {
+     "group": "DJ & club",
+     "text": "DJ supports (1001Tracklists) +50% (3 this week vs 2 last week)",
+     "strength": 50,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "dj_supports"
+    },
+    {
+     "group": "DJ & club",
+     "text": "1 new Beatport DJ chart: Romza",
+     "strength": 40,
+     "positive": true,
+     "kind": "dj"
+    },
+    {
+     "group": "Streaming",
+     "text": "Spotify playlist reach -23% (3,105,103 now vs 4,018,516 a week ago)",
+     "strength": -23,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "spotify_reach"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 4,
+    "apple_editorial": 3,
+    "deezer_editorial": 1,
+    "amazon_editorial": 8,
+    "beatport_charts": 2,
+    "shazam_charts": 0
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 4,
+     "apple_editorial": 3,
+     "deezer_editorial": 1,
+     "amazon_editorial": 8,
+     "beatport_charts": 2,
+     "shazam_charts": 0
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "h7m9256f",
+    "songstats_artist_id": "5neqv0o9"
+   }
+  },
+  "AUDCB2500657": {
+   "isrc": "AUDCB2500657",
+   "updated": "2026-11-25T12:23:07+00:00",
+   "momentum": "accelerating",
+   "ups": 4,
+   "downs": 1,
+   "signal_count": 4,
+   "tags": [
+    "editorial"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": false,
+     "week": 88460,
+     "prev": null,
+     "pct": null,
+     "total": 127129,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      88460
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 3733576,
+     "prev": 3035812,
+     "pct": 23,
+     "total": 3733576,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      3035812,
+      3733576
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": false,
+     "week": 1421,
+     "prev": null,
+     "pct": null,
+     "total": 2860,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1421
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": true,
+     "week": 2,
+     "prev": null,
+     "pct": null,
+     "total": 39,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      2
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 127,
+     "as_of": "2026-11-19",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 1340450,
+     "prev": 1393488,
+     "pct": -4,
+     "total": 4005688,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      377748,
+      893866,
+      1393488,
+      1340450
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 31,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 295604,
+     "prev": 980897,
+     "pct": -70,
+     "total": 3057623,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      960806,
+      980897,
+      295604
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": 0,
+     "prev": null,
+     "pct": null,
+     "total": 0,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": true,
+     "week": 4253,
+     "prev": null,
+     "pct": null,
+     "total": 14948,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      4253
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": false,
+     "week": 2745,
+     "prev": null,
+     "pct": null,
+     "total": 3782,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      2745
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: Workout Beats, Dance Generation, New Dance Beats",
+     "strength": 303,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Deezer editorial: Bass House, 100% Joel Corry",
+     "strength": 282,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: Nectar, Dance UK",
+     "strength": 272,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "Spotify playlist reach +23% (3,733,576 now vs 3,035,812 a week ago)",
+     "strength": 23,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "spotify_reach"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok views -4% (1,340,450 this week vs 1,393,488 last week)",
+     "strength": -4,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_views"
+    },
+    {
+     "group": "Social",
+     "text": "Instagram views -70% (295,604 this week vs 980,897 last week)",
+     "strength": -70,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "ig_views"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 5,
+    "apple_editorial": 10,
+    "deezer_editorial": 3,
+    "amazon_editorial": 6,
+    "beatport_charts": 0,
+    "shazam_charts": 1
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 5,
+     "apple_editorial": 10,
+     "deezer_editorial": 3,
+     "amazon_editorial": 6,
+     "beatport_charts": 0,
+     "shazam_charts": 1
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "yq6te5za",
+    "songstats_artist_id": "0icuz6q8"
+   }
+  },
+  "CBEFB2608427": {
+   "isrc": "CBEFB2608427",
+   "updated": "2026-11-25T12:23:10+00:00",
+   "momentum": "accelerating",
+   "ups": 9,
+   "downs": 0,
+   "signal_count": 9,
+   "tags": [
+    "dj",
+    "editorial",
+    "social"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 338171,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 14440255,
+     "prev": null,
+     "pct": null,
+     "total": 14440255,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14440255
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 5723,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 131,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": false,
+     "week": 562,
+     "prev": 173,
+     "pct": 225,
+     "total": 854,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      173,
+      562
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 4767121,
+     "prev": 598426,
+     "pct": 697,
+     "total": 5396223,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      2192,
+      28194,
+      598426,
+      4767121
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 54,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 100378,
+     "prev": null,
+     "pct": null,
+     "total": 101601,
+     "as_of": "2026-11-19",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      100378
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 0,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 59735,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": false,
+     "week": 12,
+     "prev": null,
+     "pct": null,
+     "total": 15,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      12
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 180776,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Social",
+     "text": "TikTok views +697% (4,767,121 this week vs 598,426 last week)",
+     "strength": 697,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_views"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: New Music Friday, Housewerk, Dance Rising +7 more",
+     "strength": 310,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Apple Music editorial: Dance Risers, Experts Only: New Music Friday, Breaking Dance +5 more",
+     "strength": 288,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Deezer editorial: Radar Weekly, Fresh House, Feel Good House +1 more",
+     "strength": 284,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: The Sound of Modern House, Heaters, Club Rules +6 more",
+     "strength": 279,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "DJ & club",
+     "text": "New on Beatport: Overall Top 100 #1, House #1, Latest Releases: House #41",
+     "strength": 250,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok videos +225% (562 this week vs 173 last week)",
+     "strength": 225,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_videos"
+    },
+    {
+     "group": "Discovery",
+     "text": "New Shazam charts: United Kingdom - Dance #20, Belfast United Kingdom #83, Liverpool United Kingdom #85 +10 more",
+     "strength": 213,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "DJ & club",
+     "text": "2 new Beatport DJ charts: Romza, Jordan Peak",
+     "strength": 55,
+     "positive": true,
+     "kind": "dj"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 10,
+    "apple_editorial": 8,
+    "deezer_editorial": 4,
+    "amazon_editorial": 9,
+    "beatport_charts": 3,
+    "shazam_charts": 13
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 10,
+     "apple_editorial": 8,
+     "deezer_editorial": 4,
+     "amazon_editorial": 9,
+     "beatport_charts": 3,
+     "shazam_charts": 13
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "p4edrn8k",
+    "songstats_artist_id": "gvqb4ezw"
+   }
+  },
+  "USA2P2681586": {
+   "isrc": "USA2P2681586",
+   "updated": "2026-11-25T12:23:13+00:00",
+   "momentum": "accelerating",
+   "ups": 6,
+   "downs": 0,
+   "signal_count": 6,
+   "tags": [
+    "dj",
+    "editorial"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 182729,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 30648484,
+     "prev": null,
+     "pct": null,
+     "total": 30648484,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      30648484
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 8425,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 56,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 27,
+     "as_of": "2026-11-21",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 89057,
+     "prev": null,
+     "pct": null,
+     "total": 89450,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      89057
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 1,
+     "as_of": "2026-11-22",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 65697,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 2,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 10191,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: Dance Party, mint, New Music Friday +15 more",
+     "strength": 318,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Apple Music editorial: Dance Risers, New in Dance, New in Electronic +2 more",
+     "strength": 285,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Deezer editorial: Radar Weekly",
+     "strength": 281,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: The Sound of Modern House, Fresh Dance, Nouveautés Dance +3 more",
+     "strength": 276,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "DJ & club",
+     "text": "New on Beatport: House #13, Overall Top 100 #27",
+     "strength": 250,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "DJ & club",
+     "text": "1 new Beatport DJ chart: Glass Coffee",
+     "strength": 40,
+     "positive": true,
+     "kind": "dj"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 18,
+    "apple_editorial": 5,
+    "deezer_editorial": 1,
+    "amazon_editorial": 6,
+    "beatport_charts": 2,
+    "shazam_charts": 0
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 18,
+     "apple_editorial": 5,
+     "deezer_editorial": 1,
+     "amazon_editorial": 6,
+     "beatport_charts": 2,
+     "shazam_charts": 0
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "7pvtsu41",
+    "songstats_artist_id": "cpind49m"
+   }
+  },
+  "GBAHT2602774": {
+   "isrc": "GBAHT2602774",
+   "updated": "2026-11-25T12:23:16+00:00",
+   "momentum": "accelerating",
+   "ups": 8,
+   "downs": 0,
+   "signal_count": 8,
+   "tags": [
+    "dj",
+    "editorial",
+    "social"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 128849,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 15683070,
+     "prev": null,
+     "pct": null,
+     "total": 15683070,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      15683070
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 3361,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 290,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 449,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 338696,
+     "prev": 156042,
+     "pct": 117,
+     "total": 524253,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      4081,
+      25434,
+      156042,
+      338696
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 52,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 535592,
+     "prev": 20483,
+     "pct": 2515,
+     "total": 559827,
+     "as_of": "2026-11-19",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      3094,
+      20483,
+      535592
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 2,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 96690,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 8,
+     "as_of": "2026-11-22",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 32371,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Social",
+     "text": "Instagram views +2515% (535,592 this week vs 20,483 last week)",
+     "strength": 2515,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "ig_views"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: New Music Friday, Club Hits 2026, New Music Friday UK & Ireland +18 more",
+     "strength": 321,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Apple Music editorial: danceXL, New in Dance, Future Dance Hits +5 more",
+     "strength": 288,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Deezer editorial: Radar Weekly",
+     "strength": 281,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: Deep House Now, Fresh Dance, Nouveautés Dance +4 more",
+     "strength": 277,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "DJ & club",
+     "text": "New on Beatport: Dance / Pop #3, Overall Top 100 #26",
+     "strength": 250,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "Discovery",
+     "text": "New Shazam charts: United Kingdom - Dance #10, Leeds United Kingdom #30, Manchester United Kingdom #43 +7 more",
+     "strength": 210,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok views +117% (338,696 this week vs 156,042 last week)",
+     "strength": 117,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_views"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 21,
+    "apple_editorial": 8,
+    "deezer_editorial": 1,
+    "amazon_editorial": 7,
+    "beatport_charts": 2,
+    "shazam_charts": 10
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 21,
+     "apple_editorial": 8,
+     "deezer_editorial": 1,
+     "amazon_editorial": 7,
+     "beatport_charts": 2,
+     "shazam_charts": 10
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "6z950ibk",
+    "songstats_artist_id": "aiy5u720"
+   }
+  },
+  "NLF712603021": {
+   "isrc": "NLF712603021",
+   "updated": "2026-11-25T12:23:19+00:00",
+   "momentum": "accelerating",
+   "ups": 4,
+   "downs": 0,
+   "signal_count": 4,
+   "tags": [
+    "dj",
+    "editorial"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 132598,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 1495816,
+     "prev": null,
+     "pct": null,
+     "total": 1495816,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1495816
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 717,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": false,
+     "week": 376,
+     "prev": null,
+     "pct": null,
+     "total": 377,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      376
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 18,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": true,
+     "week": 3908,
+     "prev": null,
+     "pct": null,
+     "total": 6109,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      3908
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 1,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": true,
+     "week": 301,
+     "prev": null,
+     "pct": null,
+     "total": 301,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      301
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 1,
+     "as_of": "2026-11-22",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 1216,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": false,
+     "week": 38,
+     "prev": null,
+     "pct": null,
+     "total": 48,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 2652,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: All New Dance, New Music Friday NL, New Dance 2026 +1 more",
+     "strength": 304,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Apple Music editorial: New Music Daily, New in Dance",
+     "strength": 282,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: Heaters, Club Rules, Fresh Dance +1 more",
+     "strength": 274,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "DJ & club",
+     "text": "1 new Beatport DJ chart: Xpilot",
+     "strength": 40,
+     "positive": true,
+     "kind": "dj"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 4,
+    "apple_editorial": 2,
+    "deezer_editorial": 0,
+    "amazon_editorial": 4,
+    "beatport_charts": 0,
+    "shazam_charts": 0
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 4,
+     "apple_editorial": 2,
+     "deezer_editorial": 0,
+     "amazon_editorial": 4,
+     "beatport_charts": 0,
+     "shazam_charts": 0
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "bl5r3cao",
+    "songstats_artist_id": "48ra1cnv"
+   }
+  },
+  "QMFMF2661837": {
+   "isrc": "QMFMF2661837",
+   "updated": "2026-11-25T12:23:22+00:00",
+   "momentum": "accelerating",
+   "ups": 7,
+   "downs": 0,
+   "signal_count": 7,
+   "tags": [
+    "dj",
+    "editorial",
+    "social"
+   ],
+   "metrics": [
+    {
+     "key": "spotify_streams",
+     "label": "Spotify streams",
+     "group": "Streaming",
+     "kind": "flow",
+     "floor": 2000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 200557,
+     "as_of": "2026-11-23",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "spotify_reach",
+     "label": "Spotify playlist reach",
+     "group": "Streaming",
+     "kind": "level",
+     "floor": 10000,
+     "low_volume": false,
+     "week": 19098057,
+     "prev": null,
+     "pct": null,
+     "total": 19098057,
+     "as_of": "2026-11-24",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      19098057
+     ]
+    },
+    {
+     "key": "shazams",
+     "label": "Shazams",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 300,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 2372,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "radio_plays",
+     "label": "Radio plays",
+     "group": "Discovery",
+     "kind": "flow",
+     "floor": 30,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 465,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_videos",
+     "label": "TikTok videos",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 46,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "tiktok_views",
+     "label": "TikTok views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": false,
+     "week": 186823,
+     "prev": 83966,
+     "pct": 122,
+     "total": 282615,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      83966,
+      186823
+     ]
+    },
+    {
+     "key": "ig_reels",
+     "label": "Instagram reels",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 24,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "ig_views",
+     "label": "Instagram views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 20000,
+     "low_volume": true,
+     "week": 4121,
+     "prev": 2416,
+     "pct": 71,
+     "total": 7504,
+     "as_of": "2026-11-21",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      677,
+      2416,
+      4121
+     ]
+    },
+    {
+     "key": "yt_shorts",
+     "label": "YouTube Shorts",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 2,
+     "as_of": "2026-11-22",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "yt_views",
+     "label": "YouTube views",
+     "group": "Social",
+     "kind": "flow",
+     "floor": 10000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 131714,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "key": "dj_supports",
+     "label": "DJ supports (1001Tracklists)",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 3,
+     "low_volume": false,
+     "week": 4,
+     "prev": 0,
+     "pct": null,
+     "total": 5,
+     "as_of": "2026-11-22",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      4
+     ]
+    },
+    {
+     "key": "sc_plays",
+     "label": "SoundCloud plays",
+     "group": "DJ & club",
+     "kind": "flow",
+     "floor": 1000,
+     "low_volume": true,
+     "week": null,
+     "prev": null,
+     "pct": null,
+     "total": 6341,
+     "as_of": "2026-11-25",
+     "spark": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "signals": [
+    {
+     "group": "Streaming",
+     "text": "New Spotify editorial: mint, New Music Friday, Housewerk +15 more",
+     "strength": 318,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Apple Music editorial: Future Dance Hits, danceXL, New in Dance +7 more",
+     "strength": 290,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Deezer editorial: Electronic Hits, Les nouveautés du vendredi, Radar Weekly",
+     "strength": 283,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "Streaming",
+     "text": "New Amazon Music editorial: Nectar, Fresh Dance, Novità Dance +6 more",
+     "strength": 279,
+     "positive": true,
+     "kind": "editorial"
+    },
+    {
+     "group": "DJ & club",
+     "text": "New on Beatport: Dance / Pop #13, Staff Picks: Dance #4, Banner: Dance #5",
+     "strength": 250,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "Discovery",
+     "text": "New Shazam chart: United Kingdom - Dance #160",
+     "strength": 201,
+     "positive": true,
+     "kind": "chart"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok views +122% (186,823 this week vs 83,966 last week)",
+     "strength": 122,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_views"
+    },
+    {
+     "group": "Social",
+     "text": "Instagram views +71% (4,121 this week vs 2,416 last week)",
+     "strength": 71,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": true,
+     "metric": "ig_views"
+    }
+   ],
+   "counts": {
+    "spotify_editorial": 18,
+    "apple_editorial": 10,
+    "deezer_editorial": 3,
+    "amazon_editorial": 9,
+    "beatport_charts": 3,
+    "shazam_charts": 1
+   },
+   "count_log": [
+    {
+     "date": "2026-11-25",
+     "spotify_editorial": 18,
+     "apple_editorial": 10,
+     "deezer_editorial": 3,
+     "amazon_editorial": 9,
+     "beatport_charts": 3,
+     "shazam_charts": 1
+    }
+   ],
+   "songstats": {
+    "songstats_track_id": "b6hmyx4a",
+    "songstats_artist_id": "qhznkocg"
+   }
+  }
+ },
+ "generated_at": "2026-11-25T12:23:22+00:00"
+}

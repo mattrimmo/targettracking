@@ -26390,6 +26390,16 @@
       "trend": "accelerating",
       "trend_pct_change": 33,
       "ai_read": null
+    },
+    {
+      "date": "2026-11-25",
+      "total_shazams": 2882,
+      "daily_shazams": 126,
+      "playlist_count": 123,
+      "shazam_charts": [],
+      "trend": "accelerating",
+      "trend_pct_change": 53,
+      "ai_read": null
     }
   ],
   "GBCEN2600093": [
@@ -26470,6 +26480,28 @@
       "trend": null,
       "trend_pct_change": null,
       "ai_read": null
+    },
+    {
+      "date": "2026-11-25",
+      "total_shazams": 2860,
+      "daily_shazams": 142,
+      "playlist_count": 100,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 175,
+          "previous_position": null,
+          "genre": "Dance",
+          "city": null,
+          "name": "United Kingdom - Dance",
+          "peak": 72,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e"
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
     }
   ],
   "CBEFB2608427": [
@@ -26486,6 +26518,343 @@
           "previous_position": 38,
           "genre": "Dance",
           "city": null
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    },
+    {
+      "date": "2026-11-25",
+      "total_shazams": 5723,
+      "daily_shazams": 1023,
+      "playlist_count": 197,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 20,
+          "previous_position": null,
+          "genre": "Dance",
+          "city": null,
+          "name": "United Kingdom - Dance",
+          "peak": 20,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 83,
+          "previous_position": null,
+          "genre": null,
+          "city": "Belfast",
+          "name": "Belfast United Kingdom",
+          "peak": 83,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-belfast-united-kingdom/pl.c521e63f726f4e868935565c5034fdae"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 85,
+          "previous_position": null,
+          "genre": null,
+          "city": "Liverpool",
+          "name": "Liverpool United Kingdom",
+          "peak": 85,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-liverpool-united-kingdom/pl.1466c6b3ac3942f195f3f8bfd1fbde84"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 88,
+          "previous_position": null,
+          "genre": null,
+          "city": "Edinburgh",
+          "name": "Edinburgh United Kingdom",
+          "peak": 88,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-edinburgh-united-kingdom/pl.4c580198752b48ab8be2635507b3dfb0"
+        },
+        {
+          "country_code": "NL",
+          "type": "shazams",
+          "position": 95,
+          "previous_position": null,
+          "genre": null,
+          "city": "Utrecht",
+          "name": "Utrecht Netherlands",
+          "peak": 95,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-utrecht-netherlands/pl.b7a980eedb4a4e89a02c672f8e0c4d6a"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 100,
+          "previous_position": null,
+          "genre": null,
+          "city": "Manchester",
+          "name": "Manchester United Kingdom",
+          "peak": 100,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-manchester-united-kingdom/pl.c738ec2c872b4b7ea66406117691d67c"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 116,
+          "previous_position": null,
+          "genre": null,
+          "city": "Nottingham",
+          "name": "Nottingham United Kingdom",
+          "peak": 116,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-nottingham-united-kingdom/pl.1c525c0e2d7c470e85d7e67dbd998ab7"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 120,
+          "previous_position": null,
+          "genre": null,
+          "city": "Portsmouth",
+          "name": "Portsmouth United Kingdom",
+          "peak": 120,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-portsmouth-united-kingdom/pl.de6386de4bc148d6bcea3a82f86cf5d3"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 163,
+          "previous_position": null,
+          "genre": null,
+          "city": null,
+          "name": "United Kingdom",
+          "peak": 163,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom/pl.f3df92631c43423e866305ea8ba80745"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 163,
+          "previous_position": null,
+          "genre": null,
+          "city": "Birmingham",
+          "name": "Birmingham United Kingdom",
+          "peak": 163,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-birmingham-united-kingdom/pl.2c989e536d1d4e6b9f3c010c8e05d556"
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 181,
+          "previous_position": null,
+          "genre": null,
+          "city": null,
+          "name": "Ireland",
+          "peak": 181,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-ireland/pl.8961a1ef9ea8406a8fad5faae2db9416"
+        },
+        {
+          "country_code": "IE",
+          "type": "shazams",
+          "position": 181,
+          "previous_position": null,
+          "genre": null,
+          "city": "Dublin",
+          "name": "Dublin Ireland",
+          "peak": 181,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-dublin-ireland/pl.96ea3457ea38427eb051cbaaf1c63577"
+        },
+        {
+          "country_code": "US",
+          "type": "shazams",
+          "position": 192,
+          "previous_position": null,
+          "genre": "Dance",
+          "city": null,
+          "name": "United States - Dance",
+          "peak": 192,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-states-dance/pl.e66869349fea4f3ba0f69f28881158a7"
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "GBUM72606042": [
+    {
+      "date": "2026-11-25",
+      "total_shazams": 421,
+      "daily_shazams": 40,
+      "playlist_count": 101,
+      "shazam_charts": [],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "USA2P2681586": [
+    {
+      "date": "2026-11-25",
+      "total_shazams": 8425,
+      "daily_shazams": 117,
+      "playlist_count": 153,
+      "shazam_charts": [],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "GBAHT2602774": [
+    {
+      "date": "2026-11-25",
+      "total_shazams": 3361,
+      "daily_shazams": 361,
+      "playlist_count": 160,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 10,
+          "previous_position": null,
+          "genre": "Dance",
+          "city": null,
+          "name": "United Kingdom - Dance",
+          "peak": 10,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 30,
+          "previous_position": null,
+          "genre": null,
+          "city": "Leeds",
+          "name": "Leeds United Kingdom",
+          "peak": 30,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-leeds-united-kingdom/pl.4d4a492039e3460685e0de1984ce6ed4"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 43,
+          "previous_position": null,
+          "genre": null,
+          "city": "Manchester",
+          "name": "Manchester United Kingdom",
+          "peak": 43,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-manchester-united-kingdom/pl.c738ec2c872b4b7ea66406117691d67c"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 48,
+          "previous_position": null,
+          "genre": null,
+          "city": "Birmingham",
+          "name": "Birmingham United Kingdom",
+          "peak": 48,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-birmingham-united-kingdom/pl.2c989e536d1d4e6b9f3c010c8e05d556"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 62,
+          "previous_position": null,
+          "genre": null,
+          "city": "Liverpool",
+          "name": "Liverpool United Kingdom",
+          "peak": 62,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-liverpool-united-kingdom/pl.1466c6b3ac3942f195f3f8bfd1fbde84"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 73,
+          "previous_position": null,
+          "genre": null,
+          "city": "Cardiff",
+          "name": "Cardiff United Kingdom",
+          "peak": 73,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-cardiff-united-kingdom/pl.54fe6199050a4cbfb6dfb6b628fa2a9b"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 80,
+          "previous_position": null,
+          "genre": null,
+          "city": "Nottingham",
+          "name": "Nottingham United Kingdom",
+          "peak": 80,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-nottingham-united-kingdom/pl.1c525c0e2d7c470e85d7e67dbd998ab7"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 84,
+          "previous_position": null,
+          "genre": null,
+          "city": "Belfast",
+          "name": "Belfast United Kingdom",
+          "peak": 83,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-belfast-united-kingdom/pl.c521e63f726f4e868935565c5034fdae"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 90,
+          "previous_position": null,
+          "genre": null,
+          "city": null,
+          "name": "United Kingdom",
+          "peak": 90,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom/pl.f3df92631c43423e866305ea8ba80745"
+        },
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 93,
+          "previous_position": null,
+          "genre": null,
+          "city": "Portsmouth",
+          "name": "Portsmouth United Kingdom",
+          "peak": 93,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-portsmouth-united-kingdom/pl.de6386de4bc148d6bcea3a82f86cf5d3"
+        }
+      ],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "NLF712603021": [
+    {
+      "date": "2026-11-25",
+      "total_shazams": 717,
+      "daily_shazams": 56,
+      "playlist_count": 74,
+      "shazam_charts": [],
+      "trend": null,
+      "trend_pct_change": null,
+      "ai_read": null
+    }
+  ],
+  "QMFMF2661837": [
+    {
+      "date": "2026-11-25",
+      "total_shazams": 2372,
+      "daily_shazams": 281,
+      "playlist_count": 156,
+      "shazam_charts": [
+        {
+          "country_code": "GB",
+          "type": "shazams",
+          "position": 160,
+          "previous_position": null,
+          "genre": "Dance",
+          "city": null,
+          "name": "United Kingdom - Dance",
+          "peak": 160,
+          "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e"
         }
       ],
       "trend": null,
