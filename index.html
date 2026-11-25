@@ -750,7 +750,7 @@ function editorialListRows(list) {
         ${p.cover_url ? `<img class="row-art" src="${p.cover_url}">` : '<div class="row-art"></div>'}
         <div class="pname-wrap">
           <a class="pname" href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener" title="${p.name}">${trunc(p.name, 30)}</a>
-          <div class="curator">${p.owner_name || 'Spotify'}</div>
+          <div class="curator">${p.type ? 'Spotify · ' + p.type : (p.owner_name || 'Spotify')}</div>
         </div>
       </div>
       <div class="followers">${fmtNum(p.followers)}</div>
