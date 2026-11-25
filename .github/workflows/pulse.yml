@@ -21,10 +21,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r scripts/requirements.txt
       - name: Run pulse
         env:
-          SOT_API_KEY: ${{ secrets.SOT_API_KEY }}
+          SONGSTATS_API_KEY: ${{ secrets.SONGSTATS_API_KEY }}
         run: python scripts/pulse.py
       - name: Commit updated data
         run: |
