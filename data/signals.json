@@ -2,7 +2,7 @@
  "records": {
   "USA2P2645384": {
    "isrc": "USA2P2645384",
-   "updated": "2026-11-25T12:23:00+00:00",
+   "updated": "2026-11-25T13:00:41+00:00",
    "momentum": "cooling",
    "ups": 2,
    "downs": 4,
@@ -41,10 +41,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 10757896,
-     "prev": 11069480,
+     "week": 10757923,
+     "prev": 11069507,
      "pct": -3,
-     "total": 10757896,
+     "total": 10757923,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -52,9 +52,9 @@
       null,
       null,
       null,
-      7620941,
-      11069480,
-      10757896
+      7620966,
+      11069507,
+      10757923
      ]
     },
     {
@@ -318,7 +318,7 @@
     },
     {
      "group": "Streaming",
-     "text": "Spotify playlist reach -3% (10,757,896 now vs 11,069,480 a week ago)",
+     "text": "Spotify playlist reach -3% (10,757,923 now vs 11,069,507 a week ago)",
      "strength": -3,
      "positive": false,
      "kind": "growth",
@@ -379,6 +379,642 @@
     "beatport_charts": 1,
     "shazam_charts": 0
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24"
+     ],
+     "values": [
+      327,
+      219,
+      139,
+      139,
+      139,
+      152,
+      226,
+      226,
+      244,
+      120,
+      120,
+      98,
+      98,
+      186,
+      186,
+      94,
+      63,
+      63
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24"
+     ],
+     "values": [
+      1738,
+      57068,
+      57068,
+      29917,
+      17404,
+      17404,
+      36087,
+      39123,
+      39123,
+      41460,
+      32635,
+      25743,
+      33282,
+      68672,
+      29540,
+      31506,
+      31506,
+      20121,
+      26456
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      1249752,
+      7407718,
+      7535477,
+      7557363,
+      7591140,
+      7620966,
+      7637244,
+      7630962,
+      10981147,
+      11046103,
+      11060367,
+      11066884,
+      11069507,
+      11100531,
+      10691315,
+      10695607,
+      10709420,
+      10765454,
+      10756232,
+      10757923,
+      10757923
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24"
+     ],
+     "values": [
+      8,
+      8,
+      8,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    "dj_supports": {
+     "label": "Daily DJ supports",
+     "dates": [
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24"
+     ],
+     "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      4,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "mint",
+      "followers": 5413411,
+      "position": 25,
+      "peak": 21,
+      "added_at": "2026-11-13",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035643bea5de1f746c94fc23d9",
+      "new": false
+     },
+     {
+      "name": "Housewerk",
+      "followers": 2036858,
+      "position": 23,
+      "peak": 14,
+      "added_at": "2026-11-06",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa8NOEUWPn9W",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000282ad870a2861e036582d75f2",
+      "new": false
+     },
+     {
+      "name": "Dance Rising",
+      "followers": 1803457,
+      "position": 30,
+      "peak": 19,
+      "added_at": "2026-11-06",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000321df5c53dc5e037edb15dde2",
+      "new": false
+     },
+     {
+      "name": "UK House Music",
+      "followers": 741472,
+      "position": 6,
+      "peak": 2,
+      "added_at": "2026-11-05",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000036574502b2e17248beb073bed",
+      "new": false
+     },
+     {
+      "name": "New Dance 2026",
+      "followers": 156396,
+      "position": 40,
+      "peak": 7,
+      "added_at": "2026-11-05",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWWrJKwf0q9nn",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000036af8dd0dc645c193c851945f",
+      "new": false
+     },
+     {
+      "name": "Deep & Minimal",
+      "followers": 94866,
+      "position": 6,
+      "peak": 1,
+      "added_at": "2026-11-06",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSI21IGRaeuC",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002502274c2b48b0b59e6f92e33",
+      "new": false
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 88,
+      "peak": 7,
+      "added_at": "2026-11-06",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "House Nation",
+      "followers": null,
+      "position": 177,
+      "peak": 13,
+      "added_at": "2026-11-06",
+      "url": "https://music.apple.com/us/playlist/house-nation/pl.75f03abb293e4430a5f550d058c6f6a0",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/55/84/a6/5584a6d2-1a91-feaf-17d8-b57e656c0477/U0MtTVMtV1ctSG91c2VfTmF0aW9uLUFEQU1fSUQ9MTE5MzY4MDI3My5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 73,
+      "peak": 15,
+      "added_at": "2026-11-06",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Breaking Dance",
+      "followers": null,
+      "position": 74,
+      "peak": 46,
+      "added_at": "2026-11-06",
+      "url": "https://music.apple.com/us/playlist/breaking-dance/pl.77a913605bba4a968c5cb2b93d87b2ca",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/ed/fa/e2/edfae28c-4668-19b0-bb24-242ad3c094d2/U0MtTVMtV1ctQnJlYWtpbmdfRGFuY2VfRURNLUFEQU1fSUQ9MTEyNDU0MTA4My5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "House Grooves",
+      "followers": null,
+      "position": 127,
+      "peak": 127,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/house-grooves/pl.d73049603d7143ec86d84fc8b8af3827",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/a5/d1/8c/a5d18c90-2be5-f4e1-a721-96ff70ebe095/U0MtTVMtV1ctR3Jvb3ZlLWR5bmFtaWNzLUFkYW1fSUQ9MTI3NDgwMjE0My5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     }
+    ],
+    "deezer": [],
+    "amazon": [
+     {
+      "name": "The Sound of Modern House",
+      "followers": null,
+      "position": 11,
+      "peak": 10,
+      "added_at": "2026-11-12",
+      "url": "https://music.amazon.de/playlists/B07RHVJ8YL",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41Qb7SiXfhL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Deep Tech",
+      "followers": null,
+      "position": 25,
+      "peak": 13,
+      "added_at": "2026-11-05",
+      "url": "https://music.amazon.com.br/playlists/B0DSG4TDHC",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41cvAbS9+XL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 30,
+      "peak": 7,
+      "added_at": "2026-11-06",
+      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
+      "new": false,
+      "markets": [
+       "DE",
+       "GB",
+       "IN"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 30,
+      "peak": 7,
+      "added_at": "2026-11-06",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": false,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 30,
+      "peak": 7,
+      "added_at": "2026-11-06",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": false,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 39,
+      "peak": 7,
+      "added_at": "2026-11-06",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": false,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "Dance UK",
+      "followers": null,
+      "position": 50,
+      "peak": 23,
+      "added_at": "2026-11-05",
+      "url": "https://music.amazon.co.uk/playlists/B01M0QNBGM",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51TmlIPOfkL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     }
+    ],
+    "beatport": [
+     {
+      "name": "House",
+      "followers": null,
+      "position": 49,
+      "peak": 8,
+      "added_at": "2026-11-07",
+      "url": "https://www.beatport.com/genre/id/5/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": false
+     }
+    ],
+    "beatport_dj": [
+     {
+      "name": "Enemies Chart",
+      "owner": "Several Definitions",
+      "position": 8,
+      "added_at": "2026-11-18",
+      "url": "https://www.beatport.com/chart/enemies-chart/909388",
+      "new": false
+     },
+     {
+      "name": "Working With Chart",
+      "owner": "FINKY",
+      "position": 8,
+      "added_at": "2026-11-13",
+      "url": "https://www.beatport.com/chart/working-with-chart/908880",
+      "new": false
+     },
+     {
+      "name": "SLOW MY ROUTINE",
+      "owner": "Rafael Cerato",
+      "position": 5,
+      "added_at": "2026-11-05",
+      "url": "https://www.beatport.com/chart/slow-my-routine/908024",
+      "new": false
+     }
+    ],
+    "shazam": []
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -397,7 +1033,7 @@
   },
   "GBUM72606042": {
    "isrc": "GBUM72606042",
-   "updated": "2026-11-25T12:23:03+00:00",
+   "updated": "2026-11-25T13:00:44+00:00",
    "momentum": "accelerating",
    "ups": 7,
    "downs": 1,
@@ -438,10 +1074,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 3105103,
-     "prev": 4018516,
+     "week": 3105107,
+     "prev": 4018523,
      "pct": -23,
-     "total": 3105103,
+     "total": 3105107,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -450,8 +1086,8 @@
       null,
       null,
       null,
-      4018516,
-      3105103
+      4018523,
+      3105107
      ]
     },
     {
@@ -484,10 +1120,10 @@
      "kind": "flow",
      "floor": 30,
      "low_volume": false,
-     "week": 277,
+     "week": 279,
      "prev": 144,
-     "pct": 92,
-     "total": 434,
+     "pct": 94,
+     "total": 436,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -497,7 +1133,7 @@
       null,
       3,
       144,
-      277
+      279
      ]
     },
     {
@@ -718,8 +1354,8 @@
     },
     {
      "group": "Discovery",
-     "text": "Radio plays +92% (277 this week vs 144 last week)",
-     "strength": 92,
+     "text": "Radio plays +94% (279 this week vs 144 last week)",
+     "strength": 94,
      "positive": true,
      "kind": "growth",
      "low_volume": false,
@@ -743,7 +1379,7 @@
     },
     {
      "group": "Streaming",
-     "text": "Spotify playlist reach -23% (3,105,103 now vs 4,018,516 a week ago)",
+     "text": "Spotify playlist reach -23% (3,105,107 now vs 4,018,523 a week ago)",
      "strength": -23,
      "positive": false,
      "kind": "growth",
@@ -758,6 +1394,515 @@
     "amazon_editorial": 8,
     "beatport_charts": 2,
     "shazam_charts": 0
+   },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      22,
+      19,
+      10,
+      20,
+      32,
+      62,
+      48,
+      28,
+      62,
+      42,
+      34,
+      40
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      18311,
+      18311,
+      18311,
+      38816,
+      26525,
+      33970,
+      69922,
+      35453,
+      47183,
+      47183,
+      32935
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      875841,
+      3835242,
+      3953158,
+      3969864,
+      3995696,
+      4018523,
+      4079101,
+      4881947,
+      3002304,
+      2969951,
+      3025518,
+      3092549,
+      3105107,
+      3105107
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24"
+     ],
+     "values": [
+      6,
+      784,
+      784,
+      784,
+      784,
+      3,
+      1,
+      2,
+      2,
+      134,
+      134,
+      134
+     ]
+    },
+    "dj_supports": {
+     "label": "Daily DJ supports",
+     "dates": [
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+     ],
+     "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "Club Hits 2026",
+      "followers": 1144551,
+      "position": 8,
+      "peak": 8,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX7SEhw42DW5b",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027aac3606f0a543fa6930002b",
+      "new": true
+     },
+     {
+      "name": "UK House Music",
+      "followers": 741472,
+      "position": 8,
+      "peak": 4,
+      "added_at": "2026-11-13",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000036574502b2e17248beb073bed",
+      "new": false
+     },
+     {
+      "name": "Emotional Dance",
+      "followers": 266858,
+      "position": 21,
+      "peak": 14,
+      "added_at": "2026-11-12",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWU5hC93Ey99S",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000033fe2546417d7f11b8415adc9",
+      "new": false
+     },
+     {
+      "name": "sidewaves",
+      "followers": 118895,
+      "position": 39,
+      "peak": 25,
+      "added_at": "2026-11-12",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWUaaerD0tOpr",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000299f2bb613e728c1ab6ca81fc",
+      "new": false
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "House Nation",
+      "followers": null,
+      "position": 23,
+      "peak": 23,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/house-nation/pl.75f03abb293e4430a5f550d058c6f6a0",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/55/84/a6/5584a6d2-1a91-feaf-17d8-b57e656c0477/U0MtTVMtV1ctSG91c2VfTmF0aW9uLUFEQU1fSUQ9MTE5MzY4MDI3My5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 116,
+      "peak": 27,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 49,
+      "peak": 29,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": false
+     }
+    ],
+    "deezer": [
+     {
+      "name": "Beats Of Tomorrow",
+      "followers": 2948,
+      "position": 8,
+      "peak": 1,
+      "added_at": "2026-11-13",
+      "url": "https://www.deezer.com/playlist/13103861683",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/c7efc43b064563014fc968409cf8fbc4/1000x1000-000000-80-0-0.jpg",
+      "new": false
+     }
+    ],
+    "amazon": [
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "DE",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": false,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": false,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Deep Tech",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-12",
+      "url": "https://music.amazon.com.br/playlists/B0DSG4TDHC",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41cvAbS9+XL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 13,
+      "peak": 13,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": false,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "2026!",
+      "followers": null,
+      "position": 24,
+      "peak": 24,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.co.uk/playlists/B0DQR2H9FS",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41lDuv9MZCL.jpg",
+      "new": true,
+      "markets": [
+       "GB"
+      ]
+     },
+     {
+      "name": "Dance UK",
+      "followers": null,
+      "position": 44,
+      "peak": 41,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.uk/playlists/B01M0QNBGM",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51TmlIPOfkL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "The Sound of Modern House",
+      "followers": null,
+      "position": 107,
+      "peak": 4,
+      "added_at": "2026-11-12",
+      "url": "https://music.amazon.de/playlists/B07RHVJ8YL",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41Qb7SiXfhL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     }
+    ],
+    "beatport": [
+     {
+      "name": "Dance / Pop",
+      "followers": null,
+      "position": 6,
+      "peak": 1,
+      "added_at": "2026-11-14",
+      "url": "https://www.beatport.com/genre/id/39/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": false
+     },
+     {
+      "name": "Overall Top 100",
+      "followers": null,
+      "position": 51,
+      "peak": 14,
+      "added_at": "2026-11-14",
+      "url": "https://www.beatport.com/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": false
+     }
+    ],
+    "beatport_dj": [
+     {
+      "name": "Romza Selects 'Your Love'",
+      "owner": "Romza",
+      "position": 6,
+      "added_at": "2026-11-23",
+      "url": "https://www.beatport.com/chart/romza-selects-your-love/909854",
+      "new": true
+     },
+     {
+      "name": "Fissa Top 10 November 2026",
+      "owner": "Fissa",
+      "position": 4,
+      "added_at": "2026-11-18",
+      "url": "https://www.beatport.com/chart/fissa-top-10-november-2026/909373",
+      "new": false
+     },
+     {
+      "name": "Working With Chart",
+      "owner": "FINKY",
+      "position": 2,
+      "added_at": "2026-11-13",
+      "url": "https://www.beatport.com/chart/working-with-chart/908880",
+      "new": false
+     }
+    ],
+    "shazam": []
    },
    "count_log": [
     {
@@ -777,7 +1922,7 @@
   },
   "AUDCB2500657": {
    "isrc": "AUDCB2500657",
-   "updated": "2026-11-25T12:23:07+00:00",
+   "updated": "2026-11-25T13:00:47+00:00",
    "momentum": "accelerating",
    "ups": 4,
    "downs": 1,
@@ -816,10 +1961,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 3733576,
-     "prev": 3035812,
+     "week": 3733588,
+     "prev": 3035826,
      "pct": 23,
-     "total": 3733576,
+     "total": 3733588,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -828,8 +1973,8 @@
       null,
       null,
       null,
-      3035812,
-      3733576
+      3035826,
+      3733588
      ]
     },
     {
@@ -1064,7 +2209,7 @@
     },
     {
      "group": "Streaming",
-     "text": "Spotify playlist reach +23% (3,733,576 now vs 3,035,812 a week ago)",
+     "text": "Spotify playlist reach +23% (3,733,588 now vs 3,035,826 a week ago)",
      "strength": 23,
      "positive": true,
      "kind": "growth",
@@ -1098,6 +2243,491 @@
     "beatport_charts": 0,
     "shazam_charts": 1
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      28,
+      532,
+      349,
+      208,
+      151,
+      166,
+      135,
+      141,
+      272,
+      376,
+      219,
+      136,
+      142
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      644,
+      644,
+      25037,
+      12344,
+      8971,
+      11829,
+      25356,
+      14084,
+      10208,
+      10208,
+      7803
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      660850,
+      2699744,
+      2779768,
+      2830278,
+      2852790,
+      3035826,
+      3046667,
+      3295476,
+      2452517,
+      2446235,
+      3745929,
+      3764186,
+      3733588,
+      3733588
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19"
+     ],
+     "values": [
+      3,
+      4,
+      4,
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "Workout Beats",
+      "followers": 1299400,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-22",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWUSyphfcc6aL",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f0000000324c6521d8b5ca8c6875be748",
+      "new": true
+     },
+     {
+      "name": "Dance Generation",
+      "followers": 448599,
+      "position": 5,
+      "peak": 5,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX1lp03JVa0o6",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002aa21d50a3166425186e992e2",
+      "new": true
+     },
+     {
+      "name": "Nouveautés Electro",
+      "followers": 197242,
+      "position": 26,
+      "peak": 15,
+      "added_at": "2026-11-12",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWTIfBdh7WtFL",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000032ba20c529dca4b4e047c630a",
+      "new": false
+     },
+     {
+      "name": "New Dance Beats",
+      "followers": 148950,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXaqIZ7YXxc6o",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000034546872f7164bd925f031d24",
+      "new": true
+     },
+     {
+      "name": "The Dance List",
+      "followers": 114603,
+      "position": 24,
+      "peak": 16,
+      "added_at": "2026-11-13",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX7364T8tu1TH",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002aefbcb503963a5025b767247",
+      "new": false
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "Strike a Pose",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/strike-a-pose/pl.820321e8ea654a9182d973cd2c996ac3",
+      "curator": "Apple Music Pride",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/8a/e6/11/8ae61190-5064-8770-3248-481e6dfe0043/252ff901-c23c-496c-9a4a-e5d98ac0a8f3.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 9,
+      "peak": 2,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Club Disco",
+      "followers": null,
+      "position": 2,
+      "peak": 2,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/club-disco/pl.54bae8c027e0481ba3ce364db2cb20bf",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/2b/4a/db/2b4adbd2-97b1-8e37-f9a8-e1b5aff0a8aa/faf4e310-1dae-434f-942a-4f6e5d8de63a.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 8,
+      "peak": 3,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "danceXL",
+      "followers": null,
+      "position": 9,
+      "peak": 4,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/dancexl/pl.6bf4415b83ce4f3789614ac4c3675740",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/69/66/03/696603b1-efb9-b17d-4b78-6ed218406e93/79bac296-a7c6-4f21-a411-7b166f4489ad.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "New in Pop",
+      "followers": null,
+      "position": 46,
+      "peak": 6,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/new-in-pop/pl.16ef2c958d6e4b20ac75d783cb787053",
+      "curator": "Apple Music Pop",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/41/ab/b1/41abb1b2-3993-c9de-ca62-5323e25155b0/U0MtTVMtV1ctTmV3X0luX1BvcC1BREFNX0lEPTE0NjkyNjU1NTcucG5n.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Pure Workout",
+      "followers": null,
+      "position": 75,
+      "peak": 7,
+      "added_at": "2026-11-12",
+      "url": "https://music.apple.com/us/playlist/pure-workout/pl.ad0ee1557e3e4feba314fd70f7982766",
+      "curator": "Apple Music Fitness",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/6d/56/85/6d5685d4-d8bd-d19a-5f8b-8226c1b384dd/f9dedde7-b559-40e4-b8fb-64ca89e2cbbd.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Joel Corry Essentials",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/joel-corry-essentials/pl.7b3de6e3d54947deaa419f96dc2ddc9b",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/df/a0/bf/dfa0bf4c-3807-822c-c951-fc716a0806d1/ami_U003aidentity_U003a65c8093992672f871b9644298163e35d-2026-11-11T13-15-37.702Z_cropped.png/120x120SC.FPESS05.webp",
+      "new": false
+     },
+     {
+      "name": "Dance Workout",
+      "followers": null,
+      "position": 60,
+      "peak": 14,
+      "added_at": "2026-11-13",
+      "url": "https://music.apple.com/us/playlist/dance-workout/pl.bb5b34f808f04cf6bdc57d9f1a98c918",
+      "curator": "Apple Music Fitness",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/22/4e/0e/224e0e3b-6d91-709a-ed84-6f93cf073b84/U0MtTVMtV1ctRGFuY2VfV29ya291dC1BREFNX0lEPTEwMDQ3ODkxMTkucG5n.png/120x120SC.DN02.webp",
+      "new": false
+     },
+     {
+      "name": "Fiks Of Niks",
+      "followers": null,
+      "position": 88,
+      "peak": 20,
+      "added_at": "2026-11-12",
+      "url": "https://music.apple.com/us/playlist/fiks-of-niks/pl.6168393e47bb4a24b59fc49f2f7f2476",
+      "curator": "Apple Music Fitness",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/b6/76/b2/b676b2ee-35a5-f7c6-1959-56854c4fb8a0/U0MtTVMtV1ctRmlrc19vZl9OaWtzLUFEQU1fSUQ9MTQ3NzgzNzg2MS5wbmc.png/120x120SC.DN02.webp",
+      "new": false
+     }
+    ],
+    "deezer": [
+     {
+      "name": "Bass House",
+      "followers": 23757,
+      "position": 45,
+      "peak": 45,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/9247435102",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/e5a186bba2bf6e109491ad12ff386bb7/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     },
+     {
+      "name": "Club Rush",
+      "followers": 10415,
+      "position": 29,
+      "peak": 29,
+      "added_at": "2026-11-16",
+      "url": "https://www.deezer.com/playlist/11753127741",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/86928299f1f25a8af3c1e63febc447f5/1000x1000-000000-80-0-0.jpg",
+      "new": false
+     },
+     {
+      "name": "100% Joel Corry",
+      "followers": 443,
+      "position": 2,
+      "peak": 2,
+      "added_at": "2026-11-21",
+      "url": "https://www.deezer.com/playlist/10782890482",
+      "curator": "Deezer Artist Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/3fc3a6960c478dc4583594639981e880/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     }
+    ],
+    "amazon": [
+     {
+      "name": "Nectar",
+      "followers": null,
+      "position": 31,
+      "peak": 15,
+      "added_at": "2026-11-12",
+      "url": "https://music.amazon.com.au/playlists/B0BL966ZW6",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41xgbKBtyGL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Dance UK",
+      "followers": null,
+      "position": 39,
+      "peak": 25,
+      "added_at": "2026-11-12",
+      "url": "https://music.amazon.co.uk/playlists/B01M0QNBGM",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51TmlIPOfkL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 48,
+      "peak": 8,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
+      "new": false,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 48,
+      "peak": 8,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": false,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 48,
+      "peak": 8,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": false,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 57,
+      "peak": 5,
+      "added_at": "2026-11-13",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": false,
+      "markets": [
+       "IT"
+      ]
+     }
+    ],
+    "beatport": [],
+    "beatport_dj": [],
+    "shazam": [
+     {
+      "name": "United Kingdom - Dance",
+      "followers": null,
+      "position": 175,
+      "peak": 72,
+      "added_at": "2026-11-15",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": false
+     }
+    ]
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -1116,7 +2746,7 @@
   },
   "CBEFB2608427": {
    "isrc": "CBEFB2608427",
-   "updated": "2026-11-25T12:23:10+00:00",
+   "updated": "2026-11-25T13:00:49+00:00",
    "momentum": "accelerating",
    "ups": 9,
    "downs": 0,
@@ -1157,10 +2787,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 14440255,
+     "week": 14440277,
      "prev": null,
      "pct": null,
-     "total": 14440255,
+     "total": 14440277,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -1170,7 +2800,7 @@
       null,
       null,
       null,
-      14440255
+      14440277
      ]
     },
     {
@@ -1206,7 +2836,7 @@
      "week": null,
      "prev": null,
      "pct": null,
-     "total": 131,
+     "total": 132,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -1481,6 +3111,850 @@
     "beatport_charts": 3,
     "shazam_charts": 13
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      1339,
+      1280,
+      1014,
+      979,
+      1023
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      3791,
+      128370,
+      128370,
+      77640
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      1213864,
+      13187592,
+      13379680,
+      13411628,
+      13452844,
+      14440277,
+      14440277
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      6,
+      6,
+      8,
+      24,
+      18,
+      47,
+      41,
+      41,
+      41,
+      10,
+      20,
+      20,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      47
+     ]
+    },
+    "dj_supports": {
+     "label": "Daily DJ supports",
+     "dates": [
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      1,
+      2,
+      1,
+      2
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "New Music Friday",
+      "followers": 4659317,
+      "position": 81,
+      "peak": 81,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4JAvHpjipBk",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027c861c7e7a7e2becfcf2cbc1",
+      "new": true
+     },
+     {
+      "name": "Housewerk",
+      "followers": 2036858,
+      "position": 8,
+      "peak": 8,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa8NOEUWPn9W",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000282ad870a2861e036582d75f2",
+      "new": true
+     },
+     {
+      "name": "Dance Rising",
+      "followers": 1803457,
+      "position": 6,
+      "peak": 6,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000321df5c53dc5e037edb15dde2",
+      "new": true
+     },
+     {
+      "name": "Club Hits 2026",
+      "followers": 1144551,
+      "position": 3,
+      "peak": 3,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX7SEhw42DW5b",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027aac3606f0a543fa6930002b",
+      "new": true
+     },
+     {
+      "name": "Singled Out",
+      "followers": 921071,
+      "position": 39,
+      "peak": 39,
+      "added_at": "2026-11-24",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8f6LHxMjnzD",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000346beaf59ebfea38b4894ba80",
+      "new": true
+     },
+     {
+      "name": "UK House Music",
+      "followers": 741472,
+      "position": 22,
+      "peak": 22,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000026574502b2e17248beb073bed",
+      "new": true
+     },
+     {
+      "name": "All New Dance",
+      "followers": 578789,
+      "position": 3,
+      "peak": 3,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "new": true
+     },
+     {
+      "name": "New Music Friday",
+      "followers": 529363,
+      "position": 81,
+      "peak": 81,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "new": true
+     },
+     {
+      "name": "Deep & Minimal",
+      "followers": 94866,
+      "position": 2,
+      "peak": 2,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSI21IGRaeuC",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002502274c2b48b0b59e6f92e33",
+      "new": true
+     },
+     {
+      "name": "Beats of Tomorrow",
+      "followers": 69313,
+      "position": 13,
+      "peak": 13,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXdUF3ACtrQn3",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f00000002dd86e5ddbe0d7bcb5bbbadd7",
+      "new": true
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "Dance Risers",
+      "followers": null,
+      "position": 6,
+      "peak": 6,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/dance-risers/pl.542285f9f737465cb24bae12cdd9e58b",
+      "curator": "Shazam",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/93/f5/0c/93f50ceb-5cfe-3b60-4055-035d281e3403/pr_source.jpg/120x120cc.webp",
+      "new": true
+     },
+     {
+      "name": "Experts Only: New Music Friday",
+      "followers": null,
+      "position": 6,
+      "peak": 6,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/experts-only-new-music-friday/pl.2d856b5123854ff3bbd9a3495bfe42b3",
+      "curator": "Experts Only",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/d1/c4/11/d1c4110b-462b-8eb3-4dff-e928f82566d0/4b6eb885-f009-4535-80cb-3ca4703370b1.png/120x120cc.webp",
+      "new": true
+     },
+     {
+      "name": "Breaking Dance",
+      "followers": null,
+      "position": 8,
+      "peak": 8,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/breaking-dance/pl.77a913605bba4a968c5cb2b93d87b2ca",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/ed/fa/e2/edfae28c-4668-19b0-bb24-242ad3c094d2/U0MtTVMtV1ctQnJlYWtpbmdfRGFuY2VfRURNLUFEQU1fSUQ9MTEyNDU0MTA4My5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 28,
+      "peak": 27,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "House Nation",
+      "followers": null,
+      "position": 46,
+      "peak": 46,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/house-nation/pl.75f03abb293e4430a5f550d058c6f6a0",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/55/84/a6/5584a6d2-1a91-feaf-17d8-b57e656c0477/U0MtTVMtV1ctSG91c2VfTmF0aW9uLUFEQU1fSUQ9MTE5MzY4MDI3My5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New Music Daily",
+      "followers": null,
+      "position": 67,
+      "peak": 59,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-music-daily/pl.2b0e6e332fdf4b7a91164da3162127b5",
+      "curator": "Apple Music",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/66/cc/17/66cc17f3-1cb7-a8fa-2e40-3f5a11a31ded/09570c31-c838-48ca-988b-77ee96cd36ac.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "The Best New Music",
+      "followers": null,
+      "position": 72,
+      "peak": 72,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/the-best-new-music/pl.c3bb6e64c59a469dbf63ef893b57cfd2",
+      "curator": "Shazam",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/c4/66/ec/c466ec6d-183c-9158-1bfb-9068bab5d536/pr_source.jpg/120x120cc.webp",
+      "new": true
+     }
+    ],
+    "deezer": [
+     {
+      "name": "Radar Weekly",
+      "followers": 186271,
+      "position": 75,
+      "peak": 75,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/1282495565",
+      "curator": "Laeti - Deezer Pop Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/a8923296a74a0fc45bc74e378ce26a76/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     },
+     {
+      "name": "Fresh House",
+      "followers": 45928,
+      "position": 35,
+      "peak": 35,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/6090195324",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/99793d9fba03b38c70ac40d946713dd9/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     },
+     {
+      "name": "Feel Good House",
+      "followers": 16420,
+      "position": 13,
+      "peak": 13,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/9002582642",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/ed8099e96556b601a15fac2cd1f676ae/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     },
+     {
+      "name": "Beats Of Tomorrow",
+      "followers": 2948,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/13103861683",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/c7efc43b064563014fc968409cf8fbc4/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     }
+    ],
+    "amazon": [
+     {
+      "name": "The Sound of Modern House",
+      "followers": null,
+      "position": 3,
+      "peak": 3,
+      "added_at": "2026-11-22",
+      "url": "https://music.amazon.fr/playlists/B07RJYS17K",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41Qb7SiXfhL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Heaters",
+      "followers": null,
+      "position": 6,
+      "peak": 6,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.com.au/playlists/B08CNFY4BJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41UhS+aJx3L.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Club Rules",
+      "followers": null,
+      "position": 7,
+      "peak": 7,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.es/playlists/B08CQ5HYSP",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41UhS+aJx3L.jpg",
+      "new": true,
+      "markets": [
+       "ES",
+       "JP"
+      ]
+     },
+     {
+      "name": "Deep Tech",
+      "followers": null,
+      "position": 8,
+      "peak": 8,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.com.br/playlists/B0DSG4TDHC",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41cvAbS9+XL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 51,
+      "peak": 50,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 51,
+      "peak": 50,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": true,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 51,
+      "peak": 50,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": true,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 60,
+      "peak": 59,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": true,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "Brand New Music",
+      "followers": null,
+      "position": 118,
+      "peak": 118,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.co.uk/playlists/B01LYFJHPB",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51NLWYp8jML.jpg",
+      "new": true,
+      "markets": [
+       "GB"
+      ]
+     }
+    ],
+    "beatport": [
+     {
+      "name": "Overall Top 100",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "House",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/5/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Latest Releases: House",
+      "followers": null,
+      "position": 41,
+      "peak": 41,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/5/",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ],
+    "beatport_dj": [
+     {
+      "name": "Romza Selects 'Your Love'",
+      "owner": "Romza",
+      "position": 4,
+      "added_at": "2026-11-23",
+      "url": "https://www.beatport.com/chart/romza-selects-your-love/909854",
+      "new": true
+     },
+     {
+      "name": "The Siren",
+      "owner": "Jordan Peak",
+      "position": 6,
+      "added_at": "2026-11-19",
+      "url": "https://www.beatport.com/chart/the-siren/909480",
+      "new": true
+     },
+     {
+      "name": "Enemies Chart",
+      "owner": "Several Definitions",
+      "position": 10,
+      "added_at": "2026-11-18",
+      "url": "https://www.beatport.com/chart/enemies-chart/909388",
+      "new": false
+     },
+     {
+      "name": "No Te Hagas Chart",
+      "owner": "Calussa",
+      "position": 10,
+      "added_at": "2026-11-16",
+      "url": "https://www.beatport.com/chart/no-te-hagas-chart/909165",
+      "new": false
+     },
+     {
+      "name": "Working With Chart",
+      "owner": "FINKY",
+      "position": 1,
+      "added_at": "2026-11-13",
+      "url": "https://www.beatport.com/chart/working-with-chart/908880",
+      "new": false
+     },
+     {
+      "name": "Down Again",
+      "owner": "CANVI",
+      "position": 9,
+      "added_at": "2026-11-13",
+      "url": "https://www.beatport.com/chart/down-again/908782",
+      "new": false
+     },
+     {
+      "name": "Chicago - Street Player (ESSED Remix)",
+      "owner": "ESSED",
+      "position": 9,
+      "added_at": "2026-11-12",
+      "url": "https://www.beatport.com/chart/chicago-street-player-essed-remix/908639",
+      "new": false
+     }
+    ],
+    "shazam": [
+     {
+      "name": "United Kingdom - Dance",
+      "followers": null,
+      "position": 20,
+      "peak": 20,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Belfast United Kingdom",
+      "followers": null,
+      "position": 83,
+      "peak": 83,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-belfast-united-kingdom/pl.c521e63f726f4e868935565c5034fdae",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Liverpool United Kingdom",
+      "followers": null,
+      "position": 85,
+      "peak": 85,
+      "added_at": "2026-11-23",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-liverpool-united-kingdom/pl.1466c6b3ac3942f195f3f8bfd1fbde84",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Edinburgh United Kingdom",
+      "followers": null,
+      "position": 88,
+      "peak": 88,
+      "added_at": "2026-11-23",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-edinburgh-united-kingdom/pl.4c580198752b48ab8be2635507b3dfb0",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Utrecht Netherlands",
+      "followers": null,
+      "position": 95,
+      "peak": 95,
+      "added_at": "2026-11-23",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-utrecht-netherlands/pl.b7a980eedb4a4e89a02c672f8e0c4d6a",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Manchester United Kingdom",
+      "followers": null,
+      "position": 100,
+      "peak": 100,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-manchester-united-kingdom/pl.c738ec2c872b4b7ea66406117691d67c",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Nottingham United Kingdom",
+      "followers": null,
+      "position": 116,
+      "peak": 116,
+      "added_at": "2026-11-23",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-nottingham-united-kingdom/pl.1c525c0e2d7c470e85d7e67dbd998ab7",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Portsmouth United Kingdom",
+      "followers": null,
+      "position": 120,
+      "peak": 120,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-portsmouth-united-kingdom/pl.de6386de4bc148d6bcea3a82f86cf5d3",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "United Kingdom",
+      "followers": null,
+      "position": 163,
+      "peak": 163,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom/pl.f3df92631c43423e866305ea8ba80745",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Birmingham United Kingdom",
+      "followers": null,
+      "position": 163,
+      "peak": 163,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-birmingham-united-kingdom/pl.2c989e536d1d4e6b9f3c010c8e05d556",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Ireland",
+      "followers": null,
+      "position": 181,
+      "peak": 181,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-ireland/pl.8961a1ef9ea8406a8fad5faae2db9416",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Dublin Ireland",
+      "followers": null,
+      "position": 181,
+      "peak": 181,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-dublin-ireland/pl.96ea3457ea38427eb051cbaaf1c63577",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "United States - Dance",
+      "followers": null,
+      "position": 192,
+      "peak": 192,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-states-dance/pl.e66869349fea4f3ba0f69f28881158a7",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ]
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -1499,7 +3973,7 @@
   },
   "USA2P2681586": {
    "isrc": "USA2P2681586",
-   "updated": "2026-11-25T12:23:13+00:00",
+   "updated": "2026-11-25T13:00:52+00:00",
    "momentum": "accelerating",
    "ups": 6,
    "downs": 0,
@@ -1539,10 +4013,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 30648484,
+     "week": 30648536,
      "prev": null,
      "pct": null,
-     "total": 30648484,
+     "total": 30648536,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -1552,7 +4026,7 @@
       null,
       null,
       null,
-      30648484
+      30648536
      ]
     },
     {
@@ -1792,6 +4266,520 @@
     "beatport_charts": 2,
     "shazam_charts": 0
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      747,
+      620,
+      368,
+      260,
+      117
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      49276,
+      49276,
+      49276,
+      34900
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      2193118,
+      21122857,
+      21183761,
+      21305171,
+      30593515,
+      30680300,
+      30648536
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21"
+     ],
+     "values": [
+      7,
+      7
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "Dance Party",
+      "followers": 9237730,
+      "position": 142,
+      "peak": 142,
+      "added_at": "2026-11-23",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXaXB8fQg7xif",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f00000003d2c23cff8e4056e5c891216d",
+      "new": true
+     },
+     {
+      "name": "mint",
+      "followers": 5413411,
+      "position": 15,
+      "peak": 15,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035643bea5de1f746c94fc23d9",
+      "new": true
+     },
+     {
+      "name": "New Music Friday",
+      "followers": 4659317,
+      "position": 28,
+      "peak": 28,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4JAvHpjipBk",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027c861c7e7a7e2becfcf2cbc1",
+      "new": true
+     },
+     {
+      "name": "Housewerk",
+      "followers": 2036858,
+      "position": 3,
+      "peak": 3,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa8NOEUWPn9W",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000282ad870a2861e036582d75f2",
+      "new": true
+     },
+     {
+      "name": "Dance Rising",
+      "followers": 1803457,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000321df5c53dc5e037edb15dde2",
+      "new": true
+     },
+     {
+      "name": "New Music Friday UK & Ireland",
+      "followers": 1041079,
+      "position": 40,
+      "peak": 40,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4W3aJJYCDfV",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000367a7fb4e18161b7cfd1a7446",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Deutschland",
+      "followers": 939493,
+      "position": 19,
+      "peak": 19,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWUW2bvSkjcJ6",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002a9fb40145bc5335de1557503",
+      "new": true
+     },
+     {
+      "name": "Electronic Rising",
+      "followers": 760819,
+      "position": 4,
+      "peak": 4,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8AliSIsGeKd",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002fd1787cc71adbff9eb8f507b",
+      "new": true
+     },
+     {
+      "name": "UK House Music",
+      "followers": 741472,
+      "position": 3,
+      "peak": 3,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000026574502b2e17248beb073bed",
+      "new": true
+     },
+     {
+      "name": "All New Dance",
+      "followers": 578789,
+      "position": 4,
+      "peak": 4,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "new": true
+     },
+     {
+      "name": "New Music Friday",
+      "followers": 529363,
+      "position": 29,
+      "peak": 29,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "new": true
+     },
+     {
+      "name": "Umami",
+      "followers": 421424,
+      "position": 7,
+      "peak": 7,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWVUxkQFrGCkK",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000320093fe504ca4323e488d6e7",
+      "new": true
+     },
+     {
+      "name": "Dance Brandneu",
+      "followers": 351884,
+      "position": 8,
+      "peak": 8,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXcfWvNFKxjDo",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002932c79f7169429ae769265fd",
+      "new": true
+     },
+     {
+      "name": "Dance Room 2026",
+      "followers": 337835,
+      "position": 50,
+      "peak": 50,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX2ENAPP1Tyed",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003a1cfdb1aefa4f5a3adf4139b",
+      "new": true
+     },
+     {
+      "name": "New Music Friday NL",
+      "followers": 302893,
+      "position": 51,
+      "peak": 51,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXb5BKLTO7ULa",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000220a55105e30268d124a7d16a",
+      "new": true
+     },
+     {
+      "name": "New Dance 2026",
+      "followers": 156396,
+      "position": 17,
+      "peak": 10,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWWrJKwf0q9nn",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000036af8dd0dc645c193c851945f",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Suomi",
+      "followers": 109280,
+      "position": 46,
+      "peak": 46,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWXtcXUwhuzFM",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000030092af664f86a3834ea7695e",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Switzerland",
+      "followers": 55480,
+      "position": 31,
+      "peak": 31,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX3crNbt46mRU",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003f129aa82e84b144bd3a04bc2",
+      "new": true
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "Dance Risers",
+      "followers": null,
+      "position": 4,
+      "peak": 4,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/dance-risers/pl.542285f9f737465cb24bae12cdd9e58b",
+      "curator": "Shazam",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/93/f5/0c/93f50ceb-5cfe-3b60-4055-035d281e3403/pr_source.jpg/120x120cc.webp",
+      "new": true
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 10,
+      "peak": 10,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Electronic",
+      "followers": null,
+      "position": 26,
+      "peak": 26,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-electronic/pl.e395e6c47bc04b968e997ea55296d1be",
+      "curator": "Apple Music Electronic",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/60/5b/f4/605bf42f-2b35-8b07-a9e4-3c0f8e81200a/U0MtTVMtV1ctTmV3X0luX0VsZWN0cm9uaWMtQURBTV9JRD0xNDY5MjY1ODQ2LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 30,
+      "peak": 29,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New Music Daily",
+      "followers": null,
+      "position": 117,
+      "peak": 106,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-music-daily/pl.2b0e6e332fdf4b7a91164da3162127b5",
+      "curator": "Apple Music",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/66/cc/17/66cc17f3-1cb7-a8fa-2e40-3f5a11a31ded/09570c31-c838-48ca-988b-77ee96cd36ac.png/120x120SC.DN02.webp",
+      "new": true
+     }
+    ],
+    "deezer": [
+     {
+      "name": "Radar Weekly",
+      "followers": 186271,
+      "position": 55,
+      "peak": 55,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/1282495565",
+      "curator": "Laeti - Deezer Pop Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/a8923296a74a0fc45bc74e378ce26a76/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     }
+    ],
+    "amazon": [
+     {
+      "name": "The Sound of Modern House",
+      "followers": null,
+      "position": 23,
+      "peak": 22,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.de/playlists/B07RHVJ8YL",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41Qb7SiXfhL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 40,
+      "peak": 39,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 40,
+      "peak": 39,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": true,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 40,
+      "peak": 39,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": true,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 49,
+      "peak": 48,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": true,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "Brand New Music",
+      "followers": null,
+      "position": 98,
+      "peak": 98,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.co.uk/playlists/B01LYFJHPB",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51NLWYp8jML.jpg",
+      "new": true,
+      "markets": [
+       "GB"
+      ]
+     }
+    ],
+    "beatport": [
+     {
+      "name": "House",
+      "followers": null,
+      "position": 13,
+      "peak": 13,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/5/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Overall Top 100",
+      "followers": null,
+      "position": 27,
+      "peak": 27,
+      "added_at": "2026-11-22",
+      "url": "https://www.beatport.com/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ],
+    "beatport_dj": [
+     {
+      "name": "\"This Feeling\" Chart",
+      "owner": "Glass Coffee",
+      "position": 2,
+      "added_at": "2026-11-19",
+      "url": "https://www.beatport.com/chart/this-feeling-chart/909473",
+      "new": true
+     }
+    ],
+    "shazam": []
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -1810,7 +4798,7 @@
   },
   "GBAHT2602774": {
    "isrc": "GBAHT2602774",
-   "updated": "2026-11-25T12:23:16+00:00",
+   "updated": "2026-11-25T13:00:55+00:00",
    "momentum": "accelerating",
    "ups": 8,
    "downs": 0,
@@ -1851,10 +4839,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 15683070,
+     "week": 15683073,
      "prev": null,
      "pct": null,
-     "total": 15683070,
+     "total": 15683073,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -1864,7 +4852,7 @@
       null,
       null,
       null,
-      15683070
+      15683073
      ]
     },
     {
@@ -1900,7 +4888,7 @@
      "week": null,
      "prev": null,
      "pct": null,
-     "total": 290,
+     "total": 291,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -1923,8 +4911,8 @@
      "week": null,
      "prev": null,
      "pct": null,
-     "total": 449,
-     "as_of": "2026-11-24",
+     "total": 500,
+     "as_of": "2026-11-25",
      "spark": [
       null,
       null,
@@ -2168,6 +5156,743 @@
     "beatport_charts": 2,
     "shazam_charts": 10
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      1455,
+      681,
+      314,
+      398,
+      361
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      1379,
+      52656,
+      52656,
+      22158
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      2559727,
+      14110343,
+      14192746,
+      14203175,
+      14729919,
+      15683073,
+      15683073
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      51
+     ]
+    },
+    "dj_supports": {
+     "label": "Daily DJ supports",
+     "dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+     ],
+     "values": [
+      2,
+      2,
+      1,
+      1
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "New Music Friday",
+      "followers": 4659317,
+      "position": 57,
+      "peak": 57,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4JAvHpjipBk",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027c861c7e7a7e2becfcf2cbc1",
+      "new": true
+     },
+     {
+      "name": "Club Hits 2026",
+      "followers": 1144551,
+      "position": 12,
+      "peak": 12,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX7SEhw42DW5b",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027aac3606f0a543fa6930002b",
+      "new": true
+     },
+     {
+      "name": "New Music Friday UK & Ireland",
+      "followers": 1041079,
+      "position": 34,
+      "peak": 34,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4W3aJJYCDfV",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000367a7fb4e18161b7cfd1a7446",
+      "new": true
+     },
+     {
+      "name": "Singled Out",
+      "followers": 921071,
+      "position": 35,
+      "peak": 35,
+      "added_at": "2026-11-24",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8f6LHxMjnzD",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000346beaf59ebfea38b4894ba80",
+      "new": true
+     },
+     {
+      "name": "UK House Music",
+      "followers": 741472,
+      "position": 7,
+      "peak": 7,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000026574502b2e17248beb073bed",
+      "new": true
+     },
+     {
+      "name": "All New Dance",
+      "followers": 578789,
+      "position": 8,
+      "peak": 8,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "new": true
+     },
+     {
+      "name": "New Music Friday",
+      "followers": 529363,
+      "position": 57,
+      "peak": 57,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "new": true
+     },
+     {
+      "name": "House Supreme",
+      "followers": 499248,
+      "position": 5,
+      "peak": 5,
+      "added_at": "2026-11-23",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXacX3REVaOqV",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002b69499cfbf7258b189df1b4e",
+      "new": true
+     },
+     {
+      "name": "New Music Friday AU & NZ",
+      "followers": 463608,
+      "position": 37,
+      "peak": 36,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWT2SPAYawYcO",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003812b97e997b72cdb27aa2b19",
+      "new": true
+     },
+     {
+      "name": "New Music Friday India",
+      "followers": 416902,
+      "position": 42,
+      "peak": 42,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4ghkRUdIogy",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000263c5dc588340c5b20936a496",
+      "new": true
+     },
+     {
+      "name": "Dance Brandneu",
+      "followers": 351884,
+      "position": 16,
+      "peak": 16,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXcfWvNFKxjDo",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002932c79f7169429ae769265fd",
+      "new": true
+     },
+     {
+      "name": "New Music Friday NL",
+      "followers": 302893,
+      "position": 67,
+      "peak": 67,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXb5BKLTO7ULa",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000220a55105e30268d124a7d16a",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Sweden",
+      "followers": 237110,
+      "position": 40,
+      "peak": 40,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXcecv7ESbOPu",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002a88772c46c020d5520109419",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Norway",
+      "followers": 204824,
+      "position": 85,
+      "peak": 85,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWV3RrjH1jDkx",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003a70ff135fdc633e53e472c21",
+      "new": true
+     },
+     {
+      "name": "New Dance Beats",
+      "followers": 148950,
+      "position": 17,
+      "peak": 17,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXaqIZ7YXxc6o",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000034546872f7164bd925f031d24",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Denmark",
+      "followers": 130886,
+      "position": 83,
+      "peak": 80,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWWuIAAkPM0Lu",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000039ccc97a78254a03e7e08c810",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Suomi",
+      "followers": 109280,
+      "position": 50,
+      "peak": 50,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWXtcXUwhuzFM",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000030092af664f86a3834ea7695e",
+      "new": true
+     },
+     {
+      "name": "Fresh Touch",
+      "followers": 106956,
+      "position": 12,
+      "peak": 12,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa3EUr6VSsMJ",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003ab3651ff960873a339cd9326",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Bangladesh",
+      "followers": 15767,
+      "position": 42,
+      "peak": 42,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX9H0t0BHx4Z4",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003892a53e938531df0c7b1f3d0",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Sri Lanka",
+      "followers": 10992,
+      "position": 42,
+      "peak": 42,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSo1plf4t3cl",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000398895a90c7678a9e91597610",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Iceland",
+      "followers": 9743,
+      "position": 29,
+      "peak": 26,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXdvNG1v6uWvH",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f0000000307b9e1797d23e2801b3ab991",
+      "new": true
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "danceXL",
+      "followers": null,
+      "position": 2,
+      "peak": 2,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dancexl/pl.6bf4415b83ce4f3789614ac4c3675740",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/69/66/03/696603b1-efb9-b17d-4b78-6ed218406e93/79bac296-a7c6-4f21-a411-7b166f4489ad.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 2,
+      "peak": 2,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 4,
+      "peak": 4,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Dance in Spatial Audio",
+      "followers": null,
+      "position": 10,
+      "peak": 10,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dance-in-spatial-audio/pl.218206083ab24099b02fdd9b3608e3cf",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/78/b0/af/78b0afc4-11ac-64ff-a5ca-a72b6ffd19b1/cadf7d39-dcc7-468f-902f-3be12a66d61d.png/120x120cc.webp",
+      "new": true
+     },
+     {
+      "name": "New Music Daily",
+      "followers": null,
+      "position": 13,
+      "peak": 12,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-music-daily/pl.2b0e6e332fdf4b7a91164da3162127b5",
+      "curator": "Apple Music",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/66/cc/17/66cc17f3-1cb7-a8fa-2e40-3f5a11a31ded/09570c31-c838-48ca-988b-77ee96cd36ac.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Dance Workout",
+      "followers": null,
+      "position": 16,
+      "peak": 16,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dance-workout/pl.bb5b34f808f04cf6bdc57d9f1a98c918",
+      "curator": "Apple Music Fitness",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/22/4e/0e/224e0e3b-6d91-709a-ed84-6f93cf073b84/U0MtTVMtV1ctRGFuY2VfV29ya291dC1BREFNX0lEPTEwMDQ3ODkxMTkucG5n.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Pop",
+      "followers": null,
+      "position": 18,
+      "peak": 18,
+      "added_at": "2026-11-19",
+      "url": "https://music.apple.com/us/playlist/new-in-pop/pl.16ef2c958d6e4b20ac75d783cb787053",
+      "curator": "Apple Music Pop",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/41/ab/b1/41abb1b2-3993-c9de-ca62-5323e25155b0/U0MtTVMtV1ctTmV3X0luX1BvcC1BREFNX0lEPTE0NjkyNjU1NTcucG5n.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "The Best New Music",
+      "followers": null,
+      "position": 80,
+      "peak": 80,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/the-best-new-music/pl.c3bb6e64c59a469dbf63ef893b57cfd2",
+      "curator": "Shazam",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/c4/66/ec/c466ec6d-183c-9158-1bfb-9068bab5d536/pr_source.jpg/120x120cc.webp",
+      "new": true
+     }
+    ],
+    "deezer": [
+     {
+      "name": "Radar Weekly",
+      "followers": 186271,
+      "position": 20,
+      "peak": 20,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/1282495565",
+      "curator": "Laeti - Deezer Pop Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/a8923296a74a0fc45bc74e378ce26a76/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     }
+    ],
+    "amazon": [
+     {
+      "name": "Deep House Now",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.com.br/playlists/B08GSNQRVV",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41NQZKn38yL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 16,
+      "peak": 16,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 16,
+      "peak": 16,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": true,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 16,
+      "peak": 16,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": true,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 24,
+      "peak": 24,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": true,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "Brand New Music",
+      "followers": null,
+      "position": 51,
+      "peak": 51,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.co.uk/playlists/B01LYFJHPB",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51NLWYp8jML.jpg",
+      "new": true,
+      "markets": [
+       "AU",
+       "GB"
+      ]
+     },
+     {
+      "name": "Les meilleures nouveautés",
+      "followers": null,
+      "position": 85,
+      "peak": 78,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.fr/playlists/B073P7V84N",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51-jX+DCZbL.jpg",
+      "new": true,
+      "markets": [
+       "FR"
+      ]
+     }
+    ],
+    "beatport": [
+     {
+      "name": "Dance / Pop",
+      "followers": null,
+      "position": 3,
+      "peak": 3,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/39/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Overall Top 100",
+      "followers": null,
+      "position": 26,
+      "peak": 26,
+      "added_at": "2026-11-22",
+      "url": "https://www.beatport.com/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ],
+    "beatport_dj": [],
+    "shazam": [
+     {
+      "name": "United Kingdom - Dance",
+      "followers": null,
+      "position": 10,
+      "peak": 10,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Leeds United Kingdom",
+      "followers": null,
+      "position": 30,
+      "peak": 30,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-leeds-united-kingdom/pl.4d4a492039e3460685e0de1984ce6ed4",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Manchester United Kingdom",
+      "followers": null,
+      "position": 43,
+      "peak": 43,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-manchester-united-kingdom/pl.c738ec2c872b4b7ea66406117691d67c",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Birmingham United Kingdom",
+      "followers": null,
+      "position": 48,
+      "peak": 48,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-birmingham-united-kingdom/pl.2c989e536d1d4e6b9f3c010c8e05d556",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Liverpool United Kingdom",
+      "followers": null,
+      "position": 62,
+      "peak": 62,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-liverpool-united-kingdom/pl.1466c6b3ac3942f195f3f8bfd1fbde84",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Cardiff United Kingdom",
+      "followers": null,
+      "position": 73,
+      "peak": 73,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-cardiff-united-kingdom/pl.54fe6199050a4cbfb6dfb6b628fa2a9b",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Nottingham United Kingdom",
+      "followers": null,
+      "position": 80,
+      "peak": 80,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-nottingham-united-kingdom/pl.1c525c0e2d7c470e85d7e67dbd998ab7",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Belfast United Kingdom",
+      "followers": null,
+      "position": 84,
+      "peak": 83,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-belfast-united-kingdom/pl.c521e63f726f4e868935565c5034fdae",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "United Kingdom",
+      "followers": null,
+      "position": 90,
+      "peak": 90,
+      "added_at": "2026-11-22",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom/pl.f3df92631c43423e866305ea8ba80745",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Portsmouth United Kingdom",
+      "followers": null,
+      "position": 93,
+      "peak": 93,
+      "added_at": "2026-11-21",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-portsmouth-united-kingdom/pl.de6386de4bc148d6bcea3a82f86cf5d3",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ]
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -2186,7 +5911,7 @@
   },
   "NLF712603021": {
    "isrc": "NLF712603021",
-   "updated": "2026-11-25T12:23:19+00:00",
+   "updated": "2026-11-25T13:00:57+00:00",
    "momentum": "accelerating",
    "ups": 4,
    "downs": 0,
@@ -2226,10 +5951,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 1495816,
+     "week": 1495818,
      "prev": null,
      "pct": null,
-     "total": 1495816,
+     "total": 1495818,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -2239,7 +5964,7 @@
       null,
       null,
       null,
-      1495816
+      1495818
      ]
     },
     {
@@ -2272,10 +5997,10 @@
      "kind": "flow",
      "floor": 30,
      "low_volume": false,
-     "week": 376,
+     "week": 377,
      "prev": null,
      "pct": null,
-     "total": 377,
+     "total": 378,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -2285,7 +6010,7 @@
       null,
       null,
       null,
-      376
+      377
      ]
     },
     {
@@ -2511,6 +6236,288 @@
     "beatport_charts": 0,
     "shazam_charts": 0
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      6,
+      96,
+      323,
+      129,
+      106,
+      56
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      1759,
+      55380,
+      55380,
+      20078
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      211443,
+      1293919,
+      1334225,
+      1414669,
+      1483242,
+      1495818,
+      1495818
+     ]
+    },
+    "tiktok_videos": {
+     "label": "Daily TikTok videos",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+     ]
+    },
+    "dj_supports": {
+     "label": "Daily DJ supports",
+     "dates": [
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      4,
+      5,
+      5,
+      13,
+      5,
+      5,
+      7,
+      1,
+      2
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "All New Dance",
+      "followers": 578789,
+      "position": 30,
+      "peak": 28,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "new": true
+     },
+     {
+      "name": "New Music Friday NL",
+      "followers": 302893,
+      "position": 37,
+      "peak": 37,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXb5BKLTO7ULa",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000220a55105e30268d124a7d16a",
+      "new": true
+     },
+     {
+      "name": "New Dance 2026",
+      "followers": 156396,
+      "position": 4,
+      "peak": 3,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWWrJKwf0q9nn",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000026af8dd0dc645c193c851945f",
+      "new": true
+     },
+     {
+      "name": "New Music Friday BE",
+      "followers": 55047,
+      "position": 48,
+      "peak": 48,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXbUOvbOBAiPu",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002b85ff29fc783584ae4b7a814",
+      "new": true
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "New Music Daily",
+      "followers": null,
+      "position": 67,
+      "peak": 66,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-music-daily/pl.2b0e6e332fdf4b7a91164da3162127b5",
+      "curator": "Apple Music",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/66/cc/17/66cc17f3-1cb7-a8fa-2e40-3f5a11a31ded/09570c31-c838-48ca-988b-77ee96cd36ac.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 100,
+      "peak": 95,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     }
+    ],
+    "deezer": [],
+    "amazon": [
+     {
+      "name": "Heaters",
+      "followers": null,
+      "position": 9,
+      "peak": 7,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.com.au/playlists/B08CNFY4BJ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41UhS+aJx3L.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Club Rules",
+      "followers": null,
+      "position": 10,
+      "peak": 7,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.es/playlists/B08CQ5HYSP",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41UhS+aJx3L.jpg",
+      "new": true,
+      "markets": [
+       "ES",
+       "JP"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 58,
+      "peak": 58,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.com.au/playlists/B086BZ59PH",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519u-OYyZaL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Brand New Music",
+      "followers": null,
+      "position": 114,
+      "peak": 114,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.co.uk/playlists/B01LYFJHPB",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51NLWYp8jML.jpg",
+      "new": true,
+      "markets": [
+       "GB"
+      ]
+     }
+    ],
+    "beatport": [],
+    "beatport_dj": [
+     {
+      "name": "Xpilot Selection's 20/11/2026",
+      "owner": "Xpilot",
+      "position": 7,
+      "added_at": "2026-11-20",
+      "url": "https://www.beatport.com/chart/xpilot-selections-20112026/909621",
+      "new": true
+     },
+     {
+      "name": "Fresh Presssed",
+      "owner": "Beatport",
+      "position": 19,
+      "added_at": "2026-05-08",
+      "url": "https://www.beatport.com/chart/fresh-presssed/889990",
+      "new": false
+     }
+    ],
+    "shazam": []
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -2529,7 +6536,7 @@
   },
   "QMFMF2661837": {
    "isrc": "QMFMF2661837",
-   "updated": "2026-11-25T12:23:22+00:00",
+   "updated": "2026-11-25T13:01:00+00:00",
    "momentum": "accelerating",
    "ups": 7,
    "downs": 0,
@@ -2570,10 +6577,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 19098057,
+     "week": 19098078,
      "prev": null,
      "pct": null,
-     "total": 19098057,
+     "total": 19098078,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -2583,7 +6590,7 @@
       null,
       null,
       null,
-      19098057
+      19098078
      ]
     },
     {
@@ -2619,7 +6626,7 @@
      "week": null,
      "prev": null,
      "pct": null,
-     "total": 465,
+     "total": 469,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -2887,6 +6894,722 @@
     "beatport_charts": 3,
     "shazam_charts": 1
    },
+   "daily": {
+    "shazams": {
+     "label": "Daily Shazams",
+     "dates": [
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      600,
+      773,
+      353,
+      289,
+      281
+     ]
+    },
+    "spotify_streams": {
+     "label": "Daily Spotify streams",
+     "dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23"
+     ],
+     "values": [
+      53734,
+      53734,
+      53734,
+      39354
+     ]
+    },
+    "spotify_reach": {
+     "label": "Spotify playlist reach",
+     "dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22",
+      "2026-11-23",
+      "2026-11-24",
+      "2026-11-25"
+     ],
+     "values": [
+      1511830,
+      18006564,
+      18083003,
+      18115229,
+      18161572,
+      19098078,
+      19098078
+     ]
+    },
+    "dj_supports": {
+     "label": "Daily DJ supports",
+     "dates": [
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+     ],
+     "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    }
+   },
+   "placements": {
+    "spotify": [
+     {
+      "name": "mint",
+      "followers": 5413411,
+      "position": 4,
+      "peak": 4,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035643bea5de1f746c94fc23d9",
+      "new": true
+     },
+     {
+      "name": "New Music Friday",
+      "followers": 4659317,
+      "position": 22,
+      "peak": 22,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4JAvHpjipBk",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000027c861c7e7a7e2becfcf2cbc1",
+      "new": true
+     },
+     {
+      "name": "Housewerk",
+      "followers": 2036858,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa8NOEUWPn9W",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000282ad870a2861e036582d75f2",
+      "new": true
+     },
+     {
+      "name": "New Music Friday UK & Ireland",
+      "followers": 1041079,
+      "position": 95,
+      "peak": 95,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4W3aJJYCDfV",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000367a7fb4e18161b7cfd1a7446",
+      "new": true
+     },
+     {
+      "name": "Singled Out",
+      "followers": 921071,
+      "position": 25,
+      "peak": 25,
+      "added_at": "2026-11-24",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8f6LHxMjnzD",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000346beaf59ebfea38b4894ba80",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Canada",
+      "followers": 599749,
+      "position": 22,
+      "peak": 22,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX5DfG8gQdC3F",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000038c0b25fb2ef13b4775a90d17",
+      "new": true
+     },
+     {
+      "name": "All New Dance",
+      "followers": 578789,
+      "position": 6,
+      "peak": 6,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
+      "curator": "Spotify",
+      "type": "Personalized",
+      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "new": true
+     },
+     {
+      "name": "New Music Friday",
+      "followers": 529363,
+      "position": 22,
+      "peak": 22,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "new": true
+     },
+     {
+      "name": "New Music Friday France",
+      "followers": 418470,
+      "position": 54,
+      "peak": 54,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX742okrrpwah",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003ce070b3233420260d9a23c44",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Italia",
+      "followers": 372236,
+      "position": 45,
+      "peak": 45,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWVKDF4ycOESi",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000383f016cb3b168af78ae9f103",
+      "new": true
+     },
+     {
+      "name": "Dance Brandneu",
+      "followers": 351884,
+      "position": 12,
+      "peak": 12,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXcfWvNFKxjDo",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002932c79f7169429ae769265fd",
+      "new": true
+     },
+     {
+      "name": "Dance Room 2026",
+      "followers": 337835,
+      "position": 21,
+      "peak": 21,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX2ENAPP1Tyed",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000003a1cfdb1aefa4f5a3adf4139b",
+      "new": true
+     },
+     {
+      "name": "mint Canada",
+      "followers": 297397,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXdIpacQDPDV5",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000269197129bbfe53d6b633ebdc",
+      "new": true
+     },
+     {
+      "name": "Nouveautés Electro",
+      "followers": 197242,
+      "position": 7,
+      "peak": 7,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWTIfBdh7WtFL",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000032ba20c529dca4b4e047c630a",
+      "new": true
+     },
+     {
+      "name": "New Dance Beats",
+      "followers": 148950,
+      "position": 19,
+      "peak": 19,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXaqIZ7YXxc6o",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f000000034546872f7164bd925f031d24",
+      "new": true
+     },
+     {
+      "name": "The Dance List",
+      "followers": 114603,
+      "position": 12,
+      "peak": 12,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DX7364T8tu1TH",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002aefbcb503963a5025b767247",
+      "new": true
+     },
+     {
+      "name": "New Music Friday Maghreb",
+      "followers": 64592,
+      "position": 41,
+      "peak": 41,
+      "added_at": "2026-11-20",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXbVCaQthfsdD",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f0000000384f04c5b0f06109d92c4b9ee",
+      "new": true
+     },
+     {
+      "name": "New Music Friday BE",
+      "followers": 55047,
+      "position": 94,
+      "peak": 94,
+      "added_at": "2026-11-19",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DXbUOvbOBAiPu",
+      "curator": "Spotify",
+      "type": "Editorial",
+      "image": "https://i.scdn.co/image/ab67706f00000002b85ff29fc783584ae4b7a814",
+      "new": true
+     }
+    ],
+    "apple_music": [
+     {
+      "name": "Future Dance Hits",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "danceXL",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dancexl/pl.6bf4415b83ce4f3789614ac4c3675740",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/69/66/03/696603b1-efb9-b17d-4b78-6ed218406e93/79bac296-a7c6-4f21-a411-7b166f4489ad.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New in Dance",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Dance Pop Hits",
+      "followers": null,
+      "position": 5,
+      "peak": 5,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dance-pop-hits/pl.02b98f9d97e54709be8272fc297636a4",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/85/36/76/8536760e-818a-655e-9d89-4930c2a7d46f/1d7ce116-2691-410a-bb1e-310a326db3b6.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "New Music Daily",
+      "followers": null,
+      "position": 8,
+      "peak": 7,
+      "added_at": "2026-11-19",
+      "url": "https://music.apple.com/us/playlist/new-music-daily/pl.2b0e6e332fdf4b7a91164da3162127b5",
+      "curator": "Apple Music",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/66/cc/17/66cc17f3-1cb7-a8fa-2e40-3f5a11a31ded/09570c31-c838-48ca-988b-77ee96cd36ac.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Dance in Spatial Audio",
+      "followers": null,
+      "position": 8,
+      "peak": 7,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dance-in-spatial-audio/pl.218206083ab24099b02fdd9b3608e3cf",
+      "curator": "Apple Music Dance",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/78/b0/af/78b0afc4-11ac-64ff-a5ca-a72b6ffd19b1/cadf7d39-dcc7-468f-902f-3be12a66d61d.png/120x120cc.webp",
+      "new": true
+     },
+     {
+      "name": "New in Electronic",
+      "followers": null,
+      "position": 9,
+      "peak": 9,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/new-in-electronic/pl.e395e6c47bc04b968e997ea55296d1be",
+      "curator": "Apple Music Electronic",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/60/5b/f4/605bf42f-2b35-8b07-a9e4-3c0f8e81200a/U0MtTVMtV1ctTmV3X0luX0VsZWN0cm9uaWMtQURBTV9JRD0xNDY5MjY1ODQ2LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Dance Workout",
+      "followers": null,
+      "position": 18,
+      "peak": 18,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/dance-workout/pl.bb5b34f808f04cf6bdc57d9f1a98c918",
+      "curator": "Apple Music Fitness",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/22/4e/0e/224e0e3b-6d91-709a-ed84-6f93cf073b84/U0MtTVMtV1ctRGFuY2VfV29ya291dC1BREFNX0lEPTEwMDQ3ODkxMTkucG5n.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "Future Hits",
+      "followers": null,
+      "position": 25,
+      "peak": 21,
+      "added_at": "2026-11-20",
+      "url": "https://music.apple.com/us/playlist/future-hits/pl.a0214a4b459d4f79a991d1151e6f211f",
+      "curator": "Apple Music",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/cf/35/e6/cf35e6e9-6f36-cd75-e280-a27dca9deb47/U0MtTVMtV1ctRnV0dXJlX0hpdHMtQURBTV9JRD0xMDg4MzgyMDc0LnBuZw.png/120x120SC.DN02.webp",
+      "new": true
+     },
+     {
+      "name": "The Best New Music",
+      "followers": null,
+      "position": 33,
+      "peak": 33,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/the-best-new-music/pl.c3bb6e64c59a469dbf63ef893b57cfd2",
+      "curator": "Shazam",
+      "type": "Editorial",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/c4/66/ec/c466ec6d-183c-9158-1bfb-9068bab5d536/pr_source.jpg/120x120cc.webp",
+      "new": true
+     }
+    ],
+    "deezer": [
+     {
+      "name": "Electronic Hits",
+      "followers": 247568,
+      "position": 50,
+      "peak": 50,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/1902101402",
+      "curator": "Laeti - Deezer Dance & EDM Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/993c8e387f676a8eb0c58e9a28b68bca/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     },
+     {
+      "name": "Les nouveautés du vendredi",
+      "followers": 206047,
+      "position": 67,
+      "peak": 67,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/1478649355",
+      "curator": "Deezer Editors",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/4d6638acedad029ddf569e16a33cdbe2/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     },
+     {
+      "name": "Radar Weekly",
+      "followers": 186271,
+      "position": 34,
+      "peak": 34,
+      "added_at": "2026-11-20",
+      "url": "https://www.deezer.com/playlist/1282495565",
+      "curator": "Laeti - Deezer Pop Editor",
+      "type": null,
+      "image": "https://cdn-images.dzcdn.net/images/playlist/a8923296a74a0fc45bc74e378ce26a76/1000x1000-000000-80-0-0.jpg",
+      "new": true
+     }
+    ],
+    "amazon": [
+     {
+      "name": "Nectar",
+      "followers": null,
+      "position": 1,
+      "peak": 1,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.jp/playlists/B07G4MLV27",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41xgbKBtyGL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Fresh Dance",
+      "followers": null,
+      "position": 2,
+      "peak": 2,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.jp/playlists/B086BV3LFQ",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519u-OYyZaL.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Novità Dance",
+      "followers": null,
+      "position": 5,
+      "peak": 5,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
+      "curator": "Esperti di Amazon Music.",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
+      "new": true,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "Brand New Music",
+      "followers": null,
+      "position": 16,
+      "peak": 16,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.com/playlists/B01JFASI5O",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51NLWYp8jML.jpg",
+      "new": true,
+      "markets": [
+       "AU",
+       "BE",
+       "CA",
+       "GB",
+       "IN",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Nouveautés Dance",
+      "followers": null,
+      "position": 23,
+      "peak": 23,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
+      "new": true,
+      "markets": [
+       "FR"
+      ]
+     },
+     {
+      "name": "Novedades Dance",
+      "followers": null,
+      "position": 23,
+      "peak": 23,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
+      "new": true,
+      "markets": [
+       "ES"
+      ]
+     },
+     {
+      "name": "Novità del momento",
+      "followers": null,
+      "position": 37,
+      "peak": 33,
+      "added_at": "2026-11-20",
+      "url": "https://music.amazon.it/playlists/B07CN9Q6HF",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41d8hP8Pp-L.jpg",
+      "new": true,
+      "markets": [
+       "IT"
+      ]
+     },
+     {
+      "name": "Amplify",
+      "followers": null,
+      "position": 43,
+      "peak": 39,
+      "added_at": "2026-11-19",
+      "url": "https://music.amazon.co.uk/playlists/B01MFEZ5AW",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/41a6RXQya-L.jpg",
+      "new": true,
+      "markets": [
+       "AR",
+       "AU",
+       "BE",
+       "BR",
+       "CA",
+       "DE",
+       "ES",
+       "FR",
+       "GB",
+       "IN",
+       "IT",
+       "JP",
+       "MX",
+       "US"
+      ]
+     },
+     {
+      "name": "Gaming Mix",
+      "followers": null,
+      "position": 57,
+      "peak": 57,
+      "added_at": "2026-11-24",
+      "url": "https://music.amazon.ca/playlists/B08FRPWYVW",
+      "curator": "Amazon Music",
+      "type": null,
+      "image": "https://m.media-amazon.com/images/I/51YvzhlsDML.jpg",
+      "new": true,
+      "markets": [
+       "CA"
+      ]
+     }
+    ],
+    "beatport": [
+     {
+      "name": "Dance / Pop",
+      "followers": null,
+      "position": 13,
+      "peak": 13,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/39/top-100",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Staff Picks: Dance",
+      "followers": null,
+      "position": 4,
+      "peak": 4,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/39/",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     },
+     {
+      "name": "Banner: Dance",
+      "followers": null,
+      "position": 5,
+      "peak": 5,
+      "added_at": "2026-11-21",
+      "url": "https://www.beatport.com/genre/id/39/",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ],
+    "beatport_dj": [
+     {
+      "name": "Best New Dance / Pop: November 2026",
+      "owner": "Beatport",
+      "position": 11,
+      "added_at": "2026-10-30",
+      "url": "https://www.beatport.com/chart/best-new-dance-pop-november-2026/907368",
+      "new": false
+     }
+    ],
+    "shazam": [
+     {
+      "name": "United Kingdom - Dance",
+      "followers": null,
+      "position": 160,
+      "peak": 160,
+      "added_at": "2026-11-24",
+      "url": "https://music.apple.com/us/playlist/shazam-charts-united-kingdom-dance/pl.25b4bc330ebd4019b179b1e661bf518e",
+      "curator": null,
+      "type": null,
+      "image": null,
+      "new": true
+     }
+    ]
+   },
    "count_log": [
     {
      "date": "2026-11-25",
@@ -2904,5 +7627,5 @@
    }
   }
  },
- "generated_at": "2026-11-25T12:23:22+00:00"
+ "generated_at": "2026-11-25T13:01:00+00:00"
 }
