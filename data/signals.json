@@ -1,1043 +1,13 @@
 {
  "records": {
-  "USA2P2645384": {
-   "isrc": "USA2P2645384",
-   "updated": "2026-11-25T13:00:41+00:00",
-   "momentum": "cooling",
-   "ups": 2,
-   "downs": 4,
-   "signal_count": 2,
-   "tags": [
-    "social"
-   ],
-   "metrics": [
-    {
-     "key": "spotify_streams",
-     "label": "Spotify streams",
-     "group": "Streaming",
-     "kind": "flow",
-     "floor": 2000,
-     "low_volume": false,
-     "week": 241084,
-     "prev": 248980,
-     "pct": -3,
-     "total": 635854,
-     "as_of": "2026-11-24",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      248980,
-      241084
-     ]
-    },
-    {
-     "key": "spotify_reach",
-     "label": "Spotify playlist reach",
-     "group": "Streaming",
-     "kind": "level",
-     "floor": 10000,
-     "low_volume": false,
-     "week": 10757923,
-     "prev": 11069507,
-     "pct": -3,
-     "total": 10757923,
-     "as_of": "2026-11-24",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      7620966,
-      11069507,
-      10757923
-     ]
-    },
-    {
-     "key": "shazams",
-     "label": "Shazams",
-     "group": "Discovery",
-     "kind": "flow",
-     "floor": 300,
-     "low_volume": false,
-     "week": 786,
-     "prev": 1504,
-     "pct": -48,
-     "total": 2882,
-     "as_of": "2026-11-24",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      1504,
-      786
-     ]
-    },
-    {
-     "key": "radio_plays",
-     "label": "Radio plays",
-     "group": "Discovery",
-     "kind": "flow",
-     "floor": 30,
-     "low_volume": false,
-     "week": 204,
-     "prev": 227,
-     "pct": -10,
-     "total": 481,
-     "as_of": "2026-11-25",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      227,
-      204
-     ]
-    },
-    {
-     "key": "tiktok_videos",
-     "label": "TikTok videos",
-     "group": "Social",
-     "kind": "flow",
-     "floor": 20,
-     "low_volume": false,
-     "week": 25,
-     "prev": 4,
-     "pct": 525,
-     "total": 69,
-     "as_of": "2026-11-24",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      4,
-      25
-     ]
-    },
-    {
-     "key": "tiktok_views",
-     "label": "TikTok views",
-     "group": "Social",
-     "kind": "flow",
-     "floor": 20000,
-     "low_volume": false,
-     "week": 249529,
-     "prev": 114560,
-     "pct": 118,
-     "total": 396749,
-     "as_of": "2026-11-24",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      28251,
-      114560,
-      249529
-     ]
-    },
-    {
-     "key": "ig_reels",
-     "label": "Instagram reels",
-     "group": "Social",
-     "kind": "flow",
-     "floor": 20,
-     "low_volume": true,
-     "week": 11,
-     "prev": null,
-     "pct": null,
-     "total": 18,
-     "as_of": "2026-11-19",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      11
-     ]
-    },
-    {
-     "key": "ig_views",
-     "label": "Instagram views",
-     "group": "Social",
-     "kind": "flow",
-     "floor": 20000,
-     "low_volume": false,
-     "week": 188143,
-     "prev": null,
-     "pct": null,
-     "total": 261096,
-     "as_of": "2026-11-19",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      188143
-     ]
-    },
-    {
-     "key": "yt_shorts",
-     "label": "YouTube Shorts",
-     "group": "Social",
-     "kind": "flow",
-     "floor": 10,
-     "low_volume": true,
-     "week": 0,
-     "prev": 0,
-     "pct": null,
-     "total": 0,
-     "as_of": "2026-11-25",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      0,
-      0
-     ]
-    },
-    {
-     "key": "yt_views",
-     "label": "YouTube views",
-     "group": "Social",
-     "kind": "flow",
-     "floor": 10000,
-     "low_volume": false,
-     "week": 9566,
-     "prev": 32159,
-     "pct": -70,
-     "total": 53433,
-     "as_of": "2026-11-24",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      32159,
-      9566
-     ]
-    },
-    {
-     "key": "dj_supports",
-     "label": "DJ supports (1001Tracklists)",
-     "group": "DJ & club",
-     "kind": "flow",
-     "floor": 3,
-     "low_volume": false,
-     "week": 7,
-     "prev": 9,
-     "pct": -22,
-     "total": 28,
-     "as_of": "2026-11-24",
-     "spark": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      7,
-      9,
-      7
-     ]
-    },
-    {
-     "key": "sc_plays",
-     "label": "SoundCloud plays",
-     "group": "DJ & club",
-     "kind": "flow",
-     "floor": 1000,
-     "low_volume": false,
-     "week": 21435,
-     "prev": 23341,
-     "pct": -8,
-     "total": 66388,
-     "as_of": "2026-11-25",
-     "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      23341,
-      21435
-     ]
-    }
-   ],
-   "signals": [
-    {
-     "group": "Social",
-     "text": "TikTok videos +525% (25 this week vs 4 last week)",
-     "strength": 525,
-     "positive": true,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "tiktok_videos"
-    },
-    {
-     "group": "Social",
-     "text": "TikTok views +118% (249,529 this week vs 114,560 last week)",
-     "strength": 118,
-     "positive": true,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "tiktok_views"
-    },
-    {
-     "group": "Streaming",
-     "text": "Spotify streams -3% (241,084 this week vs 248,980 last week)",
-     "strength": -3,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "spotify_streams"
-    },
-    {
-     "group": "Streaming",
-     "text": "Spotify playlist reach -3% (10,757,923 now vs 11,069,507 a week ago)",
-     "strength": -3,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "spotify_reach"
-    },
-    {
-     "group": "DJ & club",
-     "text": "SoundCloud plays -8% (21,435 this week vs 23,341 last week)",
-     "strength": -8,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "sc_plays"
-    },
-    {
-     "group": "Discovery",
-     "text": "Radio plays -10% (204 this week vs 227 last week)",
-     "strength": -10,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "radio_plays"
-    },
-    {
-     "group": "DJ & club",
-     "text": "DJ supports (1001Tracklists) -22% (7 this week vs 9 last week)",
-     "strength": -22,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "dj_supports"
-    },
-    {
-     "group": "Discovery",
-     "text": "Shazams -48% (786 this week vs 1,504 last week)",
-     "strength": -48,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "shazams"
-    },
-    {
-     "group": "Social",
-     "text": "YouTube views -70% (9,566 this week vs 32,159 last week)",
-     "strength": -70,
-     "positive": false,
-     "kind": "growth",
-     "low_volume": false,
-     "metric": "yt_views"
-    }
-   ],
-   "counts": {
-    "spotify_editorial": 6,
-    "apple_editorial": 5,
-    "deezer_editorial": 0,
-    "amazon_editorial": 7,
-    "beatport_charts": 1,
-    "shazam_charts": 0
-   },
-   "daily": {
-    "shazams": {
-     "label": "Daily Shazams",
-     "dates": [
-      "2026-11-07",
-      "2026-11-08",
-      "2026-11-09",
-      "2026-11-10",
-      "2026-11-11",
-      "2026-11-12",
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21",
-      "2026-11-22",
-      "2026-11-23",
-      "2026-11-24"
-     ],
-     "values": [
-      327,
-      219,
-      139,
-      139,
-      139,
-      152,
-      226,
-      226,
-      244,
-      120,
-      120,
-      98,
-      98,
-      186,
-      186,
-      94,
-      63,
-      63
-     ]
-    },
-    "spotify_streams": {
-     "label": "Daily Spotify streams",
-     "dates": [
-      "2026-11-06",
-      "2026-11-07",
-      "2026-11-08",
-      "2026-11-09",
-      "2026-11-10",
-      "2026-11-11",
-      "2026-11-12",
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21",
-      "2026-11-22",
-      "2026-11-23",
-      "2026-11-24"
-     ],
-     "values": [
-      1738,
-      57068,
-      57068,
-      29917,
-      17404,
-      17404,
-      36087,
-      39123,
-      39123,
-      41460,
-      32635,
-      25743,
-      33282,
-      68672,
-      29540,
-      31506,
-      31506,
-      20121,
-      26456
-     ]
-    },
-    "spotify_reach": {
-     "label": "Spotify playlist reach",
-     "dates": [
-      "2026-11-05",
-      "2026-11-06",
-      "2026-11-07",
-      "2026-11-08",
-      "2026-11-09",
-      "2026-11-10",
-      "2026-11-11",
-      "2026-11-12",
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21",
-      "2026-11-22",
-      "2026-11-23",
-      "2026-11-24",
-      "2026-11-25"
-     ],
-     "values": [
-      1249752,
-      7407718,
-      7535477,
-      7557363,
-      7591140,
-      7620966,
-      7637244,
-      7630962,
-      10981147,
-      11046103,
-      11060367,
-      11066884,
-      11069507,
-      11100531,
-      10691315,
-      10695607,
-      10709420,
-      10765454,
-      10756232,
-      10757923,
-      10757923
-     ]
-    },
-    "tiktok_videos": {
-     "label": "Daily TikTok videos",
-     "dates": [
-      "2026-11-06",
-      "2026-11-07",
-      "2026-11-08",
-      "2026-11-09",
-      "2026-11-10",
-      "2026-11-11",
-      "2026-11-12",
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21",
-      "2026-11-22",
-      "2026-11-23",
-      "2026-11-24"
-     ],
-     "values": [
-      8,
-      8,
-      8,
-      4,
-      4,
-      4,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-     ]
-    },
-    "dj_supports": {
-     "label": "Daily DJ supports",
-     "dates": [
-      "2026-09-27",
-      "2026-09-28",
-      "2026-09-29",
-      "2026-09-30",
-      "2026-10-01",
-      "2026-10-02",
-      "2026-10-03",
-      "2026-10-04",
-      "2026-10-05",
-      "2026-10-06",
-      "2026-10-07",
-      "2026-10-08",
-      "2026-10-09",
-      "2026-10-10",
-      "2026-10-11",
-      "2026-10-12",
-      "2026-10-13",
-      "2026-10-14",
-      "2026-10-15",
-      "2026-10-16",
-      "2026-10-17",
-      "2026-10-18",
-      "2026-10-19",
-      "2026-10-20",
-      "2026-10-21",
-      "2026-10-22",
-      "2026-10-23",
-      "2026-10-24",
-      "2026-10-25",
-      "2026-10-26",
-      "2026-10-27",
-      "2026-10-28",
-      "2026-10-29",
-      "2026-10-30",
-      "2026-10-31",
-      "2026-11-01",
-      "2026-11-02",
-      "2026-11-03",
-      "2026-11-04",
-      "2026-11-05",
-      "2026-11-06",
-      "2026-11-07",
-      "2026-11-08",
-      "2026-11-09",
-      "2026-11-10",
-      "2026-11-11",
-      "2026-11-12",
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21",
-      "2026-11-22",
-      "2026-11-23",
-      "2026-11-24"
-     ],
-     "values": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      1,
-      1,
-      0,
-      0,
-      1,
-      1,
-      4,
-      0,
-      0,
-      1,
-      1,
-      1,
-      1,
-      2,
-      1,
-      0,
-      0
-     ]
-    }
-   },
-   "placements": {
-    "spotify": [
-     {
-      "name": "mint",
-      "followers": 5413411,
-      "position": 25,
-      "peak": 21,
-      "added_at": "2026-11-13",
-      "url": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
-      "curator": "Spotify",
-      "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035643bea5de1f746c94fc23d9",
-      "new": false
-     },
-     {
-      "name": "Housewerk",
-      "followers": 2036858,
-      "position": 23,
-      "peak": 14,
-      "added_at": "2026-11-06",
-      "url": "https://open.spotify.com/playlist/37i9dQZF1DXa8NOEUWPn9W",
-      "curator": "Spotify",
-      "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000282ad870a2861e036582d75f2",
-      "new": false
-     },
-     {
-      "name": "Dance Rising",
-      "followers": 1803457,
-      "position": 30,
-      "peak": 19,
-      "added_at": "2026-11-06",
-      "url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw",
-      "curator": "Spotify",
-      "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000321df5c53dc5e037edb15dde2",
-      "new": false
-     },
-     {
-      "name": "UK House Music",
-      "followers": 741472,
-      "position": 6,
-      "peak": 2,
-      "added_at": "2026-11-05",
-      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
-      "curator": "Spotify",
-      "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000036574502b2e17248beb073bed",
-      "new": false
-     },
-     {
-      "name": "New Dance 2026",
-      "followers": 156396,
-      "position": 40,
-      "peak": 7,
-      "added_at": "2026-11-05",
-      "url": "https://open.spotify.com/playlist/37i9dQZF1DWWrJKwf0q9nn",
-      "curator": "Spotify",
-      "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000036af8dd0dc645c193c851945f",
-      "new": false
-     },
-     {
-      "name": "Deep & Minimal",
-      "followers": 94866,
-      "position": 6,
-      "peak": 1,
-      "added_at": "2026-11-06",
-      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSI21IGRaeuC",
-      "curator": "Spotify",
-      "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000002502274c2b48b0b59e6f92e33",
-      "new": false
-     }
-    ],
-    "apple_music": [
-     {
-      "name": "New in Dance",
-      "followers": null,
-      "position": 88,
-      "peak": 7,
-      "added_at": "2026-11-06",
-      "url": "https://music.apple.com/us/playlist/new-in-dance/pl.9bd9accafe864654aac9f2dcceca5a69",
-      "curator": "Apple Music Dance",
-      "type": "Editorial",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f7/c4/b2/f7c4b293-86c3-67ed-6fd0-50a2b4ed034c/U0MtTVMtV1ctTmV3X0luX0RhbmNlLUFEQU1fSUQ9MTQ2NjEyMzY3MC5wbmc.png/120x120SC.DN02.webp",
-      "new": false
-     },
-     {
-      "name": "House Nation",
-      "followers": null,
-      "position": 177,
-      "peak": 13,
-      "added_at": "2026-11-06",
-      "url": "https://music.apple.com/us/playlist/house-nation/pl.75f03abb293e4430a5f550d058c6f6a0",
-      "curator": "Apple Music Dance",
-      "type": "Editorial",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/55/84/a6/5584a6d2-1a91-feaf-17d8-b57e656c0477/U0MtTVMtV1ctSG91c2VfTmF0aW9uLUFEQU1fSUQ9MTE5MzY4MDI3My5wbmc.png/120x120SC.DN02.webp",
-      "new": false
-     },
-     {
-      "name": "Future Dance Hits",
-      "followers": null,
-      "position": 73,
-      "peak": 15,
-      "added_at": "2026-11-06",
-      "url": "https://music.apple.com/us/playlist/future-dance-hits/pl.811ac0f053a242bbab06df4bebf90562",
-      "curator": "Apple Music Dance",
-      "type": "Editorial",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/fa/97/bc/fa97bc23-b9d5-2e69-cc8d-82415eec7ffc/U0MtTVMtV1ctRnV0dXJlX0RhbmNlX0hpdHMtQURBTV9JRD0xMDczNzc2Mjg2LnBuZw.png/120x120SC.DN02.webp",
-      "new": false
-     },
-     {
-      "name": "Breaking Dance",
-      "followers": null,
-      "position": 74,
-      "peak": 46,
-      "added_at": "2026-11-06",
-      "url": "https://music.apple.com/us/playlist/breaking-dance/pl.77a913605bba4a968c5cb2b93d87b2ca",
-      "curator": "Apple Music Dance",
-      "type": "Editorial",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/ed/fa/e2/edfae28c-4668-19b0-bb24-242ad3c094d2/U0MtTVMtV1ctQnJlYWtpbmdfRGFuY2VfRURNLUFEQU1fSUQ9MTEyNDU0MTA4My5wbmc.png/120x120SC.DN02.webp",
-      "new": false
-     },
-     {
-      "name": "House Grooves",
-      "followers": null,
-      "position": 127,
-      "peak": 127,
-      "added_at": "2026-11-13",
-      "url": "https://music.apple.com/us/playlist/house-grooves/pl.d73049603d7143ec86d84fc8b8af3827",
-      "curator": "Apple Music Dance",
-      "type": "Editorial",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/a5/d1/8c/a5d18c90-2be5-f4e1-a721-96ff70ebe095/U0MtTVMtV1ctR3Jvb3ZlLWR5bmFtaWNzLUFkYW1fSUQ9MTI3NDgwMjE0My5wbmc.png/120x120SC.DN02.webp",
-      "new": false
-     }
-    ],
-    "deezer": [],
-    "amazon": [
-     {
-      "name": "The Sound of Modern House",
-      "followers": null,
-      "position": 11,
-      "peak": 10,
-      "added_at": "2026-11-12",
-      "url": "https://music.amazon.de/playlists/B07RHVJ8YL",
-      "curator": "Amazon Music",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/41Qb7SiXfhL.jpg",
-      "new": false,
-      "markets": [
-       "AR",
-       "AU",
-       "BE",
-       "BR",
-       "CA",
-       "DE",
-       "ES",
-       "FR",
-       "GB",
-       "IN",
-       "IT",
-       "JP",
-       "MX",
-       "US"
-      ]
-     },
-     {
-      "name": "Deep Tech",
-      "followers": null,
-      "position": 25,
-      "peak": 13,
-      "added_at": "2026-11-05",
-      "url": "https://music.amazon.com.br/playlists/B0DSG4TDHC",
-      "curator": "Amazon Music",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/41cvAbS9+XL.jpg",
-      "new": false,
-      "markets": [
-       "AR",
-       "AU",
-       "BE",
-       "BR",
-       "CA",
-       "DE",
-       "ES",
-       "FR",
-       "GB",
-       "IN",
-       "IT",
-       "JP",
-       "MX",
-       "US"
-      ]
-     },
-     {
-      "name": "Fresh Dance",
-      "followers": null,
-      "position": 30,
-      "peak": 7,
-      "added_at": "2026-11-06",
-      "url": "https://music.amazon.co.uk/playlists/B07PHH6RVJ",
-      "curator": "Amazon Music",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/51Vi23TP-BL.jpg",
-      "new": false,
-      "markets": [
-       "DE",
-       "GB",
-       "IN"
-      ]
-     },
-     {
-      "name": "Nouveautés Dance",
-      "followers": null,
-      "position": 30,
-      "peak": 7,
-      "added_at": "2026-11-06",
-      "url": "https://music.amazon.fr/playlists/B0BZDFRCRX",
-      "curator": "Amazon Music",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/519YjVCyWkL.jpg",
-      "new": false,
-      "markets": [
-       "FR"
-      ]
-     },
-     {
-      "name": "Novedades Dance",
-      "followers": null,
-      "position": 30,
-      "peak": 7,
-      "added_at": "2026-11-06",
-      "url": "https://music.amazon.es/playlists/B0BZDJBBVF",
-      "curator": "Amazon Music",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/51O0N6JjEYL.jpg",
-      "new": false,
-      "markets": [
-       "ES"
-      ]
-     },
-     {
-      "name": "Novità Dance",
-      "followers": null,
-      "position": 39,
-      "peak": 7,
-      "added_at": "2026-11-06",
-      "url": "https://music.amazon.it/playlists/B0BZDCHZWR",
-      "curator": "Esperti di Amazon Music.",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/51hPltdYCqL.jpg",
-      "new": false,
-      "markets": [
-       "IT"
-      ]
-     },
-     {
-      "name": "Dance UK",
-      "followers": null,
-      "position": 50,
-      "peak": 23,
-      "added_at": "2026-11-05",
-      "url": "https://music.amazon.co.uk/playlists/B01M0QNBGM",
-      "curator": "Amazon Music",
-      "type": null,
-      "image": "https://m.media-amazon.com/images/I/51TmlIPOfkL.jpg",
-      "new": false,
-      "markets": [
-       "AR",
-       "AU",
-       "BE",
-       "BR",
-       "CA",
-       "DE",
-       "ES",
-       "FR",
-       "GB",
-       "IN",
-       "JP",
-       "MX",
-       "US"
-      ]
-     }
-    ],
-    "beatport": [
-     {
-      "name": "House",
-      "followers": null,
-      "position": 49,
-      "peak": 8,
-      "added_at": "2026-11-07",
-      "url": "https://www.beatport.com/genre/id/5/top-100",
-      "curator": null,
-      "type": null,
-      "image": null,
-      "new": false
-     }
-    ],
-    "beatport_dj": [
-     {
-      "name": "Enemies Chart",
-      "owner": "Several Definitions",
-      "position": 8,
-      "added_at": "2026-11-18",
-      "url": "https://www.beatport.com/chart/enemies-chart/909388",
-      "new": false
-     },
-     {
-      "name": "Working With Chart",
-      "owner": "FINKY",
-      "position": 8,
-      "added_at": "2026-11-13",
-      "url": "https://www.beatport.com/chart/working-with-chart/908880",
-      "new": false
-     },
-     {
-      "name": "SLOW MY ROUTINE",
-      "owner": "Rafael Cerato",
-      "position": 5,
-      "added_at": "2026-11-05",
-      "url": "https://www.beatport.com/chart/slow-my-routine/908024",
-      "new": false
-     }
-    ],
-    "shazam": []
-   },
-   "count_log": [
-    {
-     "date": "2026-11-25",
-     "spotify_editorial": 6,
-     "apple_editorial": 5,
-     "deezer_editorial": 0,
-     "amazon_editorial": 7,
-     "beatport_charts": 1,
-     "shazam_charts": 0
-    }
-   ],
-   "songstats": {
-    "songstats_track_id": "9grxaspd",
-    "songstats_artist_id": "mv16rxpq"
-   }
-  },
   "GBUM72606042": {
    "isrc": "GBUM72606042",
-   "updated": "2026-11-25T13:00:44+00:00",
+   "release_date": "2026-11-13",
+   "updated": "2026-11-25T13:40:47+00:00",
    "momentum": "accelerating",
-   "ups": 7,
-   "downs": 1,
-   "signal_count": 7,
+   "ups": 9,
+   "downs": 4,
+   "signal_count": 9,
    "tags": [
     "dj",
     "editorial",
@@ -1052,18 +22,18 @@
      "floor": 2000,
      "low_volume": false,
      "week": 293171,
-     "prev": null,
-     "pct": null,
+     "prev": 93748,
+     "pct": 213,
      "total": 386919,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      93748,
       293171
      ]
     },
@@ -1074,10 +44,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 3105107,
-     "prev": 4018523,
+     "week": 3105143,
+     "prev": 4018526,
      "pct": -23,
-     "total": 3105107,
+     "total": 3105143,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -1086,8 +56,8 @@
       null,
       null,
       null,
-      4018523,
-      3105107
+      4018526,
+      3105143
      ]
     },
     {
@@ -1098,18 +68,18 @@
      "floor": 300,
      "low_volume": false,
      "week": 316,
-     "prev": null,
-     "pct": null,
+     "prev": 105,
+     "pct": 201,
      "total": 421,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      105,
       316
      ]
     },
@@ -1120,10 +90,10 @@
      "kind": "flow",
      "floor": 30,
      "low_volume": false,
-     "week": 279,
+     "week": 281,
      "prev": 144,
-     "pct": 94,
-     "total": 436,
+     "pct": 95,
+     "total": 438,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -1133,7 +103,7 @@
       null,
       3,
       144,
-      279
+      281
      ]
     },
     {
@@ -1144,18 +114,18 @@
      "floor": 20,
      "low_volume": false,
      "week": 411,
-     "prev": null,
-     "pct": null,
+     "prev": 3159,
+     "pct": -87,
      "total": 3570,
      "as_of": "2026-11-24",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3159,
       411
      ]
     },
@@ -1189,20 +159,20 @@
      "kind": "flow",
      "floor": 20,
      "low_volume": true,
-     "week": 0,
-     "prev": null,
+     "week": 11,
+     "prev": 0,
      "pct": null,
      "total": 11,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-12",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      0
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      11
      ]
     },
     {
@@ -1236,18 +206,18 @@
      "floor": 10,
      "low_volume": true,
      "week": 0,
-     "prev": null,
+     "prev": 0,
      "pct": null,
      "total": 0,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0
      ]
     },
@@ -1259,18 +229,18 @@
      "floor": 10000,
      "low_volume": false,
      "week": 30131,
-     "prev": null,
-     "pct": null,
+     "prev": 108736,
+     "pct": -72,
      "total": 138867,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      108736,
       30131
      ]
     },
@@ -1305,18 +275,18 @@
      "floor": 1000,
      "low_volume": false,
      "week": 45990,
-     "prev": null,
-     "pct": null,
+     "prev": 67403,
+     "pct": -32,
      "total": 113393,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      67403,
       45990
      ]
     }
@@ -1344,6 +314,15 @@
      "kind": "editorial"
     },
     {
+     "group": "Streaming",
+     "text": "Spotify streams +213% (293,171 this week vs 93,748 last week)",
+     "strength": 213,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "spotify_streams"
+    },
+    {
      "group": "Social",
      "text": "TikTok views +209% (6,066,666 this week vs 1,961,280 last week)",
      "strength": 209,
@@ -1354,8 +333,17 @@
     },
     {
      "group": "Discovery",
-     "text": "Radio plays +94% (279 this week vs 144 last week)",
-     "strength": 94,
+     "text": "Shazams +201% (316 this week vs 105 last week)",
+     "strength": 201,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "shazams"
+    },
+    {
+     "group": "Discovery",
+     "text": "Radio plays +95% (281 this week vs 144 last week)",
+     "strength": 95,
      "positive": true,
      "kind": "growth",
      "low_volume": false,
@@ -1379,12 +367,39 @@
     },
     {
      "group": "Streaming",
-     "text": "Spotify playlist reach -23% (3,105,107 now vs 4,018,523 a week ago)",
+     "text": "Spotify playlist reach -23% (3,105,143 now vs 4,018,526 a week ago)",
      "strength": -23,
      "positive": false,
      "kind": "growth",
      "low_volume": false,
      "metric": "spotify_reach"
+    },
+    {
+     "group": "DJ & club",
+     "text": "SoundCloud plays -32% (45,990 this week vs 67,403 last week)",
+     "strength": -32,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "sc_plays"
+    },
+    {
+     "group": "Social",
+     "text": "YouTube views -72% (30,131 this week vs 108,736 last week)",
+     "strength": -72,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "yt_views"
+    },
+    {
+     "group": "Social",
+     "text": "TikTok videos -87% (411 this week vs 3,159 last week)",
+     "strength": -87,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "tiktok_videos"
     }
    ],
    "counts": {
@@ -1475,20 +490,20 @@
       "2026-11-25"
      ],
      "values": [
-      875841,
-      3835242,
-      3953158,
-      3969864,
-      3995696,
-      4018523,
-      4079101,
-      4881947,
-      3002304,
-      2969951,
-      3025518,
-      3092549,
-      3105107,
-      3105107
+      875842,
+      3835245,
+      3953161,
+      3969867,
+      3995699,
+      4018526,
+      4079108,
+      4881957,
+      3002315,
+      2969962,
+      3025555,
+      3092586,
+      3105143,
+      3105143
      ]
     },
     "tiktok_videos": {
@@ -1601,7 +616,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWSrVdvTl1tVY",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000036574502b2e17248beb073bed",
+      "image": "https://i.scdn.co/image/ab67706f000000026574502b2e17248beb073bed",
       "new": false
      },
      {
@@ -1613,12 +628,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWU5hC93Ey99S",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000033fe2546417d7f11b8415adc9",
+      "image": "https://i.scdn.co/image/ab67706f000000023fe2546417d7f11b8415adc9",
       "new": false
      },
      {
       "name": "sidewaves",
-      "followers": 118895,
+      "followers": 118896,
       "position": 39,
       "peak": 25,
       "added_at": "2026-11-12",
@@ -1922,12 +937,14 @@
   },
   "AUDCB2500657": {
    "isrc": "AUDCB2500657",
-   "updated": "2026-11-25T13:00:47+00:00",
+   "release_date": "2026-11-13",
+   "updated": "2026-11-25T13:40:51+00:00",
    "momentum": "accelerating",
-   "ups": 4,
-   "downs": 1,
-   "signal_count": 4,
+   "ups": 6,
+   "downs": 3,
+   "signal_count": 6,
    "tags": [
+    "dj",
     "editorial"
    ],
    "metrics": [
@@ -1939,18 +956,18 @@
      "floor": 2000,
      "low_volume": false,
      "week": 88460,
-     "prev": null,
-     "pct": null,
+     "prev": 38669,
+     "pct": 129,
      "total": 127129,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      38669,
       88460
      ]
     },
@@ -1961,10 +978,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 3733588,
-     "prev": 3035826,
+     "week": 3733591,
+     "prev": 3035830,
      "pct": 23,
-     "total": 3733588,
+     "total": 3733591,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -1973,8 +990,8 @@
       null,
       null,
       null,
-      3035826,
-      3733588
+      3035830,
+      3733591
      ]
     },
     {
@@ -1985,18 +1002,18 @@
      "floor": 300,
      "low_volume": false,
      "week": 1421,
-     "prev": null,
-     "pct": null,
+     "prev": 1439,
+     "pct": -1,
      "total": 2860,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1439,
       1421
      ]
     },
@@ -2006,20 +1023,20 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 30,
-     "low_volume": true,
+     "low_volume": false,
      "week": 2,
-     "prev": null,
-     "pct": null,
+     "prev": 37,
+     "pct": -95,
      "total": 39,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      37,
       2
      ]
     },
@@ -2029,21 +1046,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 127,
+     "prev": 0,
      "pct": null,
      "total": 127,
      "as_of": "2026-11-19",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      127
      ]
     },
     {
@@ -2075,21 +1092,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 31,
+     "prev": 0,
      "pct": null,
      "total": 31,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-19",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      31
      ]
     },
     {
@@ -2123,18 +1140,18 @@
      "floor": 10,
      "low_volume": true,
      "week": 0,
-     "prev": null,
+     "prev": 0,
      "pct": null,
      "total": 0,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0
      ]
     },
@@ -2144,20 +1161,20 @@
      "group": "Social",
      "kind": "flow",
      "floor": 10000,
-     "low_volume": true,
+     "low_volume": false,
      "week": 4253,
-     "prev": null,
-     "pct": null,
+     "prev": 10695,
+     "pct": -60,
      "total": 14948,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10695,
       4253
      ]
     },
@@ -2169,18 +1186,18 @@
      "floor": 1000,
      "low_volume": false,
      "week": 2745,
-     "prev": null,
-     "pct": null,
+     "prev": 1037,
+     "pct": 165,
      "total": 3782,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1037,
       2745
      ]
     }
@@ -2208,13 +1225,40 @@
      "kind": "editorial"
     },
     {
+     "group": "DJ & club",
+     "text": "SoundCloud plays +165% (2,745 this week vs 1,037 last week)",
+     "strength": 165,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "sc_plays"
+    },
+    {
      "group": "Streaming",
-     "text": "Spotify playlist reach +23% (3,733,588 now vs 3,035,826 a week ago)",
+     "text": "Spotify streams +129% (88,460 this week vs 38,669 last week)",
+     "strength": 129,
+     "positive": true,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "spotify_streams"
+    },
+    {
+     "group": "Streaming",
+     "text": "Spotify playlist reach +23% (3,733,591 now vs 3,035,830 a week ago)",
      "strength": 23,
      "positive": true,
      "kind": "growth",
      "low_volume": false,
      "metric": "spotify_reach"
+    },
+    {
+     "group": "Discovery",
+     "text": "Shazams -1% (1,421 this week vs 1,439 last week)",
+     "strength": -1,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "shazams"
     },
     {
      "group": "Social",
@@ -2227,12 +1271,30 @@
     },
     {
      "group": "Social",
+     "text": "YouTube views -60% (4,253 this week vs 10,695 last week)",
+     "strength": -60,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "yt_views"
+    },
+    {
+     "group": "Social",
      "text": "Instagram views -70% (295,604 this week vs 980,897 last week)",
      "strength": -70,
      "positive": false,
      "kind": "growth",
      "low_volume": false,
      "metric": "ig_views"
+    },
+    {
+     "group": "Discovery",
+     "text": "Radio plays -95% (2 this week vs 37 last week)",
+     "strength": -95,
+     "positive": false,
+     "kind": "growth",
+     "low_volume": false,
+     "metric": "radio_plays"
     }
    ],
    "counts": {
@@ -2326,19 +1388,19 @@
      ],
      "values": [
       660850,
-      2699744,
-      2779768,
-      2830278,
-      2852790,
-      3035826,
-      3046667,
-      3295476,
-      2452517,
-      2446235,
-      3745929,
-      3764186,
-      3733588,
-      3733588
+      2699747,
+      2779772,
+      2830282,
+      2852794,
+      3035830,
+      3046671,
+      3295480,
+      2452521,
+      2446239,
+      3745933,
+      3764190,
+      3733591,
+      3733591
      ]
     },
     "tiktok_videos": {
@@ -2372,7 +1434,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWUSyphfcc6aL",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f0000000324c6521d8b5ca8c6875be748",
+      "image": "https://i.scdn.co/image/ab67706f0000000224c6521d8b5ca8c6875be748",
       "new": true
      },
      {
@@ -2396,7 +1458,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWTIfBdh7WtFL",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000032ba20c529dca4b4e047c630a",
+      "image": "https://i.scdn.co/image/ab67706f000000022ba20c529dca4b4e047c630a",
       "new": false
      },
      {
@@ -2408,12 +1470,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXaqIZ7YXxc6o",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000034546872f7164bd925f031d24",
+      "image": "https://i.scdn.co/image/ab67706f000000024546872f7164bd925f031d24",
       "new": true
      },
      {
       "name": "The Dance List",
-      "followers": 114603,
+      "followers": 114604,
       "position": 24,
       "peak": 16,
       "added_at": "2026-11-13",
@@ -2746,7 +1808,8 @@
   },
   "CBEFB2608427": {
    "isrc": "CBEFB2608427",
-   "updated": "2026-11-25T13:00:49+00:00",
+   "release_date": "2026-11-20",
+   "updated": "2026-11-25T13:40:54+00:00",
    "momentum": "accelerating",
    "ups": 9,
    "downs": 0,
@@ -2763,21 +1826,21 @@
      "group": "Streaming",
      "kind": "flow",
      "floor": 2000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 338171,
+     "prev": 0,
      "pct": null,
      "total": 338171,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      338171
      ]
     },
     {
@@ -2787,10 +1850,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 14440277,
+     "week": 14440302,
      "prev": null,
      "pct": null,
-     "total": 14440277,
+     "total": 14440302,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -2800,7 +1863,7 @@
       null,
       null,
       null,
-      14440277
+      14440302
      ]
     },
     {
@@ -2809,21 +1872,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 300,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 5723,
+     "prev": 0,
      "pct": null,
      "total": 5723,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5723
      ]
     },
     {
@@ -2832,21 +1895,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 30,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 134,
+     "prev": 0,
      "pct": null,
-     "total": 132,
+     "total": 134,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      134
      ]
     },
     {
@@ -2901,21 +1964,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 54,
+     "prev": 0,
      "pct": null,
      "total": 54,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-19",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      54
      ]
     },
     {
@@ -2948,20 +2011,20 @@
      "kind": "flow",
      "floor": 10,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 0,
+     "prev": 0,
      "pct": null,
      "total": 0,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
      ]
     },
     {
@@ -2970,21 +2033,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 10000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 59735,
+     "prev": 0,
      "pct": null,
      "total": 59735,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      59735
      ]
     },
     {
@@ -3016,21 +2079,21 @@
      "group": "DJ & club",
      "kind": "flow",
      "floor": 1000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 180776,
+     "prev": 0,
      "pct": null,
      "total": 180776,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      180776
      ]
     }
    ],
@@ -3156,13 +2219,13 @@
       "2026-11-25"
      ],
      "values": [
-      1213864,
-      13187592,
-      13379680,
-      13411628,
-      13452844,
-      14440277,
-      14440277
+      1213865,
+      13187602,
+      13379705,
+      13411653,
+      13452869,
+      14440302,
+      14440302
      ]
     },
     "tiktok_videos": {
@@ -3279,7 +2342,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000321df5c53dc5e037edb15dde2",
+      "image": "https://i.scdn.co/image/ab67706f0000000221df5c53dc5e037edb15dde2",
       "new": true
      },
      {
@@ -3303,7 +2366,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX8f6LHxMjnzD",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000346beaf59ebfea38b4894ba80",
+      "image": "https://i.scdn.co/image/ab67706f0000000246beaf59ebfea38b4894ba80",
       "new": true
      },
      {
@@ -3327,7 +2390,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "image": "https://i.scdn.co/image/ab67706f000000028d9bd37b9d12a9d7f561718c",
       "new": true
      },
      {
@@ -3339,12 +2402,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "image": "https://i.scdn.co/image/ab67706f000000025ecd496aafeeff2437e21d9a",
       "new": true
      },
      {
       "name": "Deep & Minimal",
-      "followers": 94866,
+      "followers": 94869,
       "position": 2,
       "peak": 2,
       "added_at": "2026-11-20",
@@ -3356,7 +2419,7 @@
      },
      {
       "name": "Beats of Tomorrow",
-      "followers": 69313,
+      "followers": 69314,
       "position": 13,
       "peak": 13,
       "added_at": "2026-11-19",
@@ -3973,7 +3036,8 @@
   },
   "USA2P2681586": {
    "isrc": "USA2P2681586",
-   "updated": "2026-11-25T13:00:52+00:00",
+   "release_date": "2026-11-20",
+   "updated": "2026-11-25T13:40:58+00:00",
    "momentum": "accelerating",
    "ups": 6,
    "downs": 0,
@@ -3989,21 +3053,21 @@
      "group": "Streaming",
      "kind": "flow",
      "floor": 2000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 182729,
+     "prev": 0,
      "pct": null,
      "total": 182729,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      182729
      ]
     },
     {
@@ -4013,10 +3077,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 30648536,
+     "week": 30648528,
      "prev": null,
      "pct": null,
-     "total": 30648536,
+     "total": 30648528,
      "as_of": "2026-11-25",
      "spark": [
       null,
@@ -4026,7 +3090,7 @@
       null,
       null,
       null,
-      30648536
+      30648528
      ]
     },
     {
@@ -4035,21 +3099,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 300,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 8425,
+     "prev": 0,
      "pct": null,
      "total": 8425,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8425
      ]
     },
     {
@@ -4058,21 +3122,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 30,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 56,
+     "prev": 0,
      "pct": null,
      "total": 56,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      56
      ]
     },
     {
@@ -4081,21 +3145,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 27,
+     "prev": 0,
      "pct": null,
      "total": 27,
      "as_of": "2026-11-21",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      27
      ]
     },
     {
@@ -4128,20 +3192,20 @@
      "kind": "flow",
      "floor": 10,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 1,
+     "prev": 0,
      "pct": null,
      "total": 1,
      "as_of": "2026-11-22",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
      ]
     },
     {
@@ -4150,21 +3214,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 10000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 65697,
+     "prev": 0,
      "pct": null,
      "total": 65697,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      65697
      ]
     },
     {
@@ -4174,20 +3238,20 @@
      "kind": "flow",
      "floor": 3,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 2,
+     "prev": 0,
      "pct": null,
      "total": 2,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-20",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
      ]
     },
     {
@@ -4196,21 +3260,21 @@
      "group": "DJ & club",
      "kind": "flow",
      "floor": 1000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 10191,
+     "prev": 0,
      "pct": null,
      "total": 10191,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10191
      ]
     }
    ],
@@ -4311,13 +3375,13 @@
       "2026-11-25"
      ],
      "values": [
-      2193118,
-      21122857,
-      21183761,
-      21305171,
-      30593515,
-      30680300,
-      30648536
+      2193112,
+      21122849,
+      21183753,
+      21305162,
+      30593506,
+      30680292,
+      30648528
      ]
     },
     "tiktok_videos": {
@@ -4343,7 +3407,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXaXB8fQg7xif",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f00000003d2c23cff8e4056e5c891216d",
+      "image": "https://i.scdn.co/image/ab67706f00000002d2c23cff8e4056e5c891216d",
       "new": true
      },
      {
@@ -4355,7 +3419,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035643bea5de1f746c94fc23d9",
+      "image": "https://i.scdn.co/image/ab67706f000000025643bea5de1f746c94fc23d9",
       "new": true
      },
      {
@@ -4391,7 +3455,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000321df5c53dc5e037edb15dde2",
+      "image": "https://i.scdn.co/image/ab67706f0000000221df5c53dc5e037edb15dde2",
       "new": true
      },
      {
@@ -4403,7 +3467,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX4W3aJJYCDfV",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000367a7fb4e18161b7cfd1a7446",
+      "image": "https://i.scdn.co/image/ab67706f0000000267a7fb4e18161b7cfd1a7446",
       "new": true
      },
      {
@@ -4420,7 +3484,7 @@
      },
      {
       "name": "Electronic Rising",
-      "followers": 760819,
+      "followers": 760813,
       "position": 4,
       "peak": 4,
       "added_at": "2026-11-19",
@@ -4451,7 +3515,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "image": "https://i.scdn.co/image/ab67706f000000028d9bd37b9d12a9d7f561718c",
       "new": true
      },
      {
@@ -4463,7 +3527,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "image": "https://i.scdn.co/image/ab67706f000000025ecd496aafeeff2437e21d9a",
       "new": true
      },
      {
@@ -4475,7 +3539,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWVUxkQFrGCkK",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000320093fe504ca4323e488d6e7",
+      "image": "https://i.scdn.co/image/ab67706f0000000220093fe504ca4323e488d6e7",
       "new": true
      },
      {
@@ -4499,12 +3563,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX2ENAPP1Tyed",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003a1cfdb1aefa4f5a3adf4139b",
+      "image": "https://i.scdn.co/image/ab67706f00000002a1cfdb1aefa4f5a3adf4139b",
       "new": true
      },
      {
       "name": "New Music Friday NL",
-      "followers": 302893,
+      "followers": 302894,
       "position": 51,
       "peak": 51,
       "added_at": "2026-11-20",
@@ -4523,7 +3587,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWWrJKwf0q9nn",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000036af8dd0dc645c193c851945f",
+      "image": "https://i.scdn.co/image/ab67706f000000026af8dd0dc645c193c851945f",
       "new": true
      },
      {
@@ -4535,7 +3599,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWXtcXUwhuzFM",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000030092af664f86a3834ea7695e",
+      "image": "https://i.scdn.co/image/ab67706f000000020092af664f86a3834ea7695e",
       "new": true
      },
      {
@@ -4547,7 +3611,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX3crNbt46mRU",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003f129aa82e84b144bd3a04bc2",
+      "image": "https://i.scdn.co/image/ab67706f00000002f129aa82e84b144bd3a04bc2",
       "new": true
      }
     ],
@@ -4798,7 +3862,8 @@
   },
   "GBAHT2602774": {
    "isrc": "GBAHT2602774",
-   "updated": "2026-11-25T13:00:55+00:00",
+   "release_date": "2026-11-20",
+   "updated": "2026-11-25T13:41:01+00:00",
    "momentum": "accelerating",
    "ups": 8,
    "downs": 0,
@@ -4815,21 +3880,21 @@
      "group": "Streaming",
      "kind": "flow",
      "floor": 2000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 128849,
+     "prev": 0,
      "pct": null,
      "total": 128849,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128849
      ]
     },
     {
@@ -4839,10 +3904,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 15683073,
+     "week": 15683083,
      "prev": null,
      "pct": null,
-     "total": 15683073,
+     "total": 15683083,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -4852,7 +3917,7 @@
       null,
       null,
       null,
-      15683073
+      15683083
      ]
     },
     {
@@ -4861,21 +3926,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 300,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 3361,
+     "prev": 0,
      "pct": null,
      "total": 3361,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3361
      ]
     },
     {
@@ -4884,21 +3949,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 30,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 291,
+     "prev": 0,
      "pct": null,
      "total": 291,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      291
      ]
     },
     {
@@ -4907,21 +3972,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 500,
+     "prev": 0,
      "pct": null,
      "total": 500,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      500
      ]
     },
     {
@@ -4953,21 +4018,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 52,
+     "prev": 0,
      "pct": null,
      "total": 52,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-19",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      52
      ]
     },
     {
@@ -5000,20 +4065,20 @@
      "kind": "flow",
      "floor": 10,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 2,
+     "prev": 0,
      "pct": null,
      "total": 2,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
      ]
     },
     {
@@ -5022,21 +4087,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 10000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 96690,
+     "prev": 0,
      "pct": null,
      "total": 96690,
      "as_of": "2026-11-24",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      96690
      ]
     },
     {
@@ -5068,21 +4133,21 @@
      "group": "DJ & club",
      "kind": "flow",
      "floor": 1000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 32371,
+     "prev": 0,
      "pct": null,
      "total": 32371,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      32371
      ]
     }
    ],
@@ -5202,12 +4267,12 @@
      ],
      "values": [
       2559727,
-      14110343,
-      14192746,
-      14203175,
-      14729919,
-      15683073,
-      15683073
+      14110354,
+      14192757,
+      14203186,
+      14729929,
+      15683083,
+      15683083
      ]
     },
     "tiktok_videos": {
@@ -5280,7 +4345,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX4W3aJJYCDfV",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000367a7fb4e18161b7cfd1a7446",
+      "image": "https://i.scdn.co/image/ab67706f0000000267a7fb4e18161b7cfd1a7446",
       "new": true
      },
      {
@@ -5292,7 +4357,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX8f6LHxMjnzD",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000346beaf59ebfea38b4894ba80",
+      "image": "https://i.scdn.co/image/ab67706f0000000246beaf59ebfea38b4894ba80",
       "new": true
      },
      {
@@ -5316,7 +4381,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "image": "https://i.scdn.co/image/ab67706f000000028d9bd37b9d12a9d7f561718c",
       "new": true
      },
      {
@@ -5328,12 +4393,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "image": "https://i.scdn.co/image/ab67706f000000025ecd496aafeeff2437e21d9a",
       "new": true
      },
      {
       "name": "House Supreme",
-      "followers": 499248,
+      "followers": 499247,
       "position": 5,
       "peak": 5,
       "added_at": "2026-11-23",
@@ -5352,12 +4417,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWT2SPAYawYcO",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003812b97e997b72cdb27aa2b19",
+      "image": "https://i.scdn.co/image/ab67706f00000002812b97e997b72cdb27aa2b19",
       "new": true
      },
      {
       "name": "New Music Friday India",
-      "followers": 416902,
+      "followers": 416906,
       "position": 42,
       "peak": 42,
       "added_at": "2026-11-20",
@@ -5381,7 +4446,7 @@
      },
      {
       "name": "New Music Friday NL",
-      "followers": 302893,
+      "followers": 302894,
       "position": 67,
       "peak": 67,
       "added_at": "2026-11-20",
@@ -5412,7 +4477,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWV3RrjH1jDkx",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003a70ff135fdc633e53e472c21",
+      "image": "https://i.scdn.co/image/ab67706f00000002a70ff135fdc633e53e472c21",
       "new": true
      },
      {
@@ -5424,7 +4489,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXaqIZ7YXxc6o",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000034546872f7164bd925f031d24",
+      "image": "https://i.scdn.co/image/ab67706f000000024546872f7164bd925f031d24",
       "new": true
      },
      {
@@ -5436,7 +4501,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWWuIAAkPM0Lu",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000039ccc97a78254a03e7e08c810",
+      "image": "https://i.scdn.co/image/ab67706f000000029ccc97a78254a03e7e08c810",
       "new": true
      },
      {
@@ -5448,7 +4513,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWXtcXUwhuzFM",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000030092af664f86a3834ea7695e",
+      "image": "https://i.scdn.co/image/ab67706f000000020092af664f86a3834ea7695e",
       "new": true
      },
      {
@@ -5460,7 +4525,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXa3EUr6VSsMJ",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003ab3651ff960873a339cd9326",
+      "image": "https://i.scdn.co/image/ab67706f00000002ab3651ff960873a339cd9326",
       "new": true
      },
      {
@@ -5472,7 +4537,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX9H0t0BHx4Z4",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003892a53e938531df0c7b1f3d0",
+      "image": "https://i.scdn.co/image/ab67706f00000002892a53e938531df0c7b1f3d0",
       "new": true
      },
      {
@@ -5484,7 +4549,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWSo1plf4t3cl",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000398895a90c7678a9e91597610",
+      "image": "https://i.scdn.co/image/ab67706f0000000298895a90c7678a9e91597610",
       "new": true
      },
      {
@@ -5496,7 +4561,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXdvNG1v6uWvH",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f0000000307b9e1797d23e2801b3ab991",
+      "image": "https://i.scdn.co/image/ab67706f0000000207b9e1797d23e2801b3ab991",
       "new": true
      }
     ],
@@ -5911,7 +4976,8 @@
   },
   "NLF712603021": {
    "isrc": "NLF712603021",
-   "updated": "2026-11-25T13:00:57+00:00",
+   "release_date": "2026-11-20",
+   "updated": "2026-11-25T13:41:04+00:00",
    "momentum": "accelerating",
    "ups": 4,
    "downs": 0,
@@ -5927,21 +4993,21 @@
      "group": "Streaming",
      "kind": "flow",
      "floor": 2000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 132598,
+     "prev": 0,
      "pct": null,
      "total": 132598,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      132598
      ]
     },
     {
@@ -5951,10 +5017,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 1495818,
+     "week": 1495816,
      "prev": null,
      "pct": null,
-     "total": 1495818,
+     "total": 1495816,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -5964,7 +5030,7 @@
       null,
       null,
       null,
-      1495818
+      1495816
      ]
     },
     {
@@ -5973,21 +5039,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 300,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 717,
+     "prev": 0,
      "pct": null,
      "total": 717,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      717
      ]
     },
     {
@@ -6020,20 +5086,20 @@
      "kind": "flow",
      "floor": 20,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 18,
+     "prev": 0,
      "pct": null,
      "total": 18,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      18
      ]
     },
     {
@@ -6066,20 +5132,20 @@
      "kind": "flow",
      "floor": 20,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 1,
+     "prev": 0,
      "pct": null,
      "total": 1,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
      ]
     },
     {
@@ -6112,20 +5178,20 @@
      "kind": "flow",
      "floor": 10,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 1,
+     "prev": 0,
      "pct": null,
      "total": 1,
      "as_of": "2026-11-22",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
      ]
     },
     {
@@ -6135,20 +5201,20 @@
      "kind": "flow",
      "floor": 10000,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 1216,
+     "prev": 0,
      "pct": null,
      "total": 1216,
      "as_of": "2026-11-24",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1216
      ]
     },
     {
@@ -6180,21 +5246,21 @@
      "group": "DJ & club",
      "kind": "flow",
      "floor": 1000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 2652,
+     "prev": 0,
      "pct": null,
      "total": 2652,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2652
      ]
     }
    ],
@@ -6283,13 +5349,13 @@
       "2026-11-25"
      ],
      "values": [
-      211443,
-      1293919,
-      1334225,
-      1414669,
-      1483242,
-      1495818,
-      1495818
+      211441,
+      1293917,
+      1334223,
+      1414667,
+      1483240,
+      1495816,
+      1495816
      ]
     },
     "tiktok_videos": {
@@ -6348,12 +5414,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "image": "https://i.scdn.co/image/ab67706f000000028d9bd37b9d12a9d7f561718c",
       "new": true
      },
      {
       "name": "New Music Friday NL",
-      "followers": 302893,
+      "followers": 302894,
       "position": 37,
       "peak": 37,
       "added_at": "2026-11-20",
@@ -6377,7 +5443,7 @@
      },
      {
       "name": "New Music Friday BE",
-      "followers": 55047,
+      "followers": 55045,
       "position": 48,
       "peak": 48,
       "added_at": "2026-11-19",
@@ -6536,7 +5602,8 @@
   },
   "QMFMF2661837": {
    "isrc": "QMFMF2661837",
-   "updated": "2026-11-25T13:01:00+00:00",
+   "release_date": "2026-11-20",
+   "updated": "2026-11-25T13:41:08+00:00",
    "momentum": "accelerating",
    "ups": 7,
    "downs": 0,
@@ -6553,21 +5620,21 @@
      "group": "Streaming",
      "kind": "flow",
      "floor": 2000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 200557,
+     "prev": 0,
      "pct": null,
      "total": 200557,
      "as_of": "2026-11-23",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      200557
      ]
     },
     {
@@ -6577,10 +5644,10 @@
      "kind": "level",
      "floor": 10000,
      "low_volume": false,
-     "week": 19098078,
+     "week": 19098076,
      "prev": null,
      "pct": null,
-     "total": 19098078,
+     "total": 19098076,
      "as_of": "2026-11-24",
      "spark": [
       null,
@@ -6590,7 +5657,7 @@
       null,
       null,
       null,
-      19098078
+      19098076
      ]
     },
     {
@@ -6599,21 +5666,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 300,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 2372,
+     "prev": 0,
      "pct": null,
      "total": 2372,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2372
      ]
     },
     {
@@ -6622,21 +5689,21 @@
      "group": "Discovery",
      "kind": "flow",
      "floor": 30,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 471,
+     "prev": 0,
      "pct": null,
-     "total": 469,
+     "total": 471,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      471
      ]
     },
     {
@@ -6645,21 +5712,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 46,
+     "prev": 0,
      "pct": null,
      "total": 46,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-19",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      46
      ]
     },
     {
@@ -6691,21 +5758,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 20,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 24,
+     "prev": 0,
      "pct": null,
      "total": 24,
-     "as_of": "2026-11-25",
+     "as_of": "2026-11-21",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      24
      ]
     },
     {
@@ -6738,20 +5805,20 @@
      "kind": "flow",
      "floor": 10,
      "low_volume": true,
-     "week": null,
-     "prev": null,
+     "week": 2,
+     "prev": 0,
      "pct": null,
      "total": 2,
      "as_of": "2026-11-22",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
      ]
     },
     {
@@ -6760,21 +5827,21 @@
      "group": "Social",
      "kind": "flow",
      "floor": 10000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 131714,
+     "prev": 0,
      "pct": null,
      "total": 131714,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      131714
      ]
     },
     {
@@ -6806,21 +5873,21 @@
      "group": "DJ & club",
      "kind": "flow",
      "floor": 1000,
-     "low_volume": true,
-     "week": null,
-     "prev": null,
+     "low_volume": false,
+     "week": 6341,
+     "prev": 0,
      "pct": null,
      "total": 6341,
      "as_of": "2026-11-25",
      "spark": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6341
      ]
     }
    ],
@@ -6939,13 +6006,13 @@
       "2026-11-25"
      ],
      "values": [
-      1511830,
-      18006564,
-      18083003,
-      18115229,
-      18161572,
-      19098078,
-      19098078
+      1511828,
+      18006562,
+      18083001,
+      18115227,
+      18161570,
+      19098076,
+      19098076
      ]
     },
     "dj_supports": {
@@ -6999,7 +6066,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035643bea5de1f746c94fc23d9",
+      "image": "https://i.scdn.co/image/ab67706f000000025643bea5de1f746c94fc23d9",
       "new": true
      },
      {
@@ -7035,7 +6102,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX4W3aJJYCDfV",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000367a7fb4e18161b7cfd1a7446",
+      "image": "https://i.scdn.co/image/ab67706f0000000267a7fb4e18161b7cfd1a7446",
       "new": true
      },
      {
@@ -7047,7 +6114,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX8f6LHxMjnzD",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000346beaf59ebfea38b4894ba80",
+      "image": "https://i.scdn.co/image/ab67706f0000000246beaf59ebfea38b4894ba80",
       "new": true
      },
      {
@@ -7059,7 +6126,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX5DfG8gQdC3F",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000038c0b25fb2ef13b4775a90d17",
+      "image": "https://i.scdn.co/image/ab67706f000000028c0b25fb2ef13b4775a90d17",
       "new": true
      },
      {
@@ -7071,7 +6138,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl",
       "curator": "Spotify",
       "type": "Personalized",
-      "image": "https://i.scdn.co/image/ab67706f000000038d9bd37b9d12a9d7f561718c",
+      "image": "https://i.scdn.co/image/ab67706f000000028d9bd37b9d12a9d7f561718c",
       "new": true
      },
      {
@@ -7083,7 +6150,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000035ecd496aafeeff2437e21d9a",
+      "image": "https://i.scdn.co/image/ab67706f000000025ecd496aafeeff2437e21d9a",
       "new": true
      },
      {
@@ -7095,7 +6162,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX742okrrpwah",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003ce070b3233420260d9a23c44",
+      "image": "https://i.scdn.co/image/ab67706f00000002ce070b3233420260d9a23c44",
       "new": true
      },
      {
@@ -7107,7 +6174,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWVKDF4ycOESi",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000383f016cb3b168af78ae9f103",
+      "image": "https://i.scdn.co/image/ab67706f0000000283f016cb3b168af78ae9f103",
       "new": true
      },
      {
@@ -7131,7 +6198,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DX2ENAPP1Tyed",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f00000003a1cfdb1aefa4f5a3adf4139b",
+      "image": "https://i.scdn.co/image/ab67706f00000002a1cfdb1aefa4f5a3adf4139b",
       "new": true
      },
      {
@@ -7155,7 +6222,7 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DWTIfBdh7WtFL",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000032ba20c529dca4b4e047c630a",
+      "image": "https://i.scdn.co/image/ab67706f000000022ba20c529dca4b4e047c630a",
       "new": true
      },
      {
@@ -7167,12 +6234,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXaqIZ7YXxc6o",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f000000034546872f7164bd925f031d24",
+      "image": "https://i.scdn.co/image/ab67706f000000024546872f7164bd925f031d24",
       "new": true
      },
      {
       "name": "The Dance List",
-      "followers": 114603,
+      "followers": 114604,
       "position": 12,
       "peak": 12,
       "added_at": "2026-11-20",
@@ -7191,12 +6258,12 @@
       "url": "https://open.spotify.com/playlist/37i9dQZF1DXbVCaQthfsdD",
       "curator": "Spotify",
       "type": "Editorial",
-      "image": "https://i.scdn.co/image/ab67706f0000000384f04c5b0f06109d92c4b9ee",
+      "image": "https://i.scdn.co/image/ab67706f0000000284f04c5b0f06109d92c4b9ee",
       "new": true
      },
      {
       "name": "New Music Friday BE",
-      "followers": 55047,
+      "followers": 55045,
       "position": 94,
       "peak": 94,
       "added_at": "2026-11-19",
@@ -7627,5 +6694,5 @@
    }
   }
  },
- "generated_at": "2026-11-25T13:01:00+00:00"
+ "generated_at": "2026-11-25T13:41:08+00:00"
 }
