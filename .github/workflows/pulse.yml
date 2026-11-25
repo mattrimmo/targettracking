@@ -1,4 +1,4 @@
-name: Daily pulse (Shazam trend + Songstats signals)
+name: Daily signals (Songstats)
 on:
   schedule:
     # 05:45 UTC daily — after the weekly sync's 05:17 slot on Wednesdays,
@@ -22,14 +22,9 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
-      - name: Run pulse
-        env:
-          SONGSTATS_API_KEY: ${{ secrets.SONGSTATS_API_KEY }}
-        run: python scripts/pulse.py
       - name: Run signals
         # Everything else Songstats has: streams, socials, radio, 1001Tracklists,
         # SoundCloud, Beatport, DSP editorial adds. Writes data/signals.json.
-        if: always()
         env:
           SONGSTATS_API_KEY: ${{ secrets.SONGSTATS_API_KEY }}
         run: python scripts/signals.py
@@ -38,7 +33,7 @@ jobs:
         run: |
           git config user.name "listenup-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/pulse.json data/signals.json
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Pulse: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git add data/signals.json
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Signals: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main
           git push
