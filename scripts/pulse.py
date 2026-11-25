@@ -2,15 +2,11 @@
 """
 Long Term Target Tracking — daily pulse script.
 
-Separate and much lighter than scripts/sync.py. Runs every day (not just
-Wednesdays) via .github/workflows/pulse.yml. Deliberately makes ZERO calls
-to Spotify's API — only Spot On Track — so it stays cheap enough to run
-daily indefinitely regardless of how many tracks are being watched:
+Separate and lighter than scripts/sync.py. Runs every day via
+.github/workflows/pulse.yml, Songstats only (test version):
   - Shazam total/daily counts
   - Shazam current chart positions (every country, not just UK)
-  - A raw current-playlist COUNT (just len() of the SOT response — no
-    per-playlist Spotify owner lookup, which is what the Wednesday
-    official sync needs Spotify for and this script doesn't do at all)
+  - Current Spotify playlist COUNT (100+ followers)
 
 From the accumulated daily history, works out a simple trend classification
 (accelerating / steady / plateauing / declining) per track. AI-read
@@ -20,20 +16,18 @@ than just what this daily script sees — this file no longer touches
 Anthropic at all.
 
 Secrets:
-  SOT_API_KEY  — required (same one sync.py uses)
+  SONGSTATS_API_KEY — required (same one sync.py uses)
 """
 import json
 import os
 import sys
 from datetime import datetime, timezone
 
-import requests
+import songstats_client as ss
 
 REPO_ROOT  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRACKED_FP = os.path.join(REPO_ROOT, "data", "tracked.json")
 PULSE_FP   = os.path.join(REPO_ROOT, "data", "pulse.json")
-
-SOT_KEY = os.environ.get("SOT_API_KEY", "")
 
 MIN_FOLLOWERS = 100  # same floor used elsewhere
 DAYS_TO_KEEP = 60    # ~2 months of daily granularity is plenty for trend detection
@@ -54,38 +48,12 @@ def save_json(path, data):
         f.write("\n")
 
 
-def sot_get(path):
-    r = requests.get(
-        "https://www.spotontrack.com/api/v1" + path,
-        headers={"Authorization": "Bearer " + SOT_KEY},
-        timeout=30,
-    )
-    r.raise_for_status()
-    return r.json()
-
-
-def fetch_pulse_metrics(isrc):
-    shazams = sot_get(f"/tracks/{isrc}/shazam/shazams")
-    total_shazams = shazams[0]["total"] if shazams else None
-    daily_shazams = shazams[0]["daily"] if shazams else None
-
-    charts = sot_get(f"/tracks/{isrc}/shazam/charts/current")
-    shazam_charts = [
-        {
-            "country_code": c.get("country_code"),
-            "type": c.get("type"),
-            "position": c.get("position"),
-            "previous_position": c.get("previous_position"),
-            "genre": c.get("genre"),
-            "city": c.get("city"),
-        }
-        for c in charts
-    ]
-
-    playlists = sot_get(f"/tracks/{isrc}/spotify/playlists/current")
-    playlist_count = sum(1 for p in playlists if (p.get("playlist", {}).get("followers") or 0) >= MIN_FOLLOWERS)
-
-    return total_shazams, daily_shazams, shazam_charts, playlist_count
+def fetch_pulse_metrics(entry, previous_charts=None):
+    ident = ss.find_ids(entry["isrc"], f"{entry.get('artist','')} {entry.get('track','')}".strip())
+    total_shazams, daily_shazams, shazam_charts = ss.shazam(ident)
+    ss.fill_previous_positions(shazam_charts, previous_charts)
+    playlists, _, _ = ss.current_spotify_playlists(ident, MIN_FOLLOWERS)
+    return total_shazams, daily_shazams, shazam_charts, len(playlists)
 
 
 def classify_trend(daily_series):
@@ -133,8 +101,8 @@ def generate_ai_read(*args, **kwargs):
 
 
 def main():
-    if not SOT_KEY:
-        print("Missing SOT_API_KEY.")
+    if not ss.SS_KEY:
+        print("Missing SONGSTATS_API_KEY.")
         sys.exit(1)
 
     tracked = load_json(TRACKED_FP, {"tracks": []})
@@ -145,7 +113,8 @@ def main():
         isrc = entry["isrc"]
         print(f"Pulse: {entry.get('artist','?')} - {entry.get('track','?')} ({isrc})")
         try:
-            total_shazams, daily_shazams, shazam_charts, playlist_count = fetch_pulse_metrics(isrc)
+            prev = (pulse.get(isrc) or [{}])[-1].get("shazam_charts")
+            total_shazams, daily_shazams, shazam_charts, playlist_count = fetch_pulse_metrics(entry, prev)
         except Exception as e:
             print(f"  ERROR: {e}")
             continue
