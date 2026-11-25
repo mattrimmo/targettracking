@@ -212,6 +212,8 @@
   .rt-why .lab { color: var(--faint); }
   .rt-num { font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
   .rt-pct { font-size: 11.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .rt-pct.new { color: #a5b4fc; }
+  .rel { font-size: 11px; color: var(--faint); margin-top: 4px; white-space: nowrap; }
   .rt-pct.up { color: var(--up); } .rt-pct.down { color: var(--down); } .rt-pct.flat, .rt-pct.low { color: var(--faint); font-weight: 500; }
   .new-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.05em; color: #052e1f; background: var(--up); border-radius: 4px; padding: 1px 5px; vertical-align: 1px; }
   .mom { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
@@ -988,9 +990,20 @@ function shortDate(iso) {
   const d = new Date(iso + 'T00:00:00');
   return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
+function releaseNote(rec) {
+  if (!rec || !rec.release_date) return '';
+  const days = Math.floor((Date.now() - new Date(rec.release_date + 'T00:00:00')) / 864e5);
+  if (days < 0) return `<div class="rel">out ${shortDate(rec.release_date)}</div>`;
+  if (days <= 28) return `<div class="rel">out ${shortDate(rec.release_date)} · ${days < 7 ? 'release week' : 'week ' + (Math.floor(days / 7) + 1)}</div>`;
+  return '';
+}
 function momBadge(m) { return m ? `<span class="mom ${m}">${MOM_LABEL[m] || m}</span>` : '<span class="mom none">No data yet</span>'; }
 function pctHtml(m) {
-  if (!m || m.pct === null || m.pct === undefined) return '<span class="rt-pct flat">no change data</span>';
+  if (!m || m.week === null || m.week === undefined) return '<span class="rt-pct flat">no data yet</span>';
+  if (m.pct === null || m.pct === undefined) {
+    if (!m.prev && m.week) return '<span class="rt-pct new">first week</span>';
+    return '<span class="rt-pct flat">no change</span>';
+  }
   const cls = m.low_volume ? 'low' : m.pct > 0 ? 'up' : m.pct < 0 ? 'down' : 'flat';
   return `<span class="rt-pct ${cls}">${m.pct > 0 ? '+' : ''}${m.pct}%${m.low_volume ? ' · low vol' : ''}</span>`;
 }
@@ -1065,7 +1078,7 @@ function renderTable(tracked, history, signals) {
     return `<div class="rt-row rec ${_sel === r.t.isrc ? 'sel' : ''}" onclick="selectRecord('${r.t.isrc}')">
       ${r.t.image ? `<img class="rt-art" src="${esc(r.t.image)}" onerror="this.style.visibility='hidden'">` : '<div class="rt-art"></div>'}
       <div style="min-width:0"><div class="rt-name">${esc(r.t.artist)} - ${esc(r.t.track)}</div><div class="rt-why">${topReason(r.rec) || '<span class="lab">' + esc(r.t.label || '') + '</span>'}</div></div>
-      <div>${momBadge(r.rec && r.rec.momentum)}</div>
+      <div>${momBadge(r.rec && r.rec.momentum)}${releaseNote(r.rec)}</div>
       ${cells}
     </div>`;
   }).join('');
@@ -1181,7 +1194,7 @@ function recordSheet(r) {
         <div class="why-pills">${why.length ? why.map(s => `<span class="wp ${s.positive ? 'pos' : 'neg'}" title="${esc(s.text)}">${esc(s.kind === 'growth' ? s.text.replace(/ \(.*\)$/, '') : s.text)}</span>`).join('')
           : `<span class="ed-none">${rec ? 'Nothing above the volume floor moved this week.' : 'Songstats signals appear after the next daily run.'}</span>`}</div>
       </div>
-      <div class="rd-actions">${momBadge(rec && rec.momentum)}
+      <div class="rd-actions">${momBadge(rec && rec.momentum)}${releaseNote(rec)}
         ${rec && rec.songstats ? `<a class="rd-link" target="_blank" rel="noopener" href="https://songstats.com/track/${rec.songstats.songstats_track_id}">Songstats ↗</a>` : ''}</div>
     </div>
     <div class="strip">${STRIP.map(([k, l, c]) => stripCell(t.isrc, rec, k, l, c)).join('')}</div>
