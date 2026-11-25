@@ -187,50 +187,103 @@
   .trend-chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
   .trend-chart-box h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 10px; }
 
-  /* ── Signals (Songstats) ─────────────────────────────────────────── */
-  .sig-board { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; }
-  .sig-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
-  .sig-title { font-size: 15px; font-weight: 700; }
-  .sig-sub { font-size: 12px; color: var(--faint); margin-top: 2px; }
-  .sig-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-  .chip { font-size: 12px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border2); background: transparent; color: var(--muted); cursor: pointer; font-family: var(--sans); }
+  /* ── Dashboard (Songstats signals) ───────────────────────────────── */
+  .content { gap: 18px; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; }
+  .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 16px 20px 12px; }
+  .panel-title { font-size: 15px; font-weight: 700; }
+  .panel-sub { font-size: 12px; color: var(--faint); margin-top: 2px; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .chip { font-size: 12px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border2); background: transparent; color: var(--muted); cursor: pointer; font-family: var(--sans); white-space: nowrap; }
+  .chip:hover { color: var(--text); }
   .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .sig-sort { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); border-radius: 8px; padding: 5px 8px; font-size: 12px; font-family: var(--sans); }
-  .sig-row { display: grid; grid-template-columns: 28px 40px minmax(180px, 1.2fr) 120px 2.4fr; gap: 12px; align-items: center; padding: 10px 6px; border-top: 1px solid var(--border); cursor: pointer; border-radius: 8px; }
-  .sig-row:hover { background: rgba(255,255,255,0.03); }
-  .sig-rank { font-size: 12px; color: var(--faint); text-align: right; font-variant-numeric: tabular-nums; }
-  .sig-art { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; background: var(--surface2); }
-  .sig-name { font-size: 13.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .sig-label { font-size: 11px; color: var(--faint); }
-  .sig-count { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
-  .sig-tops { display: flex; gap: 6px; flex-wrap: wrap; }
-  .sig-pill { font-size: 12px; padding: 4px 9px; border-radius: 7px; border: 1px solid var(--border2); color: var(--text); line-height: 1.35; }
-  .sig-pill.neg { color: #fecaca; }
-  .sig-pill.low { color: var(--faint); border-style: dashed; }
-  .mom { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
-  .mom.accelerating { background: rgba(52,211,153,0.16); color: var(--up); }
-  .mom.steady { background: rgba(91,124,250,0.16); color: #a5b4fc; }
-  .mom.cooling { background: rgba(248,113,113,0.14); color: var(--down); }
-  .sig-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-  .sig-group { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
-  .sig-group h4 { font-size: 11.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
-  .m-row { display: grid; grid-template-columns: 1fr 64px 58px; gap: 8px; align-items: center; padding: 6px 0; border-top: 1px solid var(--border); }
+
+  /* records table */
+  .rt-row { display: grid; grid-template-columns: 40px minmax(220px, 2.2fr) 128px repeat(5, minmax(92px, 1fr)); gap: 14px; align-items: center; padding: 10px 20px; border-top: 1px solid var(--border); }
+  .rt-row.rt-h { padding-top: 6px; padding-bottom: 6px; border-top: none; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--faint); }
+  .rt-h .sortable { cursor: pointer; user-select: none; }
+  .rt-h .sortable:hover, .rt-h .sorted { color: var(--text); }
+  .rt-row.rec { cursor: pointer; transition: background 0.12s; }
+  .rt-row.rec:hover { background: rgba(255,255,255,0.025); }
+  .rt-row.rec.sel { background: rgba(91,124,250,0.09); box-shadow: inset 3px 0 0 var(--accent); }
+  .rt-art { width: 40px; height: 40px; border-radius: 7px; object-fit: cover; background: var(--surface2); display: block; }
+  .rt-name { font-size: 13.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rt-why { font-size: 11.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+  .rt-why .lab { color: var(--faint); }
+  .rt-num { font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .rt-pct { font-size: 11.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .rt-pct.up { color: var(--up); } .rt-pct.down { color: var(--down); } .rt-pct.flat, .rt-pct.low { color: var(--faint); font-weight: 500; }
+  .new-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.05em; color: #052e1f; background: var(--up); border-radius: 4px; padding: 1px 5px; vertical-align: 1px; }
+  .mom { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .mom.accelerating { background: rgba(52,211,153,0.15); color: var(--up); }
+  .mom.steady { background: rgba(91,124,250,0.15); color: #a5b4fc; }
+  .mom.cooling { background: rgba(248,113,113,0.13); color: var(--down); }
+  .mom.none { background: rgba(255,255,255,0.05); color: var(--faint); }
+
+  /* record detail */
+  .rd { padding: 22px 24px 24px; position: relative; overflow: hidden; }
+  .rd > *:not(.card-wash) { position: relative; z-index: 1; }
+  .rd-head { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
+  .rd-head .track-art { width: 84px; height: 84px; }
+  .rd-title { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+  .rd-artist { font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .rd-meta { font-size: 11.5px; color: var(--faint); margin-top: 6px; }
+  .rd-actions { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .rd-link { font-size: 12px; color: var(--muted); text-decoration: none; border: 1px solid var(--border2); border-radius: 8px; padding: 5px 10px; }
+  .rd-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .why { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; }
+  .why h4, .box h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .why-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 22px; }
+  @media (max-width: 1100px) { .why-list { grid-template-columns: 1fr; } }
+  .why-item { display: flex; gap: 9px; align-items: baseline; font-size: 13px; line-height: 1.4; }
+  .why-item .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; transform: translateY(-1px); }
+  .why-item .grp { font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.04em; margin-left: 4px; white-space: nowrap; }
+
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 12px; }
+  @media (max-width: 1250px) { .kpis { grid-template-columns: repeat(3, 1fr); } }
+  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; cursor: pointer; text-align: left; font-family: var(--sans); color: var(--text); transition: border-color 0.12s, background 0.12s; }
+  .kpi:hover { border-color: var(--border2); }
+  .kpi.on { border-color: var(--accent); background: rgba(91,124,250,0.08); }
+  .kpi-label { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+  .kpi-num { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin: 4px 0 2px; font-variant-numeric: tabular-nums; }
+  .kpi-sub { font-size: 11.5px; color: var(--faint); display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+  .box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .chart-box { margin-bottom: 18px; }
+  .chart-legend { font-size: 11.5px; color: var(--faint); margin-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .chart-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin-right: 5px; }
+
+  .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  .tab { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: none; padding: 9px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tab:hover { color: var(--text); }
+  .tab.on { color: var(--text); border-bottom-color: var(--accent); }
+  .tab .n { font-size: 11px; color: var(--faint); margin-left: 4px; font-weight: 500; }
+
+  .dsp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+  @media (max-width: 1100px) { .dsp-grid { grid-template-columns: 1fr; } }
+  .dsp-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .dsp-name { font-size: 13.5px; font-weight: 700; }
+  .dsp-count { font-size: 11.5px; color: var(--faint); }
+  .pl { display: grid; grid-template-columns: 30px 1fr auto; gap: 10px; align-items: center; padding: 7px 0; border-top: 1px solid var(--border); }
+  .pl:first-of-type { border-top: none; }
+  .pl img, .pl .ph { width: 30px; height: 30px; border-radius: 6px; object-fit: cover; background: var(--surface2); }
+  .pl-name { font-size: 13px; font-weight: 500; color: var(--text); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  a.pl-name:hover { color: var(--accent); }
+  .pl-sub { font-size: 11px; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pl-right { text-align: right; font-variant-numeric: tabular-nums; }
+  .pl-pos { font-size: 13px; font-weight: 700; }
+  .pl-fol { font-size: 11px; color: var(--faint); }
+  .scroll { max-height: 360px; overflow-y: auto; padding-right: 4px; }
+
+  .m-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 12px; align-items: start; }
+  .m-row { display: grid; grid-template-columns: 1fr 64px 60px; gap: 8px; align-items: center; padding: 7px 0; border-top: 1px solid var(--border); }
   .m-row:first-of-type { border-top: none; }
   .m-label { font-size: 12.5px; }
   .m-nums { font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
-  .m-pct { font-size: 12px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; border-radius: 6px; padding: 2px 5px; }
-  .m-row.low .m-label, .m-row.low .m-pct { color: var(--faint) !important; background: none !important; }
+  .m-pct { font-size: 12px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+  .m-row.low .m-label { color: var(--muted); }
   .m-tag { font-size: 10px; color: var(--faint); border: 1px dashed var(--border2); border-radius: 4px; padding: 0 4px; margin-left: 5px; }
-  .ev-list { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
-  .ev { font-size: 12.5px; padding: 7px 10px; border-radius: 8px; background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.22); }
-  .ev.neg { background: rgba(248,113,113,0.08); border-color: rgba(248,113,113,0.25); }
-  .ev b { color: var(--muted); font-weight: 600; margin-right: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
-  details.more { margin-top: 6px; }
-  details.more > summary { cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--muted); padding: 8px 0; list-style: none; }
-  details.more > summary::before { content: '▸ '; }
-  details.more[open] > summary::before { content: '▾ '; }
-  details.more[open] > summary { margin-bottom: 10px; }
-  @media (max-width: 900px) { .sig-row { grid-template-columns: 24px 36px 1fr; } .sig-row .sig-tops, .sig-row .sig-momcol { grid-column: 3; } }
+  @media (max-width: 1000px) { .rt-row { grid-template-columns: 40px 1fr 110px; } .rt-row > .c-m { display: none; } }
 </style>
 </head>
 <body>
@@ -730,7 +783,7 @@ function renderTrackedList(tracked) {
     const row = document.createElement('div');
     row.className = 'tracked-item';
     const label = t.artist + ' - ' + t.track;
-    row.innerHTML = `<span onclick="document.getElementById('card-${t.isrc}')?.scrollIntoView({behavior:'smooth'})">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'LABEL PENDING'}</span></span>
+    row.innerHTML = `<span onclick="selectRecord('${t.isrc}')">${trunc(label, 22)}<span class="label-tag" style="font-size:9px;padding:1px 5px;margin-left:5px;">${t.label || 'LABEL PENDING'}</span></span>
       <button class="rm" title="Remove">×</button>`;
     row.querySelector('.rm').addEventListener('click', (e) => { e.stopPropagation(); removeTrack(t.isrc, label); });
     el.appendChild(row);
@@ -852,27 +905,48 @@ function trendChart(canvas, series, key, color) {
 
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SIGNALS (data/signals.json, written daily by scripts/signals.py)
+// DASHBOARD: records table + one record in detail (data/signals.json + history)
 // ─────────────────────────────────────────────────────────────────────────────
-const SIG_GROUPS = ['Streaming', 'Discovery', 'Social', 'DJ & club'];
-let _sigSort = 'signals', _sigFilter = null;
+let _lastTracked = null, _lastHistory = null, _lastPulse = null, _lastSignals = null;
+let _sel = null, _sortKey = 'momentum', _filter = null, _tab = 'editorial', _chartKey = 'spotify_streams', _chart = null;
 
-function sigTone(sig) {
-  // colour intensity follows the size of the move, no cut-off
-  if (sig.low_volume) return '';
-  const pos = sig.positive;
-  const size = sig.kind === 'growth' ? Math.min(Math.abs(sig.strength), 100) / 100 : 0.8;
-  const a = (0.08 + size * 0.32).toFixed(2);
-  return pos ? `background:rgba(52,211,153,${a});` : `background:rgba(248,113,113,${a});`;
+const DSPS = [
+  ['spotify', 'Spotify'], ['apple_music', 'Apple Music'], ['amazon', 'Amazon Music'], ['deezer', 'Deezer']
+];
+// columns in the records table: metric key in signals.json
+const COLS = [
+  ['spotify_streams', 'Streams'], ['editorial', 'Editorial'], ['shazams', 'Shazams'],
+  ['tiktok_videos', 'TikTok videos'], ['dj_supports', 'DJ supports']
+];
+// KPI tiles in the record view: [metric key, label, daily chart key]
+const KPIS = [
+  ['spotify_streams', 'Spotify streams', 'spotify_streams'], ['spotify_reach', 'Playlist reach', 'spotify_reach'],
+  ['shazams', 'Shazams', 'shazams'], ['tiktok_videos', 'TikTok videos', 'tiktok_videos'],
+  ['dj_supports', 'DJ supports', 'dj_supports'], ['editorial', 'Editorial playlists', null]
+];
+const MOM_LABEL = { accelerating: '▲ Accelerating', steady: '● Steady', cooling: '▼ Cooling' };
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+function shortNum(n) {
+  if (n === null || n === undefined) return '—';
+  const a = Math.abs(n);
+  if (a >= 1e6) return (n / 1e6).toFixed(a >= 1e7 ? 0 : 1) + 'M';
+  if (a >= 1e4) return Math.round(n / 1e3) + 'K';
+  if (a >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+  return Number(n).toLocaleString('en-GB');
 }
-function sigPill(sig) {
-  const cls = sig.low_volume ? 'low' : (sig.positive ? '' : 'neg');
-  return `<span class="sig-pill ${cls}" style="${sigTone(sig)}">${sig.text}${sig.low_volume ? ' · low volume' : ''}</span>`;
+function shortDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
-function momBadge(m) {
-  const lab = { accelerating: '▲ Accelerating', steady: '● Steady', cooling: '▼ Cooling' };
-  return `<span class="mom ${m}">${lab[m] || m}</span>`;
+function momBadge(m) { return m ? `<span class="mom ${m}">${MOM_LABEL[m] || m}</span>` : '<span class="mom none">No data yet</span>'; }
+function pctHtml(m) {
+  if (!m || m.pct === null || m.pct === undefined) return '<span class="rt-pct flat">no change data</span>';
+  const cls = m.low_volume ? 'low' : m.pct > 0 ? 'up' : m.pct < 0 ? 'down' : 'flat';
+  return `<span class="rt-pct ${cls}">${m.pct > 0 ? '+' : ''}${m.pct}%${m.low_volume ? ' · low vol' : ''}</span>`;
 }
+function metricOf(rec, key) { return rec && rec.metrics ? rec.metrics.find(m => m.key === key) : null; }
 function sparkSvg(vals, up) {
   const v = (vals || []).filter(x => x !== null && x !== undefined);
   if (v.length < 2) return '';
@@ -880,229 +954,301 @@ function sparkSvg(vals, up) {
   const pts = v.map((x, i) => `${(i / (v.length - 1) * w).toFixed(1)},${(h - (x - min) / r * h).toFixed(1)}`).join(' ');
   return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h + 1}"><polyline fill="none" stroke="${up ? '#34d399' : '#f87171'}" stroke-width="1.5" points="${pts}"/></svg>`;
 }
-function shortNum(n) {
-  if (n === null || n === undefined) return '—';
-  const a = Math.abs(n);
-  if (a >= 1e6) return (n / 1e6).toFixed(a >= 1e7 ? 0 : 1) + 'M';
-  if (a >= 1e4) return Math.round(n / 1e3) + 'K';
-  return Number(n).toLocaleString('en-GB');
-}
-function signalPanels(rec) {
-  if (!rec) return `<div class="empty-note">No Songstats signals yet. They appear after the next daily pulse run.</div>`;
-  const groups = SIG_GROUPS.map(g => {
-    const ms = rec.metrics.filter(m => m.group === g);
-    if (!ms.length) return '';
-    const rows = ms.map(m => {
-      const pct = m.pct;
-      const sig = { kind: 'growth', strength: pct || 0, positive: (pct || 0) > 0, low_volume: m.low_volume };
-      const pctTxt = pct === null || pct === undefined ? '—' : (pct > 0 ? '+' : '') + pct + '%';
-      const col = pct > 0 ? 'var(--up)' : pct < 0 ? 'var(--down)' : 'var(--muted)';
-      const nums = m.kind === 'flow'
-        ? `${shortNum(m.week)} this week · ${shortNum(m.total)} total`
-        : `${shortNum(m.week)} now`;
-      return `<div class="m-row ${m.low_volume ? 'low' : ''}">
-        <div><div class="m-label">${m.label}${m.low_volume ? '<span class="m-tag">low volume</span>' : ''}</div><div class="m-nums">${nums}</div></div>
-        <div>${sparkSvg(m.spark, (pct || 0) >= 0)}</div>
-        <div class="m-pct" style="color:${col};${sigTone(sig)}">${pctTxt}</div>
-      </div>`;
-    }).join('');
-    return `<div class="sig-group"><h4>${g}</h4>${rows}</div>`;
-  }).join('');
-  const evs = rec.signals.filter(s => s.kind !== 'growth');
-  const evHtml = evs.length
-    ? `<div class="ev-list">${evs.map(e => `<div class="ev ${e.positive ? '' : 'neg'}"><b>${e.group}</b>${e.text}</div>`).join('')}</div>`
-    : `<div class="empty-note" style="margin-top:10px">No new editorial, chart or DJ chart support in the last 7 days.</div>`;
-  return `<div class="sig-groups">${groups}</div>${evHtml}`;
-}
-function renderSignalBoard(tracked, signals) {
-  const recs = (signals && signals.records) || {};
-  const box = document.createElement('div');
-  box.className = 'sig-board';
-  box.id = 'sigBoard';
-  const has = tracked.tracks.some(t => recs[t.isrc]);
-  if (!has) {
-    box.innerHTML = `<div class="sig-title">Signals</div><div class="sig-sub">No Songstats signals yet. They are written by the daily pulse run (data/signals.json).</div>`;
-    return box;
+
+// editorial playlists across DSPs: Songstats daily list first, weekly Spotify snapshot as fallback
+function editorialSets(t, rec, latest) {
+  const pl = (rec && rec.placements) || {};
+  const out = {};
+  DSPS.forEach(([k]) => { out[k] = pl[k] || []; });
+  if (!pl.spotify && latest && latest.editorial_playlists) {
+    out.spotify = latest.editorial_playlists.map(p => ({ name: p.name, followers: p.followers, position: p.position,
+      added_at: p.added_at, url: 'https://open.spotify.com/playlist/' + p.spotify_id, image: p.cover_url, type: p.type }));
   }
-  let rows = tracked.tracks.map(t => ({ t, r: recs[t.isrc] })).filter(x => x.r);
-  if (_sigFilter) rows = rows.filter(x => (x.r.tags || []).includes(_sigFilter));
-  const topMove = r => Math.max(0, ...r.signals.filter(s => s.kind === 'growth' && !s.low_volume).map(s => s.strength));
+  return out;
+}
+function editorialSummary(t, rec, latest) {
+  const sets = editorialSets(t, rec, latest);
+  let total = 0, fresh = 0;
+  Object.values(sets).forEach(l => { total += l.length; fresh += l.filter(p => p.new).length; });
+  return { total, fresh, sets };
+}
+function topReason(rec) {
+  if (!rec) return '';
+  const s = rec.signals.find(x => x.positive && !x.low_volume) || rec.signals[0];
+  return s ? `<span class="lab">${esc(s.group)} ·</span> ${esc(s.text)}` : '';
+}
+
+// ── records table ───────────────────────────────────────────────────────────
+function rowsFor(tracked, history, signals) {
+  const recs = (signals && signals.records) || {};
+  return tracked.tracks.map(t => {
+    const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
+    const latest = snaps[snaps.length - 1];
+    const rec = recs[t.isrc];
+    return { t, rec, latest, ed: editorialSummary(t, rec, latest) };
+  });
+}
+function sortRows(rows) {
   const momRank = { accelerating: 0, steady: 1, cooling: 2 };
-  if (_sigSort === 'signals') rows.sort((a, b) => (b.r.ups - b.r.downs) - (a.r.ups - a.r.downs) || momRank[a.r.momentum] - momRank[b.r.momentum]);
-  if (_sigSort === 'movers') rows.sort((a, b) => topMove(b.r) - topMove(a.r));
-  if (_sigSort === 'newest') rows.sort((a, b) => (b.t.added_at || '').localeCompare(a.t.added_at || ''));
-  const chip = (k, lab) => `<button class="chip ${_sigFilter === k ? 'on' : ''}" onclick="setSigFilter(${k ? `'${k}'` : 'null'})">${lab}</button>`;
-  const when = signals.generated_at ? new Date(signals.generated_at).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
-  box.innerHTML = `
-    <div class="sig-top">
-      <div><div class="sig-title">Signals: what's moving this week</div>
-        <div class="sig-sub">Last 7 days vs the 7 before, across Spotify, Shazam, radio, TikTok, Instagram, YouTube, SoundCloud, 1001Tracklists, Beatport and DSP editorial · updated ${when}</div></div>
-      <div class="sig-controls">
-        ${chip(null, 'All')}${chip('social', 'Social growth')}${chip('dj', 'DJ support')}${chip('editorial', 'New editorial')}
-        <select class="sig-sort" onchange="setSigSort(this.value)">
-          <option value="signals" ${_sigSort === 'signals' ? 'selected' : ''}>Most signals</option>
-          <option value="movers" ${_sigSort === 'movers' ? 'selected' : ''}>Biggest movers</option>
-          <option value="newest" ${_sigSort === 'newest' ? 'selected' : ''}>Newest added</option>
-        </select>
+  const pct = (r, k) => { const m = metricOf(r.rec, k); return m && m.pct !== null && !m.low_volume ? m.pct : -1e9; };
+  if (_sortKey === 'momentum') rows.sort((a, b) =>
+    ((a.rec ? momRank[a.rec.momentum] : 3) - (b.rec ? momRank[b.rec.momentum] : 3)) ||
+    (((b.rec || {}).ups || 0) - ((b.rec || {}).downs || 0)) - (((a.rec || {}).ups || 0) - ((a.rec || {}).downs || 0)));
+  else if (_sortKey === 'editorial') rows.sort((a, b) => (b.ed.fresh - a.ed.fresh) || (b.ed.total - a.ed.total));
+  else if (_sortKey === 'record') rows.sort((a, b) => (a.t.artist || '').localeCompare(b.t.artist || ''));
+  else rows.sort((a, b) => pct(b, _sortKey) - pct(a, _sortKey));
+  return rows;
+}
+function renderTable(tracked, history, signals) {
+  let rows = rowsFor(tracked, history, signals);
+  if (_filter === 'editorial') rows = rows.filter(r => r.ed.fresh > 0);
+  else if (_filter) rows = rows.filter(r => r.rec && (r.rec.tags || []).includes(_filter));
+  sortRows(rows);
+  const when = signals && signals.generated_at
+    ? new Date(signals.generated_at).toLocaleString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'not run yet';
+  const chip = (k, lab) => `<button class="chip ${_filter === k ? 'on' : ''}" onclick="setFilter(${k ? `'${k}'` : 'null'})">${lab}</button>`;
+  const h = (k, lab, cls = '') => `<div class="${cls} sortable ${_sortKey === k ? 'sorted' : ''}" onclick="setSort('${k}')">${lab}${_sortKey === k ? ' ↓' : ''}</div>`;
+  const body = rows.map(r => {
+    const cells = COLS.map(([k]) => {
+      if (k === 'editorial') return `<div class="c-m"><div class="rt-num">${r.ed.total}</div>${r.ed.fresh ? `<span class="new-tag">+${r.ed.fresh} NEW</span>` : '<span class="rt-pct flat">no new adds</span>'}</div>`;
+      const m = metricOf(r.rec, k);
+      return `<div class="c-m"><div class="rt-num">${m ? shortNum(m.week) : '—'}</div>${m ? pctHtml(m) : ''}</div>`;
+    }).join('');
+    return `<div class="rt-row rec ${_sel === r.t.isrc ? 'sel' : ''}" onclick="selectRecord('${r.t.isrc}')">
+      ${r.t.image ? `<img class="rt-art" src="${esc(r.t.image)}" onerror="this.style.visibility='hidden'">` : '<div class="rt-art"></div>'}
+      <div style="min-width:0"><div class="rt-name">${esc(r.t.artist)} - ${esc(r.t.track)}</div><div class="rt-why">${topReason(r.rec) || '<span class="lab">' + esc(r.t.label || '') + '</span>'}</div></div>
+      <div>${momBadge(r.rec && r.rec.momentum)}</div>
+      ${cells}
+    </div>`;
+  }).join('');
+  return `<div class="panel" id="recordsPanel">
+    <div class="panel-head">
+      <div><div class="panel-title">Records</div><div class="panel-sub">Last 7 days vs the 7 before · Songstats updated ${when} · click a record to open it</div></div>
+      <div class="chips">${chip(null, 'All')}${chip('editorial', 'New editorial')}${chip('social', 'Social growth')}${chip('dj', 'DJ support')}</div>
+    </div>
+    <div class="rt-row rt-h"><div></div>${h('record', 'Record')}${h('momentum', 'Momentum')}${COLS.map(([k, l]) => h(k, l, 'c-m')).join('')}</div>
+    ${body || '<div class="empty-note" style="padding:12px 20px">No records match this filter this week.</div>'}
+  </div>`;
+}
+
+// ── one record ─────────────────────────────────────────────────────────────
+function renderDetail(r) {
+  if (!r) return '';
+  const { t, rec, latest, ed } = r;
+  const eSigs = rec ? rec.signals.filter(s => !s.low_volume) : [];
+  const why = [...eSigs.filter(s => s.positive), ...eSigs.filter(s => !s.positive)].slice(0, 6);
+  const whyHtml = why.length ? `<div class="why-list">${why.map(s => {
+      const col = s.positive ? 'var(--up)' : 'var(--down)';
+      return `<div class="why-item"><span class="dot" style="background:${col}"></span><span>${esc(s.text)}<span class="grp">${esc(s.group)}</span></span></div>`;
+    }).join('')}</div>`
+    : `<div class="empty-note" style="padding:0">${rec ? 'Nothing above the volume floor moved this week.' : 'No Songstats signals for this record yet. They appear after the next daily run.'}</div>`;
+
+  const kpis = KPIS.map(([k, label, chartKey]) => {
+    if (k === 'editorial') {
+      return `<button class="kpi" onclick="setTab('editorial', true)"><div class="kpi-label">${label}</div>
+        <div class="kpi-num">${ed.total}</div><div class="kpi-sub">${ed.fresh ? `<span class="new-tag">+${ed.fresh} NEW</span> this week` : 'no new adds this week'}</div></button>`;
+    }
+    const m = metricOf(rec, k);
+    const has = chartKey && rec && rec.daily && rec.daily[chartKey];
+    const sub = m ? (m.kind === 'flow' ? `${pctHtml(m)} <span>vs ${shortNum(m.prev)} last wk</span>` : `${pctHtml(m)} <span>vs a week ago</span>`) : '<span>no data</span>';
+    return `<button class="kpi ${_chartKey === chartKey && has ? 'on' : ''}" ${has ? `onclick="setChart('${chartKey}')"` : 'style="cursor:default"'}>
+      <div class="kpi-label">${label}${m && m.kind === 'flow' ? ' · 7d' : ''}</div>
+      <div class="kpi-num">${m ? shortNum(m.week) : '—'}</div><div class="kpi-sub">${sub}</div></button>`;
+  }).join('');
+
+  const counts = {
+    editorial: ed.total,
+    independent: latest ? latest.independent_playlists.length : 0,
+    charts: ((latest && latest.shazam_charts) || []).length + (((rec || {}).placements || {}).beatport || []).length,
+  };
+  return `<div class="panel rd" id="recordDetail">
+    <div class="card-wash" id="wash-${t.isrc}"></div>
+    <div class="rd-head">
+      ${t.image ? `<img class="track-art" src="${esc(t.image)}" crossorigin="anonymous" id="art-${t.isrc}">`
+                : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
+      <div style="min-width:0">
+        <div class="rd-title">${esc(t.track)}</div>
+        <div class="rd-artist">${esc(t.artist)}<span class="label-tag">${esc(t.label || 'LABEL PENDING')}</span></div>
+        <div class="rd-meta">${t.isrc} · tracking since ${shortDate(t.added_at)}${latest ? ' · playlist snapshot ' + shortDate(latest.date) : ''}${rec ? ' · Songstats ' + shortDate(rec.updated.slice(0, 10)) : ''}</div>
+      </div>
+      <div class="rd-actions">
+        ${momBadge(rec && rec.momentum)}
+        ${rec && rec.songstats ? `<a class="rd-link" target="_blank" rel="noopener" href="https://songstats.com/track/${rec.songstats.songstats_track_id}">Open in Songstats ↗</a>` : ''}
       </div>
     </div>
-    ${rows.length ? rows.map((x, i) => `
-      <div class="sig-row" onclick="openCard('${x.t.isrc}')">
-        <div class="sig-rank">${i + 1}</div>
-        ${x.t.image ? `<img class="sig-art" src="${x.t.image}" onerror="this.style.visibility='hidden'">` : `<div class="sig-art"></div>`}
-        <div style="min-width:0"><div class="sig-name">${x.t.artist} - ${x.t.track}</div><div class="sig-label">${x.t.label || ''}</div></div>
-        <div class="sig-momcol">${momBadge(x.r.momentum)}<div class="sig-count">${x.r.ups} up · ${x.r.downs} down</div></div>
-        <div class="sig-tops">${x.r.signals.slice(0, 2).map(sigPill).join('') || '<span class="sig-label">Nothing new this week</span>'}</div>
-      </div>`).join('') : `<div class="empty-note">No records match this filter this week.</div>`}`;
-  return box;
+    <div class="why"><h4>What's moving this week</h4>${whyHtml}</div>
+    <div class="kpis">${kpis}</div>
+    <div class="box chart-box" id="chartBox" ${rec && rec.daily && Object.keys(rec.daily).length ? '' : 'style="display:none"'}>
+      <h4 id="chartTitle"></h4><div style="height:230px"><canvas id="dailyChart"></canvas></div>
+      <div class="chart-legend" id="chartLegend"></div>
+    </div>
+    <div class="tabs">
+      ${[['editorial', 'Editorial playlists', counts.editorial], ['independent', 'Independent playlists', counts.independent],
+         ['charts', 'Charts', counts.charts], ['metrics', 'All metrics', rec ? rec.metrics.length : 0]]
+        .map(([k, l, n]) => `<button class="tab ${_tab === k ? 'on' : ''}" onclick="setTab('${k}')">${l}<span class="n">${n}</span></button>`).join('')}
+    </div>
+    <div id="tabBody">${tabBody(r)}</div>
+  </div>`;
 }
-function setSigFilter(k) { _sigFilter = k; refreshSignalBoard(); }
-function setSigSort(k) { _sigSort = k; refreshSignalBoard(); }
-function refreshSignalBoard() {
-  const old = document.getElementById('sigBoard');
-  if (old && _lastTracked) old.replaceWith(renderSignalBoard(_lastTracked, _lastSignals));
+function plRow(p, opts = {}) {
+  const sub = [opts.sub || p.curator || (p.type && p.type !== 'Editorial' ? p.type : ''), p.added_at ? 'added ' + shortDate(p.added_at) : ''].filter(Boolean).join(' · ');
+  const right = opts.right !== undefined ? opts.right
+    : `<div class="pl-pos">${p.position ? '#' + p.position : '—'}</div><div class="pl-fol">${p.followers ? shortNum(p.followers) + ' followers' : (p.peak ? 'peak #' + p.peak : '')}</div>`;
+  return `<div class="pl">
+    ${p.image ? `<img src="${esc(p.image)}" onerror="this.style.visibility='hidden'">` : '<div class="ph"></div>'}
+    <div style="min-width:0">${p.url ? `<a class="pl-name" href="${esc(p.url)}" target="_blank" rel="noopener" title="${esc(p.name)}">` : '<div class="pl-name">'}${p.new ? '<span class="new-tag">NEW</span> ' : ''}${esc(p.name)}${p.url ? '</a>' : '</div>'}
+      <div class="pl-sub">${esc(sub)}</div></div>
+    <div class="pl-right">${right}</div>
+  </div>`;
 }
-function openCard(isrc) {
-  const card = document.getElementById('card-' + isrc);
-  if (!card) return;
-  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  card.style.outline = '1px solid var(--accent)';
-  setTimeout(() => { card.style.outline = ''; }, 1600);
+function dspBox(title, list, empty, opts) {
+  return `<div class="box"><div class="dsp-head"><span class="dsp-name">${title}</span><span class="dsp-count">${list.length}</span></div>
+    ${list.length ? `<div class="scroll">${list.map(p => plRow(p, opts ? opts(p) : {})).join('')}</div>` : `<div class="empty-note">${empty}</div>`}</div>`;
+}
+function tabBody(r) {
+  const { rec, latest, ed } = r;
+  const pl = (rec && rec.placements) || {};
+  if (_tab === 'editorial') {
+    const byFol = l => [...l].sort((a, b) => (b.new - a.new) || ((b.followers || 0) - (a.followers || 0)));
+    const opt = {
+      spotify: p => ({ sub: p.type || 'Editorial' }),
+      amazon: p => ({ sub: marketList(p.markets) }),
+    };
+    return `<div class="dsp-grid">${DSPS.map(([k, name]) => dspBox(name, byFol(ed.sets[k]), 'Not on any editorial playlists right now.', opt[k] || null)).join('')}</div>`;
+  }
+  if (_tab === 'independent') {
+    if (!latest) return '<div class="empty-note">No weekly playlist snapshot yet. Click "Check live now".</div>';
+    const ind = latest.independent_playlists.map(p => ({ name: p.name, followers: p.followers, position: p.position, added_at: p.added_at,
+      url: 'https://open.spotify.com/playlist/' + p.spotify_id, image: p.cover_url, curator: p.owner_name }));
+    return `<div class="kpis" style="grid-template-columns:repeat(3,1fr)">
+        <div class="kpi" style="cursor:default"><div class="kpi-label">Independent followers</div><div class="kpi-num">${shortNum(latest.independent_followers_total)}</div><div class="kpi-sub">${pill(latest.independent_followers_delta)} vs last snapshot</div></div>
+        <div class="kpi" style="cursor:default"><div class="kpi-label">Independent playlists</div><div class="kpi-num">${ind.length}</div><div class="kpi-sub">Spotify, 100+ followers</div></div>
+        <div class="kpi" style="cursor:default"><div class="kpi-label">Key supporters</div><div class="kpi-num">${latest.key_supporters.length}</div><div class="kpi-sub">from your curator list</div></div>
+      </div>
+      ${latest.key_supporters.length ? `<div class="box" style="margin-bottom:12px"><h4>Key supporters</h4>${supporterRow(latest.key_supporters)}</div>` : ''}
+      ${dspBox('All independent placements on Spotify', ind, 'None currently.')}`;
+  }
+  if (_tab === 'charts') {
+    const bp = pl.beatport || [], dj = pl.beatport_dj || [];
+    return `<div class="dsp-grid">
+      <div class="box"><div class="dsp-head"><span class="dsp-name">Shazam charts</span><span class="dsp-count">${((latest && latest.shazam_charts) || []).length}</span></div>${shazamChartRows((latest && latest.shazam_charts) || [])}</div>
+      ${dspBox('Beatport charts', bp, 'Not in a Beatport Top 100 or feature right now.')}
+      ${dspBox('Beatport DJ charts (latest 30)', dj.map(p => Object.assign({}, p, { added_at: null, _d: p.added_at })), 'No DJ charts yet.', p => ({ sub: (p.owner || '') + (p._d ? ' · ' + shortDate(p._d) : ''), right: `<div class="pl-pos">${p.position ? '#' + p.position : ''}</div>` }))}
+    </div>`;
+  }
+  if (!rec) return '<div class="empty-note">No Songstats metrics yet.</div>';
+  const groups = ['Streaming', 'Discovery', 'Social', 'DJ & club'].map(g => {
+    const ms = rec.metrics.filter(m => m.group === g);
+    if (!ms.length) return '';
+    return `<div class="box"><h4>${g}</h4>${ms.map(m => {
+      const col = m.low_volume ? 'var(--faint)' : m.pct > 0 ? 'var(--up)' : m.pct < 0 ? 'var(--down)' : 'var(--muted)';
+      const nums = m.kind === 'flow' ? `${shortNum(m.week)} this week · ${shortNum(m.prev)} last week · ${shortNum(m.total)} total` : `${shortNum(m.week)} now · ${shortNum(m.prev)} a week ago`;
+      return `<div class="m-row ${m.low_volume ? 'low' : ''}"><div><div class="m-label">${esc(m.label)}${m.low_volume ? '<span class="m-tag">low volume</span>' : ''}</div><div class="m-nums">${nums}</div></div>
+        <div title="last 8 weeks">${sparkSvg(m.spark, (m.pct || 0) >= 0)}</div>
+        <div class="m-pct" style="color:${col}">${m.pct === null || m.pct === undefined ? '—' : (m.pct > 0 ? '+' : '') + m.pct + '%'}</div></div>`;
+    }).join('')}</div>`;
+  }).join('');
+  return `<div class="m-groups">${groups}</div>
+    <div class="chart-legend" style="margin-top:10px">Sparklines show the last 8 weeks. "Low volume" means both weeks are under a small floor, so the % is shown but doesn't count towards momentum.</div>`;
 }
 
-let _lastTracked = null, _lastHistory = null, _lastPulse = null, _lastSignals = null;
+const KEY_MARKETS = ['GB', 'US', 'DE', 'FR', 'NL', 'AU', 'CA', 'IT', 'ES', 'JP', 'BR', 'MX', 'IE', 'BE', 'SE'];
+function marketList(m) {
+  if (!m || !m.length) return '';
+  const r = c => { const i = KEY_MARKETS.indexOf(c); return i < 0 ? 99 : i; };
+  const s = [...m].sort((a, b) => r(a) - r(b) || a.localeCompare(b));
+  return s.length > 5 ? s.slice(0, 5).join(', ') + ' +' + (s.length - 5) + ' more' : s.join(', ');
+}
+// daily chart: 7-day average as the main line, raw daily faint behind it, editorial adds marked
+function drawChart(r) {
+  const rec = r && r.rec;
+  const canvas = document.getElementById('dailyChart');
+  if (_chart) { _chart.destroy(); _chart = null; }
+  if (!rec || !rec.daily || !canvas) return;
+  if (!rec.daily[_chartKey]) _chartKey = Object.keys(rec.daily)[0];
+  const d = rec.daily[_chartKey];
+  if (!d) return;
+  document.getElementById('chartTitle').textContent = d.label.replace(/^Daily /, '') + ' · daily, last ' + d.dates.length + ' days';
+  const adds = {};
+  Object.entries(r.ed.sets).forEach(([k, l]) => l.forEach(p => {
+    if (p.added_at) (adds[p.added_at] = adds[p.added_at] || []).push(p.name + ' (' + (DSPS.find(x => x[0] === k) || [k, k])[1] + ')');
+  }));
+  const isFlow = _chartKey !== 'spotify_reach';
+  const avg = d.values.map((v, i) => { const w = d.values.slice(Math.max(0, i - 6), i + 1); return i < 6 ? null : Math.round(w.reduce((a, b) => a + b, 0) / w.length); });
+  const main = isFlow ? avg : d.values;
+  const marks = d.dates.map((dt, i) => adds[dt] ? (main[i] !== null ? main[i] : d.values[i]) : null);
+  const nMarks = marks.filter(x => x !== null).length;
+  document.getElementById('chartLegend').innerHTML = (isFlow ? '<span><i style="background:#5b7cfa"></i>7-day average</span><span><i style="background:#3a3f5c"></i>Daily</span>' : '') + (nMarks ? '<span><i></i>Editorial add (hover for the playlist)</span>' : '');
+  _chart = new Chart(canvas, {
+    type: 'line',
+    data: { labels: d.dates, datasets: [
+      { data: main, borderColor: '#5b7cfa', backgroundColor: '#5b7cfa22', fill: true, borderWidth: 2.2, pointRadius: 0, pointHitRadius: 6, tension: 0.35, order: 2, spanGaps: true },
+      { data: isFlow ? d.values : [], borderColor: 'rgba(140,150,200,0.35)', borderWidth: 1, pointRadius: 0, tension: 0.2, order: 3, fill: false },
+      { data: marks, showLine: false, pointRadius: 5, pointHoverRadius: 7, pointBackgroundColor: '#e8b95c', pointBorderColor: '#101014', pointBorderWidth: 2, order: 1 }
+    ] },
+    options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { display: false }, tooltip: { callbacks: {
+        title: items => shortDate(items[0].label),
+        label: item => item.raw === null || item.datasetIndex === 2 ? null : (isFlow ? (item.datasetIndex === 0 ? ' 7-day avg ' : ' Daily ') : ' ') + Number(item.raw).toLocaleString('en-GB'),
+        afterBody: items => (adds[items[0].label] || []).map(n => '+ ' + n) } } },
+      scales: { x: { ticks: { color: '#55555f', font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9, callback: function (v) { return shortDate(this.getLabelForValue(v)); } }, grid: { display: false } },
+                y: { ticks: { color: '#55555f', font: { size: 10 }, callback: v => shortNum(v) }, grid: { color: 'rgba(255,255,255,0.05)' } } } }
+  });
+}
 
+// ── wiring ─────────────────────────────────────────────────────────────────
+function currentRow() {
+  if (!_lastTracked) return null;
+  return rowsFor(_lastTracked, _lastHistory, _lastSignals).find(r => r.t.isrc === _sel) || null;
+}
 function renderAllCards(tracked, history, pulse, signals) {
   document.getElementById('mainTitle').textContent = 'Target Tracking';
-  document.getElementById('mainSub').textContent = 'Official week-on-week movement, refreshed every Wednesday · daily trend pulse in between';
+  document.getElementById('mainSub').textContent = 'Everything each record is doing: streaming, editorial, Shazam, socials and DJ support. Updated daily from Songstats.';
   const content = document.getElementById('content');
   if (!tracked.tracks.length) {
     content.innerHTML = `<div class="empty-state"><div class="empty-icon">◎</div><div>Nothing tracked yet.<br>Search for a track on the left to start following it.</div></div>`;
     return;
   }
-  content.innerHTML = '';
-
-  // Aggregate classification status across every tracked track's LATEST
-  // snapshot — a single honest number instead of checking each card, or
-  // watching Actions logs, to know whether more sync runs are needed.
-  let totalClassified = 0, totalPending = 0;
-  tracked.tracks.forEach(t => {
-    const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
-    const latest = snaps[snaps.length - 1];
-    if (!latest) return;
-    totalClassified += (latest.editorial_count || 0) + (latest.independent_playlists ? latest.independent_playlists.length : 0);
-    totalPending += latest.unclassified_count || 0;
-  });
-  const totalKnown = totalClassified + totalPending;
-  if (totalKnown > 0) {
-    const pct = Math.round((totalClassified / totalKnown) * 100);
-    const banner = document.createElement('div');
-    banner.className = 'status-banner ' + (totalPending === 0 ? 'complete' : 'pending');
-    banner.innerHTML = totalPending === 0
-      ? `<div><span class="status-label">✓ All playlists classified</span> <span class="status-detail">— ${fmtNum(totalClassified)} playlists across every tracked record, fully up to date.</span></div>`
-      : `<div><span class="status-label">${fmtNum(totalClassified)} of ${fmtNum(totalKnown)} playlists classified (${pct}%)</span> <span class="status-detail">— ${fmtNum(totalPending)} pending, picked up automatically over the next few sync runs.</span></div>
-         <div class="status-bar-track"><div class="status-bar-fill" style="width:${pct}%"></div></div>`;
-    content.appendChild(banner);
+  if (!_sel || !tracked.tracks.some(t => t.isrc === _sel)) {
+    const fromHash = decodeURIComponent((location.hash || '').slice(1));
+    _sel = tracked.tracks.some(t => t.isrc === fromHash) ? fromHash : sortRows(rowsFor(tracked, history, signals))[0].t.isrc;
   }
-
-  content.appendChild(renderSignalBoard(tracked, signals));
-
-  tracked.tracks.forEach(t => {
-    const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
-    const latest = snaps[snaps.length - 1];
-    const pseries = (pulse && pulse[t.isrc]) || [];
-    const platest = pseries[pseries.length - 1];
-    const srec = signals && signals.records && signals.records[t.isrc];
-
-    const card = document.createElement('div');
-    card.className = 'track-card';
-    card.id = 'card-' + t.isrc;
-
-    if (!latest) {
-      card.innerHTML = `
-        <div class="track-head">
-          <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'LABEL PENDING'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
-        </div>
-        <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>
-        <div class="section" style="margin-top:14px">
-          <div class="section-head"><span class="section-title">Signals this week</span>${srec ? momBadge(srec.momentum) : ''}</div>
-          ${signalPanels(srec)}
-        </div>`;
-      content.appendChild(card);
-      return;
-    }
-
-    const unclassifiedNote = latest.unclassified_count
-      ? `<div class="empty-note">${latest.unclassified_count} playlist${latest.unclassified_count !== 1 ? 's' : ''} not yet classified this run — will be picked up on a future sync.</div>`
-      : '';
-
-    card.innerHTML = `
-      <div class="card-wash" id="wash-${t.isrc}"></div>
-      <div class="track-head">
-        ${t.image
-          ? `<img class="track-art" src="${t.image}" crossorigin="anonymous" id="art-${t.isrc}">`
-          : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
-        <div>
-          <div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'LABEL PENDING'}</span></div>
-          <div class="track-meta">${t.isrc} · last weekly sync ${latest.date}${latest.official ? '' : ' <span class="live-tag">· live check</span>'}${platest ? ' · last pulse ' + platest.date : ''}</div>
-        </div>
-        ${trendBadge(platest && platest.trend, platest && platest.trend_pct_change)}
-      </div>
-      ${unclassifiedNote}
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-label">Editorial playlists</div>
-          <div class="hero-row"><span class="hero-num">${latest.editorial_count}</span>${pill(latest.editorial_count_delta)}</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-label">Independent followers</div>
-          <div class="hero-row"><span class="hero-num">${fmtNum(latest.independent_followers_total)}</span>${pill(latest.independent_followers_delta)}</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-label">Total Shazams</div>
-          <div class="hero-row"><span class="hero-num">${fmtNum(latest.total_shazams)}</span>${pill(latest.total_shazams_delta)}</div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-head"><span class="section-title">Signals this week</span>${srec ? momBadge(srec.momentum) : ''}</div>
-        ${signalPanels(srec)}
-      </div>
-      ${pseries.length > 1 ? `
-      <div class="section">
-        <div class="section-head"><span class="section-title">Daily trend (Shazam)</span><span class="section-count">${pseries.length} day${pseries.length !== 1 ? 's' : ''} of pulse data</span></div>
-        <div class="trend-charts">
-          <div class="trend-chart-box"><h4>Daily Shazams</h4><canvas id="trend-daily-${t.isrc}"></canvas></div>
-          <div class="trend-chart-box"><h4>Playlist count</h4><canvas id="trend-playlists-${t.isrc}"></canvas></div>
-        </div>
-      </div>` : ''}
-      <details class="more">
-      <summary>Playlists, supporters and Shazam charts (${latest.editorial_count} editorial · ${latest.independent_playlists.length} independent · ${(latest.shazam_charts || []).length} charts)</summary>
-      <div class="section">
-        <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
-        ${supporterRow(latest.key_supporters)}
-      </div>
-      <div class="section">
-        <div class="section-head"><span class="section-title">Shazam chart positions</span><span class="section-count">${(latest.shazam_charts || []).length} charts · UK prioritised</span></div>
-        ${shazamChartRows(latest.shazam_charts)}
-      </div>
-      <div class="duo-grid">
-        <div class="section">
-          <div class="section-head"><span class="section-title">Current editorial playlists</span><span class="section-count">${latest.editorial_count}</span></div>
-          ${editorialListRows(latest.editorial_playlists)}
-        </div>
-        <div class="section">
-          <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
-          ${independentListRows(latest.independent_playlists)}
-        </div>
-      </div>
-      </details>`;
-    content.appendChild(card);
-
-    if (pseries.length > 1) {
-      trendChart(document.getElementById('trend-daily-' + t.isrc), pseries, 'daily_shazams', '#5b7cfa');
-      trendChart(document.getElementById('trend-playlists-' + t.isrc), pseries, 'playlist_count', '#34d399');
-    }
-  });
+  let banner = '';
+  let pending = 0;
+  tracked.tracks.forEach(t => { const s = (history.snapshots || {})[t.isrc]; if (s && s.length) pending += s[s.length - 1].unclassified_count || 0; });
+  if (pending) banner = `<div class="status-banner pending"><div><span class="status-label">${fmtNum(pending)} playlists still to classify</span> <span class="status-detail">· picked up automatically on the next sync runs.</span></div></div>`;
+  content.innerHTML = banner + renderTable(tracked, history, signals) + renderDetail(currentRow());
+  drawChart(currentRow());
+}
+function refreshTable() {
+  const el = document.getElementById('recordsPanel');
+  if (el) el.outerHTML = renderTable(_lastTracked, _lastHistory, _lastSignals);
+}
+function selectRecord(isrc, scroll) {
+  _sel = isrc;
+  history.replaceState(null, '', '#' + encodeURIComponent(isrc));
+  refreshTable();
+  const el = document.getElementById('recordDetail');
+  const r = currentRow();
+  if (el) el.outerHTML = renderDetail(r);
+  drawChart(r);
+  applyArtworkWash();
+  backfillMissingArt({ tracks: r ? [r.t] : [] });
+  const d = document.getElementById('recordDetail');
+  if (d && scroll !== false) d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function setFilter(k) { _filter = k; refreshTable(); }
+function setSort(k) { _sortKey = k; refreshTable(); }
+function setTab(k, scroll) {
+  _tab = k;
+  document.querySelectorAll('#recordDetail .tab').forEach(b => b.classList.toggle('on', b.getAttribute('onclick').includes("'" + k + "'")));
+  document.getElementById('tabBody').innerHTML = tabBody(currentRow());
+  if (scroll) document.querySelector('#recordDetail .tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function setChart(k) {
+  _chartKey = k;
+  document.querySelectorAll('#recordDetail .kpi').forEach(b => b.classList.toggle('on', (b.getAttribute('onclick') || '').includes("'" + k + "'")));
+  drawChart(currentRow());
 }
 async function loadAll() {
   try {
