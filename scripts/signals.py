@@ -84,7 +84,7 @@ def fmt(n):
 
 # ── history ────────────────────────────────────────────────────────────────
 def fetch_history(ident):
-    start = date.today() - timedelta(days=7 * (WEEKS + 1) + 2)
+    start = date.today() - timedelta(days=max(7 * (WEEKS + 1) + 2, DAILY_DAYS + 3))
     params = dict(ident, start_date=start.isoformat(), end_date=date.today().isoformat())
     out = {}
     try:
@@ -141,10 +141,50 @@ def metric(pts, kind):
                 spark=list(reversed(weekly)))
 
 
+# ── daily series for the trend chart (one consistent source: Songstats history) ──
+DAILY_DAYS = 60
+DAILY = [  # key, label, source, field, kind
+    ("shazams", "Daily Shazams", "shazam", "shazams_total", "flow"),
+    ("spotify_streams", "Daily Spotify streams", "spotify", "streams_total", "flow"),
+    ("spotify_reach", "Spotify playlist reach", "spotify", "playlist_reach_current", "level"),
+    ("tiktok_videos", "Daily TikTok videos", "tiktok", "videos_total", "flow"),
+    ("dj_supports", "Daily DJ supports", "tracklist", "total_supports_total", "flow"),
+]
+
+
+def daily_flow(pts):
+    """Daily gains from a running total. Totals can sit still for a day or two and then jump,
+    so a jump is spread evenly over the days it covers. Trailing days with no update are left off."""
+    out = []
+    last_i = 0
+    for i in range(1, len(pts)):
+        if pts[i][1] != pts[last_i][1]:
+            gain = max(pts[i][1] - pts[last_i][1], 0)
+            span = (pts[i][0] - pts[last_i][0]).days or 1
+            for k in range(span):
+                out.append(((pts[last_i][0] + timedelta(days=k + 1)).isoformat(), round(gain / span)))
+            last_i = i
+    return out
+
+
+def daily_series(hist):
+    out = {}
+    cutoff = (date.today() - timedelta(days=DAILY_DAYS)).isoformat()
+    for key, label, src, field, kind in DAILY:
+        pts = series(hist.get(src), field)
+        if len(pts) < 2:
+            continue
+        rows = daily_flow(pts) if kind == "flow" else [(dt.isoformat(), v) for dt, v in pts]
+        rows = [r for r in rows if r[0] > cutoff]
+        if rows and any(v for _, v in rows):
+            out[key] = dict(label=label, dates=[r[0] for r in rows], values=[r[1] for r in rows])
+    return out
+
+
 # ── current snapshot: what's new this week ───────────────────────────────
 def new_support(ident):
     cutoff = date.today() - timedelta(days=NEW_DAYS)
-    events, counts = [], {}
+    events, counts, placed = [], {}, {}
 
     def recent(s):
         x = d(s)
@@ -157,6 +197,7 @@ def new_support(ident):
         ed = [p for p in pl if ((p.get("spotify_userid") or "").lower() == "spotify" or p.get("owner_name") == "Spotify")
               and p.get("type") not in SKIP_SPOTIFY_TYPES]
         counts["spotify_editorial"] = len(ed)
+        placed["spotify"] = [row(p, recent) for p in ed]
         new = [p for p in ed if recent(p.get("added_at"))]
         if new:
             events.append(dict(group="Streaming", kind="editorial", strength=300 + len(new),
@@ -174,6 +215,13 @@ def new_support(ident):
         for p in am:
             am_names.setdefault(p.get("name"), []).append(p)
         counts.update(apple_editorial=len(ap), deezer_editorial=len(dz), amazon_editorial=len(am_names))
+        placed["apple_music"] = [row(p, recent) for p in ap]
+        placed["deezer"] = [row(p, recent) for p in dz]
+        placed["amazon"] = [dict(row(v[0], recent), markets=sorted({p.get("region") for p in v if p.get("region")}),
+                                 added_at=min((p.get("added_at") or "9") for p in v)[:10],
+                                 new=any(recent(p.get("added_at")) for p in v),
+                                 position=min((p.get("current_position") for p in v if p.get("current_position")), default=None))
+                            for v in am_names.values()]
         for label, rows in (("Apple Music", ap), ("Deezer", dz)):
             new = [p for p in rows if recent(p.get("added_at"))]
             if new:
@@ -192,6 +240,11 @@ def new_support(ident):
         bp = ss.source_data(body, "beatport")
         charts = [c for c in (bp.get("top_100") or []) + (bp.get("features") or []) if not c.get("removed_at")]
         counts["beatport_charts"] = len(charts)
+        placed["beatport"] = [row(c, recent) for c in charts]
+        placed["beatport_dj"] = [dict(name=c.get("name"), owner=c.get("owner_name"), position=c.get("position"),
+                                      added_at=(c.get("release_date") or "")[:10], url=c.get("external_url"),
+                                      new=recent(c.get("release_date")))
+                                 for c in sorted(bp.get("dj_charts") or [], key=lambda c: c.get("release_date") or "", reverse=True)[:30]]
         new = [c for c in charts if recent(c.get("added_at"))]
         if new:
             events.append(dict(group="DJ & club", kind="chart", strength=250,
@@ -206,6 +259,7 @@ def new_support(ident):
                                     + (f" +{len(djc) - 4} more" if len(djc) > 4 else "")))
         sz = [c for c in ss.source_data(body, "shazam").get("charts") or [] if not c.get("removed_at")]
         counts["shazam_charts"] = len(sz)
+        placed["shazam"] = [row(c, recent) for c in sz]
         new = [c for c in sz if recent(c.get("added_at"))]
         if new:
             events.append(dict(group="Discovery", kind="chart", strength=200 + len(new),
@@ -214,7 +268,14 @@ def new_support(ident):
                                     + (f" +{len(new) - 3} more" if len(new) > 3 else "")))
     except Exception as e:
         print(f"  [beatport/shazam] {e}")
-    return events, counts
+    return events, counts, placed
+
+
+def row(p, recent):
+    return dict(name=p.get("name"), followers=p.get("followers_count"), position=p.get("current_position"),
+                peak=p.get("top_position"), added_at=(p.get("added_at") or "")[:10], url=p.get("external_url"),
+                curator=p.get("curator_name") or p.get("owner_name"), type=p.get("type"),
+                image=p.get("artwork"), new=recent(p.get("added_at")))
 
 
 def deezer_editorial(owner):
@@ -240,7 +301,7 @@ def build_record(entry, prev_rec):
         low = (m["week"] or 0) < floor and (m["prev"] or 0) < floor
         metrics.append(dict(key=key, label=label, group=group, kind=kind, floor=floor, low_volume=low, **m))
 
-    events, counts = new_support(ident)
+    events, counts, placed = new_support(ident)
 
     # editorial counts against a week ago (from our own daily log) for drops
     today = date.today().isoformat()
@@ -279,7 +340,7 @@ def build_record(entry, prev_rec):
     tags = sorted({t for s in signals if s["positive"] and not s.get("low_volume") for t in tags_for(s)})
     return dict(isrc=entry["isrc"], updated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 momentum=momentum, ups=ups, downs=downs, signal_count=ups, tags=tags,
-                metrics=metrics, signals=signals, counts=counts, count_log=log, songstats=ident)
+                metrics=metrics, signals=signals, counts=counts, daily=daily_series(hist), placements=placed, count_log=log, songstats=ident)
 
 
 def tags_for(s):
