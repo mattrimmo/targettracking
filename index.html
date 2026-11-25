@@ -284,6 +284,54 @@
   .m-row.low .m-label { color: var(--muted); }
   .m-tag { font-size: 10px; color: var(--faint); border: 1px dashed var(--border2); border-radius: 4px; padding: 0 4px; margin-left: 5px; }
   @media (max-width: 1000px) { .rt-row { grid-template-columns: 40px 1fr 110px; } .rt-row > .c-m { display: none; } }
+  /* record sheets */
+  .sheets { display: flex; flex-direction: column; gap: 18px; }
+  .sheet { padding: 18px 20px 20px; position: relative; overflow: hidden; scroll-margin-top: 16px; transition: box-shadow 0.3s; }
+  .sheet.flash { box-shadow: 0 0 0 2px var(--accent); }
+  .sheet > *:not(.card-wash) { position: relative; z-index: 1; }
+  .sh-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .sh-head .track-art { width: 56px; height: 56px; border-radius: 10px; }
+  .sh-title { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+  .why-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+  .wp { font-size: 12px; padding: 3px 9px; border-radius: 7px; line-height: 1.35; }
+  .wp.pos { background: rgba(52,211,153,0.11); color: #a7f3d0; }
+  .wp.neg { background: rgba(248,113,113,0.10); color: #fecaca; }
+  .strip { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 14px; }
+  @media (max-width: 1350px) { .strip { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  .cell { background: var(--surface); padding: 9px 11px; min-width: 0; }
+  .cell.click { cursor: pointer; }
+  .cell.click:hover { background: #1d1d24; }
+  .cell.on { background: rgba(91,124,250,0.13); box-shadow: inset 0 -2px 0 var(--accent); }
+  .cell-label { font-size: 10.5px; color: var(--muted); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cell-num { font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums; margin: 2px 0 1px; }
+  .cell-foot { display: flex; align-items: center; justify-content: space-between; gap: 4px; }
+  .cell-foot svg { width: 44px; flex-shrink: 0; }
+  .cell.low .cell-num { color: var(--muted); }
+  .sh-grid { display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; align-items: stretch; }
+  .sh-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+  @media (max-width: 1200px) { .sh-grid, .sh-grid2 { grid-template-columns: 1fr; } }
+  .box.sm { padding: 12px 14px; }
+  .box h4 { display: flex; align-items: baseline; gap: 8px; }
+  .ed-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  @media (max-width: 1350px) { .ed-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .ed-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 12.5px; font-weight: 700; padding-bottom: 5px; border-bottom: 1px solid var(--border2); margin-bottom: 4px; }
+  .ed-n { font-size: 11px; color: var(--faint); font-weight: 500; text-transform: none; letter-spacing: 0; }
+  .ed-item { padding: 4px 0; min-width: 0; }
+  .ed-name { display: block; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ed-item .new-tag + .ed-name { display: inline; }
+  .ed-name a { color: var(--text); text-decoration: none; }
+  .ed-name a:hover { color: var(--accent); }
+  .ed-sub { display: block; font-size: 11px; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+  .ed-none { font-size: 12px; color: var(--faint); padding: 4px 0; }
+  .more-btn { font-family: var(--sans); font-size: 11.5px; color: var(--accent); background: none; border: none; cursor: pointer; padding: 4px 0 0; }
+  .sub-h { font-size: 11.5px; font-weight: 700; color: var(--text); margin: 10px 0 5px; display: flex; gap: 6px; align-items: baseline; }
+  .sub-h:first-of-type { margin-top: 0; }
+  .chips-list { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+  .mini { font-size: 11.5px; padding: 2px 8px; border-radius: 6px; background: var(--surface2); border: 1px solid var(--border); white-space: nowrap; }
+  .mini .up { color: var(--up); font-size: 10.5px; } .mini .down { color: var(--down); font-size: 10.5px; }
+  .mini.tier1 { border-color: rgba(232,185,92,0.55); } .mini.tier2 { border-color: rgba(200,200,210,0.4); }
+  .indie-top { display: flex; gap: 28px; margin-bottom: 4px; }
+  .chart-sm .chart-legend { margin-top: 6px; font-size: 11px; }
 </style>
 </head>
 <body>
@@ -1023,7 +1071,7 @@ function renderTable(tracked, history, signals) {
   }).join('');
   return `<div class="panel" id="recordsPanel">
     <div class="panel-head">
-      <div><div class="panel-title">Records</div><div class="panel-sub">Last 7 days vs the 7 before · Songstats updated ${when} · click a record to open it</div></div>
+      <div><div class="panel-title">Records</div><div class="panel-sub">Last 7 days vs the 7 before · Songstats updated ${when} · click a record to jump to it</div></div>
       <div class="chips">${chip(null, 'All')}${chip('editorial', 'New editorial')}${chip('social', 'Social growth')}${chip('dj', 'DJ support')}</div>
     </div>
     <div class="rt-row rt-h"><div></div>${h('record', 'Record')}${h('momentum', 'Momentum')}${COLS.map(([k, l]) => h(k, l, 'c-m')).join('')}</div>
@@ -1031,175 +1079,174 @@ function renderTable(tracked, history, signals) {
   </div>`;
 }
 
-// ── one record ─────────────────────────────────────────────────────────────
-function renderDetail(r) {
-  if (!r) return '';
-  const { t, rec, latest, ed } = r;
-  const eSigs = rec ? rec.signals.filter(s => !s.low_volume) : [];
-  const why = [...eSigs.filter(s => s.positive), ...eSigs.filter(s => !s.positive)].slice(0, 6);
-  const whyHtml = why.length ? `<div class="why-list">${why.map(s => {
-      const col = s.positive ? 'var(--up)' : 'var(--down)';
-      return `<div class="why-item"><span class="dot" style="background:${col}"></span><span>${esc(s.text)}<span class="grp">${esc(s.group)}</span></span></div>`;
-    }).join('')}</div>`
-    : `<div class="empty-note" style="padding:0">${rec ? 'Nothing above the volume floor moved this week.' : 'No Songstats signals for this record yet. They appear after the next daily run.'}</div>`;
-
-  const kpis = KPIS.map(([k, label, chartKey]) => {
-    if (k === 'editorial') {
-      return `<button class="kpi" onclick="setTab('editorial', true)"><div class="kpi-label">${label}</div>
-        <div class="kpi-num">${ed.total}</div><div class="kpi-sub">${ed.fresh ? `<span class="new-tag">+${ed.fresh} NEW</span> this week` : 'no new adds this week'}</div></button>`;
-    }
-    const m = metricOf(rec, k);
-    const has = chartKey && rec && rec.daily && rec.daily[chartKey];
-    const sub = m ? (m.kind === 'flow' ? `${pctHtml(m)} <span>vs ${shortNum(m.prev)} last wk</span>` : `${pctHtml(m)} <span>vs a week ago</span>`) : '<span>no data</span>';
-    return `<button class="kpi ${_chartKey === chartKey && has ? 'on' : ''}" ${has ? `onclick="setChart('${chartKey}')"` : 'style="cursor:default"'}>
-      <div class="kpi-label">${label}${m && m.kind === 'flow' ? ' · 7d' : ''}</div>
-      <div class="kpi-num">${m ? shortNum(m.week) : '—'}</div><div class="kpi-sub">${sub}</div></button>`;
-  }).join('');
-
-  const counts = {
-    editorial: ed.total,
-    independent: latest ? latest.independent_playlists.length : 0,
-    charts: ((latest && latest.shazam_charts) || []).length + (((rec || {}).placements || {}).beatport || []).length,
-  };
-  return `<div class="panel rd" id="recordDetail">
-    <div class="card-wash" id="wash-${t.isrc}"></div>
-    <div class="rd-head">
-      ${t.image ? `<img class="track-art" src="${esc(t.image)}" crossorigin="anonymous" id="art-${t.isrc}">`
-                : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
-      <div style="min-width:0">
-        <div class="rd-title">${esc(t.track)}</div>
-        <div class="rd-artist">${esc(t.artist)}<span class="label-tag">${esc(t.label || 'LABEL PENDING')}</span></div>
-        <div class="rd-meta">${t.isrc} · tracking since ${shortDate(t.added_at)}${latest ? ' · playlist snapshot ' + shortDate(latest.date) : ''}${rec ? ' · Songstats ' + shortDate(rec.updated.slice(0, 10)) : ''}</div>
-      </div>
-      <div class="rd-actions">
-        ${momBadge(rec && rec.momentum)}
-        ${rec && rec.songstats ? `<a class="rd-link" target="_blank" rel="noopener" href="https://songstats.com/track/${rec.songstats.songstats_track_id}">Open in Songstats ↗</a>` : ''}
-      </div>
-    </div>
-    <div class="why"><h4>What's moving this week</h4>${whyHtml}</div>
-    <div class="kpis">${kpis}</div>
-    <div class="box chart-box" id="chartBox" ${rec && rec.daily && Object.keys(rec.daily).length ? '' : 'style="display:none"'}>
-      <h4 id="chartTitle"></h4><div style="height:230px"><canvas id="dailyChart"></canvas></div>
-      <div class="chart-legend" id="chartLegend"></div>
-    </div>
-    <div class="tabs">
-      ${[['editorial', 'Editorial playlists', counts.editorial], ['independent', 'Independent playlists', counts.independent],
-         ['charts', 'Charts', counts.charts], ['metrics', 'All metrics', rec ? rec.metrics.length : 0]]
-        .map(([k, l, n]) => `<button class="tab ${_tab === k ? 'on' : ''}" onclick="setTab('${k}')">${l}<span class="n">${n}</span></button>`).join('')}
-    </div>
-    <div id="tabBody">${tabBody(r)}</div>
-  </div>`;
-}
-function plRow(p, opts = {}) {
-  const sub = [opts.sub || p.curator || (p.type && p.type !== 'Editorial' ? p.type : ''), p.added_at ? 'added ' + shortDate(p.added_at) : ''].filter(Boolean).join(' · ');
-  const right = opts.right !== undefined ? opts.right
-    : `<div class="pl-pos">${p.position ? '#' + p.position : '—'}</div><div class="pl-fol">${p.followers ? shortNum(p.followers) + ' followers' : (p.peak ? 'peak #' + p.peak : '')}</div>`;
-  return `<div class="pl">
-    ${p.image ? `<img src="${esc(p.image)}" onerror="this.style.visibility='hidden'">` : '<div class="ph"></div>'}
-    <div style="min-width:0">${p.url ? `<a class="pl-name" href="${esc(p.url)}" target="_blank" rel="noopener" title="${esc(p.name)}">` : '<div class="pl-name">'}${p.new ? '<span class="new-tag">NEW</span> ' : ''}${esc(p.name)}${p.url ? '</a>' : '</div>'}
-      <div class="pl-sub">${esc(sub)}</div></div>
-    <div class="pl-right">${right}</div>
-  </div>`;
-}
-function dspBox(title, list, empty, opts) {
-  return `<div class="box"><div class="dsp-head"><span class="dsp-name">${title}</span><span class="dsp-count">${list.length}</span></div>
-    ${list.length ? `<div class="scroll">${list.map(p => plRow(p, opts ? opts(p) : {})).join('')}</div>` : `<div class="empty-note">${empty}</div>`}</div>`;
-}
-function tabBody(r) {
-  const { rec, latest, ed } = r;
-  const pl = (rec && rec.placements) || {};
-  if (_tab === 'editorial') {
-    const byFol = l => [...l].sort((a, b) => (b.new - a.new) || ((b.followers || 0) - (a.followers || 0)));
-    const opt = {
-      spotify: p => ({ sub: p.type || 'Editorial' }),
-      amazon: p => ({ sub: marketList(p.markets) }),
-    };
-    return `<div class="dsp-grid">${DSPS.map(([k, name]) => dspBox(name, byFol(ed.sets[k]), 'Not on any editorial playlists right now.', opt[k] || null)).join('')}</div>`;
-  }
-  if (_tab === 'independent') {
-    if (!latest) return '<div class="empty-note">No weekly playlist snapshot yet. Click "Check live now".</div>';
-    const ind = latest.independent_playlists.map(p => ({ name: p.name, followers: p.followers, position: p.position, added_at: p.added_at,
-      url: 'https://open.spotify.com/playlist/' + p.spotify_id, image: p.cover_url, curator: p.owner_name }));
-    return `<div class="kpis" style="grid-template-columns:repeat(3,1fr)">
-        <div class="kpi" style="cursor:default"><div class="kpi-label">Independent followers</div><div class="kpi-num">${shortNum(latest.independent_followers_total)}</div><div class="kpi-sub">${pill(latest.independent_followers_delta)} vs last snapshot</div></div>
-        <div class="kpi" style="cursor:default"><div class="kpi-label">Independent playlists</div><div class="kpi-num">${ind.length}</div><div class="kpi-sub">Spotify, 100+ followers</div></div>
-        <div class="kpi" style="cursor:default"><div class="kpi-label">Key supporters</div><div class="kpi-num">${latest.key_supporters.length}</div><div class="kpi-sub">from your curator list</div></div>
-      </div>
-      ${latest.key_supporters.length ? `<div class="box" style="margin-bottom:12px"><h4>Key supporters</h4>${supporterRow(latest.key_supporters)}</div>` : ''}
-      ${dspBox('All independent placements on Spotify', ind, 'None currently.')}`;
-  }
-  if (_tab === 'charts') {
-    const bp = pl.beatport || [], dj = pl.beatport_dj || [];
-    return `<div class="dsp-grid">
-      <div class="box"><div class="dsp-head"><span class="dsp-name">Shazam charts</span><span class="dsp-count">${((latest && latest.shazam_charts) || []).length}</span></div>${shazamChartRows((latest && latest.shazam_charts) || [])}</div>
-      ${dspBox('Beatport charts', bp, 'Not in a Beatport Top 100 or feature right now.')}
-      ${dspBox('Beatport DJ charts (latest 30)', dj.map(p => Object.assign({}, p, { added_at: null, _d: p.added_at })), 'No DJ charts yet.', p => ({ sub: (p.owner || '') + (p._d ? ' · ' + shortDate(p._d) : ''), right: `<div class="pl-pos">${p.position ? '#' + p.position : ''}</div>` }))}
-    </div>`;
-  }
-  if (!rec) return '<div class="empty-note">No Songstats metrics yet.</div>';
-  const groups = ['Streaming', 'Discovery', 'Social', 'DJ & club'].map(g => {
-    const ms = rec.metrics.filter(m => m.group === g);
-    if (!ms.length) return '';
-    return `<div class="box"><h4>${g}</h4>${ms.map(m => {
-      const col = m.low_volume ? 'var(--faint)' : m.pct > 0 ? 'var(--up)' : m.pct < 0 ? 'var(--down)' : 'var(--muted)';
-      const nums = m.kind === 'flow' ? `${shortNum(m.week)} this week · ${shortNum(m.prev)} last week · ${shortNum(m.total)} total` : `${shortNum(m.week)} now · ${shortNum(m.prev)} a week ago`;
-      return `<div class="m-row ${m.low_volume ? 'low' : ''}"><div><div class="m-label">${esc(m.label)}${m.low_volume ? '<span class="m-tag">low volume</span>' : ''}</div><div class="m-nums">${nums}</div></div>
-        <div title="last 8 weeks">${sparkSvg(m.spark, (m.pct || 0) >= 0)}</div>
-        <div class="m-pct" style="color:${col}">${m.pct === null || m.pct === undefined ? '—' : (m.pct > 0 ? '+' : '') + m.pct + '%'}</div></div>`;
-    }).join('')}</div>`;
-  }).join('');
-  return `<div class="m-groups">${groups}</div>
-    <div class="chart-legend" style="margin-top:10px">Sparklines show the last 8 weeks. "Low volume" means both weeks are under a small floor, so the % is shown but doesn't count towards momentum.</div>`;
-}
-
+// ── record sheets: everything for a record on one panel, no tabs ───────────
+const STRIP = [ // metric cells shown on every record, [key, short label, daily chart key]
+  ['spotify_streams', 'Spotify streams', 'spotify_streams'], ['spotify_reach', 'Playlist reach', 'spotify_reach'],
+  ['shazams', 'Shazams', 'shazams'], ['radio_plays', 'Radio plays', null],
+  ['tiktok_videos', 'TikTok videos', 'tiktok_videos'], ['tiktok_views', 'TikTok views', null],
+  ['ig_reels', 'IG reels', null], ['yt_shorts', 'YT Shorts', null],
+  ['dj_supports', 'DJ supports', 'dj_supports'], ['sc_plays', 'SoundCloud', null]
+];
+const EDITORIAL_SHOW = 6;
+const _chartKeys = {}, _charts = {}, _open = {};
 const KEY_MARKETS = ['GB', 'US', 'DE', 'FR', 'NL', 'AU', 'CA', 'IT', 'ES', 'JP', 'BR', 'MX', 'IE', 'BE', 'SE'];
-function marketList(m) {
+function marketList(m, n = 4) {
   if (!m || !m.length) return '';
   const r = c => { const i = KEY_MARKETS.indexOf(c); return i < 0 ? 99 : i; };
   const s = [...m].sort((a, b) => r(a) - r(b) || a.localeCompare(b));
-  return s.length > 5 ? s.slice(0, 5).join(', ') + ' +' + (s.length - 5) + ' more' : s.join(', ');
+  return s.length > n ? s.slice(0, n).join(', ') + ' +' + (s.length - n) : s.join(', ');
 }
-// daily chart: 7-day average as the main line, raw daily faint behind it, editorial adds marked
+function edItem(p, dsp) {
+  const bits = [];
+  if (p.position) bits.push('#' + p.position);
+  if (dsp === 'amazon') { const m = marketList(p.markets); if (m) bits.push(m); }
+  else if (p.followers) bits.push(shortNum(p.followers));
+  else if (p.peak) bits.push('peak #' + p.peak);
+  if (dsp === 'spotify' && p.type && p.type !== 'Editorial') bits.push(p.type);
+  const name = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" title="${esc(p.name)}">${esc(p.name)}</a>` : esc(p.name);
+  return `<div class="ed-item">${p.new ? '<span class="new-tag">NEW</span> ' : ''}<span class="ed-name">${name}</span><span class="ed-sub">${bits.join(' · ')}${p.added_at ? ' · ' + shortDate(p.added_at) : ''}</span></div>`;
+}
+function edColumn(isrc, dsp, title, list) {
+  const sorted = [...list].sort((a, b) => (b.new - a.new) || ((b.followers || 0) - (a.followers || 0)) || ((a.position || 999) - (b.position || 999)));
+  const key = isrc + ':' + dsp, open = _open[key];
+  const shown = open ? sorted : sorted.slice(0, EDITORIAL_SHOW);
+  const more = sorted.length - shown.length;
+  const fresh = sorted.filter(p => p.new).length;
+  return `<div class="ed-col">
+    <div class="ed-head"><span>${title}</span><span class="ed-n">${sorted.length}${fresh ? ` <span class="new-tag">+${fresh}</span>` : ''}</span></div>
+    ${sorted.length ? shown.map(p => edItem(p, dsp)).join('') : '<div class="ed-none">None right now</div>'}
+    ${more > 0 ? `<button class="more-btn" onclick="toggleOpen('${key}')">+${more} more</button>` : (open && sorted.length > EDITORIAL_SHOW ? `<button class="more-btn" onclick="toggleOpen('${key}')">Show less</button>` : '')}
+  </div>`;
+}
+function stripCell(isrc, rec, key, label, chartKey) {
+  const m = metricOf(rec, key);
+  const can = chartKey && rec && rec.daily && rec.daily[chartKey];
+  const on = can && (_chartKeys[isrc] || 'spotify_streams') === chartKey;
+  return `<div class="cell ${on ? 'on' : ''} ${can ? 'click' : ''} ${m && m.low_volume ? 'low' : ''}" ${can ? `onclick="setChart('${isrc}','${chartKey}')" title="Show on the chart"` : ''}>
+    <div class="cell-label">${label}</div>
+    <div class="cell-num">${m ? shortNum(m.week) : '—'}</div>
+    <div class="cell-foot">${m ? pctHtml(m) : '<span class="rt-pct flat">—</span>'}${m ? sparkSvg(m.spark, (m.pct || 0) >= 0) : ''}</div>
+  </div>`;
+}
+function chartsBox(r) {
+  const { rec, latest } = r;
+  const pl = (rec && rec.placements) || {};
+  const sz = [...((latest && latest.shazam_charts) || [])].sort((a, b) => {
+    const rank = c => c.country_code === 'GB' ? 0 : c.country_code === 'GLOBAL' ? 1 : 2;
+    return rank(a) - rank(b) || (a.position || 0) - (b.position || 0);
+  });
+  const key = r.t.isrc + ':shazam', open = _open[key];
+  const szShown = open ? sz : sz.slice(0, 8);
+  const mv = c => c.previous_position && c.position !== c.previous_position
+    ? (c.position < c.previous_position ? `<span class="up">▲${c.previous_position - c.position}</span>` : `<span class="down">▼${c.position - c.previous_position}</span>`) : '';
+  const bp = pl.beatport || [], dj = pl.beatport_dj || [];
+  const djNew = dj.filter(c => c.new).length;
+  return `<div class="box sm"><h4>Charts</h4>
+    <div class="sub-h">Shazam <span class="ed-n">${sz.length}</span></div>
+    ${sz.length ? `<div class="chips-list">${szShown.map(c => `<span class="mini" title="${esc(c.name)}">${countryFlag(c.country_code)} #${c.position}${c.city ? ' ' + esc(c.city) : c.genre ? ' ' + esc(c.genre) : ''} ${mv(c)}</span>`).join('')}
+      ${sz.length > szShown.length ? `<button class="more-btn" onclick="toggleOpen('${key}')">+${sz.length - szShown.length} more</button>` : ''}</div>` : '<div class="ed-none">Not charting</div>'}
+    <div class="sub-h">Beatport <span class="ed-n">${bp.length}</span></div>
+    ${bp.length ? `<div class="chips-list">${bp.map(c => `<span class="mini">${c.new ? '<span class="new-tag">NEW</span> ' : ''}#${c.position || '—'} ${esc(c.name)}</span>`).join('')}</div>` : '<div class="ed-none">Not in a Top 100 or feature</div>'}
+    <div class="sub-h">Beatport DJ charts <span class="ed-n">${dj.length}${djNew ? ` <span class="new-tag">+${djNew}</span>` : ''}</span></div>
+    ${dj.length ? `<div class="ed-sub" style="display:block">Latest: ${dj.slice(0, 4).map(c => `${esc(c.owner || c.name)} (${shortDate(c.added_at)})`).join(', ')}</div>` : '<div class="ed-none">None yet</div>'}
+  </div>`;
+}
+function indieBox(r) {
+  const { latest } = r;
+  if (!latest) return `<div class="box sm"><h4>Independent</h4><div class="ed-none">No weekly snapshot yet. Click "Check live now".</div></div>`;
+  const ind = [...latest.independent_playlists].sort((a, b) => (b.followers || 0) - (a.followers || 0));
+  const key = r.t.isrc + ':indie', open = _open[key];
+  const shown = open ? ind : ind.slice(0, 5);
+  return `<div class="box sm"><h4>Independent (Spotify)</h4>
+    <div class="indie-top"><div><div class="cell-num">${ind.length}</div><div class="cell-label">playlists</div></div>
+      <div><div class="cell-num">${shortNum(latest.independent_followers_total)}</div><div class="cell-label">followers ${pill(latest.independent_followers_delta)}</div></div></div>
+    ${latest.key_supporters.length ? `<div class="sub-h">Key supporters</div><div class="chips-list">${latest.key_supporters.map(k => `<span class="mini tier${k.tier}" title="${esc(k.name)}">${esc(k.owner_name)}</span>`).join('')}</div>` : ''}
+    <div class="sub-h">Biggest placements</div>
+    ${shown.map(p => `<div class="ed-item"><span class="ed-name"><a href="https://open.spotify.com/playlist/${p.spotify_id}" target="_blank" rel="noopener">${esc(p.name)}</a></span><span class="ed-sub">${p.position ? '#' + p.position + ' · ' : ''}${shortNum(p.followers)} · ${esc(p.owner_name || '')}</span></div>`).join('')}
+    ${ind.length > 5 ? `<button class="more-btn" onclick="toggleOpen('${key}')">${open ? 'Show less' : '+' + (ind.length - 5) + ' more'}</button>` : ''}
+  </div>`;
+}
+function recordSheet(r) {
+  const { t, rec, ed } = r;
+  const sigs = rec ? rec.signals.filter(s => !s.low_volume) : [];
+  const why = [...sigs.filter(s => s.positive), ...sigs.filter(s => !s.positive)].slice(0, 5);
+  const hasDaily = rec && rec.daily && Object.keys(rec.daily).length;
+  return `<div class="panel sheet" id="sheet-${t.isrc}">
+    <div class="card-wash" id="wash-${t.isrc}"></div>
+    <div class="sh-head">
+      ${t.image ? `<img class="track-art" src="${esc(t.image)}" crossorigin="anonymous" id="art-${t.isrc}">`
+                : `<img class="track-art" style="display:none" crossorigin="anonymous" id="art-missing-${t.isrc}">`}
+      <div style="min-width:0;flex:1">
+        <div class="sh-title">${esc(t.artist)} - ${esc(t.track)} <span class="label-tag">${esc(t.label || 'LABEL PENDING')}</span></div>
+        <div class="why-pills">${why.length ? why.map(s => `<span class="wp ${s.positive ? 'pos' : 'neg'}" title="${esc(s.text)}">${esc(s.kind === 'growth' ? s.text.replace(/ \(.*\)$/, '') : s.text)}</span>`).join('')
+          : `<span class="ed-none">${rec ? 'Nothing above the volume floor moved this week.' : 'Songstats signals appear after the next daily run.'}</span>`}</div>
+      </div>
+      <div class="rd-actions">${momBadge(rec && rec.momentum)}
+        ${rec && rec.songstats ? `<a class="rd-link" target="_blank" rel="noopener" href="https://songstats.com/track/${rec.songstats.songstats_track_id}">Songstats ↗</a>` : ''}</div>
+    </div>
+    <div class="strip">${STRIP.map(([k, l, c]) => stripCell(t.isrc, rec, k, l, c)).join('')}</div>
+    <div class="sh-grid">
+      <div class="box sm ed-box"><h4>Editorial <span class="ed-n">${ed.total} live${ed.fresh ? ` · <span class="new-tag">+${ed.fresh} NEW this week</span>` : ''}</span></h4>
+        <div class="ed-grid">${DSPS.map(([k, name]) => edColumn(t.isrc, k, name, ed.sets[k] || [])).join('')}</div>
+        ${rec && !rec.placements ? '<div class="ed-none" style="margin-top:6px">Apple, Amazon and Deezer lists appear after the next daily Songstats run.</div>' : ''}
+      </div>
+      <div class="box sm chart-sm" ${hasDaily ? '' : 'style="display:none"'}><h4 id="ct-${t.isrc}"></h4><div style="height:190px"><canvas id="ch-${t.isrc}"></canvas></div><div class="chart-legend" id="cl-${t.isrc}"></div></div>
+    </div>
+    <div class="sh-grid2">${chartsBox(r)}${indieBox(r)}</div>
+  </div>`;
+}
 function drawChart(r) {
-  const rec = r && r.rec;
-  const canvas = document.getElementById('dailyChart');
-  if (_chart) { _chart.destroy(); _chart = null; }
+  const rec = r && r.rec, isrc = r && r.t.isrc;
+  const canvas = isrc && document.getElementById('ch-' + isrc);
+  if (_charts[isrc]) { _charts[isrc].destroy(); delete _charts[isrc]; }
   if (!rec || !rec.daily || !canvas) return;
-  if (!rec.daily[_chartKey]) _chartKey = Object.keys(rec.daily)[0];
-  const d = rec.daily[_chartKey];
+  let key = _chartKeys[isrc] || 'spotify_streams';
+  if (!rec.daily[key]) key = Object.keys(rec.daily)[0];
+  const d = rec.daily[key];
   if (!d) return;
-  document.getElementById('chartTitle').textContent = d.label.replace(/^Daily /, '') + ' · daily, last ' + d.dates.length + ' days';
+  const isFlow = key !== 'spotify_reach';
+  document.getElementById('ct-' + isrc).textContent = d.label.replace(/^Daily /, '') + (isFlow ? ' per day' : '') + ' · last ' + d.dates.length + ' days';
   const adds = {};
   Object.entries(r.ed.sets).forEach(([k, l]) => l.forEach(p => {
     if (p.added_at) (adds[p.added_at] = adds[p.added_at] || []).push(p.name + ' (' + (DSPS.find(x => x[0] === k) || [k, k])[1] + ')');
   }));
-  const isFlow = _chartKey !== 'spotify_reach';
-  const avg = d.values.map((v, i) => { const w = d.values.slice(Math.max(0, i - 6), i + 1); return i < 6 ? null : Math.round(w.reduce((a, b) => a + b, 0) / w.length); });
+  const avg = d.values.map((v, i) => { if (i < 6) return null; const w = d.values.slice(i - 6, i + 1); return Math.round(w.reduce((a, b) => a + b, 0) / 7); });
   const main = isFlow ? avg : d.values;
   const marks = d.dates.map((dt, i) => adds[dt] ? (main[i] !== null ? main[i] : d.values[i]) : null);
-  const nMarks = marks.filter(x => x !== null).length;
-  document.getElementById('chartLegend').innerHTML = (isFlow ? '<span><i style="background:#5b7cfa"></i>7-day average</span><span><i style="background:#3a3f5c"></i>Daily</span>' : '') + (nMarks ? '<span><i></i>Editorial add (hover for the playlist)</span>' : '');
-  _chart = new Chart(canvas, {
+  document.getElementById('cl-' + isrc).innerHTML = (isFlow ? '<span><i style="background:#5b7cfa"></i>7-day avg</span><span><i style="background:#3a3f5c"></i>daily</span>' : '')
+    + (marks.some(x => x !== null) ? '<span><i></i>editorial add</span>' : '') + '<span>click a metric above to switch</span>';
+  _charts[isrc] = new Chart(canvas, {
     type: 'line',
     data: { labels: d.dates, datasets: [
-      { data: main, borderColor: '#5b7cfa', backgroundColor: '#5b7cfa22', fill: true, borderWidth: 2.2, pointRadius: 0, pointHitRadius: 6, tension: 0.35, order: 2, spanGaps: true },
+      { data: main, borderColor: '#5b7cfa', backgroundColor: '#5b7cfa22', fill: true, borderWidth: 2, pointRadius: 0, pointHitRadius: 6, tension: 0.35, order: 2, spanGaps: true },
       { data: isFlow ? d.values : [], borderColor: 'rgba(140,150,200,0.35)', borderWidth: 1, pointRadius: 0, tension: 0.2, order: 3, fill: false },
-      { data: marks, showLine: false, pointRadius: 5, pointHoverRadius: 7, pointBackgroundColor: '#e8b95c', pointBorderColor: '#101014', pointBorderWidth: 2, order: 1 }
+      { data: marks, showLine: false, pointRadius: 4.5, pointHoverRadius: 6, pointBackgroundColor: '#e8b95c', pointBorderColor: '#101014', pointBorderWidth: 2, order: 1 }
     ] },
     options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
       plugins: { legend: { display: false }, tooltip: { callbacks: {
         title: items => shortDate(items[0].label),
-        label: item => item.raw === null || item.datasetIndex === 2 ? null : (isFlow ? (item.datasetIndex === 0 ? ' 7-day avg ' : ' Daily ') : ' ') + Number(item.raw).toLocaleString('en-GB'),
+        label: item => item.raw === null || item.datasetIndex === 2 ? null : (isFlow ? (item.datasetIndex === 0 ? ' 7-day avg ' : ' daily ') : ' ') + Number(item.raw).toLocaleString('en-GB'),
         afterBody: items => (adds[items[0].label] || []).map(n => '+ ' + n) } } },
-      scales: { x: { ticks: { color: '#55555f', font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9, callback: function (v) { return shortDate(this.getLabelForValue(v)); } }, grid: { display: false } },
-                y: { ticks: { color: '#55555f', font: { size: 10 }, callback: v => shortNum(v) }, grid: { color: 'rgba(255,255,255,0.05)' } } } }
+      scales: { x: { ticks: { color: '#55555f', font: { size: 9 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 6, callback: function (v) { return shortDate(this.getLabelForValue(v)); } }, grid: { display: false } },
+                y: { ticks: { color: '#55555f', font: { size: 9 }, maxTicksLimit: 5, callback: v => shortNum(v) }, grid: { color: 'rgba(255,255,255,0.05)' } } } }
   });
 }
 
 // ── wiring ─────────────────────────────────────────────────────────────────
-function currentRow() {
-  if (!_lastTracked) return null;
-  return rowsFor(_lastTracked, _lastHistory, _lastSignals).find(r => r.t.isrc === _sel) || null;
+function visibleRows() {
+  let rows = rowsFor(_lastTracked, _lastHistory, _lastSignals);
+  if (_filter === 'editorial') rows = rows.filter(r => r.ed.fresh > 0);
+  else if (_filter) rows = rows.filter(r => r.rec && (r.rec.tags || []).includes(_filter));
+  return sortRows(rows);
+}
+function renderSheets() {
+  const box = document.getElementById('sheets');
+  if (!box) return;
+  Object.keys(_charts).forEach(k => { _charts[k].destroy(); delete _charts[k]; });
+  const rows = visibleRows();
+  box.innerHTML = rows.map(recordSheet).join('');
+  rows.forEach(drawChart);
+  applyArtworkWash();
 }
 function renderAllCards(tracked, history, pulse, signals) {
   document.getElementById('mainTitle').textContent = 'Target Tracking';
@@ -1209,46 +1256,44 @@ function renderAllCards(tracked, history, pulse, signals) {
     content.innerHTML = `<div class="empty-state"><div class="empty-icon">◎</div><div>Nothing tracked yet.<br>Search for a track on the left to start following it.</div></div>`;
     return;
   }
-  if (!_sel || !tracked.tracks.some(t => t.isrc === _sel)) {
-    const fromHash = decodeURIComponent((location.hash || '').slice(1));
-    _sel = tracked.tracks.some(t => t.isrc === fromHash) ? fromHash : sortRows(rowsFor(tracked, history, signals))[0].t.isrc;
-  }
-  let banner = '';
   let pending = 0;
   tracked.tracks.forEach(t => { const s = (history.snapshots || {})[t.isrc]; if (s && s.length) pending += s[s.length - 1].unclassified_count || 0; });
-  if (pending) banner = `<div class="status-banner pending"><div><span class="status-label">${fmtNum(pending)} playlists still to classify</span> <span class="status-detail">· picked up automatically on the next sync runs.</span></div></div>`;
-  content.innerHTML = banner + renderTable(tracked, history, signals) + renderDetail(currentRow());
-  drawChart(currentRow());
+  const banner = pending ? `<div class="status-banner pending"><div><span class="status-label">${fmtNum(pending)} playlists still to classify</span> <span class="status-detail">· picked up automatically on the next sync runs.</span></div></div>` : '';
+  content.innerHTML = banner + renderTable(tracked, history, signals) + '<div id="sheets" class="sheets"></div>';
+  renderSheets();
+  const fromHash = decodeURIComponent((location.hash || '').slice(1));
+  if (fromHash) setTimeout(() => selectRecord(fromHash), 50);
 }
-function refreshTable() {
+function refreshAll() {
   const el = document.getElementById('recordsPanel');
   if (el) el.outerHTML = renderTable(_lastTracked, _lastHistory, _lastSignals);
+  renderSheets();
 }
-function selectRecord(isrc, scroll) {
+function selectRecord(isrc) {
   _sel = isrc;
   history.replaceState(null, '', '#' + encodeURIComponent(isrc));
-  refreshTable();
-  const el = document.getElementById('recordDetail');
-  const r = currentRow();
-  if (el) el.outerHTML = renderDetail(r);
+  const el = document.getElementById('recordsPanel');
+  if (el) el.outerHTML = renderTable(_lastTracked, _lastHistory, _lastSignals);
+  const s = document.getElementById('sheet-' + isrc);
+  if (s) { s.scrollIntoView({ behavior: 'smooth', block: 'start' }); s.classList.add('flash'); setTimeout(() => s.classList.remove('flash'), 1400); }
+}
+function setFilter(k) { _filter = k; refreshAll(); }
+function setSort(k) { _sortKey = k; refreshAll(); }
+function setChart(isrc, k) {
+  _chartKeys[isrc] = k;
+  const r = rowsFor(_lastTracked, _lastHistory, _lastSignals).find(x => x.t.isrc === isrc);
+  document.querySelectorAll('#sheet-' + isrc + ' .cell.click').forEach(c => c.classList.toggle('on', c.getAttribute('onclick').includes("'" + k + "'")));
+  drawChart(r);
+}
+function toggleOpen(key) {
+  _open[key] = !_open[key];
+  const isrc = key.split(':')[0];
+  const r = rowsFor(_lastTracked, _lastHistory, _lastSignals).find(x => x.t.isrc === isrc);
+  const old = document.getElementById('sheet-' + isrc);
+  if (_charts[isrc]) { _charts[isrc].destroy(); delete _charts[isrc]; }
+  old.outerHTML = recordSheet(r);
   drawChart(r);
   applyArtworkWash();
-  backfillMissingArt({ tracks: r ? [r.t] : [] });
-  const d = document.getElementById('recordDetail');
-  if (d && scroll !== false) d.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-function setFilter(k) { _filter = k; refreshTable(); }
-function setSort(k) { _sortKey = k; refreshTable(); }
-function setTab(k, scroll) {
-  _tab = k;
-  document.querySelectorAll('#recordDetail .tab').forEach(b => b.classList.toggle('on', b.getAttribute('onclick').includes("'" + k + "'")));
-  document.getElementById('tabBody').innerHTML = tabBody(currentRow());
-  if (scroll) document.querySelector('#recordDetail .tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-function setChart(k) {
-  _chartKey = k;
-  document.querySelectorAll('#recordDetail .kpi').forEach(b => b.classList.toggle('on', (b.getAttribute('onclick') || '').includes("'" + k + "'")));
-  drawChart(currentRow());
 }
 async function loadAll() {
   try {
