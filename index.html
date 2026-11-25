@@ -186,6 +186,51 @@
   @media (max-width: 980px) { .trend-charts { grid-template-columns: 1fr; } }
   .trend-chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
   .trend-chart-box h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 10px; }
+
+  /* ── Signals (Songstats) ─────────────────────────────────────────── */
+  .sig-board { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; }
+  .sig-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  .sig-title { font-size: 15px; font-weight: 700; }
+  .sig-sub { font-size: 12px; color: var(--faint); margin-top: 2px; }
+  .sig-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .chip { font-size: 12px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border2); background: transparent; color: var(--muted); cursor: pointer; font-family: var(--sans); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .sig-sort { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); border-radius: 8px; padding: 5px 8px; font-size: 12px; font-family: var(--sans); }
+  .sig-row { display: grid; grid-template-columns: 28px 40px minmax(180px, 1.2fr) 120px 2.4fr; gap: 12px; align-items: center; padding: 10px 6px; border-top: 1px solid var(--border); cursor: pointer; border-radius: 8px; }
+  .sig-row:hover { background: rgba(255,255,255,0.03); }
+  .sig-rank { font-size: 12px; color: var(--faint); text-align: right; font-variant-numeric: tabular-nums; }
+  .sig-art { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; background: var(--surface2); }
+  .sig-name { font-size: 13.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sig-label { font-size: 11px; color: var(--faint); }
+  .sig-count { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+  .sig-tops { display: flex; gap: 6px; flex-wrap: wrap; }
+  .sig-pill { font-size: 12px; padding: 4px 9px; border-radius: 7px; border: 1px solid var(--border2); color: var(--text); line-height: 1.35; }
+  .sig-pill.neg { color: #fecaca; }
+  .sig-pill.low { color: var(--faint); border-style: dashed; }
+  .mom { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+  .mom.accelerating { background: rgba(52,211,153,0.16); color: var(--up); }
+  .mom.steady { background: rgba(91,124,250,0.16); color: #a5b4fc; }
+  .mom.cooling { background: rgba(248,113,113,0.14); color: var(--down); }
+  .sig-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .sig-group { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+  .sig-group h4 { font-size: 11.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
+  .m-row { display: grid; grid-template-columns: 1fr 64px 58px; gap: 8px; align-items: center; padding: 6px 0; border-top: 1px solid var(--border); }
+  .m-row:first-of-type { border-top: none; }
+  .m-label { font-size: 12.5px; }
+  .m-nums { font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .m-pct { font-size: 12px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; border-radius: 6px; padding: 2px 5px; }
+  .m-row.low .m-label, .m-row.low .m-pct { color: var(--faint) !important; background: none !important; }
+  .m-tag { font-size: 10px; color: var(--faint); border: 1px dashed var(--border2); border-radius: 4px; padding: 0 4px; margin-left: 5px; }
+  .ev-list { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+  .ev { font-size: 12.5px; padding: 7px 10px; border-radius: 8px; background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.22); }
+  .ev.neg { background: rgba(248,113,113,0.08); border-color: rgba(248,113,113,0.25); }
+  .ev b { color: var(--muted); font-weight: 600; margin-right: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  details.more { margin-top: 6px; }
+  details.more > summary { cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--muted); padding: 8px 0; list-style: none; }
+  details.more > summary::before { content: '▸ '; }
+  details.more[open] > summary::before { content: '▾ '; }
+  details.more[open] > summary { margin-bottom: 10px; }
+  @media (max-width: 900px) { .sig-row { grid-template-columns: 24px 36px 1fr; } .sig-row .sig-tops, .sig-row .sig-momcol { grid-column: 3; } }
 </style>
 </head>
 <body>
@@ -805,9 +850,129 @@ function trendChart(canvas, series, key, color) {
   });
 }
 
-let _lastTracked = null, _lastHistory = null, _lastPulse = null;
 
-function renderAllCards(tracked, history, pulse) {
+// ─────────────────────────────────────────────────────────────────────────────
+// SIGNALS (data/signals.json, written daily by scripts/signals.py)
+// ─────────────────────────────────────────────────────────────────────────────
+const SIG_GROUPS = ['Streaming', 'Discovery', 'Social', 'DJ & club'];
+let _sigSort = 'signals', _sigFilter = null;
+
+function sigTone(sig) {
+  // colour intensity follows the size of the move, no cut-off
+  if (sig.low_volume) return '';
+  const pos = sig.positive;
+  const size = sig.kind === 'growth' ? Math.min(Math.abs(sig.strength), 100) / 100 : 0.8;
+  const a = (0.08 + size * 0.32).toFixed(2);
+  return pos ? `background:rgba(52,211,153,${a});` : `background:rgba(248,113,113,${a});`;
+}
+function sigPill(sig) {
+  const cls = sig.low_volume ? 'low' : (sig.positive ? '' : 'neg');
+  return `<span class="sig-pill ${cls}" style="${sigTone(sig)}">${sig.text}${sig.low_volume ? ' · low volume' : ''}</span>`;
+}
+function momBadge(m) {
+  const lab = { accelerating: '▲ Accelerating', steady: '● Steady', cooling: '▼ Cooling' };
+  return `<span class="mom ${m}">${lab[m] || m}</span>`;
+}
+function sparkSvg(vals, up) {
+  const v = (vals || []).filter(x => x !== null && x !== undefined);
+  if (v.length < 2) return '';
+  const w = 58, h = 18, min = Math.min(...v), max = Math.max(...v), r = (max - min) || 1;
+  const pts = v.map((x, i) => `${(i / (v.length - 1) * w).toFixed(1)},${(h - (x - min) / r * h).toFixed(1)}`).join(' ');
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h + 1}"><polyline fill="none" stroke="${up ? '#34d399' : '#f87171'}" stroke-width="1.5" points="${pts}"/></svg>`;
+}
+function shortNum(n) {
+  if (n === null || n === undefined) return '—';
+  const a = Math.abs(n);
+  if (a >= 1e6) return (n / 1e6).toFixed(a >= 1e7 ? 0 : 1) + 'M';
+  if (a >= 1e4) return Math.round(n / 1e3) + 'K';
+  return Number(n).toLocaleString('en-GB');
+}
+function signalPanels(rec) {
+  if (!rec) return `<div class="empty-note">No Songstats signals yet. They appear after the next daily pulse run.</div>`;
+  const groups = SIG_GROUPS.map(g => {
+    const ms = rec.metrics.filter(m => m.group === g);
+    if (!ms.length) return '';
+    const rows = ms.map(m => {
+      const pct = m.pct;
+      const sig = { kind: 'growth', strength: pct || 0, positive: (pct || 0) > 0, low_volume: m.low_volume };
+      const pctTxt = pct === null || pct === undefined ? '—' : (pct > 0 ? '+' : '') + pct + '%';
+      const col = pct > 0 ? 'var(--up)' : pct < 0 ? 'var(--down)' : 'var(--muted)';
+      const nums = m.kind === 'flow'
+        ? `${shortNum(m.week)} this week · ${shortNum(m.total)} total`
+        : `${shortNum(m.week)} now`;
+      return `<div class="m-row ${m.low_volume ? 'low' : ''}">
+        <div><div class="m-label">${m.label}${m.low_volume ? '<span class="m-tag">low volume</span>' : ''}</div><div class="m-nums">${nums}</div></div>
+        <div>${sparkSvg(m.spark, (pct || 0) >= 0)}</div>
+        <div class="m-pct" style="color:${col};${sigTone(sig)}">${pctTxt}</div>
+      </div>`;
+    }).join('');
+    return `<div class="sig-group"><h4>${g}</h4>${rows}</div>`;
+  }).join('');
+  const evs = rec.signals.filter(s => s.kind !== 'growth');
+  const evHtml = evs.length
+    ? `<div class="ev-list">${evs.map(e => `<div class="ev ${e.positive ? '' : 'neg'}"><b>${e.group}</b>${e.text}</div>`).join('')}</div>`
+    : `<div class="empty-note" style="margin-top:10px">No new editorial, chart or DJ chart support in the last 7 days.</div>`;
+  return `<div class="sig-groups">${groups}</div>${evHtml}`;
+}
+function renderSignalBoard(tracked, signals) {
+  const recs = (signals && signals.records) || {};
+  const box = document.createElement('div');
+  box.className = 'sig-board';
+  box.id = 'sigBoard';
+  const has = tracked.tracks.some(t => recs[t.isrc]);
+  if (!has) {
+    box.innerHTML = `<div class="sig-title">Signals</div><div class="sig-sub">No Songstats signals yet. They are written by the daily pulse run (data/signals.json).</div>`;
+    return box;
+  }
+  let rows = tracked.tracks.map(t => ({ t, r: recs[t.isrc] })).filter(x => x.r);
+  if (_sigFilter) rows = rows.filter(x => (x.r.tags || []).includes(_sigFilter));
+  const topMove = r => Math.max(0, ...r.signals.filter(s => s.kind === 'growth' && !s.low_volume).map(s => s.strength));
+  const momRank = { accelerating: 0, steady: 1, cooling: 2 };
+  if (_sigSort === 'signals') rows.sort((a, b) => (b.r.ups - b.r.downs) - (a.r.ups - a.r.downs) || momRank[a.r.momentum] - momRank[b.r.momentum]);
+  if (_sigSort === 'movers') rows.sort((a, b) => topMove(b.r) - topMove(a.r));
+  if (_sigSort === 'newest') rows.sort((a, b) => (b.t.added_at || '').localeCompare(a.t.added_at || ''));
+  const chip = (k, lab) => `<button class="chip ${_sigFilter === k ? 'on' : ''}" onclick="setSigFilter(${k ? `'${k}'` : 'null'})">${lab}</button>`;
+  const when = signals.generated_at ? new Date(signals.generated_at).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+  box.innerHTML = `
+    <div class="sig-top">
+      <div><div class="sig-title">Signals: what's moving this week</div>
+        <div class="sig-sub">Last 7 days vs the 7 before, across Spotify, Shazam, radio, TikTok, Instagram, YouTube, SoundCloud, 1001Tracklists, Beatport and DSP editorial · updated ${when}</div></div>
+      <div class="sig-controls">
+        ${chip(null, 'All')}${chip('social', 'Social growth')}${chip('dj', 'DJ support')}${chip('editorial', 'New editorial')}
+        <select class="sig-sort" onchange="setSigSort(this.value)">
+          <option value="signals" ${_sigSort === 'signals' ? 'selected' : ''}>Most signals</option>
+          <option value="movers" ${_sigSort === 'movers' ? 'selected' : ''}>Biggest movers</option>
+          <option value="newest" ${_sigSort === 'newest' ? 'selected' : ''}>Newest added</option>
+        </select>
+      </div>
+    </div>
+    ${rows.length ? rows.map((x, i) => `
+      <div class="sig-row" onclick="openCard('${x.t.isrc}')">
+        <div class="sig-rank">${i + 1}</div>
+        ${x.t.image ? `<img class="sig-art" src="${x.t.image}" onerror="this.style.visibility='hidden'">` : `<div class="sig-art"></div>`}
+        <div style="min-width:0"><div class="sig-name">${x.t.artist} - ${x.t.track}</div><div class="sig-label">${x.t.label || ''}</div></div>
+        <div class="sig-momcol">${momBadge(x.r.momentum)}<div class="sig-count">${x.r.ups} up · ${x.r.downs} down</div></div>
+        <div class="sig-tops">${x.r.signals.slice(0, 2).map(sigPill).join('') || '<span class="sig-label">Nothing new this week</span>'}</div>
+      </div>`).join('') : `<div class="empty-note">No records match this filter this week.</div>`}`;
+  return box;
+}
+function setSigFilter(k) { _sigFilter = k; refreshSignalBoard(); }
+function setSigSort(k) { _sigSort = k; refreshSignalBoard(); }
+function refreshSignalBoard() {
+  const old = document.getElementById('sigBoard');
+  if (old && _lastTracked) old.replaceWith(renderSignalBoard(_lastTracked, _lastSignals));
+}
+function openCard(isrc) {
+  const card = document.getElementById('card-' + isrc);
+  if (!card) return;
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  card.style.outline = '1px solid var(--accent)';
+  setTimeout(() => { card.style.outline = ''; }, 1600);
+}
+
+let _lastTracked = null, _lastHistory = null, _lastPulse = null, _lastSignals = null;
+
+function renderAllCards(tracked, history, pulse, signals) {
   document.getElementById('mainTitle').textContent = 'Target Tracking';
   document.getElementById('mainSub').textContent = 'Official week-on-week movement, refreshed every Wednesday · daily trend pulse in between';
   const content = document.getElementById('content');
@@ -840,11 +1005,14 @@ function renderAllCards(tracked, history, pulse) {
     content.appendChild(banner);
   }
 
+  content.appendChild(renderSignalBoard(tracked, signals));
+
   tracked.tracks.forEach(t => {
     const snaps = (history.snapshots && history.snapshots[t.isrc]) || [];
     const latest = snaps[snaps.length - 1];
     const pseries = (pulse && pulse[t.isrc]) || [];
     const platest = pseries[pseries.length - 1];
+    const srec = signals && signals.records && signals.records[t.isrc];
 
     const card = document.createElement('div');
     card.className = 'track-card';
@@ -855,7 +1023,11 @@ function renderAllCards(tracked, history, pulse) {
         <div class="track-head">
           <div><div class="track-name">${t.artist} - ${t.track}<span class="label-tag">${t.label || 'LABEL PENDING'}</span></div><div class="track-meta">${t.isrc} · added ${t.added_at}</div></div>
         </div>
-        <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>`;
+        <div class="empty-note">No weekly snapshot yet — click "Check live now" to pull the first one.</div>
+        <div class="section" style="margin-top:14px">
+          <div class="section-head"><span class="section-title">Signals this week</span>${srec ? momBadge(srec.momentum) : ''}</div>
+          ${signalPanels(srec)}
+        </div>`;
       content.appendChild(card);
       return;
     }
@@ -891,6 +1063,10 @@ function renderAllCards(tracked, history, pulse) {
           <div class="hero-row"><span class="hero-num">${fmtNum(latest.total_shazams)}</span>${pill(latest.total_shazams_delta)}</div>
         </div>
       </div>
+      <div class="section">
+        <div class="section-head"><span class="section-title">Signals this week</span>${srec ? momBadge(srec.momentum) : ''}</div>
+        ${signalPanels(srec)}
+      </div>
       ${pseries.length > 1 ? `
       <div class="section">
         <div class="section-head"><span class="section-title">Daily trend (Shazam)</span><span class="section-count">${pseries.length} day${pseries.length !== 1 ? 's' : ''} of pulse data</span></div>
@@ -899,6 +1075,8 @@ function renderAllCards(tracked, history, pulse) {
           <div class="trend-chart-box"><h4>Playlist count</h4><canvas id="trend-playlists-${t.isrc}"></canvas></div>
         </div>
       </div>` : ''}
+      <details class="more">
+      <summary>Playlists, supporters and Shazam charts (${latest.editorial_count} editorial · ${latest.independent_playlists.length} independent · ${(latest.shazam_charts || []).length} charts)</summary>
       <div class="section">
         <div class="section-head"><span class="section-title">Key independent supporters</span><span class="section-count">${latest.key_supporters.length} matched</span></div>
         ${supporterRow(latest.key_supporters)}
@@ -916,7 +1094,8 @@ function renderAllCards(tracked, history, pulse) {
           <div class="section-head"><span class="section-title">All independent placements</span><span class="section-count">${latest.independent_playlists.length}</span></div>
           ${independentListRows(latest.independent_playlists)}
         </div>
-      </div>`;
+      </div>
+      </details>`;
     content.appendChild(card);
 
     if (pseries.length > 1) {
@@ -927,12 +1106,13 @@ function renderAllCards(tracked, history, pulse) {
 }
 async function loadAll() {
   try {
-    const [tracked, history, pulse] = await Promise.all([
-      fetchJson('data/tracked.json'), fetchJson('data/history.json'), fetchJson('data/pulse.json')
+    const [tracked, history, pulse, signals] = await Promise.all([
+      fetchJson('data/tracked.json'), fetchJson('data/history.json'), fetchJson('data/pulse.json'),
+      fetchJson('data/signals.json').catch(() => ({ records: {} }))
     ]);
-    _lastTracked = tracked; _lastHistory = history; _lastPulse = pulse;
+    _lastTracked = tracked; _lastHistory = history; _lastPulse = pulse; _lastSignals = signals;
     renderTrackedList(tracked);
-    renderAllCards(tracked, history, pulse);
+    renderAllCards(tracked, history, pulse, signals);
     applyArtworkWash();
     backfillMissingArt(tracked);
     let latestDate = null;
