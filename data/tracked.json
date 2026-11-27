@@ -80,6 +80,14 @@
       "label": "PAWZ",
       "image": "https://i.scdn.co/image/ab67616d00001e02685112cb866f43208ac7e722",
       "added_at": "2026-11-27"
+    },
+    {
+      "isrc": "QZFPL2600171",
+      "artist": "KDAY",
+      "track": "That Beat",
+      "label": "THRIVE",
+      "image": "https://i.scdn.co/image/ab67616d00001e02c67e07c7b0aa9bad8bb8f1de",
+      "added_at": "2026-11-27"
     }
   ]
 }
