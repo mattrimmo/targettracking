@@ -56,6 +56,14 @@
       "label": "MAISON ARTS",
       "image": "https://i.scdn.co/image/ab67616d00001e0225569acefe488aaa7249451f",
       "added_at": "2026-11-20"
+    },
+    {
+      "isrc": "NLRD52673456",
+      "artist": "Riordan & Caleb Laurenson",
+      "track": "BEAT THE STREET",
+      "label": "INSOMNIAC",
+      "image": "https://i.scdn.co/image/ab67616d00001e02a95ab7d9518590e1d049fd11",
+      "added_at": "2026-11-27"
     }
   ]
 }
